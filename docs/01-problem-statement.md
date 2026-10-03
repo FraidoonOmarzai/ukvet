@@ -8,6 +8,7 @@
 | Version | 0.1 (Draft) |
 | Date | 24 Sep 2026 |
 
+**Due diligence:** means carefully checking and investigating something before making an important decision.
 ---
 
 ## 1. Background
