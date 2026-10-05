@@ -276,9 +276,7 @@ data/        ← local/raw data (git-ignored)
 
 Run this as a real workplace process:
 - Send a **one-page project brief** to AAII leadership: the problem, scope, metrics, timeline, and risks.
-- Agree on a **weekly demo** where you show working software every Friday, even if it's small.
 - Keep a **decision log** of what you changed and why. You'll draw on it for interview stories and the Medium article.
-- Write a short **weekly update**: done, next, blockers.
 
 ---
 ## Phase 0: Define, plan, set up
@@ -292,7 +290,7 @@ Run this as a real workplace process:
 8. **Step 8:** `08-architecture.md` has a Mermaid diagram (GitHub renders it), component responsibilities, draft `Fact`/`Report` schemas and the request flow, plus 5 ADRs and a template in `adr/`.
 9. **Step 9:** a uv workspace with two packages (`ukvet-mcp`, `ukvet-agent`), ruff, strict mypy, pytest with an 80% coverage gate, pre-commit hooks, a Makefile, and CI running on Python 3.11 and 3.12 with a Gitleaks secrets scan. It also has an MIT licence, `.gitignore` and `.env.example`.
 10. **Step 10:** `09-plan.md` covers milestones, the Definition of Done, git workflow and weekly rhythm. `scripts/create_backlog.sh` creates ** GitHub issues** with milestones and labels in one command.
-11. **Step 11:** `kickoff/` holds the one-page project brief for AAII, a weekly update template, and a decision log already filled with your 5 decisions so far.
+11. **Step 11:** `kickoff/` holds the one-page project brief for AAII and a decision log already filled with your 5 decisions so far.
 ---
 
 # Phase 0 checklist
@@ -308,6 +306,6 @@ Run this as a real workplace process:
 - [ ] Architecture diagram and 5 ADRs
 - [ ] Repo created with structure, tooling, and CI
 - [ ] GitHub board with milestones and issues
-- [ ] Project brief sent to AAII; weekly demo agreed
+- [ ] Project brief sent to AAII
 
 **Honest note:** Phase 0 will feel slow because you'll want to start coding. Don't. Keep it to 5 days maximum. The goal is a clear plan, not perfect documents. The API spike in Step 5 is the one step you must not skip, because it's the step most likely to change your plan.
