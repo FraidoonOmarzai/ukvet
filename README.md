@@ -2,7 +2,7 @@
 
 **Vet any UK company in 30 seconds — cited, evaluated, open source.**
 
-<!-- [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml) -->
+[![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > **Status: Phase 0 — planning and API spike.** Not yet functional. Follow progress on the project board.
