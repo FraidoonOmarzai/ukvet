@@ -1,65 +1,79 @@
-<h1 align=center> ukvet — AI Due-Diligence Agent for UK Companies</h1>
+# ukvet — AI Due-Diligence Agent for UK Companies
+
+**Vet any UK company in 30 seconds — cited, evaluated, open source.**
+
+<!-- [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml) -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+> **Status: Phase 0 — planning and API spike.** Not yet functional. Follow progress on the project board.
+
+## What it does
+
+Enter a UK company name or number. ukvet checks official Companies House records and returns a risk report answering:
+
+1. Is it active, dissolved or insolvent?
+2. How old is it?
+3. Who are the directors?
+4. Are its accounts or confirmation statement overdue?
+5. Who controls it?
+6. Does it have secured debts (charges)?
+7. Any insolvency history?
+8. Have its directors run companies that failed?
+9. Any recent changes of directors or address?
+10. **What are the red flags?**
+
+Every fact is cited to the official record. When data is missing, ukvet says so instead of guessing.
+
+## How it's built
+
+| Part | What |
+|---|---|
+| `ukvet-mcp` | Open-source MCP server exposing Companies House data to any MCP client |
+| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter |
+| Evals | 200+ item benchmark; accuracy, hallucination, citation validity; gated in CI |
+| Observability | Langfuse tracing of cost, latency and tool calls |
+
+Architecture: [docs/08-architecture.md](docs/08-architecture.md)
+
+## Results
 
 
-### Project: UK Company Due-Diligence Agent (MCP)
 
-**In one sentence:** an AI agent that researches any UK company from official public data and produces a sourced risk report, built on an open-source MCP server that anyone can plug into their own AI tools.
+## Development
 
-**The problem it solves:** before hiring a supplier, signing a contract or investing, people check whether a company is legitimate. That means clicking through Companies House manually. Your agent does it in 30 seconds with every claim cited.
+Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
 
-#### Step 1: Build the MCP server (week 1)
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/ukvet.git
+cd ukvet
+cp .env.example .env      # add your Companies House API key
+make install              # dependencies + git hooks
+make check                # lint, type check, tests
+make notebook             # API exploration notebook
+```
 
-- Get a free Companies House API key.
-- Wrap its endpoints as MCP tools: search_company, get_profile, get_officers, get_filing_history, get_psc (persons with significant control), get_charges, and get_insolvency.
-- Handle rate limits (600 requests per 5 minutes), caching and errors properly.
-- Publish it to PyPI and the MCP registries. People can now use your server in Claude Desktop or Cursor, which is where your real users come from.
+## Project documents
 
-#### Step 2: Build the agent (week 2)
+| Doc | Contents |
+|---|---|
+| [01 Problem statement](docs/01-problem-statement.md) | Why ukvet exists |
+| [02 Users and questions](docs/02-users-and-questions.md) | Personas and Q1–Q10 |
+| [03 Scope](docs/03-scope.md) | In, out, later |
+| [04 Success metrics](docs/04-success-metrics.md) | Targets fixed before building |
+| [05 Data notes](docs/05-data-notes.md) | API findings |
+| [06 Legal and ethics](docs/06-legal-and-ethics.md) | Licensing, UK GDPR, misuse |
+| [07 Risks](docs/07-risks.md) | Risk register |
+| [08 Architecture](docs/08-architecture.md) | Design + [ADRs](docs/adr/) |
+| [09 Plan](docs/09-plan.md) | Milestones, backlog, workflow |
 
-The LangGraph flow has four nodes:
+## Disclaimer
 
-- Planner: decides what to check based on the question.
-- Researcher: calls MCP tools.
-- Verifier: cross-checks facts, such as whether a director is linked to dissolved companies.
-- Reporter: writes the risk summary with a citation for every claim.
+ukvet is informational only. It is not legal, financial or credit advice. Reports are based on public records at the time of retrieval, which may be incomplete or out of date. Always verify before making decisions. ukvet is not affiliated with Companies House.
 
-Wrap it in FastAPI with a simple Streamlit front end, containerised with Docker.
+## Attribution
 
-#### Step 3: Build the eval harness (weeks 3–4)
+Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) (Companies House).
 
-This is the most important and most skipped part.
+## Licence
 
-- Write 200+ questions, such as "How many active directors does X have?", "Are X's accounts overdue?" or "Who controls X?"
-- Verify every answer against the raw API. That's your ground truth.
-- Measure factual accuracy, citation correctness, hallucination rate, and whether the agent correctly says "insufficient data" instead of guessing.
-- Use rule-based checks where possible and LLM-as-judge only for report quality.
-- Add a GitHub Actions job that runs the evals on every pull request and blocks the merge if scores drop.
-
-#### Step 4: Observability and guardrails (week 4)
-
-- Use Langfuse tracing for cost per report, latency, tool calls per query, and where failures happen.
-- Add prompt injection defence. Company names and filing text are untrusted input, and someone could register a company called "Ignore previous instructions."
-- Validate outputs with Pydantic schemas.
-
-#### Step 5: Model comparison and launch (week 5)
-
-- Run the same evals with a frontier API model versus an open model (you can reuse your vLLM setup from Project 1).
-- Publish a table comparing accuracy, cost and latency. This shows engineering judgment, not just building.
-- Write a Medium article and share the repo.
-
-What you end up with: an open-source package with install counts, a working agent, a benchmark, CI eval gates, cost data, and a model comparison.
-
----
-
-## Phase 0: Define, plan, set up
-1. **The problem statement:** background, the problem, who's affected, current alternatives and their gaps, why an agent, the final problem statement, 5 assumptions to validate, and a sign-off table for AAII.
-2. **Users and questions:** 3 personas plus developers as a secondary user, and the 10 core questions (Q1–Q10) with why each matters, likely data source and answer type. It also sets the answer rules (citations, "insufficient data") and gives a 15-minute user interview script.
-3. **Scope:** in scope, out of scope with reasons, a v2 backlog, constraints, and the MVP definition of done.
-4. **Success metrics:** 16 metrics, each with a precise definition and target, when it's measured, and the reporting rules.
-5. **The API spike:** `notebooks/00_api_exploration.ipynb` is a complete notebook. It tests auth, builds a varied test set automatically, calls every endpoint, records "no data" behaviour, answers Q1–Q9 from the raw data, measures the director network cost for Q8, and calculates calls per report, latency and reports per 5 minutes. `docs/05-data-notes.md` is the template you fill in from the results.
-6. **Step 6:** `06-legal-and-ethics.md` covers OGL attribution, the UK GDPR rules, the report disclaimer, and misuse controls.
-7. **Step 7:** `07-risks.md` has 13 risks, each with likelihood, impact, mitigation and a trigger to act.
-8. **Step 8:** `08-architecture.md` has a Mermaid diagram (GitHub renders it), component responsibilities, draft `Fact`/`Report` schemas and the request flow, plus 5 ADRs and a template in `adr/`.
-9. **Step 9:** a uv workspace with two packages (`ukvet-mcp`, `ukvet-agent`), ruff, strict mypy, pytest with an 80% coverage gate, pre-commit hooks, a Makefile, and CI running on Python 3.11 and 3.12 with a Gitleaks secrets scan. It also has an MIT licence, `.gitignore` and `.env.example`.
-10. **Step 10:** `09-plan.md` covers milestones, the Definition of Done, git workflow and weekly rhythm. `scripts/create_backlog.sh` creates **51 GitHub issues** with milestones and labels in one command.
-11. **Step 11:** `kickoff/` holds the one-page project brief for AAII, a weekly update template, and a decision log already filled with your 5 decisions so far.
+Code: [MIT](LICENSE) © 2026 Fraidoon Omarzai

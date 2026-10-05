@@ -5,9 +5,48 @@ description = "ukvet — AI Due-Diligence Agent for UK Companies"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "ukvet-agent",
+    "ukvet-mcp",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+notebook = [
     "jupyter>=1.1.1",
     "numpy>=2.5.3",
     "pandas>=3.0.6",
-    "pytest>=9.1.1",
     "python-dotenv>=1.2.4",
 ]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+ukvet-mcp = { workspace = true }
+ukvet-agent = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "S"]
+ignore = ["S101"]  # allow assert in tests
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["ukvet_mcp", "ukvet_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=ukvet_mcp --cov=ukvet_agent --cov-report=term-missing"
+
+[tool.coverage.report]
+fail_under = 80

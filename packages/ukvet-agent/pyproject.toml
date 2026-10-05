@@ -3,7 +3,7 @@ name = "ukvet-agent"
 version = "0.0.1"
 description = "LangGraph due-diligence agent for UK companies — part of ukvet."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = "MIT"
 authors = [{ name = "Fraidoon Omarzai" }]
 dependencies = ["ukvet-mcp"]
