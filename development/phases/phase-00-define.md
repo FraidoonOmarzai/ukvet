@@ -291,7 +291,7 @@ Run this as a real workplace process:
 7. **Step 7:** `07-risks.md` has 13 risks, each with likelihood, impact, mitigation and a trigger to act.
 8. **Step 8:** `08-architecture.md` has a Mermaid diagram (GitHub renders it), component responsibilities, draft `Fact`/`Report` schemas and the request flow, plus 5 ADRs and a template in `adr/`.
 9. **Step 9:** a uv workspace with two packages (`ukvet-mcp`, `ukvet-agent`), ruff, strict mypy, pytest with an 80% coverage gate, pre-commit hooks, a Makefile, and CI running on Python 3.11 and 3.12 with a Gitleaks secrets scan. It also has an MIT licence, `.gitignore` and `.env.example`.
-10. **Step 10:** `09-plan.md` covers milestones, the Definition of Done, git workflow and weekly rhythm. `scripts/create_backlog.sh` creates **51 GitHub issues** with milestones and labels in one command.
+10. **Step 10:** `09-plan.md` covers milestones, the Definition of Done, git workflow and weekly rhythm. `scripts/create_backlog.sh` creates ** GitHub issues** with milestones and labels in one command.
 11. **Step 11:** `kickoff/` holds the one-page project brief for AAII, a weekly update template, and a decision log already filled with your 5 decisions so far.
 ---
 

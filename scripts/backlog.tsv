@@ -1,0 +1,8 @@
+milestone	labels	title	body
+Phase 0 — Define & plan	phase-0,docs	Run the API spike notebook	Run notebooks/00_api_exploration.ipynb end to end with a real API key. Acceptance: all sections run; findings JSON saved.
+Phase 0 — Define & plan	phase-0,docs	Fill in data notes from spike	Complete docs/05-data-notes.md: endpoint no-data behaviour, Q1–Q10 status, measurements, quirks. Update assumptions A4, A5.
+Phase 0 — Define & plan	phase-0,research	Time 3 manual company checks	Do 3 due-diligence checks by hand on the Companies House website and time them. Replace the 20–40 min assumption (A2) with real numbers.
+Phase 0 — Define & plan	phase-0,research	Run 3 user interviews	Use the script in docs/02-users-and-questions.md §4. Record findings in docs/user-research.md; update personas and Q1–Q10 ranking.
+Phase 0 — Define & plan	phase-0,docs	Record project process	Record the project process in development/*. Explain all the phases, journals, and why we use the tools we do.
+Phase 0 — Define & plan	phase-0,docs	Stakeholder sign-off on project brief	Send docs/kickoff/project-brief.md to AAII. Record decision in the sign-off table and decision log.
+
