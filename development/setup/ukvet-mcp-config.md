@@ -80,3 +80,16 @@ A missing API key produces instructions for obtaining and configuring a Companie
 - `ukvet_mcp/errors.py` — custom configuration error definitions.
 - `.env` — optional local configuration file; should not be committed if it contains secrets.
 - `.env.example` — recommended template documenting the environment variables required for local development.
+
+## Run the module itself
+Add a block at the bottom of `cofig.py`:
+```python
+if __name__ == "__main__":
+    s = load_settings()
+    print(s)
+    print("rate limit:", s.effective_rate_limit)
+```
+Then run it as a module:
+```bash
+uv run python -m ukvet_mcp.config
+```

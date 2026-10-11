@@ -141,3 +141,10 @@ def load_settings(env_file: str | None = ".env") -> Settings:
                 raise ConfigError(API_KEY_HELP) from None
             problems.append(f"{loc}: {item['msg']}")
         raise ConfigError("Invalid configuration: " + "; ".join(problems)) from None
+
+
+if __name__ == "__main__":
+    s = load_settings()
+
+    print(s)
+    print("rate limit:", s.effective_rate_limit)
