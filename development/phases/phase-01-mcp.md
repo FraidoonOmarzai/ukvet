@@ -81,6 +81,7 @@ class Source(BaseModel):
     url: str  # public Companies House page for the user to verify
     retrieved_at: datetime
 
+
 class ToolResult(BaseModel):
     found: bool  # False = valid "no data"
     data: ...  # typed per tool
