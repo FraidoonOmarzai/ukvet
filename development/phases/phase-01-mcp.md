@@ -77,13 +77,13 @@ This is the foundation for citations.
 
 ```python
 class Source(BaseModel):
-    endpoint: str        # "/company/01234567/charges"
-    url: str             # public Companies House page for the user to verify
+    endpoint: str  # "/company/01234567/charges"
+    url: str  # public Companies House page for the user to verify
     retrieved_at: datetime
 
 class ToolResult(BaseModel):
-    found: bool          # False = valid "no data"
-    data: ...            # typed per tool
+    found: bool  # False = valid "no data"
+    data: ...  # typed per tool
     source: Source
 ```
 
