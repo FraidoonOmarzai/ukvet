@@ -55,6 +55,23 @@ tests/fixtures/ch/   # recorded API responses
 
 **Tests:** the key is loaded, the missing-key error is clear, defaults are correct, and the secret is masked.
 
+
+The code uses two important libraries:
+- Pydantic — validates the settings and converts values to the expected types.
+- Pydantic Settings — loads configuration from environment variables and an optional .env file.
+
+```python
+from pydantic import (
+    AliasChoices,  # Allows multiple names for one setting
+    Field,  # Defines defaults, aliases and validation constraints
+    SecretStr,  # Masks sensitive values such as API keys
+    ValidationError,  # Lets you run custom validation logic
+    field_validator,  # Represents settings that failed validation
+)
+from pydantic_settings import BaseSettings, SettingsConfigDict
+# BaseSettings 	Loads settings from the environment and .env file.
+# SettingsConfigDict	Configures how settings are loaded.
+```
 ---
 
 ## Step 1.3: Errors and output models (½ day)
@@ -91,6 +108,11 @@ class ToolResult(BaseModel):
 Also create typed models per tool (CompanyProfile, Officer, Appointment, PSC, Charge, InsolvencyCase, Filing), including only the fields needed for Q1–Q10. This is also your GDPR data-minimisation rule in code.
 
 **Tests:** models validate against the real fixture shapes.
+
+`Note: ` 
+> The code inside model.py defines the output data models for your UK Companies House MCP project. It describes the exact shape of the data your tools return when someone asks questions about a company, its directors, its filings, its charges, or its insolvency history.
+> The key idea is: your tools return structured, validated data instead of giving the LLM raw API responses and asking it to figure everything out.
+> For example, when someone asks, “Does this company have any outstanding charges?”, your application can return a clear result with the charge count, the relevant records, and a source that lets the user verify the information.
 
 ---
 
