@@ -17,13 +17,16 @@
 ## Step 1.1: Dependencies and module layout (½ day)
 
 **Add dependencies:**
+
 ```bash
 uv add --package ukvet-mcp mcp httpx pydantic pydantic-settings
 uv add --dev respx pytest-asyncio
 ```
+
 `respx` mocks httpx calls so tests never hit the real API.
 
 **Create this structure:**
+
 ```
 packages/ukvet-mcp/src/ukvet_mcp/
 ├── __main__.py      # entry point: starts the server
@@ -60,17 +63,18 @@ This is the foundation for citations.
 
 **Errors (`errors.py`):**
 
-| Error | Meaning |
-|---|---|
-| `AuthError` | 401: bad or missing key |
+| Error             | Meaning                          |
+| ----------------- | -------------------------------- |
+| `AuthError`       | 401: bad or missing key          |
 | `CompanyNotFound` | The company number doesn't exist |
-| `RateLimited` | 429 after retries were exhausted |
-| `UpstreamError` | 5xx or timeout after retries |
-| `InvalidInput` | Bad company number format |
+| `RateLimited`     | 429 after retries were exhausted |
+| `UpstreamError`   | 5xx or timeout after retries     |
+| `InvalidInput`    | Bad company number format        |
 
 **Important:** "no data" (for example, no charges) is **not an error**. It's a valid empty result.
 
 **Every tool result carries a source (`models.py`):**
+
 ```python
 class Source(BaseModel):
     endpoint: str        # "/company/01234567/charges"
@@ -82,6 +86,7 @@ class ToolResult(BaseModel):
     data: ...            # typed per tool
     source: Source
 ```
+
 Also create typed models per tool (CompanyProfile, Officer, Appointment, PSC, Charge, InsolvencyCase, Filing), including only the fields needed for Q1–Q10. This is also your GDPR data-minimisation rule in code.
 
 **Tests:** models validate against the real fixture shapes.
@@ -125,7 +130,7 @@ Also create typed models per tool (CompanyProfile, Officer, Appointment, PSC, Ch
 
 - **Company numbers:** trim and uppercase them, and zero-pad numeric ones to 8 digits (`1234` → `00001234`). Keep prefixes like `SC`, `NI` and `OC`. Validate the format and raise `InvalidInput` with a helpful message.
 - **"No data" mapping:** apply exactly what you observed in the spike. For example, if `/charges` returns 404 for a company with no charges, return `found=False` with an empty list, **not** `CompanyNotFound`.
-- **Watch this trap:** a 404 on `/charges` can mean "no charges" *or* "company doesn't exist". Solve it by confirming the company exists first (its profile, which you cache), so the two cases are never confused.
+- **Watch this trap:** a 404 on `/charges` can mean "no charges" _or_ "company doesn't exist". Solve it by confirming the company exists first (its profile, which you cache), so the two cases are never confused.
 - **Filing codes:** map the address-change and other key filing `description` codes you found in the spike to plain English.
 
 **Tests:** number formats (valid, invalid, padding, prefixes), each endpoint's no-data case, the 404 disambiguation, and code mapping.
@@ -136,18 +141,19 @@ Also create typed models per tool (CompanyProfile, Officer, Appointment, PSC, Ch
 
 Define the tools in `server.py` using the MCP SDK's FastMCP. There are **8 tools**:
 
-| Tool | Input | Answers |
-|---|---|---|
-| `search_company` | `query`, `limit` (default 10) | Name → number |
-| `get_company_profile` | `company_number` | Q1, Q2, Q4 |
-| `get_officers` | `company_number`, `include_resigned` | Q3, Q9 |
-| `get_officer_appointments` | `officer_id` | Q8 |
-| `get_persons_with_significant_control` | `company_number` | Q5 |
-| `get_charges` | `company_number` | Q6 |
-| `get_insolvency` | `company_number` | Q7 |
-| `get_filing_history` | `company_number`, `since` (optional date), `category` (optional) | Q9 |
+| Tool                                   | Input                                                            | Answers       |
+| -------------------------------------- | ---------------------------------------------------------------- | ------------- |
+| `search_company`                       | `query`, `limit` (default 10)                                    | Name → number |
+| `get_company_profile`                  | `company_number`                                                 | Q1, Q2, Q4    |
+| `get_officers`                         | `company_number`, `include_resigned`                             | Q3, Q9        |
+| `get_officer_appointments`             | `officer_id`                                                     | Q8            |
+| `get_persons_with_significant_control` | `company_number`                                                 | Q5            |
+| `get_charges`                          | `company_number`                                                 | Q6            |
+| `get_insolvency`                       | `company_number`                                                 | Q7            |
+| `get_filing_history`                   | `company_number`, `since` (optional date), `category` (optional) | Q9            |
 
 **Tool design rules (these matter for the agent in Phase 2):**
+
 - **Tool descriptions are prompts.** Write them carefully: what the tool returns, when to use it, and what `found=false` means. The LLM decides based on these words.
 - **Keep outputs small.** Return only the model fields, not the raw API response. Large outputs cost tokens and confuse the model.
 - **Keep errors readable by the LLM.** Return messages like "Company 12345678 not found. Check the number or use search_company." Never return a stack trace.
@@ -181,6 +187,7 @@ Define the tools in `server.py` using the MCP SDK's FastMCP. There are **8 tools
 ## Step 1.11: Package documentation (½ day)
 
 The `packages/ukvet-mcp/README.md` should include:
+
 - What it is, in one sentence, with the GIF
 - Install and configure instructions: `uvx ukvet-mcp` and the Claude Desktop JSON config
 - The tool list with a one-line description each
