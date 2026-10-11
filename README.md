@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 0 — planning and API spike.** Not yet functional. Follow progress on the project board.
+> **Status: Phase 1** (`ukvet-mcp`: 8 tools, 169 offline tests, 98% coverage). 
 
 ## What it does
 
