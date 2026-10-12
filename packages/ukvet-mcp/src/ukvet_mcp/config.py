@@ -26,7 +26,8 @@ API_KEY_HELP = (
 )
 
 
-# choose where the cache lives by default, if the user doesn't override it
+# choose where the cache lives by default, 
+# if the user doesn't override it
 def _default_cache_path() -> Path:
     """this builds a path to a local SQLite cache database, e.g. ~/.cache/ukvet/ch_cache.sqlite"""
     return Path.home() / ".cache" / "ukvet" / "ch_cache.sqlite"
@@ -36,23 +37,27 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        extra="ignore",  # ignore unrecognised entries in the .env file rather than rejecting the configuration because of them
+        extra="ignore",  # ignore unrecognised entries in the 
+        # .env file rather than rejecting the configuration because of them
         populate_by_name=True,
     )
 
     api_key: SecretStr = Field(validation_alias=AliasChoices("CH_API_KEY", "api_key"))
-    # AliasChoices("CH_API_KEY", "api_key") allows the configuration to be supplied using either name
+    # AliasChoices("CH_API_KEY", "api_key") allows the 
+    # configuration to be supplied using either name
     base_url: str = Field(
         default="https://api.company-information.service.gov.uk",
         validation_alias=AliasChoices("CH_BASE_URL", "base_url"),
     )
-    # How long to wait for an HTTP operation (connect, read, etc.) before giving up. The default is 20 seconds.
+    # How long to wait for an HTTP operation (connect, read, etc.) 
+    # before giving up. The default is 20 seconds.
     timeout_seconds: float = Field(
         default=20.0,
         gt=0,
         validation_alias=AliasChoices("UKVET_HTTP_TIMEOUT_SECONDS", "timeout_seconds"),
     )
-    # How many times to retry a failed request before giving up. The default is 3, and the maximum is 6.
+    # How many times to retry a failed request before giving up. 
+    # The default is 3, and the maximum is 6.
     max_attempts: int = Field(
         default=3,
         ge=1,
@@ -64,7 +69,8 @@ class Settings(BaseSettings):
         default=True,
         validation_alias=AliasChoices("UKVET_CACHE_ENABLED", "cache_enabled"),
     )
-    # How long to keep cached responses before considering them stale. The default is 24 hours.
+    # How long to keep cached responses before considering them stale. 
+    # The default is 24 hours.
     cache_ttl_hours: float = Field(
         default=24.0,
         gt=0,
@@ -80,7 +86,8 @@ class Settings(BaseSettings):
         ge=1,
         validation_alias=AliasChoices("UKVET_RATE_LIMIT_REQUESTS", "rate_limit_requests"),
     )
-    # The time window (in seconds) for rate limiting. The default is 300 seconds (5 minutes).
+    # The time window (in seconds) for rate limiting. 
+    # The default is 300 seconds (5 minutes).
     rate_limit_window_seconds: int = Field(
         default=300,
         ge=1,
@@ -94,7 +101,8 @@ class Settings(BaseSettings):
         le=1,
         validation_alias=AliasChoices("UKVET_RATE_LIMIT_SAFETY", "rate_limit_safety"),
     )
-    # The maximum number of items to return in a single response. The default is 100, and the maximum is 500.
+    # The maximum number of items to return in a single response. 
+    # The default is 100, and the maximum is 500.
     max_items: int = Field(
         default=100,
         ge=1,
@@ -117,7 +125,8 @@ class Settings(BaseSettings):
 
         return value
 
-    # This calculates how many requests the application should allow within a rate-limit window after applying a safety margin
+    # This calculates how many requests the application should allow 
+    # within a rate-limit window after applying a safety margin
     @property
     def effective_rate_limit(self) -> int:
         """Requests allowed per window, after the safety margin."""

@@ -17,8 +17,12 @@ T = TypeVar("T")
 
 
 class Source(BaseModel):
-    endpoint: str = Field(description="Companies House API endpoint the data came from.")
-    url: str = Field(description="Public Companies House page where anyone can verify the data.")
+    endpoint: str = Field(
+        description="Companies House API endpoint the data came from."
+    )
+    url: str = Field(
+        description="Public Companies House page where anyone can verify the data."
+    )
     retrieved_at: datetime = Field(
         description="When the data was fetched from Companies House (UTC). May be up to 24h old."
     )
@@ -41,9 +45,13 @@ class ToolResult(BaseModel, Generic[T]):
 class Listing(BaseModel):
     """Common fields for list results."""
 
-    total: int | None = Field(description="Total records Companies House reports, if known.")
+    total: int | None = Field(
+        description="Total records Companies House reports, if known."
+    )
     returned: int = Field(description="Number of records in `items`.")
-    truncated: bool = Field(description="True if more records exist than were returned.")
+    truncated: bool = Field(
+        description="True if more records exist than were returned."
+    )
 
 
 # ---- search -------------------------------------------------------------------------------
@@ -83,7 +91,9 @@ class ConfirmationStatementInfo(BaseModel):
 class CompanyProfile(BaseModel):
     company_number: str
     company_name: str
-    status: str | None = Field(description="e.g. active, dissolved, liquidation, administration.")
+    status: str | None = Field(
+        description="e.g. active, dissolved, liquidation, administration."
+    )
     status_detail: str | None
     company_type: str | None
     date_of_creation: date | None
@@ -91,7 +101,9 @@ class CompanyProfile(BaseModel):
     age_days: int | None = Field(
         description="Days from incorporation to today (or to cessation if dissolved). Computed."
     )
-    age_years: float | None = Field(description="age_days / 365.25, one decimal. Computed.")
+    age_years: float | None = Field(
+        description="age_days / 365.25, one decimal. Computed."
+    )
     sic_codes: list[str]
     accounts: AccountsInfo
     confirmation_statement: ConfirmationStatementInfo
@@ -111,7 +123,9 @@ class Officer(BaseModel):
     role: str
     appointed_on: date | None
     resigned_on: date | None
-    is_active: bool = Field(description="True if the officer has not resigned. Computed.")
+    is_active: bool = Field(
+        description="True if the officer has not resigned. Computed."
+    )
 
 
 class OfficersData(Listing):
@@ -148,7 +162,9 @@ class AppointmentsData(Listing):
 class PersonWithSignificantControl(BaseModel):
     name: str
     kind: str
-    is_corporate: bool = Field(description="True if the controller is a company/legal entity.")
+    is_corporate: bool = Field(
+        description="True if the controller is a company/legal entity."
+    )
     natures_of_control: list[str]
     notified_on: date | None
     ceased_on: date | None
@@ -175,8 +191,12 @@ class Charge(BaseModel):
 
 
 class ChargesData(Listing):
-    outstanding_count: int = Field(description="Charges with status 'outstanding'. Computed.")
-    part_satisfied_count: int = Field(description="Charges with status 'part-satisfied'. Computed.")
+    outstanding_count: int = Field(
+        description="Charges with status 'outstanding'. Computed."
+    )
+    part_satisfied_count: int = Field(
+        description="Charges with status 'part-satisfied'. Computed."
+    )
     satisfied_count: int = Field(description="Fully satisfied charges. Computed.")
     items: list[Charge]
 
@@ -211,7 +231,9 @@ class Filing(BaseModel):
     description: str = Field(description="Plain-English description.")
     raw_description: str | None
     paper_filed: bool
-    is_address_change: bool = Field(description="True for registered-office changes (AD01).")
+    is_address_change: bool = Field(
+        description="True for registered-office changes (AD01)."
+    )
     transaction_id: str | None
 
 
