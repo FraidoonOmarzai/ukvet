@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/company/12345678/officers"
+  },
+  "status": 200,
+  "body": {
+    "kind": "officer-list",
+    "active_count": 3,
+    "resigned_count": 1,
+    "total_results": 4,
+    "items_per_page": 100,
+    "start_index": 0,
+    "items": [
+      {
+        "name": "DIRECTOR A",
+        "officer_role": "director",
+        "appointed_on": "2019-03-04",
+        "links": {
+          "officer": {
+            "appointments": "/officers/OFFICERIDA1/appointments"
+          }
+        },
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      },
+      {
+        "name": "DIRECTOR B",
+        "officer_role": "director",
+        "appointed_on": "2024-11-20",
+        "links": {
+          "officer": {
+            "appointments": "/officers/OFFICERIDB1/appointments"
+          }
+        },
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      },
+      {
+        "name": "SECRETARY C",
+        "officer_role": "secretary",
+        "appointed_on": "2019-03-04",
+        "links": {
+          "officer": {
+            "appointments": "/officers/OFFICERIDC1/appointments"
+          }
+        },
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      },
+      {
+        "name": "DIRECTOR D",
+        "officer_role": "director",
+        "appointed_on": "2019-03-04",
+        "links": {
+          "officer": {
+            "appointments": "/officers/OFFICERIDD1/appointments"
+          }
+        },
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        },
+        "resigned_on": "2024-10-01"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/company/12345678/insolvency"
+  },
+  "status": 404,
+  "body": null
+}

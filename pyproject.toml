@@ -53,6 +53,7 @@ packages = ["ukvet_mcp", "ukvet_agent"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--cov=ukvet_mcp --cov=ukvet_agent --cov-report=term-missing"
+asyncio_mode = "auto"
 
 [tool.coverage.report]
 fail_under = 80

@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/company/12345678"
+  },
+  "status": 200,
+  "body": {
+    "company_number": "12345678",
+    "company_name": "ACME TEST LTD",
+    "company_status": "active",
+    "type": "ltd",
+    "jurisdiction": "england-wales",
+    "date_of_creation": "2019-03-04",
+    "has_charges": true,
+    "has_insolvency_history": false,
+    "sic_codes": [
+      "43220"
+    ],
+    "registered_office_address": {
+      "address_line_1": "1 TEST STREET",
+      "postal_code": "AB1 2CD"
+    },
+    "accounts": {
+      "next_due": "2025-12-31",
+      "overdue": true,
+      "last_accounts": {
+        "made_up_to": "2023-03-31"
+      }
+    },
+    "confirmation_statement": {
+      "next_due": "2026-11-01",
+      "overdue": false,
+      "last_made_up_to": "2025-10-18"
+    }
+  }
+}

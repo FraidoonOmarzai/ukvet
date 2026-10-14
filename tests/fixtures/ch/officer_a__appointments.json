@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/officers/OFFICERIDA1/appointments"
+  },
+  "status": 200,
+  "body": {
+    "name": "DIRECTOR A",
+    "total_results": 4,
+    "items_per_page": 50,
+    "start_index": 0,
+    "kind": "personal-appointment",
+    "items": [
+      {
+        "appointed_to": {
+          "company_name": "ACME TEST LTD",
+          "company_number": "12345678",
+          "company_status": "active"
+        },
+        "officer_role": "director",
+        "appointed_on": "2019-03-04",
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      },
+      {
+        "appointed_to": {
+          "company_name": "LINKED TEST ONE LTD",
+          "company_number": "90000001",
+          "company_status": "dissolved"
+        },
+        "officer_role": "director",
+        "appointed_on": "2015-01-01",
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        },
+        "resigned_on": "2017-06-30"
+      },
+      {
+        "appointed_to": {
+          "company_name": "LINKED TEST TWO LTD",
+          "company_number": "90000002",
+          "company_status": "liquidation"
+        },
+        "officer_role": "director",
+        "appointed_on": "2016-02-02",
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      },
+      {
+        "appointed_to": {
+          "company_name": "LINKED TEST THREE LTD",
+          "company_number": "90000003",
+          "company_status": "active"
+        },
+        "officer_role": "director",
+        "appointed_on": "2020-03-03",
+        "date_of_birth": {
+          "month": 5,
+          "year": 1980
+        },
+        "nationality": "British",
+        "occupation": "Engineer",
+        "country_of_residence": "England",
+        "address": {
+          "address_line_1": "1 TEST STREET",
+          "postal_code": "AB1 2CD"
+        }
+      }
+    ]
+  }
+}

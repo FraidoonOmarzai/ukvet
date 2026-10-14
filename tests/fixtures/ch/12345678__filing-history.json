@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/company/12345678/filing-history"
+  },
+  "status": 200,
+  "body": {
+    "total_count": 5,
+    "items_per_page": 100,
+    "start_index": 0,
+    "filing_history_status": "filing-history-available",
+    "items": [
+      {
+        "date": "2026-02-10",
+        "type": "CS01",
+        "category": "confirmation-statement",
+        "description": "confirmation-statement-with-updates",
+        "transaction_id": "TXN5",
+        "paper_filed": false
+      },
+      {
+        "date": "2025-09-15",
+        "type": "AD01",
+        "category": "address",
+        "description": "change-registered-office-address-company-with-date-old-address-new-address",
+        "transaction_id": "TXN4",
+        "paper_filed": false
+      },
+      {
+        "date": "2025-01-30",
+        "type": "AA",
+        "category": "accounts",
+        "description": "accounts-with-accounts-type-total-exemption-full",
+        "transaction_id": "TXN3",
+        "paper_filed": false
+      },
+      {
+        "date": "2024-11-22",
+        "type": "AP01",
+        "category": "officers",
+        "description": "appoint-person-director-company-with-name-date",
+        "transaction_id": "TXN2",
+        "paper_filed": false
+      },
+      {
+        "date": "2024-10-02",
+        "type": "TM01",
+        "category": "officers",
+        "description": "termination-director-company-with-name-termination-date",
+        "transaction_id": "TXN1",
+        "paper_filed": false
+      }
+    ]
+  }
+}

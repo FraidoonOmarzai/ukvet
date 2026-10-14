@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "Hand-written to match the documented Companies House response shape. No real people or companies. Replace/augment with scripts/record_fixtures.py output."
+  },
+  "request": {
+    "path": "/company/87654321/insolvency"
+  },
+  "status": 200,
+  "body": {
+    "status": [
+      "liquidation-in-progress"
+    ],
+    "cases": [
+      {
+        "number": 1,
+        "type": "creditors-voluntary-liquidation",
+        "dates": [
+          {
+            "type": "wound-up-on",
+            "date": "2021-11-02"
+          },
+          {
+            "type": "concluded-winding-up-on",
+            "date": "2022-03-01"
+          }
+        ],
+        "practitioners": [
+          {
+            "name": "PRACTITIONER X"
+          }
+        ]
+      }
+    ]
+  }
+}

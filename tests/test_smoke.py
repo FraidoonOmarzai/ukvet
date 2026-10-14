@@ -1,8 +1,9 @@
-"""Smoke tests: packages install and import. Replaced by real tests from Phase 1."""
+"""Packaging sanity: both packages import and the code version matches the package metadata."""
+
+from importlib.metadata import version
 
 import ukvet_agent
 import ukvet_mcp
-from ukvet_mcp.__main__ import main
 
 
 def test_packages_import() -> None:
@@ -10,6 +11,5 @@ def test_packages_import() -> None:
     assert ukvet_agent.__version__
 
 
-def test_mcp_entrypoint_runs(capsys) -> None:  # type: ignore[no-untyped-def]
-    main()
-    assert "ukvet-mcp" in capsys.readouterr().out
+def test_code_version_matches_package_metadata() -> None:
+    assert version("ukvet-mcp") == ukvet_mcp.__version__
