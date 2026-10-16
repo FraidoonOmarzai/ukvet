@@ -1,0 +1,72 @@
+name: Release ukvet-mcp
+
+# Publishes with PyPI Trusted Publishing (OIDC): no API token is stored anywhere.
+# One-off setup: docs/10-phase-1-guide.md, section "Publishing".
+#
+#   Tag release:   git tag ukvet-mcp-v0.1.0 && git push origin ukvet-mcp-v0.1.0   -> PyPI
+#   Dry run:       Actions -> Release ukvet-mcp -> Run workflow -> target: testpypi  -> TestPyPI
+
+on:
+  push:
+    tags: ["ukvet-mcp-v*"]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Where to publish"
+        type: choice
+        options: [testpypi, pypi]
+        default: testpypi
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --group dev
+      - name: Test before releasing
+        run: uv run pytest
+      - name: Tag must match package version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          VERSION=$(uv run python -c "import ukvet_mcp; print(ukvet_mcp.__version__)")
+          if [ "ukvet-mcp-v${VERSION}" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match package version ${VERSION}"; exit 1
+          fi
+      - run: uv build --package ukvet-mcp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish-testpypi:
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'testpypi'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    if: startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && inputs.target == 'pypi')
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
