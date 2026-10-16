@@ -7,7 +7,11 @@ insolvency and filing history.
 Part of [ukvet](https://github.com/fraidoonomarzai/ukvet) (an AI due-diligence agent with an
 evaluation benchmark). This package is the data layer and works on its own.
 
-![ukvet-mcp demo](https://raw.githubusercontent.com/FraidoonOmarzai/ukvet/main/docs/ukvet-demo.gif)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FraidoonOmarzai/ukvet/main/docs/ukvet-demo.gif" alt="ukvet-mcp demo" width="800">
+</p>
+
 
 ## Why another Companies House server?
 
