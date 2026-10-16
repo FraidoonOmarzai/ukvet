@@ -64,46 +64,48 @@ if __name__ == "__main__":
 
     # 1. Test company number normalisation
     print("1. Company number normalisation")
-    for value in ["1234", "sc12345", "R0000001", "00445790"]:
+    for company_value in ["1234", "sc12345", "R0000001", "00445790"]:
         try:
-            result = normalise_company_number(value)
-            print(f"  {value!r} -> {result!r}")
+            company_result = normalise_company_number(company_value)
+            print(f"  {company_value!r} -> {company_result!r}")
         except InvalidInput as exc:
-            print(f"  {value!r} -> ERROR: {exc}")
+            print(f"  {company_value!r} -> ERROR: {exc}")
 
     # 2. Test officer ID validation
     print("\n2. Officer ID validation")
-    for value in ["abc123", " ABC123 ", "abc", "abc/123"]:
+    for officer_value in ["abc123", " ABC123 ", "abc", "abc/123"]:
         try:
-            result = validate_officer_id(value)
-            print(f"  {value!r} -> {result!r}")
+            officer_result = validate_officer_id(officer_value)
+            print(f"  {officer_value!r} -> {officer_result!r}")
         except InvalidInput as exc:
-            print(f"  {value!r} -> ERROR: {exc}")
+            print(f"  {officer_value!r} -> ERROR: {exc}")
 
     # 3. Test officer ID extraction from a link
     print("\n3. Officer ID extraction")
-    for value in [
+    officer_links: list[str | None] = [
         "/officers/ABC12345/appointments",
         "/officers/ABC12345/appointments/",
         "/invalid/path",
         None,
-    ]:
-        result = officer_id_from_link(value)
-        print(f"  {value!r} -> {result!r}")
+    ]
+    for link_value in officer_links:
+        link_result = officer_id_from_link(link_value)
+        print(f"  {link_value!r} -> {link_result!r}")
 
     # 4. Test category validation
     print("\n4. Category validation")
-    for value in [
+    categories: list[str | None] = [
         "address",
         " Officers,Accounts ",
         "officers, accounts",
         "",
         None,
-    ]:
+    ]
+    for category_value in categories:
         try:
-            result = validate_category(value)
-            print(f"  {value!r} -> {result!r}")
+            category_result = validate_category(category_value)
+            print(f"  {category_value!r} -> {category_result!r}")
         except InvalidInput as exc:
-            print(f"  {value!r} -> ERROR: {exc}")
+            print(f"  {category_value!r} -> ERROR: {exc}")
 
     print("\nTesting complete.")
