@@ -52,9 +52,7 @@ class SlidingWindowRateLimiter:
         """Pause all callers for `seconds` (bounded by one window). Used after an HTTP 429."""
         if seconds <= 0:
             return
-        self._blocked_until = max(
-            self._blocked_until, self._clock() + min(seconds, self._window)
-        )
+        self._blocked_until = max(self._blocked_until, self._clock() + min(seconds, self._window))
 
     def observe(self, remaining: int | None, reset_in_seconds: float | None) -> None:
         """Second safety check from the `X-Ratelimit-*` headers: if the server says we're nearly

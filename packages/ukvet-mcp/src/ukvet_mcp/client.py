@@ -108,9 +108,7 @@ class CompaniesHouseClient:
 
     # ---- single request ---------------------------------------------------------------------
 
-    async def get(
-        self, path: str, params: Mapping[str, Any] | None = None
-    ) -> ApiResponse:
+    async def get(self, path: str, params: Mapping[str, Any] | None = None) -> ApiResponse:
         key = make_key(path, params)
         cached = self._cache.get(key)
         if cached is not None:
@@ -131,9 +129,7 @@ class CompaniesHouseClient:
             await self._limiter.acquire()
             started = time.perf_counter()
             try:
-                resp = await self._http.get(
-                    path, params=dict(params) if params else None
-                )
+                resp = await self._http.get(path, params=dict(params) if params else None)
             except (httpx.TimeoutException, httpx.TransportError) as exc:
                 last_status = None
                 log.warning(
@@ -163,9 +159,7 @@ class CompaniesHouseClient:
                         "Companies House returned a response that is not valid JSON."
                     ) from None
                 if not isinstance(body, dict):
-                    raise UpstreamError(
-                        "Companies House returned an unexpected response shape."
-                    )
+                    raise UpstreamError("Companies House returned an unexpected response shape.")
                 return 200, body
             if status == 404:
                 self._observe_headers(resp)
@@ -173,9 +167,7 @@ class CompaniesHouseClient:
             if status in (401, 403):
                 raise AuthError(status)
             if status == 400:
-                raise InvalidInput(
-                    "Companies House rejected the request parameters (HTTP 400)."
-                )
+                raise InvalidInput("Companies House rejected the request parameters (HTTP 400).")
             if status in RETRYABLE_STATUSES:
                 last_status = status
                 retry_after = self._retry_after(resp)
@@ -185,9 +177,7 @@ class CompaniesHouseClient:
                     await self._backoff(attempt, retry_after)
                     continue
                 break
-            raise UpstreamError(
-                f"Companies House returned an unexpected HTTP {status}."
-            )
+            raise UpstreamError(f"Companies House returned an unexpected HTTP {status}.")
 
         if last_status == 429:
             raise RateLimited()
@@ -219,9 +209,7 @@ class CompaniesHouseClient:
             return
         reset_in: float | None = None
         with contextlib.suppress(KeyError, ValueError):
-            reset_in = max(
-                0.0, float(resp.headers["X-Ratelimit-Reset"]) - self._wall_clock()
-            )
+            reset_in = max(0.0, float(resp.headers["X-Ratelimit-Reset"]) - self._wall_clock())
         self._limiter.observe(remaining, reset_in)
 
     # ---- pagination ---------------------------------------------------------------------------
@@ -255,9 +243,7 @@ class CompaniesHouseClient:
             if first is None:
                 first = resp
                 if resp.status == 404:
-                    return Page(
-                        [], 0, False, resp.retrieved_at, resp.from_cache, not_found=True
-                    )
+                    return Page([], 0, False, resp.retrieved_at, resp.from_cache, not_found=True)
             body = resp.data or {}
             page_items = [i for i in body.get(items_key, []) if isinstance(i, dict)]
             raw_total = body.get(total_key)

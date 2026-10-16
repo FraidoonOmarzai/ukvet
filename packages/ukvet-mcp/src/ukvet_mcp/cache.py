@@ -84,9 +84,7 @@ class ResponseCache:
 
     def set(self, key: str, status: int, body: dict[str, Any] | None) -> None:
         if status not in CACHEABLE_STATUSES:
-            raise ValueError(
-                f"HTTP {status} must not be cached (errors are never cached)"
-            )
+            raise ValueError(f"HTTP {status} must not be cached (errors are never cached)")
         if not self.enabled:
             return
         with self._lock:

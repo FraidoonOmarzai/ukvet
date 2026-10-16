@@ -17,9 +17,7 @@ def normalise_company_number(raw: str) -> str:
     Raises `InvalidInput` with a helpful message otherwise.
     """
     if not isinstance(raw, str):
-        raise InvalidInput(
-            "company_number must be a string such as '00445790' or 'SC123456'."
-        )
+        raise InvalidInput("company_number must be a string such as '00445790' or 'SC123456'.")
     cleaned = re.sub(r"\s+", "", raw).upper()
     match = _NUMBER_RE.match(cleaned)
     if not cleaned or not match or len(cleaned) > 8:
@@ -62,7 +60,6 @@ def validate_category(raw: str | None) -> str | None:
 
 
 if __name__ == "__main__":
-
     print("Testing input validation...\n")
 
     # 1. Test company number normalisation
