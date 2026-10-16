@@ -180,16 +180,6 @@ If it works in Inspector but not Claude Desktop, check the paths and environment
 
 Never share your API key when asking for help. Remove secrets from logs before posting them.
 
-## Completion checklist
-
-- [x] Automated tests passed: 168 passed, 1 skipped.
-- [x] Coverage reached 92.95%.
-- [x] MCP Inspector connected to the local server.
-- [x] Claude Desktop was configured to use the local `ukvet-mcp` server.
-- [ ] Manually verify all eight tools in Inspector.
-- [ ] Compare real answers with Companies House.
-- [ ] Record a short demonstration GIF for the README.
-
 ## Summary
 
 The local `ukvet-mcp` server is now connected to Claude Desktop. The key configuration details are the absolute path to `uv.exe`, the project root passed to `--directory`, and the `CH_API_KEY` environment variable. Since the server uses stdio, it is launched and controlled by the MCP client rather than acting like a standalone web server.
