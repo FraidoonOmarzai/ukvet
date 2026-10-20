@@ -50,6 +50,26 @@
 
 > Understand `facts.py` and `schemas.py` first, because together they explain the central idea of our project: converting retrieved company records into structured, traceable evidence. Then study `mcp_client.py` to understand where the evidence comes from, and `text.py` to understand how the system prepares information for validation.
 
+> `redflags.py` — identifies potential company risks. 
+
+> `citations.py` — validates claims before they appear in the report: checking whether the AI-generated report is supported by the facts.
+
+
+Where things live (all under `packages/ukvet-agent/src/ukvet_agent/`):
+ 
+| File | Job |
+|---|---|
+| `facts.py` | tool results to facts and gaps (Q1 to Q9) |
+| `redflags.py` | red-flag rules, risk level, assessment text |
+| `citations.py` | the citation checker |
+| `nodes/planner.py` `researcher.py` `verifier.py` `reporter.py` | the four steps |
+| `graph.py` | the LangGraph wiring and retry loop |
+| `llm.py`, `prompts/` | LLM providers and prompts |
+| `api.py`, `cli.py` | FastAPI service, `ukvet-check` command |
+| `ui/` (repo root) | Streamlit app |
+ 
+---
+
 ### 2.3 LLM abstraction and a fake model
 - One chat-model interface selected by environment variables, with structured output.
 - A **fake model** for tests that returns canned responses. CI must never call a real LLM, because that would cost money and give flaky results.
@@ -95,6 +115,81 @@
 - Wire Planner → Researcher → Verifier → Reporter, with the capped loop and the ambiguous-name exit.
 - End-to-end tests with the fake LLM and fixtures covering: a normal company, dissolved, insolvent, a missing endpoint, an ambiguous name, an unknown company, and invalid LLM output.
 
+---
+Go in the order the data flows, after done with: facts, mcp_client, schemas, text, redflags and citations. 
+
+| # | Module | What it does | Test it with | What to check |
+|---|---|---|---|---|
+| 1 | `settings.py`, `errors.py` | Config and HTTP-mapped errors | `AgentSettings(_env_file=None)`; change a value | Defaults match the guide, and a bad value (e.g. `max_directors=0`) is rejected |
+| 2 | `nodes/planner.py` | Number or name to a company | `await plan_node({"request": "acme"}, tools)` | A number skips search, an ambiguous name returns `NeedsSelection`, blank input raises `InvalidRequest` |
+| 3 | `nodes/researcher.py` | Calls the 8 tools in parallel | Run `research_node(...)` and print `out["raw"].keys()` | The keys are `profile`, `officers`, ..., `appointments.1`; a failed tool is an outcome, not an exception |
+| 4 | `nodes/verifier.py` | Builds facts, finds gaps, requests retries | `verify_node(...)` on the researcher output | `retry_keys` lists only retryable gaps, and `loops` stops at 2 |
+| 5 | `llm.py` + `prompts/` | Provider setup and prompts | `build_writer(LlmSettings(...))` with `provider=none`, then a bad config | The error is clear, and `none` returns `None` |
+| 6 | `nodes/reporter.py` | Flags, narrative, checker, fallback | Run it with a `FakeWriter` first, then a real LLM | A good draft is used, a bad one is retried, and a still-bad one falls back to the template |
+| 7 | `graph.py` | Wires 2 to 6 together | `run_report(graph, "12345678")` | `timings_ms` has all four nodes |
+| 8 | `api.py`, `cli.py` | FastAPI service and terminal command | `make api` and `curl`, then `ukvet-check` | Status codes 200/404/422/504 behave as in the guide |
+| 9 | `ui/` | Streamlit front end | `make ui` | Candidates, citations and gaps all show |
+
+You can check everything up to `graph.py` from the terminal. Run these from the repo root, in order.
+
+#### 1. Code quality
+
+```bash
+uv run ruff check . && uv run ruff format --check .
+uv run mypy
+```
+Expect `All checks passed!` and `Success: no issues found in 36 source files`.
+
+#### 2. Module-by-module tests (all offline, no keys)
+
+These run in pipeline order, so the first failure points at the broken module:
+
+```bash
+uv run pytest --no-cov -q tests/agent/test_text.py          # text.py
+uv run pytest --no-cov -q tests/agent/test_mcp_client.py    # mcp_client.py
+uv run pytest --no-cov -q tests/agent/test_facts.py         # facts.py (+ schemas)
+uv run pytest --no-cov -q tests/agent/test_redflags.py      # redflags.py
+uv run pytest --no-cov -q tests/agent/test_citations.py     # citations.py
+uv run pytest --no-cov -q tests/agent/test_planner.py       # nodes/planner.py
+uv run pytest --no-cov -q tests/agent/test_researcher_verifier.py   # researcher + verifier
+uv run pytest --no-cov -q tests/agent/test_llm.py           # llm.py
+uv run pytest --no-cov -q tests/agent/test_reporter.py      # nodes/reporter.py
+uv run pytest --no-cov -q tests/agent/test_graph.py         # graph.py, end to end
+```
+
+Or all of them in one go:
+```bash
+uv run pytest --no-cov -q tests/agent --ignore=tests/agent/test_api.py --ignore=tests/agent/test_cli.py
+```
+You should see `0 failed`. Add `-v` to see each test name, which doubles as a list of what each module guarantees.
+
+#### 3. See the whole graph run
+
+I've written `scripts/offline_demo.py` (attached above). It runs the real graph on the recorded fixtures, with no key or network:
+
+```bash
+uv run python scripts/offline_demo.py             # active company, medium risk
+uv run python scripts/offline_demo.py 87654321    # dissolved, high risk
+uv run python scripts/offline_demo.py acme        # ambiguous: lists candidates
+uv run python scripts/offline_demo.py 99999999    # clean 404 error
+```
+
+It prints the headline, findings, red flags, gaps, fact IDs, citation stats and timings. I ran all four cases and they work. For `12345678` you should see risk `medium`, flags `accounts_overdue`, `network` and `charges`, and one gap (`appointments.2`). That gap is expected: the fixtures have no record for the second director.
+
+#### 4. Check the reporter's safety behaviour
+
+This is the one part the demo doesn't show, because there's no LLM in it:
+```bash
+uv run pytest --no-cov -v tests/agent/test_reporter.py
+```
+Read the test names. They cover a valid draft, a retry with feedback, a draft that still fails and falls back to the template, a timeout, and a writer error.
+
+#### Next, with your key
+
+Once all of the above pass, you've proved the code. Then add your key and run `uv run ukvet-check --full 00445790`. That is the first time real Companies House data goes through the same graph.
+
+
+---
 ### 2.11 FastAPI service
 - `POST /v1/reports` and `GET /health`, with the status codes from the design doc.
 - Manage the MCP session in the app lifespan, and enforce a hard 45 s deadline.

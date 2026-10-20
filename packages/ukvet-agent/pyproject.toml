@@ -3,10 +3,26 @@ name = "ukvet-agent"
 version = "0.0.1"
 description = "LangGraph due-diligence agent for UK companies — part of ukvet."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 license = "MIT"
 authors = [{ name = "Fraidoon Omarzai" }]
-dependencies = ["ukvet-mcp"]
+dependencies = [
+    "fastapi>=0.146.0",
+    "httpx>=0.28.1",
+    "langchain-anthropic>=1.7.6",
+    "langchain-core>=1.6.12",
+    "langchain-openai>=1.7.2",
+    "langgraph>=1.2.16",
+    "mcp>=2,<3",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "ukvet-mcp",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+ukvet-check = "ukvet_agent.cli:main"
+ukvet-agent = "ukvet_agent.__main__:main"
 
 [tool.uv.sources]
 ukvet-mcp = { workspace = true }

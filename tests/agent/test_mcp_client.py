@@ -14,8 +14,7 @@ def test_is_retryable() -> None:
 def test_stdio_params_pass_environment() -> None:
     params = stdio_params({"CH_API_KEY": "abc"})
     assert params.args == ["-m", "ukvet_mcp"]
-    assert params.env is not None
-    assert dict(params.env).get("CH_API_KEY") == "abc"
+    assert params.env is not None and params.env["CH_API_KEY"] == "abc"
 
 
 async def test_call_before_open_never_raises() -> None:
