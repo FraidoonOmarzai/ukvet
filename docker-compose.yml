@@ -1,0 +1,30 @@
+# One command: docker compose up --build   (needs a .env, see .env.example)
+# UI: http://localhost:8501   API docs: http://localhost:8000/docs
+# Ports bind to localhost only: this is a development setup, not a public deployment.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    env_file: .env
+    volumes:
+      - ukvet-cache:/data
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.ui
+    environment:
+      UKVET_API_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8501:8501"
+    restart: unless-stopped
+
+volumes:
+  ukvet-cache:

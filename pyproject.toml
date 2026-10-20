@@ -30,7 +30,7 @@ notebook = [
 package = false
 
 [tool.uv.workspace]
-members = ["packages/*"]
+members = ["packages/*", "ui"]
 
 [tool.uv.sources]
 ukvet-mcp = { workspace = true }
@@ -48,10 +48,12 @@ ignore = ["S101"]  # allow assert in tests
 [tool.mypy]
 python_version = "3.11"
 strict = true
-packages = ["ukvet_mcp", "ukvet_agent"]
+packages = ["ukvet_mcp", "ukvet_agent", "ukvet"]
+mypy_path = ["ui"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["ui"]
 addopts = "--cov=ukvet_mcp --cov=ukvet_agent --cov-report=term-missing"
 asyncio_mode = "auto"
 

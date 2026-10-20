@@ -286,11 +286,75 @@ Use it for the 10-company accuracy check (step 6 of the guide) and for latency n
 
 - Multi-stage image, `docker-compose.yml` with `api` and `ui`, and a volume for the cache. Secrets come from `.env`. Check that one command starts everything.
 
+---
+
+#### 0. Before you start
+
+1. Stop your local API and Streamlit (Ctrl+C in those windows). The containers need ports 8000 and 8501.
+2. Install **Docker Desktop** if you haven't. It needs WSL2 on Windows. Start it and wait until it says it's running.
+3. Check it works:
+
+```powershell
+docker --version
+docker compose version
+docker run --rm hello-world
+```
+
+4. Check that `.env` is in the repo root with `CH_API_KEY=...` and no quotes. Use `LLM_PROVIDER=none` for now.
+
+#### 1. Build
+
+```powershell
+docker compose build
+```
+
+The first build takes a few minutes. It downloads Python and the dependencies. It builds two images: `api` and `ui`.
+
+#### 2. Start
+
+```powershell
+docker compose up -d
+docker compose ps
+```
+
+You want both services to reach `healthy`. The API takes about 20 to 30 seconds, and the UI waits for it.
+
+#### 3. Check
+
+```powershell
+curl.exe -s localhost:8000/health
+curl.exe -s -X POST localhost:8000/v1/reports -H "content-type: application/json" -d "{\"company\":\"00445790\"}"
+docker compose logs api --tail 30
+```
+
+`/health` should show `"status":"ok"` and `"mcp_tools":8`. Then open http://localhost:8501 and check a company. This is your README screenshot, and it also proves the UI reaches the API over the Docker network.
+
+Two more checks:
+
+- **Cache persists.** Run the same company twice. The second run is faster. Then `docker compose restart api` and run it again; it should still be fast, because the cache is in the `ukvet-cache` volume.
+- **Not running as root.** `docker compose exec api whoami` should print `ukvet`.
+
+#### 4. Stop
+
+```powershell
+docker compose down          # keeps the cache volume
+docker compose down -v       # also deletes the cache
+```
+
+#### When it works
+
+- Take the screenshot.
+- Update risk R16 in `docs/07-risks.md` to say the images built and ran, with the date.
+- Tick the Docker box in `docs/PHASE-2-CHECKLIST.md`.
+- Push to GitHub. The CI Docker job then builds the same images on Linux.
+
+---
+
 ### 2.14 Measure and tune
 
 - Run 10 varied companies by hand (active, dissolved, insolvent, large, tiny, ambiguous). Read every report and check each claim against Companies House.
 - Time each node. **Record the real Reporter latency and rough cost.** That's the number the design left as a guess.
-- Update `11-system-design.md`, the decision log and the risk register (R3, R7, R12).
+- Update `10-system-design.md`, the decision log and the risk register (R3, R7, R12).
 
 ### 2.15 Close the phase
 
@@ -315,5 +379,3 @@ Prototype Reporter → 2.1 → 2.2 → 2.3 ─┐
 - **Resist the free-form agent.** Keeping the Researcher, Verifier and red flags deterministic is what makes the Phase 3 evals meaningful, because you can tell a retrieval bug from a writing error.
 - **Keep prompts in files,** not scattered in code. You'll rewrite them many times, and the history shows how you iterated.
 - **Commit the prototype notebook** (outputs stripped) with a short note on what it taught you. It's good interview material.
-
-**One question before I write code:** which LLM provider do you have an API key for? That settles ADR-003 and the dependency choices for steps 2.1 and 2.3.
