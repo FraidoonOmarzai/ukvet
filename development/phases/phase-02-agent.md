@@ -45,7 +45,7 @@
 - Modules: `schemas.py`, `state.py`, `llm.py`, `mcp_client.py`, `facts.py`, `nodes/` (planner, researcher, verifier, reporter), `redflags.py`, `citations.py`, `graph.py`, `api.py`, and a `prompts/` folder.
 
 ### 2.2 Schemas and fact IDs
-- `Fact`, `Claim{text, fact_ids}`, `RedFlag`, `Report` and `AgentState`, as in `08-architecture.md` and `11-system-design.md`.
+- `Fact`, `Claim{text, fact_ids}`, `RedFlag`, `Report` and `AgentState`, as in `08-architecture.md` and `10-system-design.md`.
 - Use **stable, readable fact IDs** (for example `Q4.accounts_overdue`), so the citation check can be deterministic and eval failures are traceable.
 
 ### 2.3 LLM abstraction and a fake model
