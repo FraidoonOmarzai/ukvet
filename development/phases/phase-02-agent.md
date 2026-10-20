@@ -3,6 +3,7 @@
 **Goal:** a company name or number goes in, and a validated, cited report comes out, through an API and a UI, running with one `docker compose up`.
 
 **Exit criteria:**
+
 - Q1-Q9 answered for any active UK company.
 - Every claim cites a fact that exists.
 - Runs in Docker.
@@ -22,81 +23,88 @@
 
 ## Steps
 
-| Step | What | Time |
-|---|---|---|
-| 2.1 | Dependencies and layout | ½ day |
-| 2.2 | Schemas and fact IDs | ½ day |
-| 2.3 | LLM abstraction and a fake model | ½ day |
-| 2.4 | MCP client integration | 1 day |
-| 2.5 | Fact builders (tool results to `Fact`s) | 1 day |
-| 2.6 | Researcher node | 1 day |
-| 2.7 | Planner node | ½ day |
-| 2.8 | Verifier node | 1 day |
-| 2.9 | Red-flag rules, Reporter and citation checker | 2 days |
-| 2.10 | LangGraph assembly | ½ day |
-| 2.11 | FastAPI service | 1 day |
-| 2.12 | Streamlit UI | ½ day |
-| 2.13 | Docker | ½ day |
-| 2.14 | Measure and tune | ½ day |
-| 2.15 | Close the phase | ½ day |
+| Step | What                                          | Time   |
+| ---- | --------------------------------------------- | ------ |
+| 2.1  | Dependencies and layout                       | ½ day  |
+| 2.2  | Schemas and fact IDs                          | ½ day  |
+| 2.3  | LLM abstraction and a fake model              | ½ day  |
+| 2.4  | MCP client integration                        | 1 day  |
+| 2.5  | Fact builders (tool results to `Fact`s)       | 1 day  |
+| 2.6  | Researcher node                               | 1 day  |
+| 2.7  | Planner node                                  | ½ day  |
+| 2.8  | Verifier node                                 | 1 day  |
+| 2.9  | Red-flag rules, Reporter and citation checker | 2 days |
+| 2.10 | LangGraph assembly                            | ½ day  |
+| 2.11 | FastAPI service                               | 1 day  |
+| 2.12 | Streamlit UI                                  | ½ day  |
+| 2.13 | Docker                                        | ½ day  |
+| 2.14 | Measure and tune                              | ½ day  |
+| 2.15 | Close the phase                               | ½ day  |
 
 ### 2.1 Dependencies and layout
+
 - Add `langgraph`, the chat-model package for your chosen provider, `fastapi` and `uvicorn` to `ukvet-agent`, and `streamlit` to the UI.
 - Modules: `schemas.py`, `state.py`, `llm.py`, `mcp_client.py`, `facts.py`, `nodes/` (planner, researcher, verifier, reporter), `redflags.py`, `citations.py`, `graph.py`, `api.py`, and a `prompts/` folder.
 
 ### 2.2 Schemas and fact IDs
+
 - `Fact`, `Claim{text, fact_ids}`, `RedFlag`, `Report` and `AgentState`, as in `08-architecture.md` and `10-system-design.md`.
 - Use **stable, readable fact IDs** (for example `Q4.accounts_overdue`), so the citation check can be deterministic and eval failures are traceable.
 
 > Understand `facts.py` and `schemas.py` first, because together they explain the central idea of our project: converting retrieved company records into structured, traceable evidence. Then study `mcp_client.py` to understand where the evidence comes from, and `text.py` to understand how the system prepares information for validation.
 
-> `redflags.py` — identifies potential company risks. 
+> `redflags.py` — identifies potential company risks.
 
 > `citations.py` — validates claims before they appear in the report: checking whether the AI-generated report is supported by the facts.
 
-
 Where things live (all under `packages/ukvet-agent/src/ukvet_agent/`):
- 
-| File | Job |
-|---|---|
-| `facts.py` | tool results to facts and gaps (Q1 to Q9) |
-| `redflags.py` | red-flag rules, risk level, assessment text |
-| `citations.py` | the citation checker |
-| `nodes/planner.py` `researcher.py` `verifier.py` `reporter.py` | the four steps |
-| `graph.py` | the LangGraph wiring and retry loop |
-| `llm.py`, `prompts/` | LLM providers and prompts |
-| `api.py`, `cli.py` | FastAPI service, `ukvet-check` command |
-| `ui/` (repo root) | Streamlit app |
- 
+
+| File                                                           | Job                                         |
+| -------------------------------------------------------------- | ------------------------------------------- |
+| `facts.py`                                                     | tool results to facts and gaps (Q1 to Q9)   |
+| `redflags.py`                                                  | red-flag rules, risk level, assessment text |
+| `citations.py`                                                 | the citation checker                        |
+| `nodes/planner.py` `researcher.py` `verifier.py` `reporter.py` | the four steps                              |
+| `graph.py`                                                     | the LangGraph wiring and retry loop         |
+| `llm.py`, `prompts/`                                           | LLM providers and prompts                   |
+| `api.py`, `cli.py`                                             | FastAPI service, `ukvet-check` command      |
+| `ui/` (repo root)                                              | Streamlit app                               |
+
 ---
 
 ### 2.3 LLM abstraction and a fake model
+
 - One chat-model interface selected by environment variables, with structured output.
 - A **fake model** for tests that returns canned responses. CI must never call a real LLM, because that would cost money and give flaky results.
 - A separate, opt-in `live` pytest marker for real-LLM smoke tests that you run by hand.
 
 ### 2.4 MCP client integration
+
 - Start `ukvet-mcp` as a stdio subprocess and keep one session for the API's lifetime.
 - Call tools and parse `structured_content` into typed results.
 - Add timeouts and a health check for a dead subprocess.
 - Test against the in-memory server with your fixtures.
 
 ### 2.5 Fact builders
+
 - Pure functions that turn each tool result into tagged `Fact`s for Q1-Q9, with value, source URL and `retrieved_at`.
 - A `found=false` result becomes a fact like "no charges registered", not a gap.
 - Missing or failed data becomes an explicit **gap**.
 - This is the foundation of every citation, so test it heavily with parametrised cases.
 
 ### 2.6 Researcher
+
 - Plain code, no LLM. Fan out profile, officers, PSC, charges, insolvency and filings in parallel with `asyncio.gather`.
 - Then fetch Q8 appointments for current directors, capped at 5 to start.
 - One failed call becomes a gap and never a crash.
 
 ### 2.7 Planner
+
 - A number goes straight through. A name triggers search, and an ambiguous name returns candidates for the user to choose.
 - Decide whether free-text questions ("who controls X?") are in the MVP. I'd defer them and ship the full report first.
 
 ### 2.8 Verifier
+
 - Deterministic checks only:
   - every planned question has a fact or a gap;
   - profile flags agree with the detail endpoints (`has_charges` against the charges list);
@@ -104,6 +112,7 @@ Where things live (all under `packages/ukvet-agent/src/ukvet_agent/`):
 - Gaps trigger one targeted re-fetch, with at most 2 loops.
 
 ### 2.9 Red-flag rules, Reporter, citation checker
+
 - **Red flags come from rules, not the LLM.** Examples: overdue accounts, a very young company, an outstanding charge, directors linked to dissolved companies. Each rule produces a flag that cites its facts.
   - **Trade-off:** it's less flexible, but red-flag recall (M5) becomes measurable and the LLM can't invent a flag.
 - **Reporter:** a single structured-output call that phrases the findings and assessment from verified facts only. Registry text goes in delimited data blocks and is treated as untrusted.
@@ -112,23 +121,25 @@ Where things live (all under `packages/ukvet-agent/src/ukvet_agent/`):
 - Enforce "no statements implying wrongdoing by an individual".
 
 ### 2.10 LangGraph assembly
+
 - Wire Planner → Researcher → Verifier → Reporter, with the capped loop and the ambiguous-name exit.
 - End-to-end tests with the fake LLM and fixtures covering: a normal company, dissolved, insolvent, a missing endpoint, an ambiguous name, an unknown company, and invalid LLM output.
 
 ---
-Go in the order the data flows, after done with: facts, mcp_client, schemas, text, redflags and citations. 
 
-| # | Module | What it does | Test it with | What to check |
-|---|---|---|---|---|
-| 1 | `settings.py`, `errors.py` | Config and HTTP-mapped errors | `AgentSettings(_env_file=None)`; change a value | Defaults match the guide, and a bad value (e.g. `max_directors=0`) is rejected |
-| 2 | `nodes/planner.py` | Number or name to a company | `await plan_node({"request": "acme"}, tools)` | A number skips search, an ambiguous name returns `NeedsSelection`, blank input raises `InvalidRequest` |
-| 3 | `nodes/researcher.py` | Calls the 8 tools in parallel | Run `research_node(...)` and print `out["raw"].keys()` | The keys are `profile`, `officers`, ..., `appointments.1`; a failed tool is an outcome, not an exception |
-| 4 | `nodes/verifier.py` | Builds facts, finds gaps, requests retries | `verify_node(...)` on the researcher output | `retry_keys` lists only retryable gaps, and `loops` stops at 2 |
-| 5 | `llm.py` + `prompts/` | Provider setup and prompts | `build_writer(LlmSettings(...))` with `provider=none`, then a bad config | The error is clear, and `none` returns `None` |
-| 6 | `nodes/reporter.py` | Flags, narrative, checker, fallback | Run it with a `FakeWriter` first, then a real LLM | A good draft is used, a bad one is retried, and a still-bad one falls back to the template |
-| 7 | `graph.py` | Wires 2 to 6 together | `run_report(graph, "12345678")` | `timings_ms` has all four nodes |
-| 8 | `api.py`, `cli.py` | FastAPI service and terminal command | `make api` and `curl`, then `ukvet-check` | Status codes 200/404/422/504 behave as in the guide |
-| 9 | `ui/` | Streamlit front end | `make ui` | Candidates, citations and gaps all show |
+Go in the order the data flows, after done with: facts, mcp_client, schemas, text, redflags and citations.
+
+| #   | Module                     | What it does                               | Test it with                                                             | What to check                                                                                            |
+| --- | -------------------------- | ------------------------------------------ | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| 1   | `settings.py`, `errors.py` | Config and HTTP-mapped errors              | `AgentSettings(_env_file=None)`; change a value                          | Defaults match the guide, and a bad value (e.g. `max_directors=0`) is rejected                           |
+| 2   | `nodes/planner.py`         | Number or name to a company                | `await plan_node({"request": "acme"}, tools)`                            | A number skips search, an ambiguous name returns `NeedsSelection`, blank input raises `InvalidRequest`   |
+| 3   | `nodes/researcher.py`      | Calls the 8 tools in parallel              | Run `research_node(...)` and print `out["raw"].keys()`                   | The keys are `profile`, `officers`, ..., `appointments.1`; a failed tool is an outcome, not an exception |
+| 4   | `nodes/verifier.py`        | Builds facts, finds gaps, requests retries | `verify_node(...)` on the researcher output                              | `retry_keys` lists only retryable gaps, and `loops` stops at 2                                           |
+| 5   | `llm.py` + `prompts/`      | Provider setup and prompts                 | `build_writer(LlmSettings(...))` with `provider=none`, then a bad config | The error is clear, and `none` returns `None`                                                            |
+| 6   | `nodes/reporter.py`        | Flags, narrative, checker, fallback        | Run it with a `FakeWriter` first, then a real LLM                        | A good draft is used, a bad one is retried, and a still-bad one falls back to the template               |
+| 7   | `graph.py`                 | Wires 2 to 6 together                      | `run_report(graph, "12345678")`                                          | `timings_ms` has all four nodes                                                                          |
+| 8   | `api.py`, `cli.py`         | FastAPI service and terminal command       | `make api` and `curl`, then `ukvet-check`                                | Status codes 200/404/422/504 behave as in the guide                                                      |
+| 9   | `ui/`                      | Streamlit front end                        | `make ui`                                                                | Candidates, citations and gaps all show                                                                  |
 
 You can check everything up to `graph.py` from the terminal. Run these from the repo root, in order.
 
@@ -138,6 +149,7 @@ You can check everything up to `graph.py` from the terminal. Run these from the 
 uv run ruff check . && uv run ruff format --check .
 uv run mypy
 ```
+
 Expect `All checks passed!` and `Success: no issues found in 36 source files`.
 
 #### 2. Module-by-module tests (all offline, no keys)
@@ -158,9 +170,11 @@ uv run pytest --no-cov -q tests/agent/test_graph.py         # graph.py, end to e
 ```
 
 Or all of them in one go:
+
 ```bash
 uv run pytest --no-cov -q tests/agent --ignore=tests/agent/test_api.py --ignore=tests/agent/test_cli.py
 ```
+
 You should see `0 failed`. Add `-v` to see each test name, which doubles as a list of what each module guarantees.
 
 #### 3. See the whole graph run
@@ -179,34 +193,107 @@ It prints the headline, findings, red flags, gaps, fact IDs, citation stats and 
 #### 4. Check the reporter's safety behaviour
 
 This is the one part the demo doesn't show, because there's no LLM in it:
+
 ```bash
 uv run pytest --no-cov -v tests/agent/test_reporter.py
 ```
+
 Read the test names. They cover a valid draft, a retry with feedback, a draft that still fails and falls back to the template, a timeout, and a writer error.
 
 #### Next, with your key
 
 Once all of the above pass, you've proved the code. Then add your key and run `uv run ukvet-check --full 00445790`. That is the first time real Companies House data goes through the same graph.
 
-
 ---
+
 ### 2.11 FastAPI service
+
 - `POST /v1/reports` and `GET /health`, with the status codes from the design doc.
 - Manage the MCP session in the app lifespan, and enforce a hard 45 s deadline.
 - Test with the fake LLM.
 
 ### 2.12 Streamlit UI
+
 - Input box, candidate picker, report with clickable citations, freshness timestamp, disclaimer and OGL attribution.
 
+---
+
+Use them for the first real run. Everything so far has used fixtures. These two are how you reach the live system, so they're what turns "tests pass" into "it works on real data".
+
+#### 1. Confirm the offline tests for both (1 minute)
+
+```powershell
+uv run pytest --no-cov -q tests/agent/test_api.py tests/agent/test_cli.py
+```
+
+This should be all green. Those tests cover the status codes (200/404/422/503/504/500), the concurrency cap, `/health`, and the CLI output and exit codes.
+
+#### 2. First real run with the CLI (no LLM)
+
+Set `CH_API_KEY` in `.env` and `LLM_PROVIDER=none`, then:
+
+```powershell
+uv run ukvet-check --full 00445790
+```
+
+Open that company on Companies House and compare every line by hand. This is the most important check. If everything is `insufficient_data` with many gaps, the key or network is the problem. Run `--json` and read `gaps[].reason`.
+
+#### 3. Run the API for real
+
+```powershell
+uv run python -m ukvet_agent
+```
+
+In a second PowerShell window (`curl` in PowerShell is an alias, so use `curl.exe` or `Invoke-RestMethod`):
+
+```powershell
+curl.exe -s localhost:8000/health
+curl.exe -s -X POST localhost:8000/v1/reports -H "content-type: application/json" -d "{\"company\":\"00445790\"}"
+```
+
+Also open http://localhost:8000/docs and try the endpoint from the browser. Check the cases that matter:
+
+| Try                         | Expect                           |
+| --------------------------- | -------------------------------- |
+| a valid number              | 200, `"kind": "report"`          |
+| a name with several matches | 200, `"kind": "needs_selection"` |
+| `99999999`                  | 404                              |
+| empty text                  | 422                              |
+
+#### 4. Put the UI on top
+
+With the API still running, start the UI in a third window:
+
+```powershell
+uv run streamlit run ui/app.py
+```
+
+It's at http://localhost:8501. Try a number, an ambiguous name, and a missing company, then take a screenshot for the README.
+
+#### 5. Then the measurement work
+
+The CLI is the right tool here, not the notebook:
+
+```powershell
+uv run ukvet-check 00445790 17491796 12115175 01468547 12056899 17016019 03977902 | Tee-Object latency.txt
+```
+
+Use it for the 10-company accuracy check (step 6 of the guide) and for latency numbers (step 8).
+
+---
+
 ### 2.13 Docker
+
 - Multi-stage image, `docker-compose.yml` with `api` and `ui`, and a volume for the cache. Secrets come from `.env`. Check that one command starts everything.
 
 ### 2.14 Measure and tune
+
 - Run 10 varied companies by hand (active, dissolved, insolvent, large, tiny, ambiguous). Read every report and check each claim against Companies House.
 - Time each node. **Record the real Reporter latency and rough cost.** That's the number the design left as a guess.
 - Update `11-system-design.md`, the decision log and the risk register (R3, R7, R12).
 
 ### 2.15 Close the phase
+
 - Coverage at 80% or above, CI green, milestone closed, Friday demo to AAII, and a weekly update.
 
 ---
