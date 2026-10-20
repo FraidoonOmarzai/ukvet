@@ -48,6 +48,8 @@
 - `Fact`, `Claim{text, fact_ids}`, `RedFlag`, `Report` and `AgentState`, as in `08-architecture.md` and `10-system-design.md`.
 - Use **stable, readable fact IDs** (for example `Q4.accounts_overdue`), so the citation check can be deterministic and eval failures are traceable.
 
+> Understand `facts.py` and `schemas.py` first, because together they explain the central idea of our project: converting retrieved company records into structured, traceable evidence. Then study `mcp_client.py` to understand where the evidence comes from, and `text.py` to understand how the system prepares information for validation.
+
 ### 2.3 LLM abstraction and a fake model
 - One chat-model interface selected by environment variables, with structured output.
 - A **fake model** for tests that returns canned responses. CI must never call a real LLM, because that would cost money and give flaky results.
