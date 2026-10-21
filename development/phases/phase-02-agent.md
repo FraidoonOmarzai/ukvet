@@ -275,7 +275,7 @@ It's at http://localhost:8501. Try a number, an ambiguous name, and a missing co
 The CLI is the right tool here, not the notebook:
 
 ```powershell
-uv run ukvet-check 00445790 17491796 12115175 01468547 12056899 17016019 03977902 | Tee-Object latency.txt
+uv run ukvet-check 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233 | Tee-Object latency.txt
 ```
 
 Use it for the 10-company accuracy check (step 6 of the guide) and for latency numbers (step 8).
@@ -345,7 +345,6 @@ docker compose down -v       # also deletes the cache
 
 - Take the screenshot.
 - Update risk R16 in `docs/07-risks.md` to say the images built and ran, with the date.
-- Tick the Docker box in `docs/PHASE-2-CHECKLIST.md`.
 - Push to GitHub. The CI Docker job then builds the same images on Linux.
 
 ---
@@ -355,6 +354,37 @@ docker compose down -v       # also deletes the cache
 - Run 10 varied companies by hand (active, dissolved, insolvent, large, tiny, ambiguous). Read every report and check each claim against Companies House.
 - Time each node. **Record the real Reporter latency and rough cost.** That's the number the design left as a guess.
 - Update `10-system-design.md`, the decision log and the risk register (R3, R7, R12).
+
+---
+
+#### 2.14a a Manual accuracy check
+  - Run, with CH_API_KEY set and LLM_PROVIDER unset: `uv run ukvet-check --full 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233 | Tee-Object report.txt` 10 total.
+  - For each company, open its Companies House page and compare against the report: status, incorporation date, accounts and confirmation due dates, directors (current only), PSC, charges (count, outstanding), insolvency, director count changes.
+  - Fill this table in docs/accuracy-check.md (keep it private if it holds director names; use numbers and field names only):
+```  
+| ompany no. | Field | ukvet said | Website says | Cause (mapping bug / rule / data lag / my misreading) |
+| ---------- | ----- | ---------- | ------------ | ----------------------------------------------------- |
+```
+  - Error rate = wrong fields / fields checked. Report it as "X errors in Y fields over 10 companies". That is NOT the M1 score (that is Phase 3, on a proper eval set); do not call it accuracy of the system.
+  - Also judge each red flag: fair or not? A wrong or unfair flag matters more than a missed field. 
+
+#### 2.14b Latency
+  - `uv run python scripts/measure.py 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233`
+  - It prints median / p95 / worst for the cold cache, then the warm cache, plus time per stage. CSV goes to data/processed/measure.csv (git-ignored; numbers only).
+  - With no LLM this measures Companies House plus agent time only. Expect low single-digit seconds. Write that number down as "template mode".
+  - Honest caveat: p95 over 10 companies is basically the slowest one. Say "worst of 10", not "p95".
+
+
+#### 2.14c Real LLM (needed to close R3, R7, R12 properly)
+
+  - You can close Phase 2 without it, but then those three risks stay "partly measured", and say so in the register.
+
+  - Pick 2 or 3 models: put in .env, e.g. LLM_PROVIDER=openai + LLM_MODEL=<model id> (same for anthropic; free tier via openai_compatible + LLM_BASE_URL). Do not hard-code IDs; copy the exact ID from the provider dashboard.
+  - uv run pytest -m live (opt-in test) then re-run measure.py for each model.
+  - Per model, record in a table: narrative source (llm vs template), claims dropped / total, retries, total seconds, errors. If a model falls back to the template on most companies, it fails the checker: try another or tune the prompt.
+  - Cost per report: note your provider dashboard balance (or usage) before and after running the 10 companies, divide by 10. Free tier: record "£0, rate-limited". Target is under £0.05.
+  - Choose one model; write its exact ID in ADR-003 and decision log entry #28.
+---
 
 ### 2.15 Close the phase
 

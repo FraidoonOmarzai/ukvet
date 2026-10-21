@@ -5,6 +5,7 @@ and the LLM cannot invent or hide one. Wording is neutral: it describes patterns
 and never implies wrongdoing by an individual.
 """
 
+from datetime import date
 from typing import Any
 
 from ukvet_agent.facts import FAILED_STATUSES
@@ -20,6 +21,13 @@ def _v(facts: dict[str, Fact], fact_id: str) -> dict[str, Any] | None:
     return fact.value if fact else None
 
 
+def _within_days(a: str, b: str, days: int) -> bool:
+    try:
+        return abs((date.fromisoformat(a) - date.fromisoformat(b)).days) <= days
+    except ValueError:
+        return False
+
+
 def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
     facts = {f.id: f for f in facts_list}
     flags: list[RedFlag] = []
@@ -33,8 +41,22 @@ def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
     status = (q1 or {}).get("status")
     is_active = status in _HEALTHY
 
+    q7 = _v(facts, "Q7.insolvency")
+    case_types = [str(t) for t in (q7 or {}).get("case_types") or []]
+    # A members' voluntary liquidation is a solvent wind-up chosen by the directors, not distress.
+    mvl_only = bool(case_types) and all("members-voluntary" in t for t in case_types)
+
     if q1 is not None and status:
-        if status == "dissolved":
+        if status == "liquidation" and mvl_only:
+            add(
+                "status",
+                "medium",
+                "Company is in a members' voluntary liquidation",
+                "This is a solvent wind-up: the directors declared the company can pay its debts. "
+                "The company is closing down.",
+                "Q1.status",
+            )
+        elif status == "dissolved":
             add(
                 "status",
                 "high",
@@ -59,12 +81,23 @@ def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
                 "Q1.status",
             )
 
-    q7 = _v(facts, "Q7.insolvency")
-    if q7 and q7.get("case_count", 0) > 0:
+    if (q1 or {}).get("status_detail") == "active-proposal-to-strike-off":
+        add(
+            "strike_off",
+            "high",
+            "Company has a proposal to be struck off the register",
+            "Companies House has started the process to dissolve this company.",
+            "Q1.status",
+        )
+
+    status_covers_mvl = mvl_only and status == "liquidation"  # avoid a duplicate flag
+    if q7 and q7.get("case_count", 0) > 0 and not status_covers_mvl:
         add(
             "insolvency",
-            "high",
-            "Insolvency record on file",
+            "medium" if mvl_only else "high",
+            "Members' voluntary liquidation on file (solvent wind-up)"
+            if mvl_only
+            else "Insolvency record on file",
             f"Companies House holds {plural(q7['case_count'], 'insolvency case')} "
             "for this company.",
             "Q7.insolvency",
@@ -130,14 +163,23 @@ def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
                 f"liquidation, administration or a similar process. {PATTERN_NOTE}",
                 "Q8.network",
             )
-        elif failed >= 1:
+        elif failed == 2:
             add(
                 "network",
                 "medium",
+                "Directors linked to two companies in insolvency processes",
+                f"Current directors have other appointments at 2 companies now in "
+                f"liquidation, administration or a similar process. {PATTERN_NOTE}",
+                "Q8.network",
+            )
+        elif failed == 1:
+            add(
+                "network",
+                "low",
                 "Directors linked to a company in an insolvency process",
                 f"Current directors have other appointments at "
                 f"{plural(failed, 'company', 'companies')} now in liquidation, administration "
-                f"or a similar process. {PATTERN_NOTE}",
+                f"or a similar process (this can be a routine, solvent closure). {PATTERN_NOTE}",
                 "Q8.network",
             )
         elif dissolved >= 5:
@@ -152,7 +194,12 @@ def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
 
     q9 = _v(facts, "Q9.officer_changes")
     if q9:
-        changes = q9.get("appointed", 0) + q9.get("resigned", 0)
+        created = (_v(facts, "Q2.age") or {}).get("date_of_creation") or ""
+        # Directors named when the company was formed are not "changes".
+        formation = sum(
+            1 for d in q9.get("appointed_dates", []) if created and _within_days(d, created, 30)
+        )
+        changes = q9.get("appointed", 0) - formation + q9.get("resigned", 0)
         if changes >= 3:
             add(
                 "officer_turnover",

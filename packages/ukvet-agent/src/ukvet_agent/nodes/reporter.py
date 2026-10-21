@@ -79,7 +79,7 @@ def template_narrative(
         headline = Claim(
             text=f"Status information for {name} ({number}) could not be retrieved.", fact_ids=[]
         )
-    flagged = [i for fl in flags if fl.severity in ("high", "medium") for i in fl.fact_ids]
+    flagged = [i for fl in flags for i in fl.fact_ids]  # every flag's evidence is shown
     order = list(dict.fromkeys([*flagged, *(f.id for f in facts)]))
     findings = [
         Claim(text=_clip(by_id[i].statement), fact_ids=[i])

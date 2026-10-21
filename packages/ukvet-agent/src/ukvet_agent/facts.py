@@ -461,7 +461,12 @@ def _q9_officers(officers: ToolOutcome, cutoff: date) -> Fact:
         "Q9.officer_changes",
         "Q9",
         stmt,
-        {"appointed": len(appointed), "resigned": len(resigned), "window_start": iso},
+        {
+            "appointed": len(appointed),
+            "resigned": len(resigned),
+            "window_start": iso,
+            "appointed_dates": [o.get("appointed_on") for o in appointed if o.get("appointed_on")],
+        },
         [officers],
         extra_dates=(iso, *dates),
     )
