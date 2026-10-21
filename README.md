@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 2.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are building with 356 offline tests at 98% coverage. **Not yet verified** against the live Companies House API or a real LLM, and latency/cost are unmeasured.
+> **Status: Phase 2 Completed.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are building with 340 offline tests at 95.74% coverage.
 
 ## What it does
 

@@ -62,3 +62,23 @@ def client(settings: Settings, clock: FakeClock) -> CompaniesHouseClient:
 @pytest.fixture
 def service(client: CompaniesHouseClient) -> CompaniesHouseService:
     return CompaniesHouseService(client, max_items=100, today=lambda: TODAY)
+
+
+@pytest.fixture(autouse=True)
+def _isolate_llm_env(monkeypatch: pytest.MonkeyPatch, request: pytest.FixtureRequest) -> None:
+    """Tests must not depend on the developer's real LLM settings (shell variables or .env)."""
+    if request.node.get_closest_marker("live"):
+        return  # live tests deliberately use the real LLM settings
+    from ukvet_agent.llm import LlmSettings
+
+    monkeypatch.setitem(LlmSettings.model_config, "env_file", None)
+    for name in (
+        "LLM_PROVIDER",
+        "LLM_MODEL",
+        "LLM_API_KEY",
+        "LLM_BASE_URL",
+        "LLM_TEMPERATURE",
+        "LLM_MAX_TOKENS",
+        "LLM_TIMEOUT_SECONDS",
+    ):
+        monkeypatch.delenv(name, raising=False)

@@ -358,50 +358,82 @@ docker compose down -v       # also deletes the cache
 ---
 
 #### 2.14a a Manual accuracy check
-  - Run, with CH_API_KEY set and LLM_PROVIDER unset: `uv run ukvet-check --full 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233 | Tee-Object report.txt` 10 total.
-  - For each company, open its Companies House page and compare against the report: status, incorporation date, accounts and confirmation due dates, directors (current only), PSC, charges (count, outstanding), insolvency, director count changes.
-  - Fill this table in docs/accuracy-check.md (keep it private if it holds director names; use numbers and field names only):
-```  
+
+- Run, with CH_API_KEY set and LLM_PROVIDER unset: `uv run ukvet-check --full 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233 | Tee-Object report.txt` 10 total.
+- For each company, open its Companies House page and compare against the report: status, incorporation date, accounts and confirmation due dates, directors (current only), PSC, charges (count, outstanding), insolvency, director count changes.
+- Fill this table in `docs/accuracy-check.md` (keep it private if it holds director names; use numbers and field names only):
+
+```
 | ompany no. | Field | ukvet said | Website says | Cause (mapping bug / rule / data lag / my misreading) |
 | ---------- | ----- | ---------- | ------------ | ----------------------------------------------------- |
 ```
-  - Error rate = wrong fields / fields checked. Report it as "X errors in Y fields over 10 companies". That is NOT the M1 score (that is Phase 3, on a proper eval set); do not call it accuracy of the system.
-  - Also judge each red flag: fair or not? A wrong or unfair flag matters more than a missed field. 
+
+- Error rate = wrong fields / fields checked. Report it as "X errors in Y fields over 10 companies". That is NOT the M1 score (that is Phase 3, on a proper eval set); do not call it accuracy of the system.
+- Also judge each red flag: fair or not? A wrong or unfair flag matters more than a missed field.
 
 #### 2.14b Latency
-  - `uv run python scripts/measure.py 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233`
-  - It prints median / p95 / worst for the cold cache, then the warm cache, plus time per stage. CSV goes to data/processed/measure.csv (git-ignored; numbers only).
-  - With no LLM this measures Companies House plus agent time only. Expect low single-digit seconds. Write that number down as "template mode".
-  - Honest caveat: p95 over 10 companies is basically the slowest one. Say "worst of 10", not "p95".
 
+- `uv run python scripts/measure.py 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233`
+- It prints median / p95 / worst for the cold cache, then the warm cache, plus time per stage. CSV goes to data/processed/measure.csv (git-ignored; numbers only).
+- With no LLM this measures Companies House plus agent time only. Expect low single-digit seconds. Write that number down as "template mode".
+- Honest caveat: p95 over 10 companies is basically the slowest one. Say "worst of 10", not "p95".
 
 #### 2.14c Real LLM (needed to close R3, R7, R12 properly)
 
-  - You can close Phase 2 without it, but then those three risks stay "partly measured", and say so in the register.
+- You can close Phase 2 without it, but then those three risks stay "partly measured", and say so in the register.
 
-  - Pick 2 or 3 models: put in .env, e.g. LLM_PROVIDER=openai + LLM_MODEL=<model id> (same for anthropic; free tier via openai_compatible + LLM_BASE_URL). Do not hard-code IDs; copy the exact ID from the provider dashboard.
-  - uv run pytest -m live (opt-in test) then re-run measure.py for each model.
-  - Per model, record in a table: narrative source (llm vs template), claims dropped / total, retries, total seconds, errors. If a model falls back to the template on most companies, it fails the checker: try another or tune the prompt.
-  - Cost per report: note your provider dashboard balance (or usage) before and after running the 10 companies, divide by 10. Free tier: record "£0, rate-limited". Target is under £0.05.
-  - Choose one model; write its exact ID in ADR-003 and decision log entry #28.
+- Pick 2 or 3 models: put in .env, e.g. LLM_PROVIDER=openai + LLM_MODEL=<model id> (same for anthropic; free tier via openai_compatible + LLM_BASE_URL). Do not hard-code IDs; copy the exact ID from the provider dashboard.
+- uv run pytest -m live (opt-in test) then re-run measure.py for each model.
+- Per model, record in a table: narrative source (llm vs template), claims dropped / total, retries, total seconds, errors. If a model falls back to the template on most companies, it fails the checker: try another or tune the prompt.
+- Cost per report: note your provider dashboard balance (or usage) before and after running the 10 companies, divide by 10. Free tier: record "£0, rate-limited". Target is under £0.05.
+- Choose one model; write its exact ID in ADR-003 and decision log entry #28.
+
+**I used claude:**
+
+1. Setup (PowerShell, in the repo root)
+
+- Create an API key in the Anthropic Console and put a small credit limit on it (a few dollars is plenty).
+
+```bsh
+LLM_PROVIDER = "anthropic"
+LLM_MODEL = "claude-haiku-5-5"
+LLM_API_KEY = "sk-ant-..."
+```
+
+2. Run the smoke test first:
+
+```powershell
+uv run pytest -m live --no-cov -s
+```
+
+- It prints the model, whether the narrative came from the LLM or fell back to the template, and the time. If it says source=template, the model failed the citation checker or errored, so paste the output and I’ll look.
+
+4. Then run the real measurement:
+
+```powershell
+uv run python scripts/measure.py 00445790 17491796 12115175 01468547 12056899 17016019 03977902 17313434 14189917 12204233
+```
+
+- Note your Console usage and balance before and after, then divide the spend by 20 (the script runs the 10 companies twice).
+
 ---
+
+#### What needs to be updated:
+
+| Result | Where to record it | What to write |
+|---|---|---|
+| Manual accuracy check | `docs/accuracy-check.md` | Already done. Commit it. |
+| Latency | `docs/07-risks.md` (R12) and the README | Template mode: median 0.18 s, worst 0.69 s cold, 10 companies. With Haiku: median about 3.2 s, worst 5.9 s, 20 runs. Target 30 s. |
+| LLM choice | `docs/adr/003` | Model `claude-haiku-5-5`. Result: 20 of 20 runs used the LLM, 1 of 88 claims failed the checker on the first try, 2 retries. Say why: cheapest Claude model, and it passed. |
+| Cost | `docs/07-risks.md` (R7) and the README | About £0.0004 per report ($0.01 for about 22 calls, dashboard rounded to the cent). Target £0.05. |
+| Fairness and wrongdoing wording | `docs/07-risks.md` (R15) | Only if you've read narratives. State what you read, or write "not yet reviewed". |
+| Rule changes | `docs/kickoff/decision-log.md`, entries #28 to #33 | One line each: what changed and why (the six fixes). |
+| Docker build | `docs/07-risks.md` (R16) | Whatever your build result was. |
+
 
 ### 2.15 Close the phase
 
-- Coverage at 80% or above, CI green, milestone closed, Friday demo to AAII, and a weekly update.
-
----
-
-## Order
-
-```
-Prototype Reporter → 2.1 → 2.2 → 2.3 ─┐
-                              2.4 → 2.5 → 2.6 → 2.7 → 2.8 ─┤→ 2.9 → 2.10 → 2.11 → 2.12 → 2.13 → 2.14 → 2.15
-```
-
-2.3 and 2.4 can be built in either order. 2.9 depends on all of 2.5-2.8.
-
----
+- Coverage at 80% or above, CI green, milestone closed.
 
 ## Honest notes
 
