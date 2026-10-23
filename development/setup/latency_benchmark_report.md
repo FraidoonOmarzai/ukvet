@@ -145,3 +145,77 @@ Use **median** to describe typical runtime, **p95** to assess the slower end of 
 The system meets the stated **p95 < 30 seconds** latency target in all four benchmark conditions. Template-based reports are substantially faster, while LLM-based reports have a median runtime of about 3.2 seconds. For LLM reports, narrative generation is the main bottleneck; warm caching makes research faster but has little effect on total latency.
 
 These results support a conclusion about **performance**, not overall accuracy or report quality.
+
+---
+---
+# Latency Explained In Simple Terms
+
+Latency means how long your system takes to generate a company report. Your benchmark tests whether the system is fast enough, both when data is not cached and when it is already available.
+
+## 1. What your main metrics mean
+
+| Metric       | Simple meaning                                     | Your LLM results                     |
+| ------------ | -------------------------------------------------- | ------------------------------------ |
+| Median       | The typical time a report takes                    | 3.25 seconds cold; 3.16 seconds warm |
+| p95          | How long it takes for almost all reports to finish | 5.91 seconds cold; 5.98 seconds warm |
+| Worst        | The slowest report in your test                    | 5.91 seconds cold; 5.98 seconds warm |
+| Target       | Your maximum acceptable p95 time                   | Under 30 seconds                     |
+| Success rate | How many reports finished successfully             | 10 out of 10 per test                |
+
+### What is the difference between median and p95?
+
+Imagine you generate 100 reports.
+
+- Median = 3 seconds: Half the reports take 3 seconds or less, and half take 3 seconds or more.
+- p95 = 6 seconds: About 95 reports finish in 6 seconds or less. The slowest 5 may take longer.
+- Worst = 10 seconds: The slowest report in that particular test took 10 seconds.
+
+Your test only ran 10 reports per condition, so the p95 is a rough estimate rather than a precise measure of performance at scale.
+
+## 2. What cold cache and warm cache mean
+---
+### Cold cache
+
+The system may need to fetch company data instead of reusing cached results.
+
+3.25 seconds median
+
+LLM approach
+---
+### Warm cache
+
+The system can reuse cached data, so research is faster.
+
+3.16 seconds median
+
+LLM approach
+---
+Your warm-cache result is only slightly faster overall because the LLM still needs time to write the report.
+
+## 3. What the stages mean
+
+Your system measures four stages:
+
+| Stage      | What it does                  | What your results show                     |
+| ---------- | ----------------------------- | ------------------------------------------ |
+| `plan`     | Decides what steps to perform | Almost zero time                           |
+| `research` | Retrieves company information | About 0.19 seconds cold, 0.01 seconds warm |
+| `verify`   | Checks the information        | Almost zero measured time                  |
+| `report`   | Produces the final report     | About 3 seconds; the slowest stage         |
+
+The main bottleneck is report generation. Making the research stage faster will have limited impact unless you also reduce the time spent generating the narrative.
+
+
+## 4. What your cost and other metrics mean
+
+- 20 reports cost $0.01: Your confirmed average cost is $0.0005 per report.
+- Claims: 88: The benchmark recorded 88 claims in the LLM runs.
+- Dropped: 1: The citation checker rejected one claim in the cold-cache test and none in the warm-cache test.
+- Retries: 1: One retry occurred in each test condition.
+- Risk levels: High, medium and low appeared in the reports. This doesn't prove those risk assessments were correct.
+
+## Final takeaway
+
+Your system is fast enough for your current target. The LLM version takes around 3 seconds per report and costs very little in your test. Templates are much faster, but LLMs give you dynamically generated narratives.
+
+Remember: latency tells you how fast the system works, not whether the company information or risk flags are correct. That needs a separate quality test.
