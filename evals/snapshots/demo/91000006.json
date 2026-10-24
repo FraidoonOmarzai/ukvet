@@ -1,0 +1,124 @@
+{
+ "appointments": {
+  "OFFICERID06A": {
+   "body": {
+    "items": [],
+    "name": "PERSON 001",
+    "total_results": 0
+   },
+   "status": 200
+  },
+  "OFFICERID06B": {
+   "body": {
+    "items": [],
+    "name": "PERSON 001",
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": {
+    "items": [
+     {
+      "category": "address",
+      "date": "2025-12-01",
+      "type": "AD01"
+     },
+     {
+      "category": "address",
+      "date": "2025-06-10",
+      "type": "AD01"
+     }
+    ],
+    "total_count": 2
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 3,
+    "items": [
+     {
+      "appointed_on": "2025-04-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID06A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2025-09-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID06B/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2016-02-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID06C/appointments"
+       }
+      },
+      "name": "PERSON 003",
+      "officer_role": "director",
+      "resigned_on": "2025-10-01"
+     }
+    ],
+    "total_results": 3
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-03-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 006",
+    "company_number": "91000006",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-08-18",
+     "next_due": "2026-09-01",
+     "overdue": false
+    },
+    "date_of_creation": "2016-02-01",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": null,
+   "status": 404
+  }
+ },
+ "meta": {
+  "as_of": "2026-03-04",
+  "company_number": "91000006",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

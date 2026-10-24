@@ -2,7 +2,7 @@
 name = "ukvet-evals"
 version = "0.1.0"
 description = "Evaluation harness for ukvet: dataset, independent oracle, scorers (M1-M5) and CI gate."
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 license = "MIT"
 dependencies = [
     "httpx>=0.28.1",

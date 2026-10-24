@@ -1,0 +1,6 @@
+{"as_of": "2026-03-04", "company_number": "12345678", "id": "c001", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "overdue-filings", "charges-outstanding"]}
+{"as_of": "2026-03-04", "company_number": "87654321", "id": "c002", "notes": "", "public": false, "split": "test", "tags": ["dissolved", "liquidation-creditors"]}
+{"as_of": "2026-03-04", "company_number": "91000003", "id": "c003", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-mvl"]}
+{"as_of": "2026-03-04", "company_number": "91000004", "id": "c004", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year", "strike-off-proposal", "no-psc"]}
+{"as_of": "2026-03-04", "company_number": "91000005", "id": "c005", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "corporate-psc", "charges-all-satisfied"]}
+{"as_of": "2026-03-04", "company_number": "91000006", "id": "c006", "notes": "", "public": false, "split": "test", "tags": ["officer-changes-12m", "address-change-12m"]}

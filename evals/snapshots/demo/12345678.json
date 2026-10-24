@@ -1,0 +1,402 @@
+{
+ "appointments": {
+  "OFFICERIDA1": {
+   "body": {
+    "items": [
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2019-03-04",
+      "appointed_to": {
+       "company_name": "ACME TEST LTD",
+       "company_number": "12345678",
+       "company_status": "active"
+      },
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2015-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST ONE LTD",
+       "company_number": "90000001",
+       "company_status": "dissolved"
+      },
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director",
+      "resigned_on": "2017-06-30"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2016-02-02",
+      "appointed_to": {
+       "company_name": "LINKED TEST TWO LTD",
+       "company_number": "90000002",
+       "company_status": "liquidation"
+      },
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2020-03-03",
+      "appointed_to": {
+       "company_name": "LINKED TEST THREE LTD",
+       "company_number": "90000003",
+       "company_status": "active"
+      },
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "DIRECTOR A",
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "OFFICERIDB1": {
+   "body": {
+    "items": [],
+    "name": "PERSON 001",
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_code": "123456780002",
+      "charge_number": 2,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2023-05-02",
+      "persons_entitled": [
+       {
+        "name": "TEST BANK PLC"
+       }
+      ],
+      "status": "outstanding"
+     },
+     {
+      "charge_code": "123456780001",
+      "charge_number": 1,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-02-01",
+      "persons_entitled": [
+       {
+        "name": "TEST BANK PLC"
+       }
+      ],
+      "satisfied_on": "2022-08-09",
+      "status": "fully-satisfied"
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 1,
+    "total_count": 2,
+    "unfiltered_count": 2
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "confirmation-statement",
+      "date": "2026-02-10",
+      "description": "confirmation-statement-with-updates",
+      "paper_filed": false,
+      "transaction_id": "TXN5",
+      "type": "CS01"
+     },
+     {
+      "category": "address",
+      "date": "2025-09-15",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "paper_filed": false,
+      "transaction_id": "TXN4",
+      "type": "AD01"
+     },
+     {
+      "category": "accounts",
+      "date": "2025-01-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "paper_filed": false,
+      "transaction_id": "TXN3",
+      "type": "AA"
+     },
+     {
+      "category": "officers",
+      "date": "2024-11-22",
+      "description": "appoint-person-director-company-with-name-date",
+      "paper_filed": false,
+      "transaction_id": "TXN2",
+      "type": "AP01"
+     },
+     {
+      "category": "officers",
+      "date": "2024-10-02",
+      "description": "termination-director-company-with-name-termination-date",
+      "paper_filed": false,
+      "transaction_id": "TXN1",
+      "type": "TM01"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 5
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 3,
+    "items": [
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2019-03-04",
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERIDA1/appointments"
+       }
+      },
+      "name": "DIRECTOR A",
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2024-11-20",
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERIDB1/appointments"
+       }
+      },
+      "name": "DIRECTOR B",
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2019-03-04",
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERIDC1/appointments"
+       }
+      },
+      "name": "SECRETARY C",
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "secretary"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "appointed_on": "2019-03-04",
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERIDD1/appointments"
+       }
+      },
+      "name": "DIRECTOR D",
+      "nationality": "British",
+      "occupation": "Engineer",
+      "officer_role": "director",
+      "resigned_on": "2024-10-01"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2023-03-31"
+     },
+     "next_due": "2025-12-31",
+     "overdue": true
+    },
+    "company_name": "ACME TEST LTD",
+    "company_number": "12345678",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-10-18",
+     "next_due": "2026-11-01",
+     "overdue": false
+    },
+    "date_of_creation": "2019-03-04",
+    "has_charges": true,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "registered_office_address": {
+     "address_line_1": "1 TEST STREET",
+     "postal_code": "AB1 2CD"
+    },
+    "sic_codes": [
+     "43220"
+    ],
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 2,
+    "ceased_count": 1,
+    "items": [
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON A",
+      "nationality": "British",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2019-03-04",
+      "occupation": "Engineer"
+     },
+     {
+      "kind": "corporate-entity-person-with-significant-control",
+      "name": "HOLDCO TEST LTD",
+      "natures_of_control": [
+       "ownership-of-shares-50-to-75-percent"
+      ],
+      "notified_on": "2021-06-01"
+     },
+     {
+      "address": {
+       "address_line_1": "1 TEST STREET",
+       "postal_code": "AB1 2CD"
+      },
+      "ceased": true,
+      "ceased_on": "2022-01-01",
+      "country_of_residence": "England",
+      "date_of_birth": {
+       "month": 5,
+       "year": 1980
+      },
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON B",
+      "nationality": "British",
+      "natures_of_control": [
+       "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2019-03-04",
+      "occupation": "Engineer"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 3
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-03-04",
+  "company_number": "12345678",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

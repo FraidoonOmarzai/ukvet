@@ -1,0 +1,9 @@
+{
+ "name": "demo",
+ "version": "demo-1",
+ "split_salt": "s3",
+ "dev_percent": 60,
+ "description": "Synthetic companies for testing the harness. Not real data.",
+ "synthetic": true,
+ "splits_locked": true
+}

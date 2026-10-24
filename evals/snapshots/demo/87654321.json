@@ -1,0 +1,86 @@
+{
+ "appointments": {},
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": {
+    "cases": [
+     {
+      "dates": [
+       {
+        "date": "2021-11-02",
+        "type": "wound-up-on"
+       },
+       {
+        "date": "2022-03-01",
+        "type": "concluded-winding-up-on"
+       }
+      ],
+      "number": 1,
+      "practitioners": [
+       {
+        "name": "PRACTITIONER X"
+       }
+      ],
+      "type": "creditors-voluntary-liquidation"
+     }
+    ],
+    "status": [
+     "liquidation-in-progress"
+    ]
+   },
+   "status": 200
+  },
+  "officers": {
+   "body": null,
+   "status": 404
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2020-01-31"
+     }
+    },
+    "company_name": "GONE TEST LTD",
+    "company_number": "87654321",
+    "company_status": "dissolved",
+    "confirmation_statement": {},
+    "date_of_cessation": "2022-06-01",
+    "date_of_creation": "2018-01-15",
+    "has_charges": false,
+    "has_insolvency_history": true,
+    "sic_codes": [
+     "62020"
+    ],
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": null,
+   "status": 404
+  }
+ },
+ "meta": {
+  "as_of": "2026-03-04",
+  "company_number": "87654321",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

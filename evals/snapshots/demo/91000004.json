@@ -1,0 +1,82 @@
+{
+ "appointments": {
+  "OFFICERID04": {
+   "body": {
+    "items": [],
+    "name": "PERSON 001",
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "appointed_on": "2026-01-10",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID04/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-03-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 004",
+    "company_number": "91000004",
+    "company_status": "active",
+    "company_status_detail": "active-proposal-to-strike-off",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-08-18",
+     "next_due": "2026-09-01",
+     "overdue": false
+    },
+    "date_of_creation": "2026-01-10",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": null,
+   "status": 404
+  }
+ },
+ "meta": {
+  "as_of": "2026-03-04",
+  "company_number": "91000004",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

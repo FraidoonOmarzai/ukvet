@@ -377,6 +377,26 @@ Done when CI is green and the ADR is committed.
 
 ## Day 2: skeleton and company list (3.2 and 3.3)
 1. Create `evals/ukvet_evals/` as a uv workspace member. Add `schema.py` with pydantic models for items, flags, abstention cases and results.
+---
+```bash
+uv sync --all-groups --all-packages  # (it installs the new `evals` package).
+uv run pytest  # You should see about 428 passed.
+uv run ukvet-evals run --dataset demo  # You should see a results table on the fake demo companies.
+```
+## What is inside `evals/`
+- **`src/ukvet_evals/`** is the code:
+  - **`record.py`** records real companies and anonymises them.
+  - **`oracle.py`** works out the correct answers independently.
+  - **`snapshot.py`** replays the saved data through your real agent.
+  - **`scorers/`** holds the scoring for M1 to M5.
+  - **`faults.py`** simulates failures.
+  - **`gate.py`** blocks regressions in CI.
+  - **`cli.py`** provides the `ukvet-evals` command.
+- **`datasets/demo/` and `snapshots/demo/`** hold the **fake** practice companies. The real dataset (`v0.1`) doesn't exist yet. You create it on Day 3 with the `record` command.
+- **`baselines/demo.json`** is the saved score the CI gate compares against.
+- **`README.md` and `LABELLING.md`** explain how to use it all.
+
+---
 2. Write `evals/README.md` with the labelling rules.
 3. Build the company list in a spreadsheet with 28 companies. Every tag in section 7.1 needs its minimum count.
 4. Split dev and test with a fixed hash, in code, so it can't drift. Save the result as `companies.jsonl`.
