@@ -269,6 +269,8 @@ def test_q9_changes_inside_and_outside_window() -> None:
         "resigned": 1,
         "window_start": "2025-03-04",
         "appointed_dates": ["2025-06-01"],
+        "turnover_appointed_dates": ["2025-06-01"],
+        "turnover_resigned": 1,
     }
     assert f["Q9.address_changes"].value["count"] == 1
 

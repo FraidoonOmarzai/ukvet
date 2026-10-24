@@ -17,6 +17,7 @@ resolution-markers = [
 members = [
     "ukvet",
     "ukvet-agent",
+    "ukvet-evals",
     "ukvet-mcp",
     "ukvet-ui",
 ]
@@ -3623,6 +3624,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ukvet-agent" },
+    { name = "ukvet-evals" },
     { name = "ukvet-mcp" },
 ]
 
@@ -3646,6 +3648,7 @@ notebook = [
 [package.metadata]
 requires-dist = [
     { name = "ukvet-agent", editable = "packages/ukvet-agent" },
+    { name = "ukvet-evals", editable = "evals" },
     { name = "ukvet-mcp", editable = "packages/ukvet-mcp" },
 ]
 
@@ -3697,6 +3700,29 @@ requires-dist = [
     { name = "pydantic-settings", specifier = ">=2.15.0" },
     { name = "ukvet-mcp", editable = "packages/ukvet-mcp" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.54.0" },
+]
+
+[[package]]
+name = "ukvet-evals"
+version = "0.1.0"
+source = { editable = "evals" }
+dependencies = [
+    { name = "httpx" },
+    { name = "pydantic" },
+    { name = "pydantic-settings" },
+    { name = "respx" },
+    { name = "ukvet-agent" },
+    { name = "ukvet-mcp" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "httpx", specifier = ">=0.28.1" },
+    { name = "pydantic", specifier = ">=2.13.5" },
+    { name = "pydantic-settings", specifier = ">=2.15.0" },
+    { name = "respx", specifier = ">=0.23.1" },
+    { name = "ukvet-agent", editable = "packages/ukvet-agent" },
+    { name = "ukvet-mcp", editable = "packages/ukvet-mcp" },
 ]
 
 [[package]]

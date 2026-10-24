@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 2 Completed.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are building with 340 offline tests at 95.74% coverage.
+> **Status: Phase 3 (evaluation) in progress.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested offline. A first manual check of 10 real companies found no errors in about 75 values; this is a spot check, not an accuracy figure. The evaluation harness is in [`evals/`](evals/README.md); the measured results will be published in [docs/eval-report.md](docs/eval-report.md) once the dataset is complete.
 
 ## What it does
 
@@ -26,18 +26,14 @@ Every fact is cited to the official record. When data is missing, ukvet says so 
 
 ## How it's built
 
-| Part | What |
-|---|---|
-| `ukvet-mcp` | Open-source MCP server exposing Companies House data to any MCP client |
-| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter |
-| Evals | 200+ item benchmark; accuracy, hallucination, citation validity; gated in CI |
-| Observability | Langfuse tracing of cost, latency and tool calls |
+| Part          | What                                                                         |
+| ------------- | ---------------------------------------------------------------------------- |
+| `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client       |
+| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                  |
+| Evals         | 200+ item benchmark; accuracy, hallucination, citation validity; gated in CI |
+| Observability | Langfuse tracing of cost, latency and tool calls                             |
 
 Architecture: [docs/08-architecture.md](docs/08-architecture.md)
-
-## Results
-
-
 
 ## Development
 
@@ -52,19 +48,31 @@ make check                # lint, type check, tests
 make notebook             # API exploration notebook
 ```
 
+### Run it
+
+```bash
+# .env: CH_API_KEY=...   (optional: LLM_PROVIDER / LLM_MODEL / LLM_API_KEY, see .env.example)
+make api                                   # API on http://localhost:8000/docs
+make ui                                    # Streamlit UI on http://localhost:8501
+uv run ukvet-check --full 00445790         # terminal, no UI
+docker compose up --build                  # API + UI in Docker
+```
+
+With no `LLM_PROVIDER` set, reports use a template narrative and cost nothing. With one set, the LLM writes the wording and every sentence must pass the citation check, or the template is used instead.
+
 ## Project documents
 
-| Doc | Contents |
-|---|---|
-| [01 Problem statement](docs/01-problem-statement.md) | Why ukvet exists |
-| [02 Users and questions](docs/02-users-and-questions.md) | Personas and Q1–Q10 |
-| [03 Scope](docs/03-scope.md) | In, out, later |
-| [04 Success metrics](docs/04-success-metrics.md) | Targets fixed before building |
-| [05 Data notes](docs/05-data-notes.md) | API findings |
-| [06 Legal and ethics](docs/06-legal-and-ethics.md) | Licensing, UK GDPR, misuse |
-| [07 Risks](docs/07-risks.md) | Risk register |
-| [08 Architecture](docs/08-architecture.md) | Design + [ADRs](docs/adr/) |
-| [09 Plan](docs/09-plan.md) | Milestones, backlog, workflow |
+| Doc                                                      | Contents                      |
+| -------------------------------------------------------- | ----------------------------- |
+| [01 Problem statement](docs/01-problem-statement.md)     | Why ukvet exists              |
+| [02 Users and questions](docs/02-users-and-questions.md) | Personas and Q1–Q10           |
+| [03 Scope](docs/03-scope.md)                             | In, out, later                |
+| [04 Success metrics](docs/04-success-metrics.md)         | Targets fixed before building |
+| [05 Data notes](docs/05-data-notes.md)                   | API findings                  |
+| [06 Legal and ethics](docs/06-legal-and-ethics.md)       | Licensing, UK GDPR, misuse    |
+| [07 Risks](docs/07-risks.md)                             | Risk register                 |
+| [08 Architecture](docs/08-architecture.md)               | Design + [ADRs](docs/adr/)    |
+| [09 Plan](docs/09-plan.md)                               | Milestones, backlog, workflow |
 
 ## Disclaimer
 

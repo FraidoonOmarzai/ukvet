@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "ukvet-agent",
     "ukvet-mcp",
+    "ukvet-evals",
 ]
 
 [dependency-groups]
@@ -30,31 +31,42 @@ notebook = [
 package = false
 
 [tool.uv.workspace]
-members = ["packages/*", "ui"]
+members = ["packages/*", "ui", "evals"]
 
 [tool.uv.sources]
 ukvet-mcp = { workspace = true }
 ukvet-agent = { workspace = true }
+ukvet-evals = { workspace = true }
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 extend-exclude = ["notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "S"]
 ignore = ["S101"]  # allow assert in tests
 
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S603", "E501"]  # fake keys, subprocess, long fixture lines
+"scripts/**" = ["S310"]
+# data-heavy modules: seed strings, demo tables and report templates read better unwrapped
+"evals/src/ukvet_evals/authoring.py" = ["E501"]
+"evals/src/ukvet_evals/demo.py" = ["E501"]
+"evals/src/ukvet_evals/report.py" = ["E501"]
+
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 strict = true
-packages = ["ukvet_mcp", "ukvet_agent", "ukvet_ui"]
-mypy_path = ["ui"]
+packages = ["ukvet_mcp", "ukvet_agent", "ukvet_ui", "ukvet_evals"]
+mypy_path = "ui:evals/src"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["ui"]
-addopts = "--cov=ukvet_mcp --cov=ukvet_agent --cov-report=term-missing"
+pythonpath = ["ui", "evals/src"]
+markers = ["live: calls a real LLM/API; opt in with -m live (needs keys)"]
+asyncio_default_fixture_loop_scope = "function"
+addopts = "--cov=ukvet_mcp --cov=ukvet_agent --cov=ukvet_evals --cov-report=term-missing"
 asyncio_mode = "auto"
 
 [tool.coverage.report]

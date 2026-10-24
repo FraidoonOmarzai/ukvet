@@ -111,7 +111,10 @@ def _ok(outcome: ToolOutcome | None) -> bool:
 def _gap(question_id: str, tool: str, outcome: ToolOutcome | None) -> Gap:
     if outcome is None:
         return Gap(
-            question_id=question_id, tool=tool, reason="Data was not retrieved.", retryable=True
+            question_id=question_id,
+            tool=tool,
+            reason="Data was not retrieved.",
+            retryable=True,
         )
     return Gap(
         question_id=question_id,
@@ -127,7 +130,11 @@ def _gap(question_id: str, tool: str, outcome: ToolOutcome | None) -> Gap:
 def _q1(profile: ToolOutcome) -> Fact:
     p = profile.data
     name, number = _s(p.get("company_name")), _s(p.get("company_number"))
-    status, detail, ceased = p.get("status"), p.get("status_detail"), p.get("date_of_cessation")
+    status, detail, ceased = (
+        p.get("status"),
+        p.get("status_detail"),
+        p.get("date_of_cessation"),
+    )
     stmt = (
         f"{name} ({number}) has status '{status}'"
         if status
@@ -155,7 +162,11 @@ def _q1(profile: ToolOutcome) -> Fact:
 
 def _q2(profile: ToolOutcome) -> Fact:
     p = profile.data
-    created, days, years = p.get("date_of_creation"), p.get("age_days"), p.get("age_years")
+    created, days, years = (
+        p.get("date_of_creation"),
+        p.get("age_days"),
+        p.get("age_years"),
+    )
     if not (created and days is not None and years is not None):
         return _make(
             "Q2.age",
@@ -385,7 +396,10 @@ def _q8(
                 "other_total": len(items),
                 "status_counts": dict(counts),
                 "companies": [
-                    {"company_number": a["company_number"], "status": a.get("company_status")}
+                    {
+                        "company_number": a["company_number"],
+                        "status": a.get("company_status"),
+                    }
                     for a in items
                 ],
             },
@@ -432,6 +446,9 @@ def _q8(
 def _q9_officers(officers: ToolOutcome, cutoff: date) -> Fact:
     iso = cutoff.isoformat()
     items = officers.data.get("items", [])
+    counted = [o for o in items if "secretary" not in str(o.get("role", ""))]
+    counted_appointed = [o for o in counted if (o.get("appointed_on") or "") >= iso]
+    counted_resigned = [o for o in counted if (o.get("resigned_on") or "") >= iso]
     appointed = [o for o in items if (o.get("appointed_on") or "") >= iso]
     resigned = [o for o in items if (o.get("resigned_on") or "") >= iso]
     if not appointed and not resigned:
@@ -466,6 +483,10 @@ def _q9_officers(officers: ToolOutcome, cutoff: date) -> Fact:
             "resigned": len(resigned),
             "window_start": iso,
             "appointed_dates": [o.get("appointed_on") for o in appointed if o.get("appointed_on")],
+            "turnover_appointed_dates": [
+                o["appointed_on"] for o in counted_appointed if o.get("appointed_on")
+            ],
+            "turnover_resigned": len(counted_resigned),
         },
         [officers],
         extra_dates=(iso, *dates),
@@ -491,7 +512,11 @@ def _q9_address(filings: ToolOutcome, cutoff: date) -> Fact:
         "Q9.address_changes",
         "Q9",
         stmt,
-        {"count": len(changes), "dates": [f["date"] for f in changes], "window_start": iso},
+        {
+            "count": len(changes),
+            "dates": [f["date"] for f in changes],
+            "window_start": iso,
+        },
         [filings],
         extra_dates=(iso, *[f["date"] for f in changes[:MAX_LISTED]]),
     )
@@ -534,7 +559,11 @@ def build_facts(
         else:
             gaps.append(_gap("Q3", "officers", officers))
 
-    for q, tool, builder in (("Q5", "psc", _q5), ("Q6", "charges", _q6), ("Q7", "insolvency", _q7)):
+    for q, tool, builder in (
+        ("Q5", "psc", _q5),
+        ("Q6", "charges", _q6),
+        ("Q7", "insolvency", _q7),
+    ):
         if q in plan:
             outcome = raw.get(tool)
             if outcome is not None and outcome.ok:

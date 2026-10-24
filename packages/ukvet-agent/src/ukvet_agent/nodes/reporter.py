@@ -18,7 +18,14 @@ from ukvet_agent.citations import MAX_CLAIM_CHARS, Violation, check_claims
 from ukvet_agent.llm import NarrativeDraft, NarrativeWriter
 from ukvet_agent.mcp_client import ToolOutcome
 from ukvet_agent.redflags import assessment_text, evaluate_red_flags, risk_level
-from ukvet_agent.schemas import CitationStats, Claim, Fact, RedFlag, Report
+from ukvet_agent.schemas import (
+    AttemptStats,
+    CitationStats,
+    Claim,
+    Fact,
+    RedFlag,
+    Report,
+)
 from ukvet_agent.text import sanitise_registry_text
 
 log = logging.getLogger("ukvet_agent.reporter")
@@ -77,7 +84,8 @@ def template_narrative(
         headline = Claim(text=_clip(q1.statement), fact_ids=[q1.id])
     else:
         headline = Claim(
-            text=f"Status information for {name} ({number}) could not be retrieved.", fact_ids=[]
+            text=f"Status information for {name} ({number}) could not be retrieved.",
+            fact_ids=[],
         )
     flagged = [i for fl in flags for i in fl.fact_ids]  # every flag's evidence is shown
     order = list(dict.fromkeys([*flagged, *(f.id for f in facts)]))
@@ -106,6 +114,10 @@ async def _llm_narrative(
         except Exception as exc:  # LLM/network/schema failure: fall back, never crash
             log.warning("narrative attempt %d failed: %s", attempt + 1, type(exc).__name__)
             stats.violations.append(f"LLM error ({type(exc).__name__})")
+            stats.llm_errors += 1
+            stats.attempts.append(
+                AttemptStats(attempt=attempt + 1, outcome="llm_error", error=type(exc).__name__)
+            )
             if attempt == 0:
                 stats.retries = 1
             continue
@@ -118,6 +130,16 @@ async def _llm_narrative(
         stats.claims_kept = len(head.kept) + len(rest.kept)
         stats.claims_dropped = stats.claims_total - stats.claims_kept
         stats.violations = [str(v) for v in violations]
+        stats.attempts.append(
+            AttemptStats(
+                attempt=attempt + 1,
+                outcome="violations" if violations else "ok",
+                claims_total=stats.claims_total,
+                claims_kept=stats.claims_kept,
+                claims_dropped=stats.claims_dropped,
+                violations=list(stats.violations),
+            )
+        )
 
         if head.kept and rest.kept and not violations:
             return NarrativeDraft(headline=head.kept[0], findings=rest.kept), stats

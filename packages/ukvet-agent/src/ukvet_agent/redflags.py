@@ -195,11 +195,11 @@ def evaluate_red_flags(facts_list: list[Fact]) -> list[RedFlag]:
     q9 = _v(facts, "Q9.officer_changes")
     if q9:
         created = (_v(facts, "Q2.age") or {}).get("date_of_creation") or ""
-        # Directors named when the company was formed are not "changes".
-        formation = sum(
-            1 for d in q9.get("appointed_dates", []) if created and _within_days(d, created, 30)
-        )
-        changes = q9.get("appointed", 0) - formation + q9.get("resigned", 0)
+        dates = q9.get("turnover_appointed_dates", q9.get("appointed_dates", []))
+        resigned = q9.get("turnover_resigned", q9.get("resigned", 0))
+        appointed = len(dates) if "turnover_appointed_dates" in q9 else q9.get("appointed", 0)
+        formation = sum(1 for d in dates if created and _within_days(d, created, 30))
+        changes = appointed - formation + resigned
         if changes >= 3:
             add(
                 "officer_turnover",

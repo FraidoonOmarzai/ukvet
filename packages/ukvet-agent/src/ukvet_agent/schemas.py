@@ -72,12 +72,33 @@ class Candidate(BaseModel):
     address_snippet: str | None = None
 
 
+class AttemptStats(BaseModel):
+    """What happened in ONE narrative attempt (the LLM gets at most two)."""
+
+    attempt: int
+    outcome: Literal["ok", "violations", "llm_error"]
+    claims_total: int = 0
+    claims_kept: int = 0
+    claims_dropped: int = 0
+    violations: list[str] = Field(default_factory=list)
+    error: str | None = None
+
+
 class CitationStats(BaseModel):
+    """Citation outcome of the narrative.
+
+    `claims_*` and `violations` describe the LAST attempt that returned a draft. To see what the
+    FIRST attempt got wrong, or whether a retry was caused by the checker or by an LLM error, read
+    `attempts` and `llm_errors`.
+    """
+
     claims_total: int = 0
     claims_kept: int = 0
     claims_dropped: int = 0
     retries: int = 0
     violations: list[str] = Field(default_factory=list)
+    llm_errors: int = 0
+    attempts: list[AttemptStats] = Field(default_factory=list)
 
 
 class Report(BaseModel):
