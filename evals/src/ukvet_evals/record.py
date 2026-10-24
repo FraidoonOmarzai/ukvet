@@ -59,6 +59,43 @@ def make_anonymiser(root: Path, public: set[str]) -> Any:
     return Persistent()
 
 
+def _alias_charge_codes(body: dict[str, Any], number: str, alias: str) -> dict[str, Any]:
+    """Charge codes are the company number plus a 4-digit suffix, so they would leak it."""
+    for item in body.get("items", []):
+        code = item.get("charge_code")
+        if isinstance(code, str) and code.startswith(number):
+            item["charge_code"] = alias + code[len(number) :]
+    return body
+
+
+def explain_leak(anon: Any, payload: Any) -> list[str]:
+    """Where in the payload do original sensitive values survive? Never prints the values."""
+    found: list[str] = []
+    kinds = {
+        "company number": set(getattr(anon, "_companies", {})),
+        "company name": set(getattr(anon, "_company_names", {})),
+        "person name": set(getattr(anon, "_people", {})),
+        "officer id": set(getattr(anon, "_officer_ids", {})),
+        "charge holder": set(getattr(anon, "_chargees", {})),
+    }
+
+    def walk(obj: Any, path: str) -> None:
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                walk(v, f"{path}.{k}")
+        elif isinstance(obj, list):
+            for i, v in enumerate(obj):
+                walk(v, f"{path}[{i}]")
+        elif isinstance(obj, str):
+            for secret in anon.sensitive:
+                if len(secret) >= 4 and secret in obj and secret not in anon.public:
+                    kind = next((k for k, vals in kinds.items() if secret in vals), "value")
+                    found.append(f"{path}: contains an original {kind} (length {len(secret)})")
+
+    walk(payload, "snapshot")
+    return found
+
+
 def _paged(
     fetch: Fetch, path: str, cap: int, stop: Callable[[list[dict[str, Any]]], bool] | None = None
 ) -> tuple[int, dict[str, Any] | None, bool]:
@@ -110,7 +147,12 @@ def record_company(
 
     officers_raw = put("officers", "/officers", anon.officers, MAX_LIST_ITEMS)
     put("psc", "/persons-with-significant-control", anon.psc, MAX_LIST_ITEMS)
-    put("charges", "/charges", lambda b: anon.charges(b, number), MAX_LIST_ITEMS)
+    put(
+        "charges",
+        "/charges",
+        lambda b: _alias_charge_codes(anon.charges(b, number), number, alias),
+        MAX_LIST_ITEMS,
+    )
     st, ins = fetch(f"/company/{number}/insolvency", None)
     eps["insolvency"] = Endpoint(status=st, body=anon.insolvency(ins) if ins else None)
     cutoff = (as_of - timedelta(days=WINDOW_DAYS + FILINGS_MARGIN_DAYS)).isoformat()
@@ -148,7 +190,15 @@ def record_company(
         endpoints=eps,
         appointments=appointments,
     )
-    anon.leak_check(snap.model_dump(mode="json"))
+    payload = snap.model_dump(mode="json")
+    try:
+        anon.leak_check(payload)
+    except AssertionError as exc:
+        where = explain_leak(anon, payload) or ["(forbidden key; see message above)"]
+        raise AssertionError(
+            f"Anonymisation leak for company {alias}; nothing was written.\n  "
+            + "\n  ".join(where[:10])
+        ) from exc
     return snap
 
 

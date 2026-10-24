@@ -214,3 +214,28 @@ def test_company_entry_roundtrip() -> None:
         id="c001", company_number="91000001", as_of=date(2026, 1, 1), split=split_for("c001")
     )
     assert CompanyEntry.model_validate_json(c.model_dump_json()) == c
+
+
+def test_charge_codes_do_not_leak_the_company_number(tmp_path: Path) -> None:
+    api = fake_api()
+    api["/company/01234567/charges"] = {
+        "total_count": 1,
+        "items": [{"status": "outstanding", "charge_code": "012345670001"}],
+    }
+    snap = record_company(
+        fetcher(api), "01234567", date(2026, 3, 4), make_anonymiser(make_root(tmp_path), set())
+    )
+    assert snap is not None
+    code = snap.endpoints["charges"].body["items"][0]["charge_code"]  # type: ignore[index]
+    assert "01234567" not in code and code.startswith("91") and code.endswith("0001")
+
+
+def test_a_leak_names_the_place_but_not_the_value(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    anon = make_anonymiser(make_root(tmp_path), set())
+    monkeypatch.setattr(anon, "officers", lambda body: body)
+    with pytest.raises(AssertionError) as err:
+        record_company(fetcher(fake_api()), "01234567", date(2026, 3, 4), anon)
+    text = str(err.value)
+    assert "officers" in text and "person name" in text and "SMITH" not in text

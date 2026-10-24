@@ -296,6 +296,7 @@ def cmd_record(args: argparse.Namespace) -> int:
                     public=number in (args.public or []),
                 )
                 companies.append(entry)
+                write_jsonl(ds_dir / "companies.jsonl", companies)
                 print(f"{number} -> {alias} ({cid}) recorded")
             else:
                 print(f"{number} -> {alias} ({existing.id}) re-recorded")
