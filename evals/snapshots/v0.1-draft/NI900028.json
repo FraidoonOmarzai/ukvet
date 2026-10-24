@@ -1,0 +1,288 @@
+{
+ "appointments": {
+  "OFFICERID28A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2005-02-14",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 028",
+       "company_number": "NI900028",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-0 LTD",
+       "company_number": "930280000",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-1 LTD",
+       "company_number": "930280001",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-2 LTD",
+       "company_number": "930280002",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-3 LTD",
+       "company_number": "930280003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-4 LTD",
+       "company_number": "930280004",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-5 LTD",
+       "company_number": "930280005",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-6 LTD",
+       "company_number": "930280006",
+       "company_status": "liquidation"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-7 LTD",
+       "company_number": "930280007",
+       "company_status": "liquidation"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-8 LTD",
+       "company_number": "930280008",
+       "company_status": "liquidation"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-9 LTD",
+       "company_number": "930280009",
+       "company_status": "dissolved"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-10 LTD",
+       "company_number": "930280010",
+       "company_status": "dissolved"
+      },
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2012-01-01",
+      "appointed_to": {
+       "company_name": "LINKED TEST 028-0-11 LTD",
+       "company_number": "930280011",
+       "company_status": "dissolved"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 13
+   },
+   "status": 200
+  },
+  "OFFICERID28B": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2026-02-02",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 028",
+       "company_number": "NI900028",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 002",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID28C": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2026-03-03",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 028",
+       "company_number": "NI900028",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 003",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 3,
+    "items": [
+     {
+      "appointed_on": "2005-02-14",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID28A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-02-02",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID28B/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-03-03",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID28C/appointments"
+       }
+      },
+      "name": "PERSON 003",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2010-10-10",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID28D/appointments"
+       }
+      },
+      "name": "PERSON 004",
+      "officer_role": "director",
+      "resigned_on": "2026-07-07"
+     }
+    ],
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 028",
+    "company_number": "NI900028",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "2005-02-14",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "NI900028",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

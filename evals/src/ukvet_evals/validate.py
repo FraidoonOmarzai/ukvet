@@ -25,8 +25,12 @@ FORBIDDEN_KEYS = {
     "registered_office_address", "service_address", "usual_residential_address",
     "residential_address", "principal_office_address", "practitioners", "description_values",
     "name_elements", "identification", "etag", "former_names", "previous_company_names",
-    "foreign_company_details", "accounts_reference_date", "address_snippet", "snippet", "matches",
+    "foreign_company_details",
+    "identity_verification_details",
+    "preferred_name", "accounts_reference_date", "address_snippet", "snippet", "matches",
 }  # fmt: skip
+NAME_KEYS_OK = {"name", "company_name", "title", "officer_role"}
+_NAMEY = re.compile(r"name|surname|forename|title", re.IGNORECASE)
 _PERSON = re.compile(
     r"^(PERSON|CORPORATE CONTROLLER) \d{3,}$|^DIRECTOR [A-Z]$|^PERSON [A-Z]$|^SECRETARY [A-Z]$"
 )
@@ -63,6 +67,9 @@ def leak_problems(snap: Snapshot) -> list[str]:
         for path, key, value in _walk(body):
             if key in FORBIDDEN_KEYS:
                 problems.append(f"{label}{path}: forbidden key '{key}'")
+            elif _NAMEY.search(key) and key not in NAME_KEYS_OK and isinstance(value, str):
+                # Companies House adds fields over time. Any unknown *name* field is suspect.
+                problems.append(f"{label}{path}: unexpected name-like key '{key}'")
             if snap.meta.public:
                 continue
             person_context = label in {"officers", "psc"} or label.startswith("appointments/")

@@ -1,0 +1,28 @@
+{"as_of": "2026-10-24", "company_number": "92000001", "id": "c001", "notes": "", "public": false, "split": "dev", "tags": ["large-plc", "charges-all-satisfied", "officer-changes-12m"]}
+{"as_of": "2026-10-24", "company_number": "92000002", "id": "c002", "notes": "", "public": false, "split": "test", "tags": ["large-plc", "corporate-psc"]}
+{"as_of": "2026-10-24", "company_number": "92000003", "id": "c003", "notes": "", "public": false, "split": "dev", "tags": ["large-plc", "no-psc"]}
+{"as_of": "2026-10-24", "company_number": "92000004", "id": "c004", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small"]}
+{"as_of": "2026-10-24", "company_number": "92000005", "id": "c005", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "charges-all-satisfied"]}
+{"as_of": "2026-10-24", "company_number": "92000006", "id": "c006", "notes": "", "public": false, "split": "test", "tags": ["healthy-small", "corporate-psc"]}
+{"as_of": "2026-10-24", "company_number": "92000007", "id": "c007", "notes": "", "public": false, "split": "test", "tags": ["healthy-small"]}
+{"as_of": "2026-10-24", "company_number": "92000008", "id": "c008", "notes": "", "public": false, "split": "test", "tags": ["under-1-year", "no-psc"]}
+{"as_of": "2026-10-24", "company_number": "92000009", "id": "c009", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year", "no-psc"]}
+{"as_of": "2026-10-24", "company_number": "92000010", "id": "c010", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year"]}
+{"as_of": "2026-10-24", "company_number": "92000011", "id": "c011", "notes": "", "public": false, "split": "dev", "tags": ["1-to-2-years"]}
+{"as_of": "2026-10-24", "company_number": "92000012", "id": "c012", "notes": "", "public": false, "split": "dev", "tags": ["1-to-2-years", "officer-changes-12m"]}
+{"as_of": "2026-10-24", "company_number": "92000013", "id": "c013", "notes": "", "public": false, "split": "dev", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "92000014", "id": "c014", "notes": "", "public": false, "split": "dev", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "92000015", "id": "c015", "notes": "", "public": false, "split": "test", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "92000016", "id": "c016", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-mvl"]}
+{"as_of": "2026-10-24", "company_number": "92000017", "id": "c017", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-mvl"]}
+{"as_of": "2026-10-24", "company_number": "92000018", "id": "c018", "notes": "", "public": false, "split": "test", "tags": ["liquidation-creditors"]}
+{"as_of": "2026-10-24", "company_number": "92000019", "id": "c019", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-creditors", "overdue-filings"]}
+{"as_of": "2026-10-24", "company_number": "92000020", "id": "c020", "notes": "", "public": false, "split": "dev", "tags": ["administration-or-receivership"]}
+{"as_of": "2026-10-24", "company_number": "92000021", "id": "c021", "notes": "", "public": false, "split": "test", "tags": ["administration-or-receivership"]}
+{"as_of": "2026-10-24", "company_number": "92000022", "id": "c022", "notes": "", "public": false, "split": "test", "tags": ["strike-off-proposal", "overdue-filings"]}
+{"as_of": "2026-10-24", "company_number": "92000023", "id": "c023", "notes": "", "public": false, "split": "test", "tags": ["strike-off-proposal"]}
+{"as_of": "2026-10-24", "company_number": "92000024", "id": "c024", "notes": "", "public": false, "split": "dev", "tags": ["overdue-filings", "charges-outstanding"]}
+{"as_of": "2026-10-24", "company_number": "92000025", "id": "c025", "notes": "", "public": false, "split": "dev", "tags": ["charges-outstanding", "address-change-12m", "corporate-officer"]}
+{"as_of": "2026-10-24", "company_number": "OC900026", "id": "c026", "notes": "", "public": false, "split": "dev", "tags": ["llp-or-sc-or-ni", "address-change-12m"]}
+{"as_of": "2026-10-24", "company_number": "SC900027", "id": "c027", "notes": "", "public": false, "split": "test", "tags": ["llp-or-sc-or-ni", "many-appointments-director", "corporate-officer"]}
+{"as_of": "2026-10-24", "company_number": "NI900028", "id": "c028", "notes": "", "public": false, "split": "test", "tags": ["llp-or-sc-or-ni", "many-appointments-director", "officer-changes-12m"]}

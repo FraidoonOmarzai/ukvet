@@ -1,0 +1,222 @@
+{
+ "appointments": {
+  "OFFICERID03A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2001-01-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "92000003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID03B": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2009-06-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "92000003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 002",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID03C": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2015-02-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "92000003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 003",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID03D": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2017-10-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "92000003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 004",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID03E": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2020-01-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "92000003",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 005",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 5,
+    "items": [
+     {
+      "appointed_on": "2001-01-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID03A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2009-06-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID03B/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-02-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID03C/appointments"
+       }
+      },
+      "name": "PERSON 003",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-10-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID03D/appointments"
+       }
+      },
+      "name": "PERSON 004",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-01-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID03E/appointments"
+       }
+      },
+      "name": "PERSON 005",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 5
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 003",
+    "company_number": "92000003",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "1971-11-20",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "plc"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "items": [],
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "92000003",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

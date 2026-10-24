@@ -1,0 +1,153 @@
+{
+ "appointments": {
+  "OFFICERID24A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2017-05-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 024",
+       "company_number": "92000024",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID24B": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2019-11-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 024",
+       "company_number": "92000024",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 002",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_number": 1,
+      "created_on": "2018-01-01",
+      "status": "outstanding"
+     },
+     {
+      "charge_number": 2,
+      "created_on": "2018-01-01",
+      "satisfied_on": "2022-01-01",
+      "status": "fully-satisfied"
+     }
+    ],
+    "total_count": 2
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "items": [
+     {
+      "appointed_on": "2017-05-25",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID24A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-11-11",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID24B/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2024-12-31"
+     },
+     "next_due": "2026-06-30",
+     "overdue": true
+    },
+    "company_name": "TEST COMPANY 024",
+    "company_number": "92000024",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-06-17",
+     "next_due": "2026-07-01",
+     "overdue": true
+    },
+    "date_of_creation": "2017-05-25",
+    "has_charges": true,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "92000024",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

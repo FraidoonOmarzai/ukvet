@@ -351,6 +351,13 @@ def cmd_demo_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_draft_build(args: argparse.Namespace) -> int:
+    from ukvet_evals.draft import build_draft
+
+    print(f"synthetic v0.1-draft dataset written to {build_draft(_root(args))}")
+    return 0
+
+
 def cmd_judge_agreement(args: argparse.Namespace) -> int:
     res = json.loads(Path(args.results).read_text(encoding="utf-8"))
     hand = load_hand_labels(Path(args.hand))
@@ -429,6 +436,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp = add("seed-injection", cmd_seed_injection, "seed injection.jsonl for Phase 4")
     dataset(sp)
     add("demo-build", cmd_demo_build, "rebuild the synthetic demo dataset")
+    add("draft-build", cmd_draft_build, "rebuild the synthetic 28-company v0.1-draft dataset")
     sp = add("judge-agreement", cmd_judge_agreement, "compare judge verdicts with hand labels")
     sp.add_argument("--results", required=True)
     sp.add_argument("--hand", required=True)

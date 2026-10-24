@@ -239,3 +239,12 @@ def test_a_leak_names_the_place_but_not_the_value(
         record_company(fetcher(fake_api()), "01234567", date(2026, 3, 4), anon)
     text = str(err.value)
     assert "officers" in text and "person name" in text and "SMITH" not in text
+
+
+def test_new_companies_house_name_fields_are_caught() -> None:
+    leaky = snapshot_with(
+        {"items": [{"identity_verification_details": {"preferred_name": "Jane Doe"}}]}, "officers"
+    )
+    assert any("identity_verification_details" in p for p in leak_problems(leaky))
+    unknown = snapshot_with({"items": [{"legal_name": "Jane Doe"}]}, "officers")
+    assert any("unexpected name-like key 'legal_name'" in p for p in leak_problems(unknown))

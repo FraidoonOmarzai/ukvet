@@ -1,0 +1,527 @@
+{
+ "m1": {
+  "by_question": {
+   "Q1": {
+    "fields": {
+     "ci95": [
+      0.93,
+      1.0
+     ],
+     "k": 51,
+     "n": 51,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q2": {
+    "fields": {
+     "ci95": [
+      0.8985,
+      1.0
+     ],
+     "k": 34,
+     "n": 34,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q3": {
+    "fields": {
+     "ci95": [
+      0.9465,
+      1.0
+     ],
+     "k": 68,
+     "n": 68,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q4": {
+    "fields": {
+     "ci95": [
+      0.9637,
+      1.0
+     ],
+     "k": 102,
+     "n": 102,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q5": {
+    "fields": {
+     "ci95": [
+      0.8985,
+      1.0
+     ],
+     "k": 34,
+     "n": 34,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q6": {
+    "fields": {
+     "ci95": [
+      0.9465,
+      1.0
+     ],
+     "k": 68,
+     "n": 68,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q7": {
+    "fields": {
+     "ci95": [
+      0.8985,
+      1.0
+     ],
+     "k": 34,
+     "n": 34,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q8": {
+    "fields": {
+     "ci95": [
+      0.9568,
+      1.0
+     ],
+     "k": 85,
+     "n": 85,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   },
+   "Q9": {
+    "fields": {
+     "ci95": [
+      0.93,
+      1.0
+     ],
+     "k": 51,
+     "n": 51,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8157,
+      1.0
+     ],
+     "k": 17,
+     "n": 17,
+     "rate": 1.0
+    }
+   }
+  },
+  "failures": [],
+  "overall": {
+   "fields": {
+    "ci95": [
+     0.9928,
+     1.0
+    ],
+    "k": 527,
+    "n": 527,
+    "rate": 1.0
+   },
+   "items": {
+    "ci95": [
+     0.9755,
+     1.0
+    ],
+    "k": 153,
+    "n": 153,
+    "rate": 1.0
+   }
+  }
+ },
+ "m3": {
+  "cases": [
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-001",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q5"
+    ],
+    "id": "abs-003",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q6"
+    ],
+    "id": "abs-004",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q7"
+    ],
+    "id": "abs-005",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q8"
+    ],
+    "id": "abs-009",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q3",
+     "Q4",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-010",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-011",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q3",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-012",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q5"
+    ],
+    "id": "abs-013",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q6"
+    ],
+    "id": "abs-014",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-016",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q8"
+    ],
+    "id": "abs-017",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q3",
+     "Q4",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-019",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-020",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q7"
+    ],
+    "id": "abs-024",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-025",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [],
+    "id": "abs-026",
+    "passed": true,
+    "risk": "medium"
+   }
+  ],
+  "ci95": [
+   0.8157,
+   1.0
+  ],
+  "k": 17,
+  "n": 17,
+  "rate": 1.0
+ },
+ "m5": {
+  "by_flag": {
+   "accounts_overdue": {
+    "expected": 2,
+    "found": 2
+   },
+   "address_changes": {
+    "expected": 2,
+    "found": 2
+   },
+   "age": {
+    "expected": 4,
+    "found": 4
+   },
+   "charges": {
+    "expected": 2,
+    "found": 2
+   },
+   "confirmation_overdue": {
+    "expected": 1,
+    "found": 1
+   },
+   "insolvency": {
+    "expected": 2,
+    "found": 2
+   },
+   "no_directors": {
+    "expected": 1,
+    "found": 1
+   },
+   "no_psc": {
+    "expected": 2,
+    "found": 2
+   },
+   "officer_turnover": {
+    "expected": 2,
+    "found": 2
+   },
+   "status": {
+    "expected": 6,
+    "found": 6
+   }
+  },
+  "labelled_companies": 17,
+  "missed": [],
+  "precision": {
+   "ci95": [
+    0.862,
+    1.0
+   ],
+   "k": 24,
+   "n": 24,
+   "rate": 1.0
+  },
+  "recall": {
+   "ci95": [
+    0.862,
+    1.0
+   ],
+   "k": 24,
+   "n": 24,
+   "rate": 1.0
+  },
+  "second_labeller": {
+   "agreement": {
+    "ci95": null,
+    "k": 0,
+    "n": 0,
+    "rate": null
+   },
+   "kappa": null,
+   "pairs": 0
+  },
+  "severity_agreement": {
+   "ci95": [
+    0.862,
+    1.0
+   ],
+   "k": 24,
+   "n": 24,
+   "rate": 1.0
+  },
+  "severity_mismatch": [],
+  "unexpected": [],
+  "unlabelled_companies": 0
+ },
+ "meta": {
+  "companies": 17,
+  "dataset": "v0.1-draft",
+  "dataset_version": "draft-1",
+  "git_commit": "unknown",
+  "items": 153,
+  "judge": null,
+  "llm": {
+   "mode": "none",
+   "model": null
+  },
+  "split": "dev",
+  "synthetic": true,
+  "tool_version": "0.1.0"
+ },
+ "narrative": {
+  "claims": 153,
+  "examples": [],
+  "invalid_by_category": {},
+  "llm_errors": 0,
+  "llm_reports": 0,
+  "m2_unsupported": {
+   "ci95": [
+    0.0,
+    0.0245
+   ],
+   "k": 0,
+   "n": 153,
+   "rate": 0.0
+  },
+  "m4_mechanical_valid": {
+   "ci95": [
+    0.9755,
+    1.0
+   ],
+   "k": 153,
+   "n": 153,
+   "rate": 1.0
+  },
+  "m4_semantic_supported": {
+   "ci95": null,
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "reports": 17,
+  "retries": 0,
+  "writer_needed_checker": {
+   "ci95": null,
+   "k": 0,
+   "n": 0,
+   "rate": null
+  }
+ }
+}

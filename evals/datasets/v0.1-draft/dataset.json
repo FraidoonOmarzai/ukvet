@@ -1,0 +1,9 @@
+{
+ "name": "v0.1-draft",
+ "version": "draft-1",
+ "split_salt": "s3",
+ "dev_percent": 60,
+ "description": "SYNTHETIC placeholder for v0.1: 28 invented companies covering every required tag. Not real data; scores are not results.",
+ "synthetic": true,
+ "splits_locked": true
+}

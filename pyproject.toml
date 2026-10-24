@@ -52,6 +52,7 @@ ignore = ["S101"]  # allow assert in tests
 "scripts/**" = ["S310"]
 # data-heavy modules: seed strings, demo tables and report templates read better unwrapped
 "evals/src/ukvet_evals/authoring.py" = ["E501"]
+"evals/src/ukvet_evals/draft.py" = ["E501"]
 "evals/src/ukvet_evals/demo.py" = ["E501"]
 "evals/src/ukvet_evals/report.py" = ["E501"]
 

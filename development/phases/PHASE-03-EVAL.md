@@ -401,7 +401,15 @@ uv run ukvet-evals run --dataset demo  # You should see a results table on the f
 3. Build the company list in a spreadsheet with 28 companies. Every tag in section 7.1 needs its minimum count.
 4. Split dev and test with a fixed hash, in code, so it can't drift. Save the result as `companies.jsonl`.
 
+**Note:** The whole dataset plan at `setup/dataset-plan.md`
+
 Use Companies House search with a status filter to find the odd cases: dissolved, strike-off proposals, MVL and creditors' liquidation.
+
+**Note:* I created complete draft dataset
+```bash
+uv run ukvet-evals validate --dataset v0.1-draft --strict
+uv run ukvet-evals run --dataset v0.1-draft --split dev
+``` 
 
 ## Days 3-4: snapshots and replay (3.4 and 3.5)
 1. Extend `record_fixtures.py` to record all 8 endpoints for each company. Store the `as_of` date, and keep the real-to-fake number map in git-ignored `data/raw/`.

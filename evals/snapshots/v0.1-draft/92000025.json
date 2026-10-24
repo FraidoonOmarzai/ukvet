@@ -1,0 +1,166 @@
+{
+ "appointments": {
+  "OFFICERID25A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2015-11-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 025",
+       "company_number": "92000025",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID25B": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2020-02-02",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 025",
+       "company_number": "92000025",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "CORPORATE OFFICER 002",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_number": 1,
+      "created_on": "2018-01-01",
+      "status": "outstanding"
+     }
+    ],
+    "total_count": 1
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "items": [
+     {
+      "category": "address",
+      "date": "2026-01-12",
+      "type": "AD01"
+     },
+     {
+      "category": "address",
+      "date": "2026-04-02",
+      "type": "AD01"
+     },
+     {
+      "category": "address",
+      "date": "2026-08-30",
+      "type": "AD01"
+     }
+    ],
+    "total_count": 3
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "items": [
+     {
+      "appointed_on": "2015-11-30",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID25A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-02-02",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID25B/appointments"
+       }
+      },
+      "name": "CORPORATE OFFICER 002",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 025",
+    "company_number": "92000025",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "2015-11-30",
+    "has_charges": true,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "92000025",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

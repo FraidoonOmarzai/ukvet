@@ -1,0 +1,109 @@
+{
+ "appointments": {},
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": {
+    "items": [
+     {
+      "category": "address",
+      "date": "2026-02-02",
+      "type": "AD01"
+     },
+     {
+      "category": "address",
+      "date": "2026-07-07",
+      "type": "AD01"
+     }
+    ],
+    "total_count": 2
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "items": [
+     {
+      "appointed_on": "2013-04-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID26A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "llp-designated-member"
+     },
+     {
+      "appointed_on": "2013-04-01",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID26B/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "llp-member"
+     }
+    ],
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 026",
+    "company_number": "OC900026",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "2013-04-01",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "llp"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "OC900026",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

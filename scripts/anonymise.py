@@ -27,6 +27,8 @@ DROP_KEYS = {
     "description_values",
     "name_elements",
     "identification",
+    "identity_verification_details",
+    "preferred_name",
     "links",
     "etag",
     "former_names",

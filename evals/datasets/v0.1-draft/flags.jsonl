@@ -1,0 +1,28 @@
+{"company": "c001", "expected": [{"id": "officer_turnover", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c002", "expected": [], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c003", "expected": [{"id": "no_psc", "severity": "info"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c004", "expected": [], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c005", "expected": [], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c006", "expected": [], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c007", "expected": [], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c008", "expected": [{"id": "age", "severity": "medium"}, {"id": "no_psc", "severity": "info"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c009", "expected": [{"id": "age", "severity": "medium"}, {"id": "no_psc", "severity": "info"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c010", "expected": [{"id": "age", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c011", "expected": [{"id": "age", "severity": "low"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c012", "expected": [{"id": "age", "severity": "low"}, {"id": "officer_turnover", "severity": "low"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c013", "expected": [{"id": "status", "severity": "high"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c014", "expected": [{"id": "status", "severity": "high"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c015", "expected": [{"id": "status", "severity": "high"}, {"id": "insolvency", "severity": "high"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c016", "expected": [{"id": "status", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c017", "expected": [{"id": "status", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c018", "expected": [{"id": "status", "severity": "high"}, {"id": "insolvency", "severity": "high"}, {"id": "charges", "severity": "low"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c019", "expected": [{"id": "status", "severity": "high"}, {"id": "insolvency", "severity": "high"}, {"id": "accounts_overdue", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c020", "expected": [{"id": "status", "severity": "high"}, {"id": "insolvency", "severity": "high"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c021", "expected": [{"id": "status", "severity": "high"}, {"id": "insolvency", "severity": "high"}, {"id": "charges", "severity": "low"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c022", "expected": [{"id": "strike_off", "severity": "high"}, {"id": "confirmation_overdue", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c023", "expected": [{"id": "strike_off", "severity": "high"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c024", "expected": [{"id": "accounts_overdue", "severity": "medium"}, {"id": "confirmation_overdue", "severity": "medium"}, {"id": "charges", "severity": "low"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c025", "expected": [{"id": "charges", "severity": "low"}, {"id": "address_changes", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c026", "expected": [{"id": "address_changes", "severity": "medium"}, {"id": "no_directors", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "LLP members are not directors, so no_directors applies by definition", "second_labeller_expected": null}
+{"company": "c027", "expected": [{"id": "network", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}
+{"company": "c028", "expected": [{"id": "network", "severity": "high"}, {"id": "officer_turnover", "severity": "medium"}], "labelled_on": "2026-10-24", "labeller": "draft", "notes": "", "second_labeller_expected": null}

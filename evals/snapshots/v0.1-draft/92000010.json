@@ -1,0 +1,107 @@
+{
+ "appointments": {
+  "OFFICERID10A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2026-08-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 010",
+       "company_number": "92000010",
+       "company_status": "active"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "appointed_on": "2026-08-20",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID10A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 010",
+    "company_number": "92000010",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "2026-08-20",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "92000010",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}

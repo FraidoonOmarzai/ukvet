@@ -1,0 +1,123 @@
+{
+ "appointments": {
+  "OFFICERID16A": {
+   "body": {
+    "items": [
+     {
+      "appointed_on": "2010-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 016",
+       "company_number": "92000016",
+       "company_status": "liquidation"
+      },
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 001",
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": null,
+   "status": 404
+  },
+  "filings": {
+   "body": null,
+   "status": 404
+  },
+  "insolvency": {
+   "body": {
+    "cases": [
+     {
+      "dates": [
+       {
+        "date": "2025-09-01",
+        "type": "wound-up-on"
+       }
+      ],
+      "number": 1,
+      "type": "members-voluntary-liquidation"
+     }
+    ],
+    "status": [
+     "x"
+    ]
+   },
+   "status": 200
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "appointed_on": "2010-05-05",
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID16A/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "director"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "last_accounts": {
+      "made_up_to": "2025-12-31"
+     },
+     "next_due": "2026-12-31",
+     "overdue": false
+    },
+    "company_name": "TEST COMPANY 016",
+    "company_number": "92000016",
+    "company_status": "liquidation",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-01-18",
+     "next_due": "2027-02-01",
+     "overdue": false
+    },
+    "date_of_creation": "2010-05-05",
+    "has_charges": false,
+    "has_insolvency_history": true,
+    "type": "ltd"
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "items": [
+     {
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON CONTROL 001",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "92000016",
+  "public": false,
+  "recorded": null,
+  "synthetic": true,
+  "truncated": []
+ }
+}
