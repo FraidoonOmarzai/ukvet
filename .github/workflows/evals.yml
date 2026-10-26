@@ -1,0 +1,113 @@
+name: Evals
+
+# Tier 1 (every PR, free, offline): replay the frozen dev companies in template mode and compare
+# with the committed baseline. Tier 2 (LLM): re-scores RECORDED model answers, no API key needed;
+# a cache miss means the facts or prompt changed and the answers must be re-recorded (manual job).
+#
+# The gate looks at the DEV split only. The test split is for milestones (ADR-009 D5).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "What to run"
+        type: choice
+        options: [gate, record-llm]
+        default: gate
+
+env:
+  # Change to the real dataset (e.g. v0.1) once it is committed.
+  EVAL_DATASET: v0.1
+
+jobs:
+  gate:
+    if: github.event_name != 'workflow_dispatch' || inputs.action == 'gate'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --all-groups --all-packages
+
+      - name: Validate dataset (structure, drift, personal-data leak check)
+        run: uv run ukvet-evals validate --dataset "$EVAL_DATASET"
+
+      - name: Tier 1 gate (template mode, dev split)
+        id: gate
+        continue-on-error: true
+        run: uv run ukvet-evals gate --dataset "$EVAL_DATASET" --markdown eval-gate.md
+
+      - name: Tier 2 gate (recorded LLM answers)
+        id: gate_llm
+        continue-on-error: true
+        if: ${{ vars.EVAL_LLM_MODEL != '' && hashFiles('evals/baselines/*-llm.json') != '' }}
+        run: |
+          uv run ukvet-evals run --dataset "$EVAL_DATASET" --split dev --llm replay \
+            --model "${{ vars.EVAL_LLM_MODEL }}" --out eval-llm-results
+          uv run ukvet-evals gate --dataset "$EVAL_DATASET" \
+            --results eval-llm-results/results.json \
+            --baseline "evals/baselines/${EVAL_DATASET}-llm.json" --markdown eval-gate-llm.md
+
+      - name: Post results on the pull request
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = '<!-- ukvet-eval-gate -->\n';
+            for (const f of ['eval-gate.md', 'eval-gate-llm.md']) {
+              if (fs.existsSync(f)) body += fs.readFileSync(f, 'utf8') + '\n';
+            }
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number });
+            const mine = comments.find(c => c.body && c.body.includes('<!-- ukvet-eval-gate -->'));
+            if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
+            else await github.rest.issues.createComment({ owner, repo, issue_number, body });
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-gate
+          path: |
+            eval-gate*.md
+            eval-llm-results/
+
+      - name: Fail if a gate failed
+        if: steps.gate.outcome == 'failure' || steps.gate_llm.outcome == 'failure'
+        run: |
+          echo "Eval gate failed: see the table above or the PR comment."
+          exit 1
+
+  record-llm:
+    # Manual only. Spends a few pence. Download the artifact and commit evals/llm_cache/ in a PR.
+    if: github.event_name == 'workflow_dispatch' && inputs.action == 'record-llm'
+    runs-on: ubuntu-latest
+    environment: evals-llm # protect with required reviewers; holds LLM_API_KEY
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --all-groups --all-packages
+      - name: Record model answers and score them
+        env:
+          LLM_PROVIDER: ${{ vars.EVAL_LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.EVAL_LLM_MODEL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          uv run ukvet-evals run --dataset "$EVAL_DATASET" --split dev --llm record \
+            --out eval-llm-results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: llm-recordings
+          path: |
+            evals/llm_cache/
+            eval-llm-results/

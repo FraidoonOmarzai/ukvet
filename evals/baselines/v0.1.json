@@ -1,0 +1,613 @@
+{
+ "m1": {
+  "by_question": {
+   "Q1": {
+    "fields": {
+     "ci95": [
+      0.9591,
+      1.0
+     ],
+     "k": 90,
+     "n": 90,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q2": {
+    "fields": {
+     "ci95": [
+      0.9398,
+      1.0
+     ],
+     "k": 60,
+     "n": 60,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q3": {
+    "fields": {
+     "ci95": [
+      0.969,
+      1.0
+     ],
+     "k": 120,
+     "n": 120,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q4": {
+    "fields": {
+     "ci95": [
+      0.9791,
+      1.0
+     ],
+     "k": 180,
+     "n": 180,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q5": {
+    "fields": {
+     "ci95": [
+      0.9398,
+      1.0
+     ],
+     "k": 60,
+     "n": 60,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q6": {
+    "fields": {
+     "ci95": [
+      0.969,
+      1.0
+     ],
+     "k": 120,
+     "n": 120,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q7": {
+    "fields": {
+     "ci95": [
+      0.9398,
+      1.0
+     ],
+     "k": 60,
+     "n": 60,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q8": {
+    "fields": {
+     "ci95": [
+      0.975,
+      1.0
+     ],
+     "k": 150,
+     "n": 150,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   },
+   "Q9": {
+    "fields": {
+     "ci95": [
+      0.9591,
+      1.0
+     ],
+     "k": 90,
+     "n": 90,
+     "rate": 1.0
+    },
+    "items": {
+     "ci95": [
+      0.8865,
+      1.0
+     ],
+     "k": 30,
+     "n": 30,
+     "rate": 1.0
+    }
+   }
+  },
+  "failures": [],
+  "overall": {
+   "fields": {
+    "ci95": [
+     0.9959,
+     1.0
+    ],
+    "k": 930,
+    "n": 930,
+    "rate": 1.0
+   },
+   "items": {
+    "ci95": [
+     0.986,
+     1.0
+    ],
+    "k": 270,
+    "n": 270,
+    "rate": 1.0
+   }
+  }
+ },
+ "m3": {
+  "cases": [
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-001",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q3",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-002",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q5"
+    ],
+    "id": "abs-003",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q7"
+    ],
+    "id": "abs-005",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-006",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [],
+    "id": "abs-008",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-010",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q6"
+    ],
+    "id": "abs-013",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q7"
+    ],
+    "id": "abs-014",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-015",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [],
+    "id": "abs-017",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q3",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-020",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q5"
+    ],
+    "id": "abs-021",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q6"
+    ],
+    "id": "abs-022",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-024",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [],
+    "id": "abs-025",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q3",
+     "Q4",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-027",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q3",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-029",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q5"
+    ],
+    "id": "abs-030",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q7"
+    ],
+    "id": "abs-032",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q9"
+    ],
+    "id": "abs-033",
+    "passed": true,
+    "risk": "low"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [],
+    "id": "abs-035",
+    "passed": true,
+    "risk": "high"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q8"
+    ],
+    "id": "abs-036",
+    "passed": true,
+    "risk": "medium"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q1",
+     "Q2",
+     "Q4"
+    ],
+    "id": "abs-038",
+    "passed": true,
+    "risk": "insufficient_data"
+   },
+   {
+    "failed_checks": [],
+    "gap_questions": [
+     "Q3",
+     "Q8",
+     "Q9"
+    ],
+    "id": "abs-039",
+    "passed": true,
+    "risk": "high"
+   }
+  ],
+  "ci95": [
+   0.8668,
+   1.0
+  ],
+  "k": 25,
+  "n": 25,
+  "rate": 1.0
+ },
+ "m5": {
+  "by_flag": {
+   "accounts_overdue": {
+    "expected": 6,
+    "found": 6
+   },
+   "age": {
+    "expected": 4,
+    "found": 4
+   },
+   "charges": {
+    "expected": 6,
+    "found": 6
+   },
+   "confirmation_overdue": {
+    "expected": 6,
+    "found": 6
+   },
+   "insolvency": {
+    "expected": 3,
+    "found": 3
+   },
+   "network": {
+    "expected": 8,
+    "found": 8
+   },
+   "no_directors": {
+    "expected": 1,
+    "found": 1
+   },
+   "no_psc": {
+    "expected": 3,
+    "found": 3
+   },
+   "officer_turnover": {
+    "expected": 4,
+    "found": 3
+   },
+   "status": {
+    "expected": 12,
+    "found": 12
+   },
+   "strike_off": {
+    "expected": 3,
+    "found": 3
+   }
+  },
+  "labelled_companies": 30,
+  "missed": [
+   {
+    "company": "c032",
+    "flag": "officer_turnover",
+    "tags": [
+     "many-appointments-director"
+    ]
+   }
+  ],
+  "precision": {
+   "ci95": [
+    0.9347,
+    1.0
+   ],
+   "k": 55,
+   "n": 55,
+   "rate": 1.0
+  },
+  "recall": {
+   "ci95": [
+    0.9055,
+    0.9968
+   ],
+   "k": 55,
+   "n": 56,
+   "rate": 0.9821
+  },
+  "second_labeller": {
+   "agreement": {
+    "ci95": null,
+    "k": 0,
+    "n": 0,
+    "rate": null
+   },
+   "kappa": null,
+   "pairs": 0
+  },
+  "severity_agreement": {
+   "ci95": [
+    0.9039,
+    0.9968
+   ],
+   "k": 54,
+   "n": 55,
+   "rate": 0.9818
+  },
+  "severity_mismatch": [
+   {
+    "company": "c035",
+    "expected": "medium",
+    "flag": "officer_turnover",
+    "got": "low"
+   }
+  ],
+  "unexpected": [],
+  "unlabelled_companies": 0
+ },
+ "meta": {
+  "companies": 30,
+  "dataset": "v0.1",
+  "dataset_version": "v0.1",
+  "git_commit": "2fc23d8",
+  "items": 270,
+  "judge": null,
+  "llm": {
+   "mode": "none",
+   "model": null
+  },
+  "split": "dev",
+  "synthetic": false,
+  "tool_version": "0.1.0"
+ },
+ "narrative": {
+  "claims": 270,
+  "examples": [],
+  "invalid_by_category": {},
+  "llm_errors": 0,
+  "llm_reports": 0,
+  "m2_unsupported": {
+   "ci95": [
+    0.0,
+    0.014
+   ],
+   "k": 0,
+   "n": 270,
+   "rate": 0.0
+  },
+  "m4_mechanical_valid": {
+   "ci95": [
+    0.986,
+    1.0
+   ],
+   "k": 270,
+   "n": 270,
+   "rate": 1.0
+  },
+  "m4_semantic_supported": {
+   "ci95": null,
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "reports": 30,
+  "retries": 0,
+  "writer_needed_checker": {
+   "ci95": null,
+   "k": 0,
+   "n": 0,
+   "rate": null
+  }
+ }
+}

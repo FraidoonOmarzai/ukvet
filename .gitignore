@@ -222,3 +222,5 @@ data/*
 !data/.gitkeep
 
 report.txt
+
+evals/results/*
