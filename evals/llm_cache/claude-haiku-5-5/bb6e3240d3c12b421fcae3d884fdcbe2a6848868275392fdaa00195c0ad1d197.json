@@ -1,0 +1,67 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status"
+    ],
+    "text": "The company's status is recorded as 'active'."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts are not overdue and the next accounts are due 1 April 2028; the last made-up date is not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue and the next statement is due 14 July 2027; the last made-up date is not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 1 July 2026 and is less than a year old, which is flagged as a medium red flag."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One person with significant control is recorded: PERSON 107, an individual holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current",
+     "Q8.director.1"
+    ],
+    "text": "PERSON 106 is the sole current officer, appointed as director on 1 July 2026, and holds one other active appointment."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes were filed since 26 October 2025, and one officer appointment and no resignations were filed in the same period."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q6.charges",
+    "Q3.officers_current"
+   ],
+   "text": "TEST COMPANY 106 (91000106) is an active company incorporated on 1 July 2026 with no insolvency record, no registered charges and one current director."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

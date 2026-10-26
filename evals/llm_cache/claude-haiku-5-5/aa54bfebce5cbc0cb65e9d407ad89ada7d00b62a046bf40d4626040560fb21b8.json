@@ -1,0 +1,62 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has one current officer, a director, PERSON 245, who was appointed on 4 September 2013."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts were last made up to 30 September 2025 and are not overdue; the next accounts are due 30 June 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement was last made up to 4 September 2026 and is not overdue; the next one is due 18 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "Two individuals are recorded as persons with significant control: PERSON 246 (ownership of shares and voting rights 25 to 50 percent) and PERSON 247 (ownership of shares and voting rights 50 to 75 percent, with the right to appoint and remove directors and significant influence or control)."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "The director, PERSON 245, has no other appointments on record, and no other companies were found across the one current director checked."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q6.charges",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 293 (91000294) is an active company, incorporated on 4 September 2013, with no insolvency record, no registered charges, and no overdue accounts or confirmation statement."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

@@ -1,0 +1,68 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q7.insolvency"
+    ],
+    "text": "The company's status is recorded as active, and Companies House holds no insolvency record for it."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue, with the next accounts due 30 September 2027 and the last accounts made up to 31 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue, with the next statement due 20 July 2027 and the last one made up to 6 July 2026."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The register shows 3 current officers: 2 directors, PERSON 142 (appointed 1 March 2017) and PERSON 143 (appointed 16 December 2024), and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One current person with significant control is recorded, CORPORATE CONTROLLER 726, holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "Seven charges are registered: 1 outstanding, 0 part-satisfied and 6 satisfied."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 2 current directors checked, 62 other companies were found, of which 1 is in liquidation, so the directors are linked to a company in an insolvency process."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q6.charges"
+   ],
+   "text": "PB LTD (00656314) is an active company incorporated on 13 April 1960, with no insolvency record held, accounts and confirmation statement not overdue, and one outstanding secured charge."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

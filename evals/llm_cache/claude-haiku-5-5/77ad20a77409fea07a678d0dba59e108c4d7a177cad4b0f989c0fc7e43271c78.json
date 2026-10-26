@@ -1,0 +1,74 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 24 February 2026 and is 0.7 years old (242 days), which is flagged as a medium red flag because it is less than a year old."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue and the next accounts are due 24 November 2027; the last accounts made-up date is not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue and the next one is due 9 March 2027; the last made-up date is not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has one current officer, PERSON 239, a director appointed on 24 February 2026, and no other officers."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One current person with significant control is recorded: PERSON 240, an individual holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "PERSON 239 has no other appointments on record, so no other companies were found across the one current director checked; this may be incomplete because appointments are matched by officer ID."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes were filed since 24 October 2025, and one officer appointment (PERSON 239, director, 24 February 2026) and no resignations were filed in the same period."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q6.charges",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 291 (91000292) is an active company incorporated on 24 February 2026, less than a year old, with no insolvency record, no registered charges and accounts and confirmation statement not overdue."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

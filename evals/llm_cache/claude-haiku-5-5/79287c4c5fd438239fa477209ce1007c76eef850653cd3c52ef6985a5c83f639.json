@@ -1,0 +1,60 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has 2 current directors, PERSON 079 and PERSON 080, both appointed on 6 February 2026, and no other current officers."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue and are next due 6 November 2027, with the last accounts made up to date not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue and is next due 19 February 2027, with the last statement made up to date not recorded."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "Two individuals, PERSON 081 and PERSON 082, are recorded as persons with significant control, each holding 25 to 50 percent of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "One charge is registered and outstanding, with none part-satisfied or satisfied."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.director.2",
+     "Q8.network"
+    ],
+    "text": "Each current director, PERSON 079 and PERSON 080, has one other active appointment, and across the two directors one other company was found."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes"
+    ],
+    "text": "No registered office address changes have been filed since 26 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 085 (91000085) is an active company incorporated on 6 February 2026, with no insolvency record held and one outstanding charge registered."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

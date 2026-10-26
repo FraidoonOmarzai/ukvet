@@ -1,0 +1,61 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q7.insolvency"
+    ],
+    "text": "The company's status is recorded as 'administration', and one insolvency case on record is in administration, which started on 12 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are overdue, with the next accounts due 30 December 2025 and the last accounts made up to 30 December 2023."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is overdue, with the next statement due 5 June 2026 and the last made up to 22 May 2025."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "Two charges are registered as outstanding and two as satisfied, 4 charges in total."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 2 current directors checked, 11 other companies were found, including 1 in administration."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current",
+     "Q5.control"
+    ],
+    "text": "The company has 2 current directors, PERSON 320 (appointed 1 May 2006) and PERSON 321 (appointed 10 February 2004), and 2 current persons with significant control are recorded."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "One registered office address change was filed on 29 December 2025, and no officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 441 (91000442) has status 'administration', with administration started on 12 December 2025, overdue accounts and an overdue confirmation statement."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

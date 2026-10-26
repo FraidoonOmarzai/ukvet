@@ -1,0 +1,65 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 27 October 1987 and its age at cessation is recorded as 38.2 years (13936 days)."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "The insolvency record shows one case, a members' voluntary liquidation, with the company wound up on 20 May 2025 and dissolved on 22 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "The company has one current person with significant control, CORPORATE CONTROLLER 1141, recorded as holding 75 to 100 percent of ownership of shares."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has 2 current officers: 1 director, PERSON 268 (appointed 11 May 2022), and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "The director PERSON 268 has 11 other appointments, of which 8 are active, 2 dissolved and 1 in liquidation, and the records note that this may be incomplete because appointments are matched by officer ID."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts",
+     "Q4.confirmation_statement"
+    ],
+    "text": "The accounts are recorded as last made up to 31 December 2023 with overdue status unknown and no next due date recorded, and the confirmation statement is recorded as last made up to 5 March 2025 with overdue status unknown and no next due date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes and no officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 302 (91000303) is dissolved, having ceased on 22 December 2025 after a members' voluntary liquidation that began with a winding-up on 20 May 2025."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

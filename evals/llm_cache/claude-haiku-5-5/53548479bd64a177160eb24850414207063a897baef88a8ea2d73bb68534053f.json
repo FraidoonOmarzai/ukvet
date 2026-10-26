@@ -1,0 +1,62 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status"
+    ],
+    "text": "The company status is recorded as dissolved, with cessation on 8 April 2014."
+   },
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 20 March 2013 and was 1.1 years old (384 days) at cessation."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for this company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are of unknown overdue status, with no next due date or last made-up date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is of unknown overdue status, with no next due date or last made-up date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The register shows 1 current officer, a director (PERSON 366) appointed on 20 March 2013, and no other officers."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "No current person with significant control is on record, which does not prove the company has no owner."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 469 (91000470) is dissolved, having ceased on 8 April 2014, and no insolvency record is held for it."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

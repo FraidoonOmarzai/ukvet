@@ -402,6 +402,7 @@ uv run ukvet-evals run --dataset demo  # You should see a results table on the f
 4. Split dev and test with a fixed hash, in code, so it can't drift. Save the result as `companies.jsonl`.
 
 **Note:** The whole dataset plan at `setup/dataset-plan.md`
+**Note:** Golden labels and flag labels(how to make them) `setup/GOLDEN-AND-FLAGS.md`
 
 Use Companies House search with a status filter to find the odd cases: dissolved, strike-off proposals, MVL and creditors' liquidation.
 
@@ -432,6 +433,47 @@ Use Companies House search with a status filter to find the odd cases: dissolved
 1. Add a stricter claim check (names, dates, numbers) and an independent re-implementation of the citation checker.
 2. Run Haiku over the dataset with response caching, and record cost and time.
 3. If time allows, add the LLM judge from a different model family, and hand-judge 20 outputs. This is the first thing to cut.
+---
+Day 9 is: have Haiku write the narratives for the dev companies once, save the answers, then score them. The LLM judge is optional and the first thing to cut, so I'd skip it.
+
+#### 1. Check `.env`
+It needs the same settings you used earlier:
+```
+LLM_PROVIDER=anthropic
+LLM_MODEL=claude-haiku-5-5
+LLM_API_KEY=<your key>
+```
+Cost should be pence: your earlier run of about 22 reports cost $0.01, and the dev split is 25 companies.
+
+#### 2. Record the answers (one paid run)
+```powershell
+uv run ukvet-evals run --dataset v0.1 --split dev --llm record
+```
+- It sends one request per dev company and saves each answer under `evals\llm_cache\claude-haiku-5-5\`.
+- The table now includes M2 (hallucination), M4 (citation validity), `writer needed checker`, LLM errors, time and cost.
+- If you get LLM errors, check the key, the model name and your remaining balance.
+
+#### 3. Replay it for free
+```powershell
+uv run ukvet-evals run --dataset v0.1 --split dev --llm replay --model claude-haiku-5-5
+```
+- It should give the same numbers as step 2, with no API calls.
+- Exit code 3 means a cache miss ("re-record"). That happens if the facts or prompts changed since recording, and it is the intended safety check.
+
+#### 4. Commit the cache
+`evals\llm_cache\` is meant to be committed, because it is text about anonymised facts. Check it with a glance, since a cache that mentions a real person's name would be a leak. Open two or three files and confirm the names look fake.
+
+#### 5. Skip the judge (recommended)
+The judge needs a second model family, hand-labelling 20 claims and extra setup. M4's mechanical number is close to 100% by design, so skipping the judge means M4's semantic part is simply not measured. Say that in the report. If you want it later, set `JUDGE_PROVIDER`, `JUDGE_MODEL` and `JUDGE_API_KEY` and add `--judge`.
+
+#### What to send me
+Paste the table from step 2. I'm looking for:
+- how many claims were scored (n) and the M2 percentage with its interval. Remember 2% of about 250 claims is 5 claims, so one or two bad claims moves it a lot
+- how often the first attempt needed the production checker
+- any name errors that the stricter scorer caught but production's checker would miss (risk R15)
+
+Do this after your first no-LLM dev run, since the LLM run uses the same companies. If you haven't done that yet, run it first and paste that table too.
+---
 
 ## Day 10: the CI gate (3.14)
 1. Commit `baseline.json` from the dev run.
