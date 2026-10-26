@@ -1,0 +1,313 @@
+{
+ "appointments": {
+  "OFFICERID599": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2020-11-12",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 781",
+       "company_number": "91000782",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-04-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 782",
+       "company_number": "91000783",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 783",
+       "company_number": "91000784",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2022-09-02"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 720",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 3
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2024-11-19",
+      "description": "gazette-dissolved-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQ0Mjg2NTIxN2FkaXF6a2N4",
+      "type": "GAZ2(A)"
+     },
+     {
+      "category": "gazette",
+      "date": "2024-09-03",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQzMzExMDkxNGFkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "action_date": "2023-11-30",
+      "barcode": "XDAT8DT4",
+      "category": "accounts",
+      "date": "2024-09-02",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 2,
+      "transaction_id": "MzQzNDE4NDQxOWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "XDA2DUO9",
+      "category": "dissolution",
+      "date": "2024-08-22",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 1,
+      "transaction_id": "MzQzMzExMDMxNWFkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2023-11-15",
+      "barcode": "XCIHHB9T",
+      "category": "confirmation-statement",
+      "date": "2023-12-16",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQwNDU4MTE2MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2023-08-30",
+      "barcode": "XCIHHB5E",
+      "category": "persons-with-significant-control",
+      "date": "2023-12-16",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzQwNDU4MTEzNWFkaXF6a2N4",
+      "type": "PSC04"
+     },
+     {
+      "action_date": "2022-11-30",
+      "barcode": "XC950OTC",
+      "category": "accounts",
+      "date": "2023-08-03",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 10,
+      "transaction_id": "MzM4ODU5MDQwNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-11-15",
+      "barcode": "XBHO9057",
+      "category": "confirmation-statement",
+      "date": "2022-11-27",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM1OTk1NDEwNWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-11-30",
+      "barcode": "XBBESI0W",
+      "category": "accounts",
+      "date": "2022-08-29",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzM1MDAzMTMzN2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-08-29",
+      "barcode": "XBBEQO7M",
+      "category": "address",
+      "date": "2022-08-29",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzM1MDAxNzMxMmFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2021-11-15",
+      "barcode": "XAHE8CS1",
+      "category": "confirmation-statement",
+      "date": "2021-11-16",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMyMDMyNjExNmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-04-07",
+      "barcode": "XA1WFR17",
+      "category": "address",
+      "date": "2021-04-07",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzI5NzA0ODIyOGFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2020-11-12",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2020-11-12",
+        "category": "capital",
+        "date": "2020-11-12",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X9HL56HK",
+      "category": "incorporation",
+      "date": "2020-11-12",
+      "description": "incorporation-company",
+      "pages": 10,
+      "transaction_id": "MzI4MzE1MDQzN2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 13
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2020-11-12",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID599/appointments"
+       }
+      },
+      "name": "PERSON 718",
+      "officer_role": "director",
+      "person_number": "257388010001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "30",
+      "month": "11"
+     },
+     "last_accounts": {
+      "made_up_to": "2023-11-30",
+      "period_end_on": "2023-11-30",
+      "type": "dormant"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 781",
+    "company_number": "91000782",
+    "company_status": "dissolved",
+    "confirmation_statement": {
+     "last_made_up_to": "2023-11-15"
+    },
+    "date_of_cessation": "2024-11-19",
+    "date_of_creation": "2020-11-12",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "82990",
+     "86900"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 719",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2020-11-12"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000782",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

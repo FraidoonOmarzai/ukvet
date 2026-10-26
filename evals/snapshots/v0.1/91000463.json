@@ -1,0 +1,663 @@
+{
+ "appointments": {
+  "OFFICERID274": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2025-07-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 463",
+       "company_number": "91000464",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-11-07",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 464",
+       "company_number": "91000465",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-03-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 465",
+       "company_number": "91000466",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-03-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 466",
+       "company_number": "91000467",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-09-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 462",
+       "company_number": "91000463",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 355",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 5
+   },
+   "status": 200
+  },
+  "OFFICERID275": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2025-07-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 463",
+       "company_number": "91000464",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-11-07",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 464",
+       "company_number": "91000465",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-03-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 465",
+       "company_number": "91000466",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-03-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 466",
+       "company_number": "91000467",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-10-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 462",
+       "company_number": "91000463",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 356",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 5
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "barcode": "XEHZEZE0",
+      "category": "accounts",
+      "date": "2025-12-23",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 8,
+      "transaction_id": "MzQ5NjA1MTE1OGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2025-10-09",
+      "barcode": "XECSJFZG",
+      "category": "confirmation-statement",
+      "date": "2025-10-09",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ4NDMxNjUwM2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2025-09-05",
+      "barcode": "XEB6GFD5",
+      "category": "confirmation-statement",
+      "date": "2025-09-15",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ4MTA4MzgwMGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XDJ2VRG0",
+      "category": "accounts",
+      "date": "2024-12-30",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 8,
+      "transaction_id": "MzQ0OTMxOTQxMmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-09-17",
+      "barcode": "XDBUT41M",
+      "category": "address",
+      "date": "2024-09-17",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzQzNjIxMDUwOWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2024-09-05",
+      "barcode": "XDB19OCX",
+      "category": "confirmation-statement",
+      "date": "2024-09-05",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQzNDYyMTc0M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XCJ8KABN",
+      "category": "accounts",
+      "date": "2023-12-27",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 8,
+      "transaction_id": "MzQwNTY3MTYzNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-09-08",
+      "barcode": "XCBVMRPD",
+      "category": "confirmation-statement",
+      "date": "2023-09-12",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM5MjYxNjE5N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XBJUESSR",
+      "category": "accounts",
+      "date": "2022-12-28",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 8,
+      "transaction_id": "MzM2MzkwNDQ3MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-09-08",
+      "barcode": "XBC31F5U",
+      "category": "confirmation-statement",
+      "date": "2022-09-08",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM1MTIwNjI3NmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XAJY6B43",
+      "category": "accounts",
+      "date": "2021-12-23",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 8,
+      "transaction_id": "MzMyNDY0ODU5M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-09-08",
+      "barcode": "XACMIWDU",
+      "category": "confirmation-statement",
+      "date": "2021-09-08",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMxMzI1MDA1M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XA1AKA9M",
+      "category": "accounts",
+      "date": "2021-03-29",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 9,
+      "transaction_id": "MzI5NjAzMTE0OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-09-08",
+      "barcode": "X9DAIIPL",
+      "category": "confirmation-statement",
+      "date": "2020-09-10",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI3NzM1OTQwNWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "J8KJ3QI2",
+      "category": "accounts",
+      "date": "2019-12-20",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MzI1MjM3OTY3NGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-09-08",
+      "barcode": "X8DWPRWO",
+      "category": "confirmation-statement",
+      "date": "2019-09-13",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI0NDIxNzE1MWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "J7XFC856",
+      "category": "accounts",
+      "date": "2019-01-21",
+      "description": "accounts-with-accounts-type-unaudited-abridged",
+      "pages": 7,
+      "paper_filed": true,
+      "transaction_id": "MzIyNDgwODk1NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2018-09-08",
+      "barcode": "X7GOGAIK",
+      "category": "confirmation-statement",
+      "date": "2018-10-16",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIxNzA3MzM2MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-03-31",
+      "barcode": "J6FG6WQA",
+      "category": "accounts",
+      "date": "2017-09-26",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 7,
+      "paper_filed": true,
+      "transaction_id": "MzE4NTkxNDc1OGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-09-08",
+      "barcode": "X6EJ5GY3",
+      "category": "confirmation-statement",
+      "date": "2017-09-08",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzE4NDk4MTc4NWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-03-31",
+      "barcode": "X5ZUD3U9",
+      "category": "accounts",
+      "date": "2017-02-08",
+      "description": "change-account-reference-date-company-current-extended",
+      "pages": 1,
+      "transaction_id": "MzE2ODUxNTUxM2FkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2016-09-14",
+      "barcode": "X5GLXUF4",
+      "category": "confirmation-statement",
+      "date": "2016-09-30",
+      "description": "confirmation-statement-with-updates",
+      "pages": 6,
+      "transaction_id": "MzE1ODY1Mjk4MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2015-10-01",
+      "barcode": "X5GLWECT",
+      "category": "officers",
+      "date": "2016-09-30",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzE1ODYzOTIxNGFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2015-09-30",
+      "barcode": "J59R2G5C",
+      "category": "accounts",
+      "date": "2016-06-29",
+      "description": "accounts-with-accounts-type-total-exemption-small",
+      "pages": 7,
+      "paper_filed": true,
+      "transaction_id": "MzE1MTU0MTQ2OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-09-14",
+      "associated_filings": [
+       {
+        "action_date": "2015-09-14",
+        "category": "capital",
+        "date": "2015-09-14",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X4FXWZ0P",
+      "category": "annual-return",
+      "date": "2015-09-14",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 3,
+      "transaction_id": "MzEzMDk0NzY4NmFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2015-09-14",
+      "barcode": "X4FXUG1C",
+      "category": "address",
+      "date": "2015-09-14",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzEzMDkyMjg4MWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2014-09-25",
+      "barcode": "X3HLBO0Q",
+      "category": "officers",
+      "date": "2014-10-01",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzEwODY0MzUxMGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2014-09-25",
+      "barcode": "X3HLBNRN",
+      "category": "officers",
+      "date": "2014-10-01",
+      "description": "appoint-person-secretary-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzEwODY0MzUwOWFkaXF6a2N4",
+      "type": "AP03"
+     },
+     {
+      "action_date": "2014-09-25",
+      "barcode": "X3HLBNWZ",
+      "category": "officers",
+      "date": "2014-10-01",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzEwODY0MzQ5NWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "change-of-name",
+        "date": "2014-09-29",
+        "description": "change-of-name-by-resolution",
+        "type": "NM01"
+       }
+      ],
+      "barcode": "X3HFVDRZ",
+      "category": "change-of-name",
+      "date": "2014-09-29",
+      "description": "certificate-change-of-name-company",
+      "pages": 3,
+      "resolutions": [
+       {
+        "category": "change-of-name",
+        "description": "resolution-change-of-name",
+        "subcategory": "resolution",
+        "type": "RES15"
+       }
+      ],
+      "subcategory": "certificate",
+      "transaction_id": "MzEwODQzMTI5NGFkaXF6a2N4",
+      "type": "CERTNM"
+     },
+     {
+      "associated_filings": [
+       {
+        "action_date": "2014-09-24",
+        "category": "capital",
+        "date": "2014-09-24",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       },
+       {
+        "category": "incorporation",
+        "date": "2014-09-24",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       }
+      ],
+      "barcode": "X3H0BEDS",
+      "category": "incorporation",
+      "date": "2014-09-24",
+      "description": "incorporation-company",
+      "pages": 7,
+      "paper_filed": true,
+      "transaction_id": "MzEwODA2MTcwM2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 31
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2014-09-25",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID273/appointments"
+       }
+      },
+      "name": "PERSON 349",
+      "officer_role": "secretary",
+      "person_number": "191436100001"
+     },
+     {
+      "appointed_on": "2014-09-25",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID274/appointments"
+       }
+      },
+      "name": "PERSON 350",
+      "officer_role": "director",
+      "person_number": "191436080001"
+     },
+     {
+      "appointed_on": "2015-10-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID275/appointments"
+       }
+      },
+      "name": "PERSON 351",
+      "officer_role": "director",
+      "person_number": "215293060001"
+     },
+     {
+      "appointed_on": "2014-09-24",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID276/appointments"
+       }
+      },
+      "name": "PERSON 352",
+      "officer_role": "director",
+      "person_number": "153835700001",
+      "resigned_on": "2014-09-25"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-03-31",
+      "period_end_on": "2025-03-31",
+      "period_start_on": "2024-04-01",
+      "type": "unaudited-abridged"
+     },
+     "next_accounts": {
+      "due_on": "2026-12-31",
+      "overdue": false,
+      "period_end_on": "2026-03-31",
+      "period_start_on": "2025-04-01"
+     },
+     "next_due": "2026-12-31",
+     "next_made_up_to": "2026-03-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 462",
+    "company_number": "91000463",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-10-09",
+     "next_due": "2026-10-23",
+     "next_made_up_to": "2026-10-09",
+     "overdue": true
+    },
+    "date_of_creation": "2014-09-24",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "northern-ireland",
+    "last_full_members_list_date": "2015-09-14",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "86900"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 2,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 353",
+      "natures_of_control": [
+       "ownership-of-shares-50-to-75-percent"
+      ],
+      "notified_on": "2016-04-06"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 354",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000463",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

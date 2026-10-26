@@ -1,0 +1,219 @@
+{
+ "appointments": {
+  "OFFICERID218": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2015-08-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 299",
+       "company_number": "91000300",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 265",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2017-10-10",
+      "description": "gazette-dissolved-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE4Njg1NTA0NmFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "category": "gazette",
+      "date": "2017-07-25",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE4MDUzOTUwN2FkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2016-05-06",
+      "associated_filings": [
+       {
+        "action_date": "2016-05-12",
+        "category": "capital",
+        "date": "2016-05-12",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X56V3PYI",
+      "category": "annual-return",
+      "date": "2016-05-12",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 3,
+      "transaction_id": "MzE0ODQyNjAyNWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "change-of-name",
+        "date": "2016-05-06",
+        "description": "change-of-name-by-resolution",
+        "type": "NM01"
+       }
+      ],
+      "barcode": "X56CRLU8",
+      "category": "resolution",
+      "date": "2016-05-06",
+      "description": "resolution",
+      "pages": 3,
+      "resolutions": [
+       {
+        "category": "change-of-name",
+        "description": "resolution-change-of-name",
+        "subcategory": "resolution",
+        "type": "RES15"
+       }
+      ],
+      "subcategory": "certificate",
+      "transaction_id": "MzE0Nzk2NzU3MWFkaXF6a2N4",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2015-08-24",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2015-08-24",
+        "category": "capital",
+        "date": "2015-08-24",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X4EA842J",
+      "category": "incorporation",
+      "date": "2015-08-24",
+      "description": "incorporation-company",
+      "pages": 21,
+      "transaction_id": "MzEyOTQ0NTQ4M2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 5
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2015-08-24",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID218/appointments"
+       }
+      },
+      "name": "PERSON 264",
+      "officer_role": "director",
+      "person_number": "200419750001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "08"
+     },
+     "last_accounts": {
+      "type": "null"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 299",
+    "company_number": "91000300",
+    "company_status": "dissolved",
+    "date_of_cessation": "2017-10-10",
+    "date_of_creation": "2015-08-24",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2016-05-06",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "96090"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000300",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

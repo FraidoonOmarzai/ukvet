@@ -1,0 +1,48 @@
+{"as_of": "2026-10-24", "company_number": "00445790", "id": "c001", "notes": "", "public": true, "split": "dev", "tags": ["large-plc"]}
+{"as_of": "2026-10-24", "company_number": "00656314", "id": "c002", "notes": "", "public": true, "split": "dev", "tags": ["large-plc"]}
+{"as_of": "2026-10-24", "company_number": "02333320", "id": "c003", "notes": "", "public": true, "split": "dev", "tags": ["large-plc"]}
+{"as_of": "2026-10-24", "company_number": "91000285", "id": "c004", "notes": "", "public": false, "split": "test", "tags": ["healthy-small"]}
+{"as_of": "2026-10-24", "company_number": "91000288", "id": "c005", "notes": "", "public": false, "split": "dev", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "91000292", "id": "c006", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "charges-all-satisfied"]}
+{"as_of": "2026-10-24", "company_number": "91000293", "id": "c007", "notes": "", "public": false, "split": "test", "tags": ["healthy-small", "charges-all-satisfied"]}
+{"as_of": "2026-10-24", "company_number": "91000294", "id": "c008", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "corporate-psc"]}
+{"as_of": "2026-10-24", "company_number": "91000295", "id": "c009", "notes": "", "public": false, "split": "test", "tags": ["under-1-year", "no-psc"]}
+{"as_of": "2026-10-24", "company_number": "91000296", "id": "c010", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year", "no-psc"]}
+{"as_of": "2026-10-24", "company_number": "91000297", "id": "c011", "notes": "", "public": false, "split": "test", "tags": ["under-1-year"]}
+{"as_of": "2026-10-24", "company_number": "91000298", "id": "c012", "notes": "", "public": false, "split": "test", "tags": ["1-to-2-years"]}
+{"as_of": "2026-10-24", "company_number": "91000300", "id": "c013", "notes": "", "public": false, "split": "dev", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "91000301", "id": "c014", "notes": "", "public": false, "split": "dev", "tags": ["dissolved"]}
+{"as_of": "2026-10-24", "company_number": "91000303", "id": "c015", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-mvl"]}
+{"as_of": "2026-10-24", "company_number": "91000315", "id": "c016", "notes": "", "public": false, "split": "test", "tags": ["liquidation-mvl"]}
+{"as_of": "2026-10-24", "company_number": "91000424", "id": "c017", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-creditors"]}
+{"as_of": "2026-10-24", "company_number": "91000427", "id": "c018", "notes": "", "public": false, "split": "test", "tags": ["liquidation-creditors"]}
+{"as_of": "2026-10-24", "company_number": "91000430", "id": "c019", "notes": "", "public": false, "split": "test", "tags": ["administration-or-receivership"]}
+{"as_of": "2026-10-24", "company_number": "91000442", "id": "c020", "notes": "", "public": false, "split": "dev", "tags": ["administration-or-receivership"]}
+{"as_of": "2026-10-24", "company_number": "91000454", "id": "c021", "notes": "", "public": false, "split": "dev", "tags": ["strike-off-proposal"]}
+{"as_of": "2026-10-24", "company_number": "91000457", "id": "c022", "notes": "", "public": false, "split": "dev", "tags": ["strike-off-proposal"]}
+{"as_of": "2026-10-24", "company_number": "91000460", "id": "c023", "notes": "", "public": false, "split": "test", "tags": ["overdue-filings", "charges-outstanding"]}
+{"as_of": "2026-10-24", "company_number": "91000461", "id": "c024", "notes": "", "public": false, "split": "dev", "tags": ["overdue-filings"]}
+{"as_of": "2026-10-24", "company_number": "91000462", "id": "c025", "notes": "", "public": false, "split": "dev", "tags": ["llp-or-sc-or-ni"]}
+{"as_of": "2026-10-24", "company_number": "91000463", "id": "c026", "notes": "", "public": false, "split": "test", "tags": ["llp-or-sc-or-ni"]}
+{"as_of": "2026-10-24", "company_number": "91000468", "id": "c027", "notes": "", "public": false, "split": "dev", "tags": ["llp-or-sc-or-ni"]}
+{"as_of": "2026-10-24", "company_number": "91000469", "id": "c028", "notes": "", "public": false, "split": "test", "tags": ["1-to-2-years"]}
+{"as_of": "2026-10-24", "company_number": "91000470", "id": "c029", "notes": "", "public": false, "split": "dev", "tags": ["healthy-small", "corporate-psc"]}
+{"as_of": "2026-10-24", "company_number": "91000471", "id": "c030", "notes": "", "public": false, "split": "dev", "tags": ["overdue-filings", "charges-outstanding"]}
+{"as_of": "2026-10-24", "company_number": "91000476", "id": "c031", "notes": "", "public": false, "split": "test", "tags": ["many-appointments-director"]}
+{"as_of": "2026-10-24", "company_number": "91000479", "id": "c032", "notes": "", "public": false, "split": "dev", "tags": ["many-appointments-director"]}
+{"as_of": "2026-10-24", "company_number": "91000482", "id": "c033", "notes": "", "public": false, "split": "dev", "tags": ["corporate-officer"]}
+{"as_of": "2026-10-24", "company_number": "91000533", "id": "c034", "notes": "", "public": false, "split": "test", "tags": ["corporate-officer"]}
+{"as_of": "2026-10-24", "company_number": "91000591", "id": "c035", "notes": "", "public": false, "split": "dev", "tags": ["officer-changes-12m"]}
+{"as_of": "2026-10-24", "company_number": "91000690", "id": "c036", "notes": "", "public": false, "split": "dev", "tags": ["address-change-12m"]}
+{"as_of": "2026-10-24", "company_number": "91000740", "id": "c037", "notes": "", "public": false, "split": "test", "tags": ["address-change-12m"]}
+{"as_of": "2026-10-24", "company_number": "91000780", "id": "c038", "notes": "", "public": false, "split": "dev", "tags": ["officer-changes-12m"]}
+{"as_of": "2026-10-24", "company_number": "91000782", "id": "c039", "notes": "", "public": false, "split": "dev", "tags": ["officer-changes-12m"]}
+{"as_of": "2026-10-26", "company_number": "91000785", "id": "c040", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year", "no-psc"]}
+{"as_of": "2026-10-26", "company_number": "91000786", "id": "c041", "notes": "", "public": false, "split": "test", "tags": ["dissolved"]}
+{"as_of": "2026-10-26", "company_number": "91000787", "id": "c042", "notes": "", "public": false, "split": "dev", "tags": ["liquidation-mvl", "overdue-filings"]}
+{"as_of": "2026-10-26", "company_number": "91000084", "id": "c043", "notes": "", "public": false, "split": "dev", "tags": ["strike-off-proposal", "overdue-filings"]}
+{"as_of": "2026-10-26", "company_number": "91000085", "id": "c044", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year", "charges-outstanding"]}
+{"as_of": "2026-10-26", "company_number": "91000087", "id": "c045", "notes": "", "public": false, "split": "test", "tags": ["corporate-psc", "charges-outstanding"]}
+{"as_of": "2026-10-26", "company_number": "91000106", "id": "c046", "notes": "", "public": false, "split": "dev", "tags": ["under-1-year"]}
+{"as_of": "2026-10-26", "company_number": "91000788", "id": "c047", "notes": "", "public": false, "split": "test", "tags": ["charges-outstanding"]}
+{"as_of": "2026-10-26", "company_number": "91000792", "id": "c048", "notes": "", "public": false, "split": "test", "tags": ["healthy-small"]}

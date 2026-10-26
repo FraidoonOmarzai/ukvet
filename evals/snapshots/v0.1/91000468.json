@@ -1,0 +1,273 @@
+{
+ "appointments": {
+  "OFFICERID278": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2007-01-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 467",
+       "company_number": "91000468",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 361",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID279": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2007-01-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 467",
+       "company_number": "91000468",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 362",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2010-08-27",
+      "description": "gazette-dissolved-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzAyMTMzNDkzMmFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "category": "gazette",
+      "date": "2010-05-07",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzAxNDMyNjUzM2FkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "barcode": "00249968",
+      "category": "address",
+      "date": "2007-02-07",
+      "description": "legacy",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MjUwNDIyNjgzOGFkaXF6a2N4",
+      "type": "295(NI)"
+     },
+     {
+      "barcode": "00249970",
+      "category": "officers",
+      "date": "2007-02-07",
+      "description": "legacy",
+      "pages": 2,
+      "paper_filed": true,
+      "transaction_id": "MjUwNDIyNjgzN2FkaXF6a2N4",
+      "type": "296(NI)"
+     },
+     {
+      "barcode": "00249969",
+      "category": "officers",
+      "date": "2007-02-07",
+      "description": "legacy",
+      "pages": 2,
+      "paper_filed": true,
+      "transaction_id": "MjUwNDIyNjgzNmFkaXF6a2N4",
+      "type": "296(NI)"
+     },
+     {
+      "category": "incorporation",
+      "date": "2006-10-11",
+      "description": "incorporation-company",
+      "pages": 17,
+      "paper_filed": true,
+      "transaction_id": "MjUwNDIyNjgzNWFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 6
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 3,
+    "items": [
+     {
+      "appointed_on": "2007-02-07",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID277/appointments"
+       }
+      },
+      "name": "PERSON 357",
+      "officer_role": "secretary",
+      "person_number": "145856790001"
+     },
+     {
+      "appointed_on": "2007-01-08",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID278/appointments"
+       }
+      },
+      "name": "PERSON 357",
+      "officer_role": "director",
+      "person_number": "145856780001"
+     },
+     {
+      "appointed_on": "2007-01-08",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID279/appointments"
+       }
+      },
+      "name": "PERSON 358",
+      "officer_role": "director",
+      "person_number": "145856770001"
+     },
+     {
+      "appointed_on": "2006-10-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID280/appointments"
+       }
+      },
+      "name": "PERSON 359",
+      "officer_role": "secretary",
+      "person_number": "125228390001",
+      "resigned_on": "2007-01-26"
+     },
+     {
+      "appointed_on": "2006-10-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID281/appointments"
+       }
+      },
+      "name": "PERSON 360",
+      "officer_role": "director",
+      "person_number": "144414110001",
+      "resigned_on": "2007-01-26"
+     },
+     {
+      "appointed_on": "2006-10-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID280/appointments"
+       }
+      },
+      "name": "PERSON 359",
+      "officer_role": "director",
+      "person_number": "125228390001",
+      "resigned_on": "2007-01-26"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 3,
+    "start_index": 0,
+    "total_results": 6
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "10"
+     },
+     "last_accounts": {
+      "type": "null"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 467",
+    "company_number": "91000468",
+    "company_status": "dissolved",
+    "date_of_cessation": "2010-08-27",
+    "date_of_creation": "2006-10-11",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "northern-ireland",
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000468",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

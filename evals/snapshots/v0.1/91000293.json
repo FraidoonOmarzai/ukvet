@@ -1,0 +1,259 @@
+{
+ "appointments": {
+  "OFFICERID211": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2022-04-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 292",
+       "company_number": "91000293",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 244",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2026-03-31",
+      "barcode": "XF0XNK8H",
+      "category": "confirmation-statement",
+      "date": "2026-04-28",
+      "description": "confirmation-statement-with-updates",
+      "pages": 3,
+      "transaction_id": "MzUxODY4ODkxN2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2025-03-31",
+      "barcode": "XEHHPYIA",
+      "category": "accounts",
+      "date": "2025-12-15",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 5,
+      "transaction_id": "MzQ5NDA1NTYxNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2025-03-31",
+      "barcode": "XDZML5CZ",
+      "category": "confirmation-statement",
+      "date": "2025-04-02",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ2MTIyMDg4MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-03-31",
+      "barcode": "XDIXQH41",
+      "category": "accounts",
+      "date": "2024-12-28",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 5,
+      "transaction_id": "MzQ0OTI1NjQ4OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-03-31",
+      "barcode": "XD0PPL5T",
+      "category": "confirmation-statement",
+      "date": "2024-04-10",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzQxNzc3NTM3N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XCJJ7ZRT",
+      "category": "accounts",
+      "date": "2023-12-31",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 5,
+      "transaction_id": "MzQwNjExMDkwNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XCIV4N55",
+      "category": "accounts",
+      "date": "2023-12-21",
+      "description": "change-account-reference-date-company-previous-shortened",
+      "pages": 1,
+      "transaction_id": "MzQwNTE4NzczMmFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XC0PBE5T",
+      "category": "confirmation-statement",
+      "date": "2023-04-03",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM3NTAzMTQyMmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "associated_filings": [
+       {
+        "action_date": "2022-04-01",
+        "category": "capital",
+        "date": "2022-04-01",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XB0X84Q8",
+      "category": "incorporation",
+      "date": "2022-04-01",
+      "description": "incorporation-company",
+      "pages": 28,
+      "transaction_id": "MzMzNDgxOTIzNWFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 9
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2022-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID211/appointments"
+       }
+      },
+      "name": "PERSON 242",
+      "officer_role": "director",
+      "person_number": "294283960001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-03-31",
+      "period_end_on": "2025-03-31",
+      "period_start_on": "2024-04-01",
+      "type": "total-exemption-full"
+     },
+     "next_accounts": {
+      "due_on": "2026-12-31",
+      "overdue": false,
+      "period_end_on": "2026-03-31",
+      "period_start_on": "2025-04-01"
+     },
+     "next_due": "2026-12-31",
+     "next_made_up_to": "2026-03-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 292",
+    "company_number": "91000293",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-03-31",
+     "next_due": "2027-04-14",
+     "next_made_up_to": "2027-03-31",
+     "overdue": false
+    },
+    "date_of_creation": "2022-04-01",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "74990"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 243",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2022-04-01"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000293",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

@@ -1,0 +1,325 @@
+{
+ "appointments": {
+  "OFFICERID071": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2019-06-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 084",
+       "company_number": "91000084",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 078",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "dissolution",
+      "date": "2024-03-26",
+      "description": "dissolved-compulsory-strike-off-suspended",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQxNTg1NzMyNWFkaXF6a2N4",
+      "type": "DISS16(SOAS)"
+     },
+     {
+      "category": "gazette",
+      "date": "2024-03-12",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQxMjcyNzExMmFkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2023-07-15",
+      "barcode": "XC8OQ1C0",
+      "category": "confirmation-statement",
+      "date": "2023-07-28",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzM4NzkzMjM3N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2022-03-31",
+      "barcode": "XBHQY9Y3",
+      "category": "accounts",
+      "date": "2022-11-28",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 11,
+      "transaction_id": "MzM2MDAyNjI3NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "category": "resolution",
+      "date": "2022-10-03",
+      "description": "resolution",
+      "pages": 1,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "capital",
+        "description": "resolution",
+        "subcategory": "resolution",
+        "type": "RES13"
+       },
+       {
+        "category": "incorporation",
+        "description": "resolution-adopt-articles",
+        "subcategory": "resolution",
+        "type": "RES01"
+       }
+      ],
+      "transaction_id": "QUJESTY3MjBhZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "barcode": "ABDI6709",
+      "category": "incorporation",
+      "date": "2022-10-03",
+      "description": "memorandum-articles",
+      "pages": 17,
+      "paper_filed": true,
+      "transaction_id": "MzM1MzY4OTU4MGFkaXF6a2N4",
+      "type": "MA"
+     },
+     {
+      "action_date": "2022-07-15",
+      "barcode": "XB8YSCOP",
+      "category": "confirmation-statement",
+      "date": "2022-07-25",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzM0NjY4ODk4N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-03-31",
+      "barcode": "XAJY5IY1",
+      "category": "accounts",
+      "date": "2021-12-23",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 11,
+      "transaction_id": "MzMyNDY0MTk2OGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-07-15",
+      "barcode": "XAAMVB6X",
+      "category": "confirmation-statement",
+      "date": "2021-08-11",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMxMDQwODI2MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-03-31",
+      "barcode": "XA3HAK16",
+      "category": "accounts",
+      "date": "2021-04-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 9,
+      "transaction_id": "MzI5OTU5MDQ0MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-03-31",
+      "barcode": "XA3BHSSB",
+      "category": "accounts",
+      "date": "2021-04-27",
+      "description": "change-account-reference-date-company-current-shortened",
+      "pages": 1,
+      "transaction_id": "MzI5OTA5NjUwMmFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2020-12-23",
+      "barcode": "X9KHLUOP",
+      "category": "address",
+      "date": "2020-12-23",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzI4Njc3OTYxNGFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2020-07-15",
+      "barcode": "X9CP4BQR",
+      "category": "confirmation-statement",
+      "date": "2020-09-01",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzI3NjYxMzUwMmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2019-06-18",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2019-06-18",
+        "category": "capital",
+        "date": "2019-06-18",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X87T64ZN",
+      "category": "incorporation",
+      "date": "2019-06-18",
+      "description": "incorporation-company",
+      "pages": 11,
+      "transaction_id": "MzIzNzA1MzUxM2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 14
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2019-06-18",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID071/appointments"
+       }
+      },
+      "name": "PERSON 076",
+      "officer_role": "director",
+      "person_number": "259599590001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "made_up_to": "2022-03-31",
+      "period_end_on": "2022-03-31",
+      "period_start_on": "2021-04-01",
+      "type": "total-exemption-full"
+     },
+     "next_accounts": {
+      "due_on": "2023-12-31",
+      "overdue": true,
+      "period_end_on": "2023-03-31",
+      "period_start_on": "2022-04-01"
+     },
+     "next_due": "2023-12-31",
+     "next_made_up_to": "2023-03-31",
+     "overdue": true
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 084",
+    "company_number": "91000084",
+    "company_status": "active",
+    "company_status_detail": "active-proposal-to-strike-off",
+    "confirmation_statement": {
+     "last_made_up_to": "2023-07-15",
+     "next_due": "2024-07-29",
+     "next_made_up_to": "2024-07-15",
+     "overdue": true
+    },
+    "date_of_creation": "2019-06-18",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "41202"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 077",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2019-06-18"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-26",
+  "company_number": "91000084",
+  "public": false,
+  "recorded": "2026-10-26",
+  "synthetic": false,
+  "truncated": []
+ }
+}

@@ -1,0 +1,1032 @@
+{
+ "appointments": {
+  "OFFICERID603": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_before": "1991-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 785",
+       "company_number": "91000787",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": true,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 730",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2025-09-10",
+      "barcode": "YEF22M4O",
+      "category": "insolvency",
+      "date": "2025-11-11",
+      "description": "liquidation-voluntary-statement-of-receipts-and-payments-with-brought-down-date",
+      "pages": 24,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzQ4ODA1MTc5MGFkaXF6a2N4",
+      "type": "LIQ03"
+     },
+     {
+      "action_date": "2024-09-19",
+      "barcode": "YDBK8V9D",
+      "category": "address",
+      "date": "2024-09-19",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzQzNTYyNTE4MWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "barcode": "YDBK8VIW",
+      "category": "insolvency",
+      "date": "2024-09-19",
+      "description": "liquidation-voluntary-declaration-of-solvency",
+      "pages": 5,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzQzNTYyNTI3MWFkaXF6a2N4",
+      "type": "LIQ01"
+     },
+     {
+      "barcode": "YDBK8UMO",
+      "category": "insolvency",
+      "date": "2024-09-19",
+      "description": "liquidation-voluntary-appointment-of-liquidator",
+      "pages": 3,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzQzNTYyNTA4NGFkaXF6a2N4",
+      "type": "600"
+     },
+     {
+      "barcode": "YDBK8V3M",
+      "category": "resolution",
+      "date": "2024-09-19",
+      "description": "resolution",
+      "pages": 2,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "liquidation",
+        "description": "liquidation-voluntary-special-resolution-to-wind-up-case-start-date",
+        "original_description": "Special resolution to wind up",
+        "subcategory": [
+         "voluntary",
+         "resolution"
+        ],
+        "type": "LRESSP"
+       }
+      ],
+      "transaction_id": "WURCSzhWM01hZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "action_date": "2023-12-31",
+      "barcode": "XD6XJ5BS",
+      "category": "accounts",
+      "date": "2024-07-08",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 8,
+      "transaction_id": "MzQyODAwOTI4MmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-11-17",
+      "barcode": "XCTVK9MW",
+      "category": "confirmation-statement",
+      "date": "2024-01-02",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQwNjI0NjE1NmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2022-12-31",
+      "barcode": "XCAOZO97",
+      "category": "accounts",
+      "date": "2023-08-25",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 8,
+      "transaction_id": "MzM5MDg3NDY0OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-11-17",
+      "barcode": "XBUEY75C",
+      "category": "confirmation-statement",
+      "date": "2023-01-03",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzM2NDQ4MTM1OGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-12-31",
+      "barcode": "XBCJ3GGQ",
+      "category": "accounts",
+      "date": "2022-09-14",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 8,
+      "transaction_id": "MzM1MTkwMDk2NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-11-17",
+      "barcode": "XAJVIU8O",
+      "category": "confirmation-statement",
+      "date": "2021-12-22",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMyNDU0NDA5MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-12-31",
+      "barcode": "XA56Z881",
+      "category": "accounts",
+      "date": "2021-05-24",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 8,
+      "transaction_id": "MzMwMjA1MjAwOGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-11-17",
+      "barcode": "X9I15A2J",
+      "category": "confirmation-statement",
+      "date": "2020-11-17",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI4MzY0OTkyM2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2019-12-31",
+      "barcode": "X9EP49AX",
+      "category": "accounts",
+      "date": "2020-09-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 14,
+      "transaction_id": "MzI3OTI5MTk3MmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-12-28",
+      "barcode": "X8LAEWOQ",
+      "category": "confirmation-statement",
+      "date": "2019-12-28",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI1MzI3ODEwMGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2018-12-31",
+      "barcode": "X8ESMCMG",
+      "category": "accounts",
+      "date": "2019-09-26",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 12,
+      "transaction_id": "MzI0NTMzNjU2MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2018-12-31",
+      "barcode": "X7WJR80H",
+      "category": "confirmation-statement",
+      "date": "2019-01-06",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIyMzc3MTcwNmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-12-31",
+      "barcode": "X7FHZJ6H",
+      "category": "accounts",
+      "date": "2018-09-29",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 12,
+      "transaction_id": "MzIxNTgxNjU1M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-12-31",
+      "barcode": "X6XAPLSP",
+      "category": "confirmation-statement",
+      "date": "2018-01-09",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzE5NDg3NTQ4MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2016-12-31",
+      "barcode": "X6G3GRLK",
+      "category": "accounts",
+      "date": "2017-09-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 12,
+      "transaction_id": "MzE4NjcyOTkzNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2016-12-31",
+      "barcode": "X5XVMFV5",
+      "category": "confirmation-statement",
+      "date": "2017-01-11",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzE2NjQ2MjcwM2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2015-12-31",
+      "barcode": "X5GM056J",
+      "category": "accounts",
+      "date": "2016-09-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 15,
+      "transaction_id": "MzE1ODY3MzgwMGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-12-31",
+      "associated_filings": [
+       {
+        "action_date": "2016-01-06",
+        "category": "capital",
+        "date": "2016-01-06",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X4Y23SO1",
+      "category": "annual-return",
+      "date": "2016-01-06",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzEzOTE0MDg3MGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2014-12-31",
+      "barcode": "X4H12ZUP",
+      "category": "accounts",
+      "date": "2015-09-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 15,
+      "transaction_id": "MzEzMjAzNTM3NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2014-12-31",
+      "associated_filings": [
+       {
+        "action_date": "2015-01-31",
+        "category": "capital",
+        "date": "2015-01-31",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X408PW0G",
+      "category": "annual-return",
+      "date": "2015-01-31",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzExNjQ2Mzg2NWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2013-12-31",
+      "barcode": "X3HFXX1V",
+      "category": "accounts",
+      "date": "2014-09-29",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 15,
+      "transaction_id": "MzEwODQ0NTY1M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2013-12-31",
+      "associated_filings": [
+       {
+        "action_date": "2014-01-06",
+        "category": "capital",
+        "date": "2014-01-06",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X2YZ5OVO",
+      "category": "annual-return",
+      "date": "2014-01-06",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzA5MTk5MjU4MGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2012-12-31",
+      "barcode": "X2HVDBHE",
+      "category": "accounts",
+      "date": "2013-09-28",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 15,
+      "transaction_id": "MzA4NTk3MzE0OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2012-12-31",
+      "barcode": "X1OX4TP4",
+      "category": "annual-return",
+      "date": "2012-12-31",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzA3MDIwODgzOWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2011-12-31",
+      "barcode": "X1I93WEW",
+      "category": "accounts",
+      "date": "2012-09-26",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 15,
+      "transaction_id": "MzA2NDgyNjE0OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2011-12-31",
+      "barcode": "X0ZP9OS2",
+      "category": "annual-return",
+      "date": "2012-01-02",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzA0OTk0OTkxMGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2010-12-31",
+      "barcode": "L4BR6XYS",
+      "category": "accounts",
+      "date": "2011-10-03",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MzA0NDgwMjkzMWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2010-12-31",
+      "barcode": "XI9HOQWF",
+      "category": "annual-return",
+      "date": "2011-01-18",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzAzMDYwODQyMmFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2009-12-31",
+      "barcode": "AT0V2O9X",
+      "category": "accounts",
+      "date": "2010-10-15",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MzAyNTMxMzM5MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2009-12-31",
+      "barcode": "X3T4IIDA",
+      "category": "annual-return",
+      "date": "2010-03-17",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzAxMTY5NDk3MWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2010-01-01",
+      "barcode": "X3T4HID9",
+      "category": "officers",
+      "date": "2010-03-17",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAxMTY5NDk2NWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2008-12-31",
+      "barcode": "APMMWDZF",
+      "category": "accounts",
+      "date": "2009-10-13",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MzAwMDY2NDE5OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "X24AV8L1",
+      "category": "annual-return",
+      "date": "2009-03-30",
+      "description": "legacy",
+      "pages": 3,
+      "transaction_id": "MjAyOTM1NDE3NWFkaXF6a2N4",
+      "type": "363a"
+     },
+     {
+      "action_date": "2007-12-31",
+      "barcode": "APTDZ4FN",
+      "category": "accounts",
+      "date": "2008-11-03",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MjAxNzEwMzg1MGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "XXHNOZAV",
+      "category": "annual-return",
+      "date": "2008-04-29",
+      "description": "legacy",
+      "pages": 3,
+      "transaction_id": "MjAwNDM0MzA0NGFkaXF6a2N4",
+      "type": "363a"
+     },
+     {
+      "action_date": "2006-12-31",
+      "category": "accounts",
+      "date": "2007-11-02",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTg3NDAzNzMwYWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2007-09-25",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTg2MTUwMDIwYWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "2005-12-31",
+      "category": "accounts",
+      "date": "2006-08-31",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTY0NDE0MDU3YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2006-01-27",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTA1OTEyNDMxYWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "2004-12-31",
+      "category": "accounts",
+      "date": "2005-11-08",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTE0NzU1MzA3YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2005-01-11",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "NDMzNTkwNzlhZGlxemtjeA",
+      "type": "363s"
+     },
+     {
+      "action_date": "2003-12-31",
+      "category": "accounts",
+      "date": "2004-11-02",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 11,
+      "paper_filed": true,
+      "transaction_id": "MTAwMjA1Njc1YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2004-06-07",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTI2MzYzNzAyYWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "2002-12-31",
+      "category": "accounts",
+      "date": "2003-10-05",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTEwMjQ1MjA4YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2003-01-09",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTQwOTQ2NDQyYWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "2001-12-31",
+      "category": "accounts",
+      "date": "2002-06-20",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTc1NzA1NjBhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2002-03-22",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTEzMjQ4NjM1YWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "2000-12-31",
+      "category": "accounts",
+      "date": "2001-10-10",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTE4MjE4NjA0YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2001-02-13",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "ODMyOTU3MzdhZGlxemtjeA",
+      "type": "363s"
+     },
+     {
+      "action_date": "1999-12-31",
+      "category": "accounts",
+      "date": "2000-10-18",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "MTQyNjA2NTUxYWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2000-02-24",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MTA3MDIxODg2YWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "1998-12-31",
+      "category": "accounts",
+      "date": "2000-01-25",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 10,
+      "paper_filed": true,
+      "transaction_id": "NTYwNTU2NDdhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1999-05-14",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MjE1MTQyNTlhZGlxemtjeA",
+      "type": "363a"
+     },
+     {
+      "action_date": "1997-12-31",
+      "category": "accounts",
+      "date": "1998-11-03",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 11,
+      "paper_filed": true,
+      "transaction_id": "OTU2NTEwNDBhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1998-05-30",
+      "description": "legacy",
+      "pages": 8,
+      "paper_filed": true,
+      "transaction_id": "MTEyOTMxMjdhZGlxemtjeA",
+      "type": "363a"
+     },
+     {
+      "action_date": "1996-12-31",
+      "category": "accounts",
+      "date": "1997-11-03",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 12,
+      "paper_filed": true,
+      "transaction_id": "ODc1NTU4MTNhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1997-02-14",
+      "description": "legacy",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MTQwODk1Mjk5YWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "1995-12-31",
+      "category": "accounts",
+      "date": "1996-10-30",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 12,
+      "paper_filed": true,
+      "transaction_id": "MTQ5MDgzMzkzYWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1996-08-19",
+      "description": "legacy",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "ODg4MzMwNzFhZGlxemtjeA",
+      "type": "363s"
+     },
+     {
+      "action_date": "1994-12-31",
+      "category": "accounts",
+      "date": "1995-09-15",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 11,
+      "paper_filed": true,
+      "transaction_id": "MTM4MTYwNjI1YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1995-04-10",
+      "description": "legacy",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MjI2NzE3MDdhZGlxemtjeA",
+      "type": "363s"
+     },
+     {
+      "action_date": "1993-12-31",
+      "category": "accounts",
+      "date": "1994-10-25",
+      "description": "accounts-with-accounts-type-small",
+      "transaction_id": "MTI1Mjg4OTkyYWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1994-03-01",
+      "description": "legacy",
+      "transaction_id": "ODgwNTA1N2FkaXF6a2N4",
+      "type": "363s"
+     },
+     {
+      "action_date": "1992-12-31",
+      "category": "accounts",
+      "date": "1993-10-22",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "OTQ4MDE3MDBhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "annual-return",
+        "date": "1993-03-11",
+        "description": "legacy",
+        "type": "363(288)"
+       }
+      ],
+      "category": "annual-return",
+      "date": "1993-03-11",
+      "description": "legacy",
+      "transaction_id": "MTQ5NTEzMTQ1YWRpcXprY3g",
+      "type": "363s"
+     },
+     {
+      "action_date": "1991-12-31",
+      "category": "accounts",
+      "date": "1992-10-30",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "NDkwMzIwMDNhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1992-01-10",
+      "description": "legacy",
+      "transaction_id": "NjY0Nzc2MjZhZGlxemtjeA",
+      "type": "363b"
+     },
+     {
+      "action_date": "1990-12-31",
+      "category": "accounts",
+      "date": "1991-12-18",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "OTEyMzcxODJhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1991-06-04",
+      "description": "legacy",
+      "transaction_id": "MTM2NjEwNTkzYWRpcXprY3g",
+      "type": "363a"
+     },
+     {
+      "action_date": "1989-12-31",
+      "category": "accounts",
+      "date": "1991-04-10",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "MTI3NTU4NTk1YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1990-08-09",
+      "description": "legacy",
+      "transaction_id": "MTExMzIyMTcwYWRpcXprY3g",
+      "type": "363"
+     },
+     {
+      "category": "annual-return",
+      "date": "1989-09-07",
+      "description": "legacy",
+      "transaction_id": "NDk5MzU3MjlhZGlxemtjeA",
+      "type": "363"
+     },
+     {
+      "action_date": "1988-12-31",
+      "category": "accounts",
+      "date": "1989-07-24",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "NjExNjQzNDdhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "action_date": "1987-12-31",
+      "category": "accounts",
+      "date": "1988-09-21",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "OTQzNzEzNjZhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1987-12-18",
+      "description": "legacy",
+      "transaction_id": "NzcxODMxMDNhZGlxemtjeA",
+      "type": "363"
+     },
+     {
+      "action_date": "1986-12-31",
+      "category": "accounts",
+      "date": "1987-11-09",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "MTUwOTY3Njk1YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "historical",
+      "date": "1987-01-01",
+      "description": "selection-of-documents-registered-before-January-1987",
+      "paper_filed": true,
+      "subcategory": "other",
+      "transaction_id": "MzQwMDU0OTQ2MGFkaXF6a2N4",
+      "type": "PRE87"
+     },
+     {
+      "action_date": "1985-12-31",
+      "category": "accounts",
+      "date": "1986-09-26",
+      "description": "accounts-with-accounts-type-full",
+      "transaction_id": "NzQ1NjA0NjJhZGlxemtjeA",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "1986-08-28",
+      "description": "legacy",
+      "transaction_id": "OTk3NzYwOWFkaXF6a2N4",
+      "type": "363"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 84
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": {
+    "cases": [
+     {
+      "dates": [
+       {
+        "date": "2024-09-11",
+        "type": "wound-up-on"
+       },
+       {
+        "date": "2024-09-09",
+        "type": "declaration-solvent-on"
+       }
+      ],
+      "number": "1",
+      "type": "members-voluntary-liquidation"
+     }
+    ],
+    "status": [
+     "liquidation"
+    ]
+   },
+   "status": 200
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_before": "1991-12-31",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID602/appointments"
+       }
+      },
+      "name": "PERSON 727",
+      "officer_role": "secretary",
+      "person_number": "105013330001"
+     },
+     {
+      "appointed_before": "1991-12-31",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID603/appointments"
+       }
+      },
+      "name": "PERSON 728",
+      "officer_role": "director",
+      "person_number": "22853560001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "12"
+     },
+     "last_accounts": {
+      "made_up_to": "2023-12-31",
+      "period_end_on": "2023-12-31",
+      "period_start_on": "2023-01-01",
+      "type": "total-exemption-full"
+     },
+     "next_accounts": {
+      "due_on": "2025-09-30",
+      "overdue": true,
+      "period_end_on": "2024-12-31",
+      "period_start_on": "2024-01-01"
+     },
+     "next_due": "2025-09-30",
+     "next_made_up_to": "2024-12-31",
+     "overdue": true
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 785",
+    "company_number": "91000787",
+    "company_status": "liquidation",
+    "confirmation_statement": {
+     "last_made_up_to": "2023-11-17",
+     "next_due": "2024-12-01",
+     "next_made_up_to": "2024-11-17",
+     "overdue": true
+    },
+    "date_of_creation": "1979-12-24",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": true,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2015-12-31",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "43220"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 729",
+      "natures_of_control": [
+       "significant-influence-or-control-as-firm"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-26",
+  "company_number": "91000787",
+  "public": false,
+  "recorded": "2026-10-26",
+  "synthetic": false,
+  "truncated": []
+ }
+}

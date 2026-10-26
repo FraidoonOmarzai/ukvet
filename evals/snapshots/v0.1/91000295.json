@@ -1,0 +1,267 @@
+{
+ "appointments": {
+  "OFFICERID213": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2024-08-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 294",
+       "company_number": "91000295",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 253",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2026-08-25",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzUzODM5MTExNGFkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2025-08-11",
+      "barcode": "XE9JDWCQ",
+      "category": "confirmation-statement",
+      "date": "2025-08-23",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ3ODQ3MTc4NWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-08-13",
+      "barcode": "XDWAHXUQ",
+      "category": "officers",
+      "date": "2025-02-13",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzQ1NDk1MzA3N2FkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2024-08-13",
+      "barcode": "XDW7Q323",
+      "category": "persons-with-significant-control",
+      "date": "2025-02-12",
+      "description": "notification-of-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "notifications",
+      "transaction_id": "MzQ1NDc5MzA3M2FkaXF6a2N4",
+      "type": "PSC01"
+     },
+     {
+      "action_date": "2024-08-13",
+      "barcode": "XDW7PYTC",
+      "category": "officers",
+      "date": "2025-02-12",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzQ1NDc5MjAxOGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2024-08-13",
+      "barcode": "XDW7PWC1",
+      "category": "persons-with-significant-control",
+      "date": "2025-02-12",
+      "description": "cessation-of-a-person-with-significant-control",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzQ1NDc5MTQ1NGFkaXF6a2N4",
+      "type": "PSC07"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2024-08-12",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2024-08-12",
+        "category": "capital",
+        "date": "2024-08-12",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XD93WBOG",
+      "category": "incorporation",
+      "date": "2024-08-12",
+      "description": "incorporation-company",
+      "pages": 11,
+      "transaction_id": "MzQzMTc2NTA4NmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 7
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2024-08-13",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID213/appointments"
+       }
+      },
+      "name": "PERSON 249",
+      "officer_role": "director",
+      "person_number": "332294080001"
+     },
+     {
+      "appointed_on": "2024-08-12",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID214/appointments"
+       }
+      },
+      "name": "PERSON 250",
+      "officer_role": "director",
+      "person_number": "326033290001",
+      "resigned_on": "2024-08-13"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "08"
+     },
+     "next_accounts": {
+      "due_on": "2026-05-12",
+      "overdue": true,
+      "period_end_on": "2025-08-31",
+      "period_start_on": "2024-08-12"
+     },
+     "next_due": "2026-05-12",
+     "next_made_up_to": "2025-08-31",
+     "overdue": true
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 294",
+    "company_number": "91000295",
+    "company_status": "active",
+    "company_status_detail": "active-proposal-to-strike-off",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-08-11",
+     "next_due": "2026-08-25",
+     "next_made_up_to": "2026-08-11",
+     "overdue": true
+    },
+    "date_of_creation": "2024-08-12",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "41201",
+     "41202"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 1,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 251",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2024-08-13"
+     },
+     {
+      "ceased": true,
+      "ceased_on": "2024-08-13",
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 252",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-08-12"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000295",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

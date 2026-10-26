@@ -1,0 +1,199 @@
+{
+ "appointments": {
+  "OFFICERID216": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2024-09-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 296",
+       "company_number": "91000297",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 259",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2026-09-01",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzUzOTg0MjU4MmFkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2025-09-10",
+      "barcode": "XEAT71OO",
+      "category": "confirmation-statement",
+      "date": "2025-09-10",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ4MDQyNjgxOWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2024-09-30",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2024-09-30",
+        "category": "capital",
+        "date": "2024-09-30",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XDCON9RS",
+      "category": "incorporation",
+      "date": "2024-09-30",
+      "description": "incorporation-company",
+      "pages": 11,
+      "transaction_id": "MzQzNzY0MDAyMmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 3
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2024-09-30",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID216/appointments"
+       }
+      },
+      "name": "PERSON 257",
+      "officer_role": "director",
+      "person_number": "327685680001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+     },
+     "next_accounts": {
+      "due_on": "2026-06-30",
+      "overdue": true,
+      "period_end_on": "2025-09-30",
+      "period_start_on": "2024-09-30"
+     },
+     "next_due": "2026-06-30",
+     "next_made_up_to": "2025-09-30",
+     "overdue": true
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 296",
+    "company_number": "91000297",
+    "company_status": "active",
+    "company_status_detail": "active-proposal-to-strike-off",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-09-10",
+     "next_due": "2026-09-24",
+     "next_made_up_to": "2026-09-10",
+     "overdue": true
+    },
+    "date_of_creation": "2024-09-30",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "47910"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 258",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-09-30"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000297",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

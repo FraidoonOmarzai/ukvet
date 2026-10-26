@@ -1,0 +1,258 @@
+{
+ "appointments": {
+  "OFFICERID219": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2014-01-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 300",
+       "company_number": "91000301",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-01-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 301",
+       "company_number": "91000302",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 267",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2016-08-09",
+      "description": "gazette-dissolved-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE1NDExMDY4MmFkaXF6a2N4",
+      "type": "GAZ2(A)"
+     },
+     {
+      "category": "gazette",
+      "date": "2016-05-24",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE0ODM3MzczNGFkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "barcode": "A55SJ4OQ",
+      "category": "dissolution",
+      "date": "2016-05-12",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzE0NzUzNTMxMmFkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2016-01-23",
+      "associated_filings": [
+       {
+        "action_date": "2016-02-17",
+        "category": "capital",
+        "date": "2016-02-17",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X50YMBFL",
+      "category": "annual-return",
+      "date": "2016-02-17",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 3,
+      "transaction_id": "MzE0MjExNDQ4OGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2015-01-31",
+      "barcode": "X4IWZ0SB",
+      "category": "accounts",
+      "date": "2015-10-27",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 2,
+      "transaction_id": "MzEzMzkxMDUwNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-01-23",
+      "associated_filings": [
+       {
+        "action_date": "2015-01-24",
+        "category": "capital",
+        "date": "2015-01-24",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X3ZQGHWB",
+      "category": "annual-return",
+      "date": "2015-01-24",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 3,
+      "transaction_id": "MzExNjAyOTk4NmFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2014-02-01",
+      "barcode": "X3A0LOVI",
+      "category": "officers",
+      "date": "2014-06-15",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzEwMTkwNTk0NmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "associated_filings": [
+       {
+        "action_date": "2014-01-23",
+        "category": "capital",
+        "date": "2014-01-23",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       },
+       {
+        "category": "incorporation",
+        "date": "2014-01-23",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       }
+      ],
+      "barcode": "X307AZJL",
+      "category": "incorporation",
+      "date": "2014-01-23",
+      "description": "incorporation-company",
+      "pages": 7,
+      "paper_filed": true,
+      "transaction_id": "MzA5MzIyNjIwMWFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 8
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2014-01-23",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID219/appointments"
+       }
+      },
+      "name": "PERSON 266",
+      "officer_role": "director",
+      "person_number": "184415430001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "01"
+     },
+     "last_accounts": {
+      "made_up_to": "2015-01-31",
+      "type": "dormant"
+     }
+    },
+    "annual_return": {
+     "last_made_up_to": "2016-01-23"
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 300",
+    "company_number": "91000301",
+    "company_status": "dissolved",
+    "date_of_cessation": "2016-08-09",
+    "date_of_creation": "2014-01-23",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2016-01-23",
+    "sic_codes": [
+     "64303"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000301",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

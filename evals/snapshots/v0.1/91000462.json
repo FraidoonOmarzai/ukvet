@@ -1,0 +1,552 @@
+{
+ "appointments": {},
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2026-03-01",
+      "barcode": "XEXQL1RS",
+      "category": "confirmation-statement",
+      "date": "2026-03-13",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzUxMDA5NzYxMmFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2025-03-31",
+      "barcode": "XEHQVLJV",
+      "category": "accounts",
+      "date": "2025-12-19",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 4,
+      "transaction_id": "MzQ5NTQxNjI3NWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2025-03-01",
+      "barcode": "XDY0TL68",
+      "category": "confirmation-statement",
+      "date": "2025-03-10",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ1NzkwNzcxNmFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2024-03-31",
+      "barcode": "XDJ31CPF",
+      "category": "accounts",
+      "date": "2024-12-30",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 4,
+      "transaction_id": "MzQ0OTM3MzA3MGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-03-01",
+      "barcode": "XCXZZWKP",
+      "category": "confirmation-statement",
+      "date": "2024-03-01",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQxMzEyNzIyNWFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2023-12-29",
+      "barcode": "XCJDU05C",
+      "category": "confirmation-statement",
+      "date": "2023-12-29",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQwNTg3MDkwOWFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XCIC4CWP",
+      "category": "accounts",
+      "date": "2023-12-14",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 4,
+      "transaction_id": "MzQwMzk2MTI5NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-02-24",
+      "barcode": "XBY57ZKH",
+      "category": "confirmation-statement",
+      "date": "2023-02-26",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM3MDc3MjU3MGFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2022-03-31",
+      "barcode": "XBJRSNPD",
+      "category": "accounts",
+      "date": "2022-12-27",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 4,
+      "transaction_id": "MzM2Mzc3NDM3MmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-07-10",
+      "barcode": "XB8NXRRM",
+      "category": "persons-with-significant-control",
+      "date": "2022-07-20",
+      "description": "change-to-a-person-with-significant-control-limited-liability-partnership",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzM0NjEyMjIzMWFkaXF6a2N4",
+      "type": "LLPSC04"
+     },
+     {
+      "action_date": "2022-07-10",
+      "barcode": "XB8NXRHF",
+      "category": "persons-with-significant-control",
+      "date": "2022-07-20",
+      "description": "cessation-of-a-person-with-significant-control-limited-liability-partnership",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzM0NjExODMxNGFkaXF6a2N4",
+      "type": "LLPSC07"
+     },
+     {
+      "action_date": "2022-02-24",
+      "barcode": "XAYIT29K",
+      "category": "confirmation-statement",
+      "date": "2022-02-24",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMzMDk4NTEzMGFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2021-03-31",
+      "barcode": "AAKEUH02",
+      "category": "accounts",
+      "date": "2022-01-06",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzMyNTYwNzg4MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-02-24",
+      "barcode": "X9YZC1T5",
+      "category": "confirmation-statement",
+      "date": "2021-02-24",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI5MjQzNjIxM2FkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2020-03-31",
+      "barcode": "A9YLSHFE",
+      "category": "accounts",
+      "date": "2021-02-23",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "paper_filed": true,
+      "transaction_id": "MzI5MjIzNzQ1M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-02-24",
+      "barcode": "X8ZGK47M",
+      "category": "confirmation-statement",
+      "date": "2020-02-24",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI1ODA1MzM5NGFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2019-03-31",
+      "barcode": "A8LGFAUJ",
+      "category": "accounts",
+      "date": "2020-01-06",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 11,
+      "paper_filed": true,
+      "transaction_id": "MzI1MzcxNDYzN2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-02-26",
+      "barcode": "X805E9H4",
+      "category": "confirmation-statement",
+      "date": "2019-02-27",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIyODA3NTUwOWFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2018-03-31",
+      "barcode": "A7LBX48I",
+      "category": "accounts",
+      "date": "2019-01-07",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 11,
+      "paper_filed": true,
+      "transaction_id": "MzIyMzYxOTE0NWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2018-04-10",
+      "barcode": "X7HMTDMJ",
+      "category": "persons-with-significant-control",
+      "date": "2018-10-30",
+      "description": "notification-of-a-person-with-significant-control-limited-liability-partnership",
+      "pages": 2,
+      "subcategory": "notifications",
+      "transaction_id": "MzIxODIwNTY2OWFkaXF6a2N4",
+      "type": "LLPSC03"
+     },
+     {
+      "action_date": "2018-02-26",
+      "barcode": "X70OSQEH",
+      "category": "confirmation-statement",
+      "date": "2018-02-27",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzE5ODg5NDM0NGFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2017-03-31",
+      "barcode": "A6YPJVR7",
+      "category": "accounts",
+      "date": "2018-02-02",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 9,
+      "paper_filed": true,
+      "transaction_id": "MzE5Njg1ODYzN2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-11-30",
+      "barcode": "X6KBK3CR",
+      "category": "address",
+      "date": "2017-11-30",
+      "description": "change-registered-office-address-limited-liability-partnership-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzE5MTU2NzExN2FkaXF6a2N4",
+      "type": "LLAD01"
+     },
+     {
+      "action_date": "2017-02-26",
+      "barcode": "X61W4WM8",
+      "category": "confirmation-statement",
+      "date": "2017-03-11",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzE3MDkyMDQ2OGFkaXF6a2N4",
+      "type": "LLCS01"
+     },
+     {
+      "action_date": "2016-03-31",
+      "barcode": "A5MUG1KH",
+      "category": "accounts",
+      "date": "2017-01-10",
+      "description": "accounts-with-accounts-type-total-exemption-small",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzE2NjE2OTgxM2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2016-03-08",
+      "barcode": "X52CH0OQ",
+      "category": "officers",
+      "date": "2016-03-08",
+      "description": "change-corporate-member-limited-liability-partnership-with-name-change-date",
+      "pages": 1,
+      "subcategory": "change",
+      "transaction_id": "MzE0MzY0OTU4MmFkaXF6a2N4",
+      "type": "LLCH02"
+     },
+     {
+      "action_date": "2016-03-08",
+      "barcode": "X52CCDBD",
+      "category": "officers",
+      "date": "2016-03-08",
+      "description": "change-corporate-member-limited-liability-partnership-with-name-change-date",
+      "pages": 1,
+      "subcategory": "change",
+      "transaction_id": "MzE0MzU4ODk0OGFkaXF6a2N4",
+      "type": "LLCH02"
+     },
+     {
+      "action_date": "2016-02-26",
+      "barcode": "X51ORRL4",
+      "category": "annual-return",
+      "date": "2016-02-29",
+      "description": "annual-return-limited-liability-partnership-with-made-up-date",
+      "pages": 3,
+      "transaction_id": "MzE0MjkxNDIxN2FkaXF6a2N4",
+      "type": "LLAR01"
+     },
+     {
+      "action_date": "2016-02-28",
+      "barcode": "X51ORRKW",
+      "category": "address",
+      "date": "2016-02-28",
+      "description": "change-registered-office-address-limited-liability-partnership-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzE0MjkxNDIwOWFkaXF6a2N4",
+      "type": "LLAD01"
+     },
+     {
+      "action_date": "2015-03-31",
+      "barcode": "A4MAXN62",
+      "category": "accounts",
+      "date": "2015-12-21",
+      "description": "accounts-with-accounts-type-total-exemption-small",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzEzNzc2MTkzNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-02-26",
+      "barcode": "X4409T9M",
+      "category": "annual-return",
+      "date": "2015-03-26",
+      "description": "annual-return-limited-liability-partnership-with-made-up-date",
+      "pages": 3,
+      "transaction_id": "MzEyMDAyMzE2N2FkaXF6a2N4",
+      "type": "LLAR01"
+     },
+     {
+      "action_date": "2015-01-01",
+      "barcode": "X4409NZN",
+      "category": "officers",
+      "date": "2015-03-26",
+      "description": "change-person-member-limited-liability-partnership-with-name-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzEyMDAyMDgxNmFkaXF6a2N4",
+      "type": "LLCH01"
+     },
+     {
+      "action_date": "2014-03-31",
+      "barcode": "A3FIARSW",
+      "category": "accounts",
+      "date": "2014-09-05",
+      "description": "accounts-with-accounts-type-total-exemption-small",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzEwNjg4MDExNmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2014-05-27",
+      "barcode": "X38SB9F6",
+      "category": "officers",
+      "date": "2014-05-27",
+      "description": "change-corporate-member-limited-liability-partnership-with-name-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzEwMDc1NDExMmFkaXF6a2N4",
+      "type": "LLCH02"
+     },
+     {
+      "action_date": "2014-05-27",
+      "barcode": "X38SB9EQ",
+      "category": "officers",
+      "date": "2014-05-27",
+      "description": "change-person-member-limited-liability-partnership-with-name-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzEwMDc1NDExMGFkaXF6a2N4",
+      "type": "LLCH01"
+     },
+     {
+      "action_date": "2014-02-26",
+      "barcode": "X33AXASJ",
+      "category": "annual-return",
+      "date": "2014-03-10",
+      "description": "annual-return-limited-liability-partnership-with-made-up-date",
+      "pages": 3,
+      "transaction_id": "MzA5NTkzMDcwNWFkaXF6a2N4",
+      "type": "LLAR01"
+     },
+     {
+      "action_date": "2014-03-31",
+      "barcode": "X2YZ6KPS",
+      "category": "accounts",
+      "date": "2014-01-06",
+      "description": "change-account-reference-date-limited-liability-partnership-current-extended",
+      "pages": 1,
+      "transaction_id": "MzA5MjAwMzgyMWFkaXF6a2N4",
+      "type": "LLAA01"
+     },
+     {
+      "barcode": "X22ZSRSX",
+      "category": "incorporation",
+      "date": "2013-02-26",
+      "description": "incorporation-limited-liability-partnership",
+      "pages": 5,
+      "paper_filed": true,
+      "transaction_id": "MzA3MzU3ODAyOWFkaXF6a2N4",
+      "type": "LLIN01"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 38
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2013-02-26",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID271/appointments"
+       }
+      },
+      "name": "PERSON 346",
+      "officer_role": "llp-designated-member",
+      "person_number": "176162510001"
+     },
+     {
+      "appointed_on": "2013-02-26",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID272/appointments"
+       }
+      },
+      "name": "PERSON 347",
+      "officer_role": "corporate-llp-designated-member",
+      "person_number": "176162500001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-03-31",
+      "period_end_on": "2025-03-31",
+      "period_start_on": "2024-04-01",
+      "type": "micro-entity"
+     },
+     "next_accounts": {
+      "due_on": "2026-12-31",
+      "overdue": false,
+      "period_end_on": "2026-03-31",
+      "period_start_on": "2025-04-01"
+     },
+     "next_due": "2026-12-31",
+     "next_made_up_to": "2026-03-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 461",
+    "company_number": "91000462",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-03-01",
+     "next_due": "2027-03-15",
+     "next_made_up_to": "2027-03-01",
+     "overdue": false
+    },
+    "date_of_creation": "2013-02-26",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "type": "llp",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 1,
+    "items": [
+     {
+      "ceased": true,
+      "ceased_on": "2022-07-10",
+      "kind": "legal-person-person-with-significant-control",
+      "name": "CORPORATE CONTROLLER 1563",
+      "natures_of_control": [
+       "voting-rights-25-to-50-percent-limited-liability-partnership",
+       "right-to-share-surplus-assets-25-to-50-percent-limited-liability-partnership",
+       "right-to-appoint-and-remove-members-limited-liability-partnership"
+      ],
+      "notified_on": "2018-04-10"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 348",
+      "natures_of_control": [
+       "voting-rights-75-to-100-percent-limited-liability-partnership",
+       "right-to-share-surplus-assets-75-to-100-percent-limited-liability-partnership",
+       "right-to-appoint-and-remove-members-limited-liability-partnership"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000462",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

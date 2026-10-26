@@ -1,0 +1,296 @@
+{
+ "appointments": {
+  "OFFICERID253": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2022-11-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 427",
+       "company_number": "91000428",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-09-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 426",
+       "company_number": "91000427",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-08-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 428",
+       "company_number": "91000429",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2023-08-31"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 313",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 3
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2024-10-29",
+      "description": "gazette-dissolved-liquidation",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQ0MTI1NDA0NmFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "barcode": "YD8CIA4O",
+      "category": "insolvency",
+      "date": "2024-07-29",
+      "description": "liquidation-voluntary-creditors-return-of-final-meeting-scotland",
+      "pages": 11,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzQzMDM2NTcwNWFkaXF6a2N4",
+      "type": "LIQ14(Scot)"
+     },
+     {
+      "category": "resolution",
+      "date": "2023-11-29",
+      "description": "resolution",
+      "pages": 1,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "liquidation",
+        "description": "liquidation-voluntary-extraordinary-resolution-to-wind-up-with-case-start-date",
+        "original_description": "Extraordinary resolution to wind up",
+        "subcategory": [
+         "voluntary",
+         "resolution"
+        ],
+        "type": "LRESEX"
+       }
+      ],
+      "transaction_id": "WUNIQ0dUQ1dhZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "action_date": "2023-11-29",
+      "barcode": "YCGWJDU3",
+      "category": "address",
+      "date": "2023-11-29",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 2,
+      "paper_filed": true,
+      "transaction_id": "MzQwMTMzNzA4OWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2023-09-14",
+      "barcode": "XCFEMNU9",
+      "category": "confirmation-statement",
+      "date": "2023-11-01",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM5ODY0MDI0MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2022-09-30",
+      "barcode": "XC6R1M22",
+      "category": "accounts",
+      "date": "2023-06-30",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzM4NDg4NDY3M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-09-14",
+      "barcode": "XBD1GQ57",
+      "category": "confirmation-statement",
+      "date": "2022-09-21",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM1MjQ2MjE2MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2021-09-15",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2021-09-15",
+        "category": "capital",
+        "date": "2021-09-15",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XAD2LKH6",
+      "category": "incorporation",
+      "date": "2021-09-15",
+      "description": "incorporation-company",
+      "pages": 10,
+      "transaction_id": "MzMxMzkxNTQwOGFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 8
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": {
+    "cases": [
+     {
+      "dates": [
+       {
+        "date": "2023-11-21",
+        "type": "wound-up-on"
+       },
+       {
+        "date": "2024-10-29",
+        "type": "dissolved-on"
+       }
+      ],
+      "notes": [
+       "scottish-insolvency-info"
+      ],
+      "number": "1",
+      "type": "creditors-voluntary-liquidation"
+     }
+    ]
+   },
+   "status": 200
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2021-09-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID253/appointments"
+       }
+      },
+      "name": "PERSON 311",
+      "officer_role": "director",
+      "person_number": "287288290001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "30",
+      "month": "09"
+     },
+     "last_accounts": {
+      "made_up_to": "2022-09-30",
+      "period_end_on": "2022-09-30",
+      "type": "micro-entity"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 426",
+    "company_number": "91000427",
+    "company_status": "dissolved",
+    "confirmation_statement": {
+     "last_made_up_to": "2023-09-14"
+    },
+    "date_of_cessation": "2024-10-29",
+    "date_of_creation": "2021-09-15",
+    "has_charges": false,
+    "has_insolvency_history": true,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "scotland",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "56290"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 312",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2021-09-15"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000427",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

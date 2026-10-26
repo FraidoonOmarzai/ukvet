@@ -1,0 +1,183 @@
+{
+ "appointments": {
+  "OFFICERID283": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2013-03-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 469",
+       "company_number": "91000470",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 367",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2014-04-08",
+      "description": "gazette-dissolved-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzA5NzM4MzIxN2FkaXF6a2N4",
+      "type": "GAZ2(A)"
+     },
+     {
+      "category": "gazette",
+      "date": "2013-12-24",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzA5MDY0MzU0MWFkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "barcode": "A2MUSWWA",
+      "category": "dissolution",
+      "date": "2013-12-11",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzA5MDQ5ODU3OGFkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2013-09-25",
+      "barcode": "X2HKY5ND",
+      "category": "address",
+      "date": "2013-09-25",
+      "description": "change-registered-office-address-company-with-date-old-address",
+      "pages": 1,
+      "transaction_id": "MzA4NTY5MzUwOWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2013-03-20",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       }
+      ],
+      "barcode": "A2499TMY",
+      "category": "incorporation",
+      "date": "2013-03-20",
+      "description": "incorporation-company",
+      "pages": 18,
+      "paper_filed": true,
+      "transaction_id": "MzA3NDgwOTU3N2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 5
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2013-03-20",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID283/appointments"
+       }
+      },
+      "name": "PERSON 366",
+      "officer_role": "director",
+      "person_number": "176785000001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "type": "null"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 469",
+    "company_number": "91000470",
+    "company_status": "dissolved",
+    "date_of_cessation": "2014-04-08",
+    "date_of_creation": "2013-03-20",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "type": "private-limited-guarant-nsc",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000470",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

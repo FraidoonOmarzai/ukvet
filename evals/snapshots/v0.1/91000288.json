@@ -1,0 +1,210 @@
+{
+ "appointments": {
+  "OFFICERID209": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 3,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2011-04-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 287",
+       "company_number": "91000288",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2011-04-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 288",
+       "company_number": "91000289",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2011-04-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 289",
+       "company_number": "91000290",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2011-04-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 290",
+       "company_number": "91000291",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2011-09-21"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 238",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2012-12-04",
+      "description": "gazette-dissolved-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzA2ODIyMjEwMmFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "category": "gazette",
+      "date": "2012-08-21",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzA2MjM3NjU4M2FkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2011-04-28",
+      "barcode": "XGO9DTO4",
+      "category": "address",
+      "date": "2011-04-28",
+      "description": "change-registered-office-address-company-with-date-old-address",
+      "pages": 1,
+      "transaction_id": "MzAzNjI3MjQ4MWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2011-04-21",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2011-04-21",
+        "category": "capital",
+        "date": "2011-04-21",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XETIITGD",
+      "category": "incorporation",
+      "date": "2011-04-21",
+      "description": "incorporation-company",
+      "pages": 7,
+      "transaction_id": "MzAzNTk4NDAzM2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 4
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2011-04-21",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID209/appointments"
+       }
+      },
+      "name": "PERSON 237",
+      "officer_role": "director",
+      "person_number": "159562810001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "30",
+      "month": "04"
+     },
+     "last_accounts": {
+      "type": "null"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 287",
+    "company_number": "91000288",
+    "company_status": "dissolved",
+    "date_of_cessation": "2012-12-04",
+    "date_of_creation": "2011-04-21",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000288",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

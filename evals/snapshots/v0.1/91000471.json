@@ -1,0 +1,408 @@
+{
+ "appointments": {
+  "OFFICERID284": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 2,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2021-09-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 471",
+       "company_number": "91000472",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-11-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 472",
+       "company_number": "91000473",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-11-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 473",
+       "company_number": "91000474",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2017-11-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 474",
+       "company_number": "91000475",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 470",
+       "company_number": "91000471",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 372",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 5
+   },
+   "status": 200
+  },
+  "OFFICERID285": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2014-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 470",
+       "company_number": "91000471",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 373",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2018-12-04",
+      "description": "gazette-dissolved-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIyMDM2NzczNmFkaXF6a2N4",
+      "type": "GAZ2(A)"
+     },
+     {
+      "category": "gazette",
+      "date": "2018-09-18",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIxNDEwMTI2N2FkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "barcode": "X7DX8V22",
+      "category": "dissolution",
+      "date": "2018-09-10",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 1,
+      "transaction_id": "MzIxMzg5MDAyOWFkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2018-07-25",
+      "barcode": "X7AWQR6Z",
+      "category": "confirmation-statement",
+      "date": "2018-07-25",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIxMDU1NjI0N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-07-31",
+      "barcode": "X74ZE3YW",
+      "category": "accounts",
+      "date": "2018-04-30",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 2,
+      "transaction_id": "MzIwMzg1OTA4NWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2018-03-07",
+      "barcode": "X717KUSQ",
+      "category": "officers",
+      "date": "2018-03-07",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzE5OTQ4MjUwNWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2018-03-07",
+      "barcode": "X717KTT7",
+      "category": "officers",
+      "date": "2018-03-07",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzE5OTQ4MjQ1OWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2017-07-30",
+      "barcode": "X6DYGDCP",
+      "category": "confirmation-statement",
+      "date": "2017-08-31",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzE4NDI1NzU1OGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2016-07-31",
+      "barcode": "X62WSVLS",
+      "category": "accounts",
+      "date": "2017-03-24",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 2,
+      "transaction_id": "MzE3MTkwMzE1N2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2016-07-30",
+      "barcode": "X5FAI6ZK",
+      "category": "confirmation-statement",
+      "date": "2016-09-13",
+      "description": "confirmation-statement-with-updates",
+      "pages": 6,
+      "transaction_id": "MzE1NzE0OTY1NWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "A55SI64J",
+      "category": "dissolution",
+      "date": "2016-05-09",
+      "description": "dissolution-withdrawal-application-strike-off-company",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE0NzY3MjkwNWFkaXF6a2N4",
+      "type": "DS02"
+     },
+     {
+      "category": "gazette",
+      "date": "2016-03-22",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzE0MzgxOTA2NmFkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "barcode": "A51VN4MB",
+      "category": "dissolution",
+      "date": "2016-03-10",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MzE0MzI2OTQxMmFkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2015-07-31",
+      "barcode": "X51E9GHL",
+      "category": "accounts",
+      "date": "2016-02-24",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 2,
+      "transaction_id": "MzE0MjYwNDMwNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-07-30",
+      "associated_filings": [
+       {
+        "action_date": "2015-08-10",
+        "category": "capital",
+        "date": "2015-08-10",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X4DHH6W9",
+      "category": "annual-return",
+      "date": "2015-08-10",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 4,
+      "transaction_id": "MzEyODY2Nzc2MGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "associated_filings": [
+       {
+        "action_date": "2014-07-30",
+        "category": "capital",
+        "date": "2014-07-30",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X3D6VBU9",
+      "category": "incorporation",
+      "date": "2014-07-30",
+      "description": "incorporation-company",
+      "pages": 25,
+      "paper_filed": true,
+      "transaction_id": "MzEwNDcwMzUzMmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 16
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 2,
+    "items": [
+     {
+      "appointed_on": "2014-07-30",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID284/appointments"
+       }
+      },
+      "name": "PERSON 368",
+      "officer_role": "director",
+      "person_number": "189774700001"
+     },
+     {
+      "appointed_on": "2014-07-30",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID285/appointments"
+       }
+      },
+      "name": "PERSON 369",
+      "officer_role": "director",
+      "person_number": "189774710001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "07"
+     },
+     "last_accounts": {
+      "made_up_to": "2017-07-31",
+      "period_end_on": "2017-07-31",
+      "type": "micro-entity"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 470",
+    "company_number": "91000471",
+    "company_status": "dissolved",
+    "date_of_cessation": "2018-12-04",
+    "date_of_creation": "2014-07-30",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2015-07-30",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "47220"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 2,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 370",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-07-30"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 371",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-07-30"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000471",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

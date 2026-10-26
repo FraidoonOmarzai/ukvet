@@ -1,0 +1,1699 @@
+{
+ "appointments": {
+  "OFFICERID075": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2023-11-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 087",
+       "company_number": "91000087",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 104",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID076": {
+   "body": {
+    "active_count": 4,
+    "inactive_count": 6,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2021-02-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 088",
+       "company_number": "91000088",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-08-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 089",
+       "company_number": "91000089",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2016-02-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 090",
+       "company_number": "91000090",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-05-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 091",
+       "company_number": "91000091",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 092",
+       "company_number": "91000092",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-05-02",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 093",
+       "company_number": "91000093",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-02-07",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 094",
+       "company_number": "91000094",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-01-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 095",
+       "company_number": "91000095",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2013-12-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 096",
+       "company_number": "91000096",
+       "company_status": "converted-closed"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2013-11-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 087",
+       "company_number": "91000087",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-08-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 097",
+       "company_number": "91000097",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2021-07-12"
+     },
+     {
+      "appointed_on": "2014-08-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 098",
+       "company_number": "91000098",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2020-11-13"
+     },
+     {
+      "appointed_on": "2016-11-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 099",
+       "company_number": "91000099",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2018-08-31"
+     },
+     {
+      "appointed_on": "2016-04-14",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 100",
+       "company_number": "91000100",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2018-08-31"
+     },
+     {
+      "appointed_on": "2016-02-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 101",
+       "company_number": "91000101",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2018-08-13"
+     },
+     {
+      "appointed_on": "2015-09-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 102",
+       "company_number": "91000102",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-09-01"
+     },
+     {
+      "appointed_on": "2014-01-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 103",
+       "company_number": "91000103",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2014-10-29"
+     },
+     {
+      "appointed_on": "2014-01-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 104",
+       "company_number": "91000104",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2014-10-29"
+     },
+     {
+      "appointed_on": "2014-01-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 105",
+       "company_number": "91000105",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2014-10-29"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 105",
+    "resigned_count": 9,
+    "start_index": 0,
+    "total_results": 19
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_number": 1,
+      "classification": {
+       "description": "Rent deposit deed",
+       "type": "charge-description"
+      },
+      "created_on": "2012-09-25",
+      "delivered_on": "2012-10-02",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 004"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2012-10-02",
+        "filing_type": "create-charge-pre-april-2013"
+       }
+      ]
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 1,
+    "unfiltered_count": 1
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2025-12-31",
+      "barcode": "AFBKEK1D",
+      "category": "accounts",
+      "date": "2026-10-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 40,
+      "paper_filed": true,
+      "transaction_id": "MzU0ODc1MzIzMGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2026-06-01",
+      "barcode": "XF3BWWHT",
+      "category": "officers",
+      "date": "2026-06-01",
+      "description": "termination-secretary-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzUyNDY3MjM5M2FkaXF6a2N4",
+      "type": "TM02"
+     },
+     {
+      "action_date": "2026-06-01",
+      "barcode": "XF3BW8EI",
+      "category": "officers",
+      "date": "2026-06-01",
+      "description": "appoint-corporate-secretary-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzUyNDY2NzI3M2FkaXF6a2N4",
+      "type": "AP04"
+     },
+     {
+      "action_date": "2026-04-20",
+      "barcode": "XF0USDKG",
+      "category": "confirmation-statement",
+      "date": "2026-04-27",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzUxODQwODM5OGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-12-31",
+      "barcode": "AEBWIQ94",
+      "category": "accounts",
+      "date": "2025-10-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 39,
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mjk4NjY4M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2025-04-20",
+      "barcode": "XE1NOO4Q",
+      "category": "confirmation-statement",
+      "date": "2025-05-01",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ2NDgxMzIzNGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-11-19",
+      "barcode": "XDG7TS8I",
+      "category": "address",
+      "date": "2024-11-19",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzQ0NDA4MDk2MmFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2023-12-31",
+      "barcode": "ADCLGK9K",
+      "category": "accounts",
+      "date": "2024-10-08",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 42,
+      "paper_filed": true,
+      "transaction_id": "MzQzODI3NDAzOWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-08-30",
+      "barcode": "XDCX93MJ",
+      "category": "officers",
+      "date": "2024-10-03",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzQzODI3Mjk1OWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2024-04-20",
+      "barcode": "XD2AZVN7",
+      "category": "confirmation-statement",
+      "date": "2024-05-03",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQyMDY3MDIxOGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2023-11-15",
+      "barcode": "XCH7165L",
+      "category": "officers",
+      "date": "2023-11-27",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzQwMTYwNjU0MWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2023-11-15",
+      "barcode": "XCH715W2",
+      "category": "officers",
+      "date": "2023-11-27",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzQwMTYwNjUzN2FkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2022-12-31",
+      "barcode": "ACD4UNYP",
+      "category": "accounts",
+      "date": "2023-10-13",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 39,
+      "paper_filed": true,
+      "transaction_id": "MzM5NjIxNDcxOWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-04-20",
+      "barcode": "XC1TIPXE",
+      "category": "confirmation-statement",
+      "date": "2023-04-20",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM3Njk5MDE0NGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2022-12-31",
+      "barcode": "XBFL761T",
+      "category": "accounts",
+      "date": "2022-10-28",
+      "description": "change-account-reference-date-company-current-extended",
+      "pages": 1,
+      "transaction_id": "MzM1NjgxNzI2MWFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2021-12-31",
+      "barcode": "ABDI622I",
+      "category": "accounts",
+      "date": "2022-09-30",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 37,
+      "paper_filed": true,
+      "transaction_id": "MzM1MzUxODc3NGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-04-20",
+      "barcode": "XB2BS6XN",
+      "category": "confirmation-statement",
+      "date": "2022-04-20",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMzNjcyMjAxOGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-12-30",
+      "barcode": "XAAC8TND",
+      "category": "accounts",
+      "date": "2021-08-06",
+      "description": "change-account-reference-date-company-current-extended",
+      "pages": 1,
+      "transaction_id": "MzMxMDAxMTQ2MmFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2020-06-30",
+      "barcode": "AA1HS648",
+      "category": "accounts",
+      "date": "2021-04-20",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 44,
+      "paper_filed": true,
+      "transaction_id": "MzI5Nzk5Njk3NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-04-20",
+      "barcode": "XA2SJIAI",
+      "category": "confirmation-statement",
+      "date": "2021-04-20",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI5ODIxNjI1MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93CSZZ5",
+      "category": "confirmation-statement",
+      "date": "2020-04-20",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI2Mjc1OTI1OWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2019-06-30",
+      "barcode": "A91VSIRM",
+      "category": "accounts",
+      "date": "2020-04-06",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 37,
+      "paper_filed": true,
+      "transaction_id": "MzI2MTMxMzAzNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-04-20",
+      "barcode": "X84FDSU2",
+      "category": "confirmation-statement",
+      "date": "2019-04-29",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzIzMzEzNDYzOWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2018-06-30",
+      "barcode": "L826YIMH",
+      "category": "accounts",
+      "date": "2019-04-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 32,
+      "paper_filed": true,
+      "transaction_id": "MzIzMDkwMjEyNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2019-01-25",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzIzMjgyMTkyNmFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "action_date": "2018-04-20",
+      "barcode": "X74AJEP5",
+      "category": "confirmation-statement",
+      "date": "2018-04-20",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzIwMzA0NTM0NGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-06-30",
+      "barcode": "L72OEG22",
+      "category": "accounts",
+      "date": "2018-04-04",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 33,
+      "paper_filed": true,
+      "transaction_id": "MzIwMTc0MTYwOGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-05-01",
+      "barcode": "X6DCGVGA",
+      "category": "persons-with-significant-control",
+      "date": "2017-08-22",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzE4MzQ2ODExM2FkaXF6a2N4",
+      "type": "PSC05"
+     },
+     {
+      "action_date": "2017-04-20",
+      "barcode": "X65RB9LF",
+      "category": "confirmation-statement",
+      "date": "2017-05-04",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzE3NTA1MTcwNGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2016-06-30",
+      "barcode": "A63CC32X",
+      "category": "accounts",
+      "date": "2017-04-06",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 34,
+      "paper_filed": true,
+      "transaction_id": "MzE3Mjk2MDcyOGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-02-06",
+      "barcode": "X637CDRC",
+      "category": "officers",
+      "date": "2017-03-29",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzE3MjI3MjMyMGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2016-10-29",
+      "barcode": "X5M81JG1",
+      "category": "officers",
+      "date": "2016-12-20",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzE2NDg3OTEyOWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2016-04-20",
+      "associated_filings": [
+       {
+        "action_date": "2016-04-20",
+        "category": "capital",
+        "date": "2016-04-20",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X55BX1BV",
+      "category": "annual-return",
+      "date": "2016-04-20",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 7,
+      "transaction_id": "MzE0NjcyNTk5NWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2015-11-16",
+      "barcode": "X50J1DXK",
+      "category": "officers",
+      "date": "2016-02-11",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzE0MTc1MzUwNmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2015-06-30",
+      "barcode": "L4Z60DS2",
+      "category": "accounts",
+      "date": "2016-02-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 32,
+      "paper_filed": true,
+      "transaction_id": "MzE0MDQ5NDM2N2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2015-11-16",
+      "barcode": "X4LWBEKA",
+      "category": "officers",
+      "date": "2015-12-09",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzEzNzEzMTQ5OWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2015-11-16",
+      "barcode": "X4LWBEMI",
+      "category": "officers",
+      "date": "2015-12-09",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzEzNzEzMTQ3N2FkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2015-06-30",
+      "barcode": "X4G35SG3",
+      "category": "accounts",
+      "date": "2015-09-16",
+      "description": "change-account-reference-date-company-previous-extended",
+      "pages": 1,
+      "transaction_id": "MzEzMTEwNzcwN2FkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2015-04-20",
+      "associated_filings": [
+       {
+        "action_date": "2015-04-27",
+        "category": "capital",
+        "date": "2015-04-27",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X468VAMR",
+      "category": "annual-return",
+      "date": "2015-04-27",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 7,
+      "transaction_id": "MzEyMjAwNjk4MWFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2013-12-31",
+      "barcode": "L3CRM9BT",
+      "category": "accounts",
+      "date": "2014-08-04",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 29,
+      "paper_filed": true,
+      "transaction_id": "MzEwNDY4NTI2OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2014-07-01",
+      "barcode": "X3D42BMP",
+      "category": "officers",
+      "date": "2014-07-28",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzEwNDUyMTcwNmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2014-04-20",
+      "associated_filings": [
+       {
+        "action_date": "2014-04-30",
+        "category": "capital",
+        "date": "2014-04-30",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X36WZ1VD",
+      "category": "annual-return",
+      "date": "2014-04-30",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 7,
+      "transaction_id": "MzA5OTE4MDgwN2FkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "barcode": "X2NKC8JV",
+      "category": "officers",
+      "date": "2013-12-19",
+      "description": "termination-director-company-with-name",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzA5MTE0NjgyNGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "barcode": "X2NKC8K3",
+      "category": "officers",
+      "date": "2013-12-19",
+      "description": "appoint-person-director-company-with-name",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzA5MTE0Njc5OGFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2012-12-31",
+      "barcode": "L2HS762H",
+      "category": "accounts",
+      "date": "2013-10-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 27,
+      "paper_filed": true,
+      "transaction_id": "MzA4NjIyMzM5NmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "X2DUN4G1",
+      "category": "officers",
+      "date": "2013-08-01",
+      "description": "appoint-person-director-company-with-name",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzA4MjU4OTI0OGFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "barcode": "X2DUN4F5",
+      "category": "officers",
+      "date": "2013-08-01",
+      "description": "termination-director-company-with-name",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzA4MjU4OTI0NWFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "category": "resolution",
+      "date": "2013-06-03",
+      "description": "resolution",
+      "pages": 44,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "capital",
+        "description": "resolution-securities",
+        "subcategory": "resolution",
+        "type": "RES10"
+       },
+       {
+        "barcode": "A290SO3M",
+        "category": "capital",
+        "description": "resolution-removal-pre-emption",
+        "subcategory": "resolution",
+        "type": "RES11"
+       },
+       {
+        "barcode": "A290SO3M",
+        "category": "incorporation",
+        "description": "resolution-memorandum",
+        "subcategory": "resolution",
+        "type": "RES01"
+       }
+      ],
+      "transaction_id": "MzA3OTA1MTc5NGFkaXF6a2N4",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "action_date": "2013-05-10",
+      "barcode": "X28W444H",
+      "category": "capital",
+      "date": "2013-05-22",
+      "description": "capital-allotment-shares",
+      "pages": 3,
+      "transaction_id": "MzA3ODQ0MTU5NGFkaXF6a2N4",
+      "type": "SH01"
+     },
+     {
+      "action_date": "2013-04-20",
+      "barcode": "X273IKRU",
+      "category": "annual-return",
+      "date": "2013-04-29",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 6,
+      "transaction_id": "MzA3NzAyMzQwN2FkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2013-04-19",
+      "barcode": "X273IKRE",
+      "category": "officers",
+      "date": "2013-04-29",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzA3NzAyMzQxMGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2013-04-19",
+      "barcode": "X273IKRM",
+      "category": "officers",
+      "date": "2013-04-26",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzA3NzAyMzQxMmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2013-03-29",
+      "barcode": "X26IP3N6",
+      "category": "officers",
+      "date": "2013-04-18",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzA3NjQyMDg2NWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "barcode": "A1IPLHN6",
+      "category": "mortgage",
+      "date": "2012-10-02",
+      "description": "legacy",
+      "pages": 5,
+      "paper_filed": true,
+      "transaction_id": "MzA2NTI5MDU2N2FkaXF6a2N4",
+      "type": "MG01"
+     },
+     {
+      "action_date": "2011-12-31",
+      "barcode": "L1ET3MAQ",
+      "category": "accounts",
+      "date": "2012-08-09",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 24,
+      "paper_filed": true,
+      "transaction_id": "MzA2MjE3NzA2N2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2012-04-20",
+      "barcode": "X188IULU",
+      "category": "annual-return",
+      "date": "2012-05-04",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 6,
+      "transaction_id": "MzA1Njk5MzcyOGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "barcode": "A12SX896",
+      "category": "officers",
+      "date": "2012-02-16",
+      "description": "appoint-person-director-company-with-name",
+      "pages": 3,
+      "paper_filed": true,
+      "subcategory": "appointments",
+      "transaction_id": "MzA1MjU5OTgxMmFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "barcode": "X12PP6PE",
+      "category": "officers",
+      "date": "2012-02-15",
+      "description": "termination-director-company-with-name",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzA1MjUzMjk2M2FkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "barcode": "X12PP6PU",
+      "category": "officers",
+      "date": "2012-02-15",
+      "description": "termination-director-company-with-name",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzA1MjUzMjk2OGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "barcode": "X12PP6QI",
+      "category": "officers",
+      "date": "2012-02-15",
+      "description": "termination-director-company-with-name",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzA1MjUzMjk3M2FkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2010-12-31",
+      "barcode": "AUHRQVSP",
+      "category": "accounts",
+      "date": "2011-07-15",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 27,
+      "paper_filed": true,
+      "transaction_id": "MzA0MDUxNTQwNmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2011-04-20",
+      "barcode": "XNQFZU8Q",
+      "category": "annual-return",
+      "date": "2011-05-19",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 8,
+      "transaction_id": "MzAzNzM4NTQ2NmFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "action_date": "2011-04-01",
+      "barcode": "XNIKVU8J",
+      "category": "officers",
+      "date": "2011-05-18",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAzNzM2NTgwOGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2011-04-01",
+      "barcode": "XNIAVU89",
+      "category": "officers",
+      "date": "2011-05-18",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAzNzM2NTI1NmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2011-04-01",
+      "barcode": "XNI7AU8L",
+      "category": "officers",
+      "date": "2011-05-18",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAzNzM2NDk0MWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2011-04-01",
+      "barcode": "XNIATU87",
+      "category": "officers",
+      "date": "2011-05-18",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAzNzM2NTI0OWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2009-12-31",
+      "barcode": "AU0MHMA3",
+      "category": "accounts",
+      "date": "2010-08-13",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 24,
+      "paper_filed": true,
+      "transaction_id": "MzAyMTM0OTE0MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2010-04-20",
+      "barcode": "XPZXLJL7",
+      "category": "annual-return",
+      "date": "2010-05-04",
+      "description": "annual-return-company-with-made-up-date-full-list-shareholders",
+      "pages": 7,
+      "transaction_id": "MzAxNDcwMTYwMGFkaXF6a2N4",
+      "type": "AR01"
+     },
+     {
+      "barcode": "XNM1TJI1",
+      "category": "address",
+      "date": "2010-04-27",
+      "description": "move-registers-to-sail-company",
+      "pages": 1,
+      "transaction_id": "MzAxNDM3NTI5N2FkaXF6a2N4",
+      "type": "AD03"
+     },
+     {
+      "barcode": "XNLZIJIN",
+      "category": "address",
+      "date": "2010-04-27",
+      "description": "move-registers-to-sail-company",
+      "pages": 1,
+      "transaction_id": "MzAxNDM3NTI0MWFkaXF6a2N4",
+      "type": "AD03"
+     },
+     {
+      "barcode": "XNLXXJI0",
+      "category": "address",
+      "date": "2010-04-27",
+      "description": "move-registers-to-sail-company",
+      "pages": 1,
+      "transaction_id": "MzAxNDM3NTIxOGFkaXF6a2N4",
+      "type": "AD03"
+     },
+     {
+      "barcode": "XNLVLJIM",
+      "category": "address",
+      "date": "2010-04-27",
+      "description": "move-registers-to-sail-company",
+      "pages": 1,
+      "transaction_id": "MzAxNDM3NDg3OGFkaXF6a2N4",
+      "type": "AD03"
+     },
+     {
+      "barcode": "XNJXFJIG",
+      "category": "address",
+      "date": "2010-04-27",
+      "description": "change-sail-address-company",
+      "pages": 1,
+      "transaction_id": "MzAxNDM3MDg1M2FkaXF6a2N4",
+      "type": "AD02"
+     },
+     {
+      "action_date": "2010-01-01",
+      "barcode": "XLT6RHSH",
+      "category": "officers",
+      "date": "2010-02-24",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAxMDE4MjU0NGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2010-01-01",
+      "barcode": "XLT0IHS2",
+      "category": "officers",
+      "date": "2010-02-24",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAxMDE4MjE0NWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2010-01-01",
+      "barcode": "XLS9JHSB",
+      "category": "officers",
+      "date": "2010-02-24",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAxMDE4MDU2NGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2010-01-01",
+      "barcode": "XLRTXHS8",
+      "category": "officers",
+      "date": "2010-02-24",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAxMDE3OTc1MWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2008-12-31",
+      "barcode": "LW67JFPH",
+      "category": "accounts",
+      "date": "2009-12-14",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 26,
+      "paper_filed": true,
+      "transaction_id": "MzAwNDg5MjQxOWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "PWC16F2L",
+      "category": "auditors",
+      "date": "2009-11-18",
+      "description": "auditors-resignation-company",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzAwMzE2MTQ4NWFkaXF6a2N4",
+      "type": "AUD"
+     },
+     {
+      "action_date": "2009-10-02",
+      "barcode": "XTNFIEJ7",
+      "category": "officers",
+      "date": "2009-10-30",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAwMTc5NTAyMWFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2009-10-02",
+      "barcode": "XTLJ0EJR",
+      "category": "officers",
+      "date": "2009-10-30",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzAwMTc4ODk2NmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "barcode": "X1FNMC75",
+      "category": "officers",
+      "date": "2009-08-07",
+      "description": "legacy",
+      "pages": 1,
+      "transaction_id": "MjAzODgwMjg0OGFkaXF6a2N4",
+      "type": "288b"
+     },
+     {
+      "barcode": "X7FL896R",
+      "category": "annual-return",
+      "date": "2009-04-21",
+      "description": "legacy",
+      "pages": 4,
+      "transaction_id": "MjAzMDk2Nzg5MmFkaXF6a2N4",
+      "type": "363a"
+     },
+     {
+      "barcode": "X68BF91B",
+      "category": "address",
+      "date": "2009-04-15",
+      "description": "legacy",
+      "pages": 1,
+      "transaction_id": "MjAzMDY1Mjc2OWFkaXF6a2N4",
+      "type": "353"
+     },
+     {
+      "barcode": "X688I91B",
+      "category": "officers",
+      "date": "2009-04-15",
+      "description": "legacy",
+      "pages": 1,
+      "transaction_id": "MjAzMDY1MTgyOWFkaXF6a2N4",
+      "type": "288c"
+     },
+     {
+      "action_date": "2007-12-31",
+      "barcode": "LA7R179A",
+      "category": "accounts",
+      "date": "2009-02-12",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 23,
+      "paper_filed": true,
+      "transaction_id": "MjAyNTY0MjgyOGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "ALSHA2T9",
+      "category": "miscellaneous",
+      "date": "2008-09-04",
+      "description": "miscellaneous",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MjAxMjY1NzkyNmFkaXF6a2N4",
+      "type": "MISC"
+     },
+     {
+      "barcode": "XZMPRZKH",
+      "category": "annual-return",
+      "date": "2008-05-09",
+      "description": "legacy",
+      "pages": 4,
+      "transaction_id": "MjAwNTA5NzQ2OGFkaXF6a2N4",
+      "type": "363a"
+     },
+     {
+      "category": "officers",
+      "date": "2008-01-22",
+      "description": "legacy",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MTkwOTM5NzIxYWRpcXprY3g",
+      "type": "288c"
+     },
+     {
+      "action_date": "2006-12-31",
+      "category": "accounts",
+      "date": "2007-10-29",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 23,
+      "paper_filed": true,
+      "transaction_id": "MTg3MTY0NzA5YWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "officers",
+      "date": "2007-09-06",
+      "description": "legacy",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MTg0ODQ0MjMzYWRpcXprY3g",
+      "type": "288c"
+     },
+     {
+      "category": "officers",
+      "date": "2007-08-31",
+      "description": "legacy",
+      "pages": 1,
+      "transaction_id": "MTg0NzUyNjg5YWRpcXprY3g",
+      "type": "288c"
+     },
+     {
+      "category": "officers",
+      "date": "2007-08-17",
+      "description": "legacy",
+      "pages": 1,
+      "transaction_id": "MTg0MTIyMzMyYWRpcXprY3g",
+      "type": "288c"
+     },
+     {
+      "action_date": "2005-12-31",
+      "category": "accounts",
+      "date": "2007-06-14",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 17,
+      "paper_filed": true,
+      "transaction_id": "MTgxMjk2OTcyYWRpcXprY3g",
+      "type": "AA"
+     },
+     {
+      "category": "annual-return",
+      "date": "2007-06-07",
+      "description": "legacy",
+      "pages": 3,
+      "transaction_id": "MTgxODg2MDExYWRpcXprY3g",
+      "type": "363a"
+     },
+     {
+      "category": "officers",
+      "date": "2007-06-05",
+      "description": "legacy",
+      "pages": 2,
+      "paper_filed": true,
+      "transaction_id": "MTgxNDI0NTY1YWRpcXprY3g",
+      "type": "288a"
+     },
+     {
+      "category": "officers",
+      "date": "2007-06-05",
+      "description": "legacy",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MTgxNDYyNDQwYWRpcXprY3g",
+      "type": "288a"
+     },
+     {
+      "category": "officers",
+      "date": "2007-06-05",
+      "description": "legacy",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MTgxOTQ5ODk3YWRpcXprY3g",
+      "type": "288a"
+     },
+     {
+      "category": "officers",
+      "date": "2007-06-05",
+      "description": "legacy",
+      "pages": 3,
+      "paper_filed": true,
+      "transaction_id": "MTgxMjAxMTg1YWRpcXprY3g",
+      "type": "288a"
+     },
+     {
+      "category": "officers",
+      "date": "2007-06-05",
+      "description": "legacy",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MTgxMzMyMzU1YWRpcXprY3g",
+      "type": "288b"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 139
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2026-06-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID074/appointments"
+       }
+      },
+      "name": "PERSON 085",
+      "officer_role": "corporate-secretary",
+      "person_number": "73539350001"
+     },
+     {
+      "appointed_on": "2023-11-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID075/appointments"
+       }
+      },
+      "name": "PERSON 086",
+      "officer_role": "director",
+      "person_number": "316397830001"
+     },
+     {
+      "appointed_on": "2013-11-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID076/appointments"
+       }
+      },
+      "name": "PERSON 087",
+      "officer_role": "director",
+      "person_number": "183780260001"
+     },
+     {
+      "appointed_on": "2000-04-20",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID077/appointments"
+       }
+      },
+      "name": "PERSON 088",
+      "officer_role": "corporate-secretary",
+      "person_number": "61729550002",
+      "resigned_on": "2026-06-01"
+     },
+     {
+      "appointed_on": "2004-12-08",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID078/appointments"
+       }
+      },
+      "name": "PERSON 089",
+      "officer_role": "director",
+      "person_number": "69185500002",
+      "resigned_on": "2009-07-06"
+     },
+     {
+      "appointed_on": "2000-09-27",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID079/appointments"
+       }
+      },
+      "name": "PERSON 090",
+      "officer_role": "director",
+      "person_number": "72253720001",
+      "resigned_on": "2004-08-04"
+     },
+     {
+      "appointed_on": "2004-08-04",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID080/appointments"
+       }
+      },
+      "name": "PERSON 091",
+      "officer_role": "director",
+      "person_number": "100005210001",
+      "resigned_on": "2007-02-15"
+     },
+     {
+      "appointed_on": "2016-10-29",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID081/appointments"
+       }
+      },
+      "name": "PERSON 092",
+      "officer_role": "director",
+      "person_number": "209074370001",
+      "resigned_on": "2017-02-06"
+     },
+     {
+      "appointed_on": "2012-02-10",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID082/appointments"
+       }
+      },
+      "name": "PERSON 093",
+      "officer_role": "director",
+      "person_number": "152824950001",
+      "resigned_on": "2013-07-24"
+     },
+     {
+      "appointed_on": "2007-02-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID083/appointments"
+       }
+      },
+      "name": "PERSON 094",
+      "officer_role": "director",
+      "person_number": "131528320001",
+      "resigned_on": "2012-02-10"
+     },
+     {
+      "appointed_on": "2007-02-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID084/appointments"
+       }
+      },
+      "name": "PERSON 095",
+      "officer_role": "director",
+      "person_number": "178000690001",
+      "resigned_on": "2015-11-16"
+     },
+     {
+      "appointed_on": "2015-11-16",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID085/appointments"
+       }
+      },
+      "name": "PERSON 096",
+      "officer_role": "director",
+      "person_number": "203372210001",
+      "resigned_on": "2023-11-15"
+     },
+     {
+      "appointed_on": "2007-02-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID086/appointments"
+       }
+      },
+      "name": "PERSON 097",
+      "officer_role": "director",
+      "person_number": "121986940001",
+      "resigned_on": "2012-02-10"
+     },
+     {
+      "appointed_on": "2000-09-27",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID087/appointments"
+       }
+      },
+      "name": "PERSON 098",
+      "officer_role": "director",
+      "person_number": "72253770002",
+      "resigned_on": "2004-08-04"
+     },
+     {
+      "appointed_on": "2004-08-04",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID088/appointments"
+       }
+      },
+      "name": "PERSON 099",
+      "officer_role": "director",
+      "person_number": "68850240001",
+      "resigned_on": "2007-02-15"
+     },
+     {
+      "appointed_on": "2013-07-24",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID089/appointments"
+       }
+      },
+      "name": "PERSON 100",
+      "officer_role": "director",
+      "person_number": "179533800001",
+      "resigned_on": "2013-11-22"
+     },
+     {
+      "appointed_on": "2007-02-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID090/appointments"
+       }
+      },
+      "name": "PERSON 101",
+      "officer_role": "director",
+      "person_number": "86110250004",
+      "resigned_on": "2012-02-10"
+     },
+     {
+      "appointed_on": "2000-04-20",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID091/appointments"
+       }
+      },
+      "name": "PERSON 102",
+      "officer_role": "corporate-nominee-director",
+      "person_number": "900008150001",
+      "resigned_on": "2000-09-27"
+     },
+     {
+      "appointed_on": "2000-04-20",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID092/appointments"
+       }
+      },
+      "name": "PERSON 103",
+      "officer_role": "corporate-nominee-director",
+      "person_number": "900008160001",
+      "resigned_on": "2000-09-27"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 16,
+    "start_index": 0,
+    "total_results": 19
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "12"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-12-31",
+      "period_end_on": "2025-12-31",
+      "period_start_on": "2025-01-01",
+      "type": "full"
+     },
+     "next_accounts": {
+      "due_on": "2027-09-30",
+      "overdue": false,
+      "period_end_on": "2026-12-31",
+      "period_start_on": "2026-01-01"
+     },
+     "next_due": "2027-09-30",
+     "next_made_up_to": "2026-12-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 087",
+    "company_number": "91000087",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-04-20",
+     "next_due": "2027-05-04",
+     "next_made_up_to": "2027-04-20",
+     "overdue": false
+    },
+    "date_of_creation": "2000-04-20",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2016-04-20",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "82990"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "corporate-entity-person-with-significant-control",
+      "name": "CORPORATE CONTROLLER 3011",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-26",
+  "company_number": "91000087",
+  "public": false,
+  "recorded": "2026-10-26",
+  "synthetic": false,
+  "truncated": []
+ }
+}

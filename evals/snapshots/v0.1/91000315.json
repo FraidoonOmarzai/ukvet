@@ -1,0 +1,2009 @@
+{
+ "appointments": {
+  "OFFICERID241": {
+   "body": {
+    "active_count": 16,
+    "inactive_count": 114,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-06-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 315",
+       "company_number": "91000316",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2026-06-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 316",
+       "company_number": "91000317",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2026-06-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 317",
+       "company_number": "91000318",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2026-03-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 318",
+       "company_number": "91000319",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 319",
+       "company_number": "91000320",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 320",
+       "company_number": "91000321",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 321",
+       "company_number": "91000322",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-04-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 322",
+       "company_number": "91000323",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-04-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 323",
+       "company_number": "91000324",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-03-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 324",
+       "company_number": "91000325",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-03-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 325",
+       "company_number": "91000326",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2025-03-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 326",
+       "company_number": "91000327",
+       "company_status": "registered"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "managing-officer",
+      "responsibilities": "DIRECTOR"
+     },
+     {
+      "appointed_on": "2023-10-09",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 327",
+       "company_number": "91000328",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-05-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 328",
+       "company_number": "91000329",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-03-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 329",
+       "company_number": "91000330",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-03-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 330",
+       "company_number": "91000331",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-10-03",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 331",
+       "company_number": "91000332",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-09-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 332",
+       "company_number": "91000333",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 333",
+       "company_number": "91000334",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 334",
+       "company_number": "91000335",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-09",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 335",
+       "company_number": "91000336",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 336",
+       "company_number": "91000337",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 337",
+       "company_number": "91000338",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 338",
+       "company_number": "91000339",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 339",
+       "company_number": "91000340",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 340",
+       "company_number": "91000341",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 341",
+       "company_number": "91000342",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 342",
+       "company_number": "91000343",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 343",
+       "company_number": "91000344",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 344",
+       "company_number": "91000345",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 345",
+       "company_number": "91000346",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 346",
+       "company_number": "91000347",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 347",
+       "company_number": "91000348",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 348",
+       "company_number": "91000349",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 349",
+       "company_number": "91000350",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 350",
+       "company_number": "91000351",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-03-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 351",
+       "company_number": "91000352",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-02-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 352",
+       "company_number": "91000353",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-02-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 353",
+       "company_number": "91000354",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-02-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 354",
+       "company_number": "91000355",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-01-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 355",
+       "company_number": "91000356",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-01-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 356",
+       "company_number": "91000357",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-01-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 357",
+       "company_number": "91000358",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-12-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 358",
+       "company_number": "91000359",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-12-03",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 359",
+       "company_number": "91000360",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-12-03",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 360",
+       "company_number": "91000361",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-11-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 361",
+       "company_number": "91000362",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 362",
+       "company_number": "91000363",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-10-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 363",
+       "company_number": "91000364",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 364",
+       "company_number": "91000365",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 291",
+    "resigned_count": 227,
+    "start_index": 0,
+    "total_results": 357
+   },
+   "status": 200
+  },
+  "OFFICERID242": {
+   "body": {
+    "active_count": 127,
+    "inactive_count": 134,
+    "is_corporate_officer": true,
+    "items": [
+     {
+      "appointed_on": "2026-02-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 365",
+       "company_number": "91000366",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-04-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 366",
+       "company_number": "91000367",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-03-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 367",
+       "company_number": "91000368",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-03-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 368",
+       "company_number": "91000369",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-03-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 369",
+       "company_number": "91000370",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-01-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 370",
+       "company_number": "91000371",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-01-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 371",
+       "company_number": "91000372",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2024-11-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 372",
+       "company_number": "91000373",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2024-09-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 373",
+       "company_number": "91000374",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-06",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 374",
+       "company_number": "91000375",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 375",
+       "company_number": "91000376",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 376",
+       "company_number": "91000377",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 377",
+       "company_number": "91000378",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 378",
+       "company_number": "91000379",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 379",
+       "company_number": "91000380",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 380",
+       "company_number": "91000381",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 362",
+       "company_number": "91000363",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 363",
+       "company_number": "91000364",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 381",
+       "company_number": "91000382",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 382",
+       "company_number": "91000383",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 383",
+       "company_number": "91000384",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 384",
+       "company_number": "91000385",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 385",
+       "company_number": "91000386",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 386",
+       "company_number": "91000387",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 387",
+       "company_number": "91000388",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 388",
+       "company_number": "91000389",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 389",
+       "company_number": "91000390",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 390",
+       "company_number": "91000391",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 391",
+       "company_number": "91000392",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 392",
+       "company_number": "91000393",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 393",
+       "company_number": "91000394",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 394",
+       "company_number": "91000395",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 395",
+       "company_number": "91000396",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 396",
+       "company_number": "91000397",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 397",
+       "company_number": "91000398",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 398",
+       "company_number": "91000399",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 399",
+       "company_number": "91000400",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 400",
+       "company_number": "91000401",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 401",
+       "company_number": "91000402",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 402",
+       "company_number": "91000403",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 403",
+       "company_number": "91000404",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 404",
+       "company_number": "91000405",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 405",
+       "company_number": "91000406",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 406",
+       "company_number": "91000407",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 407",
+       "company_number": "91000408",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 408",
+       "company_number": "91000409",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 409",
+       "company_number": "91000410",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-05-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 410",
+       "company_number": "91000411",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-05-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 411",
+       "company_number": "91000412",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-05-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 412",
+       "company_number": "91000413",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 289",
+    "resigned_count": 9,
+    "start_index": 0,
+    "total_results": 270
+   },
+   "status": 200
+  },
+  "OFFICERID243": {
+   "body": {
+    "active_count": 126,
+    "inactive_count": 142,
+    "is_corporate_officer": true,
+    "items": [
+     {
+      "appointed_on": "2026-02-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 365",
+       "company_number": "91000366",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-09-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 413",
+       "company_number": "91000414",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-01-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 371",
+       "company_number": "91000372",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2025-01-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 370",
+       "company_number": "91000371",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2024-11-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 372",
+       "company_number": "91000373",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 414",
+       "company_number": "91000415",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 415",
+       "company_number": "91000416",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 416",
+       "company_number": "91000417",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 417",
+       "company_number": "91000418",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 418",
+       "company_number": "91000419",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 419",
+       "company_number": "91000420",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 420",
+       "company_number": "91000421",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 421",
+       "company_number": "91000422",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2023-12-06",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 422",
+       "company_number": "91000423",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-25",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 375",
+       "company_number": "91000376",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 376",
+       "company_number": "91000377",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 377",
+       "company_number": "91000378",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 378",
+       "company_number": "91000379",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 379",
+       "company_number": "91000380",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 380",
+       "company_number": "91000381",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 362",
+       "company_number": "91000363",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 363",
+       "company_number": "91000364",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 382",
+       "company_number": "91000383",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-10-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 381",
+       "company_number": "91000382",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 383",
+       "company_number": "91000384",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 384",
+       "company_number": "91000385",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 385",
+       "company_number": "91000386",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 386",
+       "company_number": "91000387",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-09-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 387",
+       "company_number": "91000388",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 388",
+       "company_number": "91000389",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 389",
+       "company_number": "91000390",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 390",
+       "company_number": "91000391",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-08-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 391",
+       "company_number": "91000392",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 392",
+       "company_number": "91000393",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 393",
+       "company_number": "91000394",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 394",
+       "company_number": "91000395",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 398",
+       "company_number": "91000399",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 395",
+       "company_number": "91000396",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 397",
+       "company_number": "91000398",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 396",
+       "company_number": "91000397",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 399",
+       "company_number": "91000400",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 400",
+       "company_number": "91000401",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 401",
+       "company_number": "91000402",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 402",
+       "company_number": "91000403",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 403",
+       "company_number": "91000404",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 404",
+       "company_number": "91000405",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 405",
+       "company_number": "91000406",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 406",
+       "company_number": "91000407",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 407",
+       "company_number": "91000408",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     },
+     {
+      "appointed_on": "2021-06-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 408",
+       "company_number": "91000409",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "corporate-director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 290",
+    "resigned_count": 16,
+    "start_index": 0,
+    "total_results": 284
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_code": "910003150001",
+      "charge_number": 1,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-04-03",
+      "delivered_on": "2019-04-05",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 006"
+       }
+      ],
+      "satisfied_on": "2022-12-16",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-04-05",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2022-12-16",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 1,
+    "total_count": 1,
+    "unfiltered_count": 1
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2023-08-17",
+      "description": "gazette-dissolved-liquidation",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzM4OTk3NDY2NWFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "barcode": "YC35MSP4",
+      "category": "insolvency",
+      "date": "2023-05-17",
+      "description": "liquidation-voluntary-members-return-of-final-meeting",
+      "pages": 14,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzM3ODg4OTg5NmFkaXF6a2N4",
+      "type": "LIQ13"
+     },
+     {
+      "barcode": "YBJEOSM0",
+      "category": "insolvency",
+      "date": "2023-01-04",
+      "description": "liquidation-voluntary-appointment-of-liquidator",
+      "pages": 3,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzM2MzQyNzQ5OWFkaXF6a2N4",
+      "type": "600"
+     },
+     {
+      "action_date": "2023-01-04",
+      "barcode": "YBJEOSJS",
+      "category": "address",
+      "date": "2023-01-04",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 2,
+      "paper_filed": true,
+      "transaction_id": "MzM2MzQyNzUxNmFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "barcode": "YBJEOSK8",
+      "category": "insolvency",
+      "date": "2023-01-04",
+      "description": "liquidation-voluntary-declaration-of-solvency",
+      "pages": 5,
+      "paper_filed": true,
+      "subcategory": "voluntary",
+      "transaction_id": "MzM2MzQyNzUwMWFkaXF6a2N4",
+      "type": "LIQ01"
+     },
+     {
+      "category": "resolution",
+      "date": "2023-01-04",
+      "description": "resolution",
+      "pages": 1,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "liquidation",
+        "description": "liquidation-voluntary-special-resolution-to-wind-up-case-start-date",
+        "original_description": "Special resolution to wind up",
+        "subcategory": [
+         "voluntary",
+         "resolution"
+        ],
+        "type": "LRESSP"
+       }
+      ],
+      "transaction_id": "WUJKRU9TSzBhZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "barcode": "XBIYE3LF",
+      "category": "mortgage",
+      "date": "2022-12-16",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzM2MjY5MzE1MGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "action_date": "2021-12-13",
+      "barcode": "XAJKGH49",
+      "category": "confirmation-statement",
+      "date": "2021-12-17",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMyNDAxODE4MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-11-24",
+      "barcode": "XAITEBDT",
+      "category": "officers",
+      "date": "2021-12-07",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzMyMjc2NDc4MGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2020-12-31",
+      "barcode": "AACK4O5M",
+      "category": "accounts",
+      "date": "2021-09-12",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 28,
+      "paper_filed": true,
+      "transaction_id": "MzMxMzM0ODg2OGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-12-13",
+      "barcode": "X9JYHUO1",
+      "category": "confirmation-statement",
+      "date": "2020-12-15",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzI4NjAxMDkzN2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9BDZBKG",
+      "category": "officers",
+      "date": "2020-08-14",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzI3NTMzMzkxMGFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9BDZBAY",
+      "category": "officers",
+      "date": "2020-08-14",
+      "description": "change-corporate-director-company-with-change-date",
+      "pages": 1,
+      "subcategory": "change",
+      "transaction_id": "MzI3NTMzMzg0NmFkaXF6a2N4",
+      "type": "CH02"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9BDZB8Y",
+      "category": "officers",
+      "date": "2020-08-14",
+      "description": "change-corporate-director-company-with-change-date",
+      "pages": 1,
+      "subcategory": "change",
+      "transaction_id": "MzI3NTMzMzgzNGFkaXF6a2N4",
+      "type": "CH02"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9BDZ6R7",
+      "category": "officers",
+      "date": "2020-08-14",
+      "description": "change-corporate-secretary-company-with-change-date",
+      "pages": 1,
+      "subcategory": "officers",
+      "transaction_id": "MzI3NTMzMjg0NWFkaXF6a2N4",
+      "type": "CH04"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9BDZ69L",
+      "category": "persons-with-significant-control",
+      "date": "2020-08-14",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzI3NTMzMjgzNGFkaXF6a2N4",
+      "type": "PSC05"
+     },
+     {
+      "action_date": "2020-08-14",
+      "barcode": "X9BDZ60O",
+      "category": "address",
+      "date": "2020-08-14",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzI3NTMzMjczM2FkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2019-12-31",
+      "barcode": "A961E2YH",
+      "category": "accounts",
+      "date": "2020-06-02",
+      "description": "accounts-with-accounts-type-full",
+      "pages": 26,
+      "paper_filed": true,
+      "transaction_id": "MzI2NjM3MDAzNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-12-13",
+      "barcode": "X8KMVCPF",
+      "category": "confirmation-statement",
+      "date": "2019-12-19",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI1MjY1MDUxMGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2019-04-03",
+      "barcode": "X82QWS5C",
+      "category": "mortgage",
+      "date": "2019-04-05",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 52,
+      "subcategory": "create",
+      "transaction_id": "MzIzMTM2NzY4NmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2018-12-14",
+        "description": "model-articles-adopted-amended-provisions",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2018-12-14",
+        "category": "capital",
+        "date": "2018-12-14",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "L7KRG65V",
+      "category": "incorporation",
+      "date": "2018-12-14",
+      "description": "incorporation-company",
+      "pages": 49,
+      "paper_filed": true,
+      "transaction_id": "MzIyMjE0NDAwM2FkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 21
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": {
+    "cases": [
+     {
+      "dates": [
+       {
+        "date": "2022-12-21",
+        "type": "wound-up-on"
+       },
+       {
+        "date": "2023-08-17",
+        "type": "dissolved-on"
+       }
+      ],
+      "number": "1",
+      "type": "members-voluntary-liquidation"
+     }
+    ]
+   },
+   "status": 200
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 4,
+    "items": [
+     {
+      "appointed_on": "2018-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID240/appointments"
+       }
+      },
+      "name": "PERSON 287",
+      "officer_role": "corporate-secretary",
+      "person_number": "239196070001"
+     },
+     {
+      "appointed_on": "2018-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID241/appointments"
+       }
+      },
+      "name": "PERSON 288",
+      "officer_role": "director",
+      "person_number": "248413650002"
+     },
+     {
+      "appointed_on": "2018-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID242/appointments"
+       }
+      },
+      "name": "PERSON 289",
+      "officer_role": "corporate-director",
+      "person_number": "244132120001"
+     },
+     {
+      "appointed_on": "2018-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID243/appointments"
+       }
+      },
+      "name": "PERSON 290",
+      "officer_role": "corporate-director",
+      "person_number": "244132310001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "12"
+     },
+     "last_accounts": {
+      "made_up_to": "2020-12-31",
+      "period_end_on": "2020-12-31",
+      "type": "full"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 314",
+    "company_number": "91000315",
+    "company_status": "dissolved",
+    "date_of_cessation": "2023-08-17",
+    "date_of_creation": "2018-12-14",
+    "has_charges": true,
+    "has_insolvency_history": true,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "64999"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "corporate-entity-person-with-significant-control",
+      "name": "CORPORATE CONTROLLER 1175",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2018-12-14"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000315",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

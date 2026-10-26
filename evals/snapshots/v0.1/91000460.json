@@ -1,0 +1,173 @@
+{
+ "appointments": {
+  "OFFICERID269": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2017-11-06",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 459",
+       "company_number": "91000460",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 342",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2019-04-16",
+      "description": "gazette-dissolved-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIzMTY1ODc3MWFkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "category": "gazette",
+      "date": "2019-01-29",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIyNDY0NjU5MWFkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2017-11-06",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2017-11-06",
+        "category": "capital",
+        "date": "2017-11-06",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X6IFXUAZ",
+      "category": "incorporation",
+      "date": "2017-11-06",
+      "description": "incorporation-company",
+      "pages": 8,
+      "transaction_id": "MzE4OTQyNTcxNmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 3
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2017-11-06",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID269/appointments"
+       }
+      },
+      "name": "PERSON 341",
+      "officer_role": "director",
+      "person_number": "239802660001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "30",
+      "month": "11"
+     },
+     "last_accounts": {
+      "type": "null"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 459",
+    "company_number": "91000460",
+    "company_status": "dissolved",
+    "date_of_cessation": "2019-04-16",
+    "date_of_creation": "2017-11-06",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "46341"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000460",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

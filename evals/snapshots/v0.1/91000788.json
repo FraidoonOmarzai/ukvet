@@ -1,0 +1,609 @@
+{
+ "appointments": {
+  "OFFICERID604": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2022-06-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 787",
+       "company_number": "91000789",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-06-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 786",
+       "company_number": "91000788",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2016-12-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 788",
+       "company_number": "91000790",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2013-02-19",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 789",
+       "company_number": "91000791",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 737",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  },
+  "OFFICERID605": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2025-01-28",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 789",
+       "company_number": "91000791",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-06-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 787",
+       "company_number": "91000789",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-06-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 786",
+       "company_number": "91000788",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 738",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 3
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_code": "910007880003",
+      "charge_number": 3,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2023-02-27",
+      "delivered_on": "2023-03-09",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 092"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2023-03-09",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     },
+     {
+      "charge_code": "910007880002",
+      "charge_number": 2,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2023-02-27",
+      "delivered_on": "2023-03-08",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 092"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2023-03-08",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     },
+     {
+      "charge_code": "910007880001",
+      "charge_number": 1,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2023-02-27",
+      "delivered_on": "2023-03-08",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 092"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2023-03-08",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 3,
+    "unfiltered_count": 3
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2026-09-04",
+      "barcode": "XF9XHTD9",
+      "category": "confirmation-statement",
+      "date": "2026-09-04",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzU0MjU4MjMyMWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2026-09-03",
+      "barcode": "XF9XHPRV",
+      "category": "persons-with-significant-control",
+      "date": "2026-09-04",
+      "description": "notification-of-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "notifications",
+      "transaction_id": "MzU0MjU4MTUzNmFkaXF6a2N4",
+      "type": "PSC02"
+     },
+     {
+      "action_date": "2026-09-03",
+      "barcode": "XF9XHN2I",
+      "category": "officers",
+      "date": "2026-09-04",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzU0MjU4MDg3NWFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2026-09-03",
+      "barcode": "XF9XHMXT",
+      "category": "persons-with-significant-control",
+      "date": "2026-09-04",
+      "description": "cessation-of-a-person-with-significant-control",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzU0MjU4MDg1OGFkaXF6a2N4",
+      "type": "PSC07"
+     },
+     {
+      "action_date": "2026-06-21",
+      "barcode": "XF4XR8MG",
+      "category": "confirmation-statement",
+      "date": "2026-06-24",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzUyNzk5MDg2N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2025-03-31",
+      "barcode": "XEG4GMB6",
+      "category": "accounts",
+      "date": "2025-11-26",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 8,
+      "transaction_id": "MzQ5MTExNzQzNWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2025-06-21",
+      "barcode": "XE5BKAGO",
+      "category": "confirmation-statement",
+      "date": "2025-06-23",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ3MTA2ODA2MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-03-31",
+      "barcode": "XDBXG3Y1",
+      "category": "accounts",
+      "date": "2024-09-18",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 5,
+      "transaction_id": "MzQzNjM1Njk1N2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-06-21",
+      "barcode": "XD75KA0I",
+      "category": "confirmation-statement",
+      "date": "2024-07-11",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQyODM4MDQzMmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-07-10",
+      "barcode": "XD72ZWMO",
+      "category": "address",
+      "date": "2024-07-10",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzQyODMwNzUxMGFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XD48D7HK",
+      "category": "accounts",
+      "date": "2024-05-30",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 5,
+      "transaction_id": "MzQyMzcwMjkwNGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-03-31",
+      "barcode": "XCXXMWXD",
+      "category": "accounts",
+      "date": "2024-03-01",
+      "description": "change-account-reference-date-company-previous-shortened",
+      "pages": 1,
+      "transaction_id": "MzQxMzE3OTc0M2FkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2023-06-21",
+      "barcode": "XC9I37UX",
+      "category": "confirmation-statement",
+      "date": "2023-08-08",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM4ODkxNTM1OGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "AC5W7ZG0",
+      "category": "incorporation",
+      "date": "2023-06-29",
+      "description": "memorandum-articles",
+      "pages": 13,
+      "paper_filed": true,
+      "transaction_id": "MzM4Mzg2OTMyNmFkaXF6a2N4",
+      "type": "MA"
+     },
+     {
+      "category": "resolution",
+      "date": "2023-06-29",
+      "description": "resolution",
+      "pages": 2,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "incorporation",
+        "description": "resolution-adopt-articles",
+        "subcategory": "resolution",
+        "type": "RES01"
+       }
+      ],
+      "transaction_id": "QUM1VzdaRkthZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "action_date": "2023-02-27",
+      "barcode": "XBYYWLHF",
+      "category": "mortgage",
+      "date": "2023-03-09",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 33,
+      "subcategory": "create",
+      "transaction_id": "MzM3MTk5ODI5N2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2023-02-27",
+      "barcode": "XBYW879T",
+      "category": "mortgage",
+      "date": "2023-03-08",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 37,
+      "subcategory": "create",
+      "transaction_id": "MzM3MTg5ODA1NGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2023-02-27",
+      "barcode": "XBYW8CKI",
+      "category": "mortgage",
+      "date": "2023-03-08",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 40,
+      "subcategory": "create",
+      "transaction_id": "MzM3MTg5OTMzOWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2022-06-23",
+      "barcode": "XB6SVVQX",
+      "category": "persons-with-significant-control",
+      "date": "2022-06-23",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzM0MzQ4NzQwMWFkaXF6a2N4",
+      "type": "PSC04"
+     },
+     {
+      "action_date": "2022-06-23",
+      "barcode": "XB6SVV1D",
+      "category": "persons-with-significant-control",
+      "date": "2022-06-23",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzM0MzQ4NzIyOWFkaXF6a2N4",
+      "type": "PSC04"
+     },
+     {
+      "action_date": "2022-06-23",
+      "barcode": "XB6SVUGG",
+      "category": "persons-with-significant-control",
+      "date": "2022-06-23",
+      "description": "change-to-a-person-with-significant-control",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzM0MzQ4Njk2MWFkaXF6a2N4",
+      "type": "PSC04"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2022-06-22",
+        "description": "model-articles-adopted-amended-provisions",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2022-06-22",
+        "category": "capital",
+        "date": "2022-06-22",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XB6Q8B0W",
+      "category": "incorporation",
+      "date": "2022-06-22",
+      "description": "incorporation-company",
+      "pages": 34,
+      "transaction_id": "MzM0MzM0ODUzNmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 22
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 2,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2022-06-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID604/appointments"
+       }
+      },
+      "name": "PERSON 731",
+      "officer_role": "director",
+      "person_number": "175973030002"
+     },
+     {
+      "appointed_on": "2022-06-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID605/appointments"
+       }
+      },
+      "name": "PERSON 732",
+      "officer_role": "director",
+      "person_number": "297217500001"
+     },
+     {
+      "appointed_on": "2022-06-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID606/appointments"
+       }
+      },
+      "name": "PERSON 733",
+      "officer_role": "director",
+      "person_number": "297217510001",
+      "resigned_on": "2026-09-03"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 3
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-03-31",
+      "period_end_on": "2025-03-31",
+      "period_start_on": "2024-04-01",
+      "type": "total-exemption-full"
+     },
+     "next_accounts": {
+      "due_on": "2026-12-31",
+      "overdue": false,
+      "period_end_on": "2026-03-31",
+      "period_start_on": "2025-04-01"
+     },
+     "next_due": "2026-12-31",
+     "next_made_up_to": "2026-03-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 786",
+    "company_number": "91000788",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-09-04",
+     "next_due": "2027-09-18",
+     "next_made_up_to": "2027-09-04",
+     "overdue": false
+    },
+    "date_of_creation": "2022-06-22",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "86230"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 3,
+    "ceased_count": 1,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "corporate-entity-person-with-significant-control",
+      "name": "CORPORATE CONTROLLER 3020",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2026-09-03"
+     },
+     {
+      "ceased": true,
+      "ceased_on": "2026-09-03",
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 734",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2022-06-22"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 735",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2022-06-22"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 736",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2022-06-22"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 4
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-26",
+  "company_number": "91000788",
+  "public": false,
+  "recorded": "2026-10-26",
+  "synthetic": false,
+  "truncated": []
+ }
+}

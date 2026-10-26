@@ -1,0 +1,204 @@
+{
+ "appointments": {
+  "OFFICERID217": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-04-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 298",
+       "company_number": "91000299",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-08-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 297",
+       "company_number": "91000298",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 263",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2026-01-27",
+      "description": "gazette-dissolved-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzUwMDU2MzcwM2FkaXF6a2N4",
+      "type": "GAZ2"
+     },
+     {
+      "category": "gazette",
+      "date": "2025-11-11",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzQ4Njk4NTU1NGFkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "incorporation",
+        "date": "2024-08-22",
+        "description": "model-articles-adopted",
+        "type": "MODEL ARTICLES"
+       },
+       {
+        "action_date": "2024-08-22",
+        "category": "capital",
+        "date": "2024-08-22",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "XDA29QG0",
+      "category": "incorporation",
+      "date": "2024-08-22",
+      "description": "incorporation-company",
+      "pages": 13,
+      "transaction_id": "MzQzMzAyMjMzNmFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 3
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2024-08-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID217/appointments"
+       }
+      },
+      "name": "PERSON 260",
+      "officer_role": "director",
+      "person_number": "326394430001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "08"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 297",
+    "company_number": "91000298",
+    "company_status": "dissolved",
+    "date_of_cessation": "2026-01-27",
+    "date_of_creation": "2024-08-22",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "58290"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 2,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 261",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-08-22"
+     },
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 262",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent",
+       "voting-rights-25-to-50-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-08-22"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 2
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000298",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

@@ -1,0 +1,3566 @@
+{
+ "appointments": {
+  "OFFICERID484": {
+   "body": {
+    "active_count": 18,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 533",
+       "company_number": "91000534",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 534",
+       "company_number": "91000535",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 535",
+       "company_number": "91000536",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 536",
+       "company_number": "91000537",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 537",
+       "company_number": "91000538",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 538",
+       "company_number": "91000539",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 539",
+       "company_number": "91000540",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 540",
+       "company_number": "91000541",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 541",
+       "company_number": "91000542",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 542",
+       "company_number": "91000543",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 543",
+       "company_number": "91000544",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 544",
+       "company_number": "91000545",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 545",
+       "company_number": "91000546",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 546",
+       "company_number": "91000547",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 547",
+       "company_number": "91000548",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 532",
+       "company_number": "91000533",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 548",
+       "company_number": "91000549",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 549",
+       "company_number": "91000550",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 593",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 18
+   },
+   "status": 200
+  },
+  "OFFICERID485": {
+   "body": {
+    "active_count": 18,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 533",
+       "company_number": "91000534",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 534",
+       "company_number": "91000535",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 535",
+       "company_number": "91000536",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 536",
+       "company_number": "91000537",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 537",
+       "company_number": "91000538",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 538",
+       "company_number": "91000539",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 539",
+       "company_number": "91000540",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 540",
+       "company_number": "91000541",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 541",
+       "company_number": "91000542",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 542",
+       "company_number": "91000543",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 543",
+       "company_number": "91000544",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 544",
+       "company_number": "91000545",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 545",
+       "company_number": "91000546",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 546",
+       "company_number": "91000547",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 547",
+       "company_number": "91000548",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 532",
+       "company_number": "91000533",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 548",
+       "company_number": "91000549",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 549",
+       "company_number": "91000550",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 594",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 18
+   },
+   "status": 200
+  },
+  "OFFICERID486": {
+   "body": {
+    "active_count": 20,
+    "inactive_count": 10,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2023-11-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 550",
+       "company_number": "91000551",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-11-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 551",
+       "company_number": "91000552",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-11-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 552",
+       "company_number": "91000553",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-11-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 553",
+       "company_number": "91000554",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-11-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 554",
+       "company_number": "91000555",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-05-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 555",
+       "company_number": "91000556",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 543",
+       "company_number": "91000544",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 540",
+       "company_number": "91000541",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 539",
+       "company_number": "91000540",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 536",
+       "company_number": "91000537",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 547",
+       "company_number": "91000548",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 535",
+       "company_number": "91000536",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 542",
+       "company_number": "91000543",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 545",
+       "company_number": "91000546",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 533",
+       "company_number": "91000534",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 549",
+       "company_number": "91000550",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 538",
+       "company_number": "91000539",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 541",
+       "company_number": "91000542",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 537",
+       "company_number": "91000538",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-07-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 544",
+       "company_number": "91000545",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 532",
+       "company_number": "91000533",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 556",
+       "company_number": "91000557",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 557",
+       "company_number": "91000558",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 558",
+       "company_number": "91000559",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 559",
+       "company_number": "91000560",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 560",
+       "company_number": "91000561",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 561",
+       "company_number": "91000562",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-08-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 562",
+       "company_number": "91000563",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-04-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 563",
+       "company_number": "91000564",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2014-03-20",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 548",
+       "company_number": "91000549",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-08-29",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 559",
+       "company_number": "91000560",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-08-29"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 595",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 31
+   },
+   "status": 200
+  },
+  "OFFICERID487": {
+   "body": {
+    "active_count": 40,
+    "inactive_count": 25,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2023-10-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 564",
+       "company_number": "91000565",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-10-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 565",
+       "company_number": "91000566",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2023-10-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 566",
+       "company_number": "91000567",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-12-12",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 567",
+       "company_number": "91000568",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-08-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 568",
+       "company_number": "91000569",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-07-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 569",
+       "company_number": "91000570",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 545",
+       "company_number": "91000546",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 543",
+       "company_number": "91000544",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 536",
+       "company_number": "91000537",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 539",
+       "company_number": "91000540",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 535",
+       "company_number": "91000536",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 542",
+       "company_number": "91000543",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 540",
+       "company_number": "91000541",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 547",
+       "company_number": "91000548",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 544",
+       "company_number": "91000545",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 549",
+       "company_number": "91000550",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 533",
+       "company_number": "91000534",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 570",
+       "company_number": "91000571",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 538",
+       "company_number": "91000539",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 541",
+       "company_number": "91000542",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 537",
+       "company_number": "91000538",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 534",
+       "company_number": "91000535",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 571",
+       "company_number": "91000572",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 556",
+       "company_number": "91000557",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 557",
+       "company_number": "91000558",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 572",
+       "company_number": "91000573",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 573",
+       "company_number": "91000574",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 574",
+       "company_number": "91000575",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 558",
+       "company_number": "91000559",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 575",
+       "company_number": "91000576",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 561",
+       "company_number": "91000562",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 548",
+       "company_number": "91000549",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 576",
+       "company_number": "91000577",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 560",
+       "company_number": "91000561",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 577",
+       "company_number": "91000578",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 578",
+       "company_number": "91000579",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 579",
+       "company_number": "91000580",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 580",
+       "company_number": "91000581",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 559",
+       "company_number": "91000560",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 581",
+       "company_number": "91000582",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 582",
+       "company_number": "91000583",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 583",
+       "company_number": "91000584",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 562",
+       "company_number": "91000563",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 532",
+       "company_number": "91000533",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 584",
+       "company_number": "91000585",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 585",
+       "company_number": "91000586",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 586",
+       "company_number": "91000587",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 587",
+       "company_number": "91000588",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 588",
+       "company_number": "91000589",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-01-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 589",
+       "company_number": "91000590",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 596",
+    "resigned_count": 4,
+    "start_index": 0,
+    "total_results": 69
+   },
+   "status": 200
+  },
+  "OFFICERID488": {
+   "body": {
+    "active_count": 18,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 533",
+       "company_number": "91000534",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 534",
+       "company_number": "91000535",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 535",
+       "company_number": "91000536",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 536",
+       "company_number": "91000537",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 537",
+       "company_number": "91000538",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 538",
+       "company_number": "91000539",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 539",
+       "company_number": "91000540",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 540",
+       "company_number": "91000541",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 541",
+       "company_number": "91000542",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 542",
+       "company_number": "91000543",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 543",
+       "company_number": "91000544",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 544",
+       "company_number": "91000545",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 545",
+       "company_number": "91000546",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 546",
+       "company_number": "91000547",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 547",
+       "company_number": "91000548",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 532",
+       "company_number": "91000533",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 548",
+       "company_number": "91000549",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 549",
+       "company_number": "91000550",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 597",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 18
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_code": "910005330031",
+      "charge_number": 31,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2025-11-03",
+      "delivered_on": "2025-11-05",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 079"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2025-11-05",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330030",
+      "charge_number": 30,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2024-12-30",
+      "delivered_on": "2025-01-07",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 079"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2025-01-07",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330029",
+      "charge_number": 29,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2024-12-30",
+      "delivered_on": "2025-01-07",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 079"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2025-01-07",
+        "filing_type": "create-charge-with-deed"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330028",
+      "charge_number": 28,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2024-12-30",
+      "delivered_on": "2025-01-02",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 079"
+       }
+      ],
+      "satisfied_on": "2025-01-09",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2025-01-02",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-01-09",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330027",
+      "charge_number": 27,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2024-12-30",
+      "delivered_on": "2025-01-02",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 079"
+       }
+      ],
+      "satisfied_on": "2025-01-09",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2025-01-02",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-01-09",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330026",
+      "charge_number": 26,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2024-01-05",
+      "delivered_on": "2024-01-08",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2024-01-08",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330025",
+      "charge_number": 25,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2022-01-26",
+      "delivered_on": "2022-01-31",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2022-01-31",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330024",
+      "charge_number": 24,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2021-12-21",
+      "delivered_on": "2021-12-23",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2021-12-23",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330023",
+      "charge_number": 23,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2021-06-22",
+      "delivered_on": "2021-06-23",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2021-06-23",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330022",
+      "charge_number": 22,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2021-05-07",
+      "delivered_on": "2021-05-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2021-05-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330021",
+      "charge_number": 21,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-11-13",
+      "delivered_on": "2020-11-17",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-11-17",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330020",
+      "charge_number": 20,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-11-13",
+      "delivered_on": "2020-11-16",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-11-16",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330019",
+      "charge_number": 19,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-04-20",
+      "delivered_on": "2020-04-22",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-04-22",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330018",
+      "charge_number": 18,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-04-20",
+      "delivered_on": "2020-04-22",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-04-22",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330017",
+      "charge_number": 17,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-04-20",
+      "delivered_on": "2020-04-22",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-04-22",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330016",
+      "charge_number": 16,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-04-20",
+      "delivered_on": "2020-04-22",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-04-22",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330015",
+      "charge_number": 15,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2020-04-20",
+      "delivered_on": "2020-04-22",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2020-04-22",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330014",
+      "charge_number": 14,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330013",
+      "charge_number": 13,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330012",
+      "charge_number": 12,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330011",
+      "charge_number": 11,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330010",
+      "charge_number": 10,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330009",
+      "charge_number": 9,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330008",
+      "charge_number": 8,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330007",
+      "charge_number": 7,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330006",
+      "charge_number": 6,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330005",
+      "charge_number": 5,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330004",
+      "charge_number": 4,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330003",
+      "charge_number": 3,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2019-09-09",
+      "delivered_on": "2019-09-11",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 080"
+       }
+      ],
+      "satisfied_on": "2025-03-06",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2019-09-11",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2025-03-06",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330002",
+      "charge_number": 2,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2018-08-24",
+      "delivered_on": "2018-09-03",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 081"
+       }
+      ],
+      "satisfied_on": "2023-05-25",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2018-09-03",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2023-05-25",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     },
+     {
+      "charge_code": "910005330001",
+      "charge_number": 1,
+      "classification": {
+       "description": "A registered charge",
+       "type": "charge-description"
+      },
+      "created_on": "2018-08-24",
+      "delivered_on": "2018-09-03",
+      "persons_entitled": [
+       {
+        "name": "CHARGEE 081"
+       }
+      ],
+      "satisfied_on": "2023-05-25",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2018-09-03",
+        "filing_type": "create-charge-with-deed"
+       },
+       {
+        "delivered_on": "2023-05-25",
+        "filing_type": "charge-satisfaction"
+       }
+      ]
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 28,
+    "total_count": 31,
+    "unfiltered_count": 31
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "action_date": "2025-12-31",
+      "barcode": "XFBN77UW",
+      "category": "accounts",
+      "date": "2026-09-29",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzU0ODE5NTM4MmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2026-09-22",
+      "barcode": "XFBKHHBT",
+      "category": "officers",
+      "date": "2026-09-28",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzU0ODAwMzI1OWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2026-09-22",
+      "barcode": "XFBKHEVU",
+      "category": "officers",
+      "date": "2026-09-28",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzU0ODAwMjczMmFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2026-09-22",
+      "barcode": "XFBKHBZD",
+      "category": "officers",
+      "date": "2026-09-28",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzU0ODAwMjA3MGFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2026-03-23",
+      "barcode": "XEYFGXZT",
+      "category": "confirmation-statement",
+      "date": "2026-03-23",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzUxMTk1MDY0M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2026-02-12",
+      "barcode": "XEVSFO8P",
+      "category": "confirmation-statement",
+      "date": "2026-02-13",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzUwNDkyNjkxOGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2025-11-20",
+      "barcode": "XEGNMHO8",
+      "category": "officers",
+      "date": "2025-12-03",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzQ5MjIyMDE5N2FkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2025-11-03",
+      "barcode": "XEEOHTXC",
+      "category": "mortgage",
+      "date": "2025-11-05",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 39,
+      "subcategory": "create",
+      "transaction_id": "MzQ4NzU0NzM0OWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2024-12-31",
+      "barcode": "XEC3GTS9",
+      "category": "accounts",
+      "date": "2025-09-29",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzQ4MzAxMzc1NGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "AEAUFLB6",
+      "category": "incorporation",
+      "date": "2025-09-15",
+      "description": "memorandum-articles",
+      "pages": 24,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MTA2OTc2OGFkaXF6a2N4",
+      "type": "MA"
+     },
+     {
+      "barcode": "AEAUFLBE",
+      "category": "resolution",
+      "date": "2025-09-15",
+      "description": "resolution",
+      "pages": 1,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "incorporation",
+        "description": "resolution-adopt-articles",
+        "subcategory": "resolution",
+        "type": "RES01"
+       }
+      ],
+      "transaction_id": "QUVBVUZMQkVhZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "barcode": "XDXQ4GO8",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1Mzk4NWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4P8H",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjA1NGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4PG0",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjA4M2FkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ45BE",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MTMxMmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ45YA",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MTQ1NGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4ON4",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NTkwN2FkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4OAP",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NTg1MmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4HUQ",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NDI3NWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4HLF",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NDIyMmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4H4A",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NDAzNmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4729",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MTY4NWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4G9M",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1Mzg0MmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ462Y",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MTQ1OWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4E0Q",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MzI4MWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4DP7",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MzE4NmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4CRK",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MzA1MWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4C0O",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1Mjg3OWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4AKR",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MjQ2OWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ46KV",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1MTU2MGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4PTU",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjE4OWFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4Q0X",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjIxNGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4QI2",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjI5NGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4QK2",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjQwMGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDXQ4R77",
+      "category": "mortgage",
+      "date": "2025-03-06",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1NzU1NjUxMGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "action_date": "2025-02-12",
+      "barcode": "XDXPWYW9",
+      "category": "confirmation-statement",
+      "date": "2025-03-05",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ1NzQzNDQ1NWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "barcode": "XDTVUWLU",
+      "category": "mortgage",
+      "date": "2025-01-09",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1MDUwMjE0MGFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XDTVUXBM",
+      "category": "mortgage",
+      "date": "2025-01-09",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzQ1MDUwMjMxNmFkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "action_date": "2024-12-30",
+      "barcode": "XDTQE1C2",
+      "category": "mortgage",
+      "date": "2025-01-07",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 34,
+      "subcategory": "create",
+      "transaction_id": "MzQ1MDE4Mjg1OGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2024-12-30",
+      "barcode": "XDTQE1BU",
+      "category": "mortgage",
+      "date": "2025-01-07",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 37,
+      "subcategory": "create",
+      "transaction_id": "MzQ1MDE4Mjg1NWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2024-12-30",
+      "barcode": "XDTD51Z4",
+      "category": "mortgage",
+      "date": "2025-01-02",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 34,
+      "subcategory": "create",
+      "transaction_id": "MzQ0OTc3MTY2MmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2024-12-30",
+      "barcode": "XDTD51WR",
+      "category": "mortgage",
+      "date": "2025-01-02",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 37,
+      "subcategory": "create",
+      "transaction_id": "MzQ0OTc3MTY0MWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2023-12-31",
+      "barcode": "XDCJJIA3",
+      "category": "accounts",
+      "date": "2024-09-27",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzQzNzU2MDQ5NGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-02-12",
+      "barcode": "XCZCQ0EX",
+      "category": "confirmation-statement",
+      "date": "2024-03-21",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQxNTYxMzMwOWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-01-05",
+      "barcode": "XCUBN5SQ",
+      "category": "mortgage",
+      "date": "2024-01-08",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 55,
+      "subcategory": "create",
+      "transaction_id": "MzQwNjkwMDgzMWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2022-12-31",
+      "barcode": "XCD0AWM0",
+      "category": "accounts",
+      "date": "2023-09-28",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzM5NDc5MzgwOGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "barcode": "XC4A37W3",
+      "category": "mortgage",
+      "date": "2023-05-25",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzM4MDgyODExM2FkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "barcode": "XC4A373N",
+      "category": "mortgage",
+      "date": "2023-05-25",
+      "description": "mortgage-satisfy-charge-full",
+      "pages": 1,
+      "subcategory": "satisfy",
+      "transaction_id": "MzM4MDgyNzk0M2FkaXF6a2N4",
+      "type": "MR04"
+     },
+     {
+      "action_date": "2023-02-12",
+      "barcode": "XC21HB56",
+      "category": "confirmation-statement",
+      "date": "2023-04-23",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM3NzI1OTA2N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2023-01-11",
+      "barcode": "XBV0D8NT",
+      "category": "officers",
+      "date": "2023-01-11",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzM2NTQ0MTY3N2FkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2022-11-11",
+      "barcode": "XBH0I063",
+      "category": "officers",
+      "date": "2022-11-18",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzM1OTA0ODc4MGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2022-11-11",
+      "barcode": "XBH0HYQ0",
+      "category": "officers",
+      "date": "2022-11-18",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzM1OTA0ODUyNWFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2022-11-11",
+      "barcode": "XBGXQNPU",
+      "category": "officers",
+      "date": "2022-11-17",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzM1ODkyNTE3MGFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2022-11-11",
+      "barcode": "XBGXQMUA",
+      "category": "officers",
+      "date": "2022-11-17",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzM1ODkyNDkzN2FkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2021-12-31",
+      "barcode": "XBBPQAFE",
+      "category": "accounts",
+      "date": "2022-09-02",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzM1MDYxNzk5MGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-02-12",
+      "barcode": "XB1W5N1C",
+      "category": "confirmation-statement",
+      "date": "2022-04-14",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMzNjIwNTk3NmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-12-31",
+      "barcode": "XAYG4NK1",
+      "category": "accounts",
+      "date": "2022-02-23",
+      "description": "change-account-reference-date-company-previous-shortened",
+      "pages": 1,
+      "transaction_id": "MzMzMDgzNzE1MmFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2022-01-26",
+      "barcode": "XAWVJ7HM",
+      "category": "mortgage",
+      "date": "2022-01-31",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzMyODMyMjkwNWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2021-03-31",
+      "barcode": "XAKDQLJS",
+      "category": "accounts",
+      "date": "2021-12-29",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzMyNTExOTQ5NWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-12-21",
+      "barcode": "XAJY57I0",
+      "category": "mortgage",
+      "date": "2021-12-23",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzMyNDYzOTA0OGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2021-06-22",
+      "barcode": "XA7AB4TS",
+      "category": "mortgage",
+      "date": "2021-06-23",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzMwNTM4ODg0MmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2021-05-07",
+      "barcode": "XA4AOFOG",
+      "category": "mortgage",
+      "date": "2021-05-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzMwMDY0MjA2NWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-03-31",
+      "barcode": "XA3HBZYQ",
+      "category": "accounts",
+      "date": "2021-04-30",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 6,
+      "transaction_id": "MzI5OTY4OTY1OWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-02-12",
+      "barcode": "XA2PZAUX",
+      "category": "confirmation-statement",
+      "date": "2021-04-19",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI5ODE1NjcyOGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-11-13",
+      "barcode": "X9I13PS1",
+      "category": "mortgage",
+      "date": "2020-11-17",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI4MzYzODQxN2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-11-13",
+      "barcode": "X9HYF11V",
+      "category": "mortgage",
+      "date": "2020-11-16",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI4MzU0NDc0MmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-11-06",
+      "barcode": "X987ZMFV",
+      "category": "officers",
+      "date": "2020-06-29",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzI3MTg5NzIzOGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2020-06-12",
+      "barcode": "X987ZLXS",
+      "category": "officers",
+      "date": "2020-06-29",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzI3MTg5NzA4NmFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93I3CFK",
+      "category": "mortgage",
+      "date": "2020-04-22",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI2Mjk2MDExNWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93I2ZNL",
+      "category": "mortgage",
+      "date": "2020-04-22",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI2Mjk1NjYxM2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93I3ERK",
+      "category": "mortgage",
+      "date": "2020-04-22",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 28,
+      "subcategory": "create",
+      "transaction_id": "MzI2Mjk2MDczOGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93I3TEI",
+      "category": "mortgage",
+      "date": "2020-04-22",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 28,
+      "subcategory": "create",
+      "transaction_id": "MzI2Mjk2NDM1NGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-04-20",
+      "barcode": "X93I3XB6",
+      "category": "mortgage",
+      "date": "2020-04-22",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI2Mjk2NTM3MmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2020-02-12",
+      "barcode": "X8YNFB8P",
+      "category": "confirmation-statement",
+      "date": "2020-02-12",
+      "description": "confirmation-statement-with-updates",
+      "pages": 4,
+      "transaction_id": "MzI1NzA0NDU3OWFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2019-03-31",
+      "barcode": "X8LICMDV",
+      "category": "accounts",
+      "date": "2019-12-31",
+      "description": "accounts-with-accounts-type-total-exemption-full",
+      "pages": 3,
+      "transaction_id": "MzI1MzQ2MDM2MGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2019-12-03",
+      "barcode": "X8JIKYQO",
+      "category": "officers",
+      "date": "2019-12-03",
+      "description": "appoint-corporate-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzI1MTA1ODM3NGFkaXF6a2N4",
+      "type": "AP02"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREHGG",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTQ0MWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREDYR",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MDU5NmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREEWB",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MDgzMmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREFZD",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTA5M2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREI48",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTU2OGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREISZ",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTcxMmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREJN7",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTg2N2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREBK3",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDAzOTk1OWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREAIG",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDAzOTcwN2FkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREK15",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTk2OGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DRE7S2",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDAzOTAyMWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-09-09",
+      "barcode": "X8DREGT5",
+      "category": "mortgage",
+      "date": "2019-09-11",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 27,
+      "subcategory": "create",
+      "transaction_id": "MzI0NDA0MTI1OWFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2019-07-05",
+      "barcode": "X89VGVIX",
+      "category": "officers",
+      "date": "2019-07-17",
+      "description": "appoint-corporate-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzIzOTU0Mjc5NWFkaXF6a2N4",
+      "type": "AP02"
+     },
+     {
+      "action_date": "2019-02-23",
+      "barcode": "X82QX8H7",
+      "category": "confirmation-statement",
+      "date": "2019-04-05",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIzMTM3MjI0M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2019-01-11",
+      "barcode": "X7XSRVHS",
+      "category": "officers",
+      "date": "2019-01-24",
+      "description": "appoint-person-director-company-with-name-date",
+      "pages": 2,
+      "subcategory": "appointments",
+      "transaction_id": "MzIyNTMzNzQ2MWFkaXF6a2N4",
+      "type": "AP01"
+     },
+     {
+      "action_date": "2018-03-31",
+      "barcode": "X7LZIVUZ",
+      "category": "accounts",
+      "date": "2018-12-31",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 2,
+      "transaction_id": "MzIyMzM0NDM3NGFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2018-08-24",
+      "barcode": "X7DP9GRV",
+      "category": "mortgage",
+      "date": "2018-09-03",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 24,
+      "subcategory": "create",
+      "transaction_id": "MzIxMzUxNTQyNGFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "action_date": "2018-08-24",
+      "barcode": "X7DP7HEZ",
+      "category": "mortgage",
+      "date": "2018-09-03",
+      "description": "mortgage-create-with-deed-with-charge-number-charge-creation-date",
+      "pages": 16,
+      "subcategory": "create",
+      "transaction_id": "MzIxMzUxMzU0MmFkaXF6a2N4",
+      "type": "MR01"
+     },
+     {
+      "category": "gazette",
+      "date": "2018-05-16",
+      "description": "gazette-filings-brought-up-to-date",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIwNDc4MjY2NWFkaXF6a2N4",
+      "type": "DISS40"
+     },
+     {
+      "category": "gazette",
+      "date": "2018-05-15",
+      "description": "gazette-notice-compulsory",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzIwNDM2MTYzN2FkaXF6a2N4",
+      "type": "GAZ1"
+     },
+     {
+      "action_date": "2018-02-23",
+      "barcode": "X75R69EG",
+      "category": "confirmation-statement",
+      "date": "2018-05-11",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzIwNDc4MjY1M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2017-03-31",
+      "barcode": "X6M84TYX",
+      "category": "accounts",
+      "date": "2017-12-28",
+      "description": "accounts-with-accounts-type-dormant",
+      "pages": 2,
+      "transaction_id": "MzE5MzkwMDQwMmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2017-02-23",
+      "barcode": "X6294AUO",
+      "category": "confirmation-statement",
+      "date": "2017-03-15",
+      "description": "confirmation-statement-with-updates",
+      "pages": 5,
+      "transaction_id": "MzE3MTE3NzI3MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2016-03-31",
+      "barcode": "X5E7G0X5",
+      "category": "accounts",
+      "date": "2016-08-26",
+      "description": "accounts-with-accounts-type-total-exemption-small",
+      "pages": 4,
+      "transaction_id": "MzE1NTk5MDIzN2FkaXF6a2N4",
+      "type": "AA"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 108
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 5,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2026-09-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID484/appointments"
+       }
+      },
+      "name": "PERSON 581",
+      "officer_role": "director",
+      "person_number": "352694640001"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID485/appointments"
+       }
+      },
+      "name": "PERSON 582",
+      "officer_role": "director",
+      "person_number": "352638970001"
+     },
+     {
+      "appointed_on": "2015-12-31",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID486/appointments"
+       }
+      },
+      "name": "PERSON 583",
+      "officer_role": "director",
+      "person_number": "186120980001"
+     },
+     {
+      "appointed_on": "2019-01-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID487/appointments"
+       }
+      },
+      "name": "PERSON 584",
+      "officer_role": "director",
+      "person_number": "106094870001"
+     },
+     {
+      "appointed_on": "2026-09-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID488/appointments"
+       }
+      },
+      "name": "PERSON 585",
+      "officer_role": "director",
+      "person_number": "352640450001"
+     },
+     {
+      "appointed_on": "2022-11-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID489/appointments"
+       }
+      },
+      "name": "PERSON 586",
+      "officer_role": "director",
+      "person_number": "302363620001",
+      "resigned_on": "2022-11-11"
+     },
+     {
+      "appointed_on": "2014-10-27",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID490/appointments"
+       }
+      },
+      "name": "PERSON 587",
+      "officer_role": "director",
+      "person_number": "193540100001",
+      "resigned_on": "2015-12-31"
+     },
+     {
+      "appointed_on": "2022-11-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID491/appointments"
+       }
+      },
+      "name": "PERSON 588",
+      "officer_role": "director",
+      "person_number": "302363310001",
+      "resigned_on": "2022-11-11"
+     },
+     {
+      "appointed_on": "2023-01-11",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID492/appointments"
+       }
+      },
+      "name": "PERSON 589",
+      "officer_role": "director",
+      "person_number": "187148400001",
+      "resigned_on": "2025-11-20"
+     },
+     {
+      "appointed_on": "2019-12-03",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID493/appointments"
+       }
+      },
+      "name": "PERSON 590",
+      "officer_role": "corporate-director",
+      "person_number": "264993490001",
+      "resigned_on": "2020-06-12"
+     },
+     {
+      "appointed_on": "2019-07-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID494/appointments"
+       }
+      },
+      "name": "PERSON 591",
+      "officer_role": "corporate-director",
+      "person_number": "260592830001",
+      "resigned_on": "2019-11-06"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 6,
+    "start_index": 0,
+    "total_results": 11
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "31",
+      "month": "12"
+     },
+     "last_accounts": {
+      "made_up_to": "2025-12-31",
+      "period_end_on": "2025-12-31",
+      "period_start_on": "2025-01-01",
+      "type": "total-exemption-full"
+     },
+     "next_accounts": {
+      "due_on": "2027-09-30",
+      "overdue": false,
+      "period_end_on": "2026-12-31",
+      "period_start_on": "2026-01-01"
+     },
+     "next_due": "2027-09-30",
+     "next_made_up_to": "2026-12-31",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TEST COMPANY 532",
+    "company_number": "91000533",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-03-23",
+     "next_due": "2027-04-06",
+     "next_made_up_to": "2027-03-23",
+     "overdue": false
+    },
+    "date_of_creation": "2014-10-27",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2016-02-23",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "55100"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 592",
+      "natures_of_control": [
+       "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2017-01-09"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "91000533",
+  "public": false,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

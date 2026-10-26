@@ -1,0 +1,3773 @@
+{
+ "appointments": {
+  "OFFICERID002": {
+   "body": {
+    "active_count": 8,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-09-16",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 001",
+       "company_number": "91000001",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2025-09-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 002",
+       "company_number": "91000002",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2024-01-31",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 003",
+       "company_number": "91000003",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-11-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 004",
+       "company_number": "91000004",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-11-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 005",
+       "company_number": "91000005",
+       "company_status": "converted-closed"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 006",
+       "company_number": "91000006",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2022-04-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 007",
+       "company_number": "91000007",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-06-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 008",
+       "company_number": "91000008",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2018-09-24",
+      "appointed_to": {
+       "company_name": "TESCO PLC",
+       "company_number": "00445790",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2020-09-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 009",
+       "company_number": "91000009",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2025-11-25"
+     },
+     {
+      "appointed_on": "2020-09-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 010",
+       "company_number": "91000010",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2025-11-25"
+     },
+     {
+      "appointed_on": "2020-09-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 011",
+       "company_number": "91000011",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2025-11-25"
+     },
+     {
+      "appointed_on": "2018-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 012",
+       "company_number": "91000012",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "llp-designated-member",
+      "resigned_on": "2023-04-30"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 071",
+    "resigned_count": 4,
+    "start_index": 0,
+    "total_results": 13
+   },
+   "status": 200
+  },
+  "OFFICERID003": {
+   "body": {
+    "active_count": 5,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2026-02-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 013",
+       "company_number": "91000013",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-02-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 014",
+       "company_number": "91000014",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2026-02-10",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 015",
+       "company_number": "91000015",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-12-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 016",
+       "company_number": "91000016",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-06-01",
+      "appointed_to": {
+       "company_name": "TESCO PLC",
+       "company_number": "00445790",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2015-06-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 017",
+       "company_number": "91000017",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2021-05-31"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 072",
+    "resigned_count": 1,
+    "start_index": 0,
+    "total_results": 6
+   },
+   "status": 200
+  },
+  "OFFICERID004": {
+   "body": {
+    "active_count": 1,
+    "inactive_count": 0,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2023-09-01",
+      "appointed_to": {
+       "company_name": "TESCO PLC",
+       "company_number": "00445790",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 073",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "OFFICERID005": {
+   "body": {
+    "active_count": 3,
+    "inactive_count": 3,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2021-07-05",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 018",
+       "company_number": "91000018",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2018-03-05",
+      "appointed_to": {
+       "company_name": "TESCO PLC",
+       "company_number": "00445790",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2016-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 019",
+       "company_number": "91000019",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2013-04-02",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 020",
+       "company_number": "91000020",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2009-05-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 021",
+       "company_number": "91000021",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2007-11-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 022",
+       "company_number": "91000022",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2013-05-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 023",
+       "company_number": "91000023",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2018-12-31"
+     },
+     {
+      "appointed_on": "2010-12-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 024",
+       "company_number": "91000024",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2018-03-05"
+     },
+     {
+      "appointed_on": "2010-11-26",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 025",
+       "company_number": "91000025",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2016-02-10"
+     },
+     {
+      "appointed_on": "2013-01-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 026",
+       "company_number": "91000026",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2016-01-29"
+     },
+     {
+      "appointed_on": "2013-01-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 027",
+       "company_number": "91000027",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2016-01-29"
+     },
+     {
+      "appointed_on": "2006-05-02",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 028",
+       "company_number": "91000028",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-12-31"
+     },
+     {
+      "appointed_on": "2010-06-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 029",
+       "company_number": "91000029",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2011-03-01"
+     },
+     {
+      "appointed_on": "2006-10-03",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 030",
+       "company_number": "91000030",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2010-11-24"
+     },
+     {
+      "appointed_on": "2010-04-30",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 031",
+       "company_number": "91000031",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2010-10-04"
+     },
+     {
+      "appointed_on": "2008-04-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 032",
+       "company_number": "91000032",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2010-03-01"
+     },
+     {
+      "appointed_on": "2008-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 033",
+       "company_number": "91000033",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2008-08-29"
+     },
+     {
+      "appointed_on": "2004-12-07",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 034",
+       "company_number": "91000034",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2005-12-27"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 074",
+    "resigned_count": 12,
+    "start_index": 0,
+    "total_results": 18
+   },
+   "status": 200
+  },
+  "OFFICERID006": {
+   "body": {
+    "active_count": 8,
+    "inactive_count": 4,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2025-02-20",
+      "appointed_to": {
+       "company_name": "TESCO PLC",
+       "company_number": "00445790",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2021-02-24",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 035",
+       "company_number": "91000035",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-05-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 036",
+       "company_number": "91000036",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-03-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 037",
+       "company_number": "91000037",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-03-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 038",
+       "company_number": "91000038",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-03-18",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 039",
+       "company_number": "91000039",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2019-02-21",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 040",
+       "company_number": "91000040",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 041",
+       "company_number": "91000041",
+       "company_status": "converted-closed"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 042",
+       "company_number": "91000042",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 043",
+       "company_number": "91000043",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 044",
+       "company_number": "91000044",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2009-07-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 045",
+       "company_number": "91000045",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     },
+     {
+      "appointed_on": "2016-03-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 046",
+       "company_number": "91000046",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2025-06-19"
+     },
+     {
+      "appointed_on": "2021-01-13",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 047",
+       "company_number": "91000047",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2024-02-29"
+     },
+     {
+      "appointed_on": "2021-04-27",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 048",
+       "company_number": "91000048",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2024-02-29"
+     },
+     {
+      "appointed_on": "2018-10-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 049",
+       "company_number": "91000049",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2019-02-21"
+     },
+     {
+      "appointed_on": "2018-10-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 050",
+       "company_number": "91000050",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2019-02-21"
+     },
+     {
+      "appointed_on": "2018-10-15",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 051",
+       "company_number": "91000051",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2019-02-21"
+     },
+     {
+      "appointed_on": "2018-10-12",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 052",
+       "company_number": "91000052",
+       "company_status": "liquidation"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2019-02-21"
+     },
+     {
+      "appointed_on": "2018-01-08",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 053",
+       "company_number": "91000053",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2019-02-21"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 054",
+       "company_number": "91000054",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-05-01"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 055",
+       "company_number": "91000055",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-05-01"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 056",
+       "company_number": "91000056",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-09-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 057",
+       "company_number": "91000057",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-09-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 058",
+       "company_number": "91000058",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 059",
+       "company_number": "91000059",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 060",
+       "company_number": "91000060",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 061",
+       "company_number": "91000061",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 062",
+       "company_number": "91000062",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 063",
+       "company_number": "91000063",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2015-11-04",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 064",
+       "company_number": "91000064",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2016-05-23",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 065",
+       "company_number": "91000065",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2017-03-31"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 066",
+       "company_number": "91000066",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-09-01"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 067",
+       "company_number": "91000067",
+       "company_status": "converted-closed"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-09-01"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 068",
+       "company_number": "91000068",
+       "company_status": "active"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-09-01"
+     },
+     {
+      "appointed_on": "2010-07-01",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 069",
+       "company_number": "91000069",
+       "company_status": "converted-closed"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2015-09-01"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 070",
+       "company_number": "91000070",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 071",
+       "company_number": "91000071",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 072",
+       "company_number": "91000072",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 073",
+       "company_number": "91000073",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 074",
+       "company_number": "91000074",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 075",
+       "company_number": "91000075",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 076",
+       "company_number": "91000076",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 077",
+       "company_number": "91000077",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 078",
+       "company_number": "91000078",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 079",
+       "company_number": "91000079",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 080",
+       "company_number": "91000080",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 081",
+       "company_number": "91000081",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 082",
+       "company_number": "91000082",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     },
+     {
+      "appointed_on": "2008-12-17",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 083",
+       "company_number": "91000083",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director",
+      "resigned_on": "2009-07-08"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 075",
+    "resigned_count": 136,
+    "start_index": 0,
+    "total_results": 148
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [
+     {
+      "charge_number": 9,
+      "classification": {
+       "description": "Account security agreement",
+       "type": "charge-description"
+      },
+      "created_on": "2009-11-04",
+      "delivered_on": "2009-11-06",
+      "persons_entitled": [
+       {
+        "name": "Tesco Trustee Company of Ireland Limited as Trustee of the Tesco Ireland Limited Senior Executive Pension Scheme"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2009-11-06",
+        "filing_type": "create-charge-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 8,
+      "classification": {
+       "description": "Account security agreement",
+       "type": "charge-description"
+      },
+      "created_on": "2009-11-04",
+      "delivered_on": "2009-11-06",
+      "persons_entitled": [
+       {
+        "name": "Tesco Ireland Pension Trustees Limited as Trustee of the Tesco Ireland Limited Pension Plan"
+       }
+      ],
+      "status": "outstanding",
+      "transactions": [
+       {
+        "delivered_on": "2009-11-06",
+        "filing_type": "create-charge-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 7,
+      "classification": {
+       "description": "Account security agreement",
+       "type": "charge-description"
+      },
+      "created_on": "2009-03-27",
+      "delivered_on": "2009-03-27",
+      "persons_entitled": [
+       {
+        "name": "Tesco Ireland Pension Trustees Limited as Trustee of the Tesco Ireland Limited Executive Scheme"
+       }
+      ],
+      "satisfied_on": "2009-11-25",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2009-03-27",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2009-11-25",
+        "filing_type": "charge-satisfaction-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 6,
+      "classification": {
+       "description": "Account security agreement",
+       "type": "charge-description"
+      },
+      "created_on": "2009-03-27",
+      "delivered_on": "2009-03-27",
+      "persons_entitled": [
+       {
+        "name": "Tesco Trustee Company of Ireland Limited as Trustee of the Tesco Ireland Limited Staff Scheme (The \"Trustee\")"
+       }
+      ],
+      "satisfied_on": "2009-11-25",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2009-03-27",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2009-11-25",
+        "filing_type": "charge-satisfaction-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 5,
+      "classification": {
+       "description": "A share charge",
+       "type": "charge-description"
+      },
+      "created_on": "2005-05-13",
+      "delivered_on": "2005-05-31",
+      "persons_entitled": [
+       {
+        "name": "Rbs Aerospace Limited"
+       }
+      ],
+      "satisfied_on": "2009-10-09",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2005-05-31",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2006-03-28",
+        "filing_type": "charge-released-floating-charge-in-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2009-10-09",
+        "filing_type": "charge-satisfaction-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 4,
+      "classification": {
+       "description": "Primary obligor guarantee,undertaking and indemnity deed",
+       "type": "charge-description"
+      },
+      "created_on": "2001-07-31",
+      "delivered_on": "2001-08-16",
+      "persons_entitled": [
+       {
+        "name": "Deutsche International Finance (Ireland) Limited"
+       }
+      ],
+      "satisfied_on": "2009-10-09",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2001-08-16",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2005-10-17",
+        "filing_type": "charge-released-floating-charge-in-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2009-10-09",
+        "filing_type": "charge-satisfaction-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 3,
+      "classification": {
+       "description": "Primary obligor guarantee undertaking and indemnity deed",
+       "type": "charge-description"
+      },
+      "created_on": "2000-12-08",
+      "delivered_on": "2000-12-20",
+      "persons_entitled": [
+       {
+        "name": "Deutsche Bank Ag"
+       }
+      ],
+      "satisfied_on": "2009-10-09",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "2000-12-20",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2005-10-17",
+        "filing_type": "charge-released-floating-charge-in-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2009-10-09",
+        "filing_type": "charge-satisfaction-pre-april-2013"
+       }
+      ]
+     },
+     {
+      "charge_number": 2,
+      "classification": {
+       "description": "Sterling deposit agreement and charge",
+       "type": "charge-description"
+      },
+      "created_on": "1994-04-05",
+      "delivered_on": "1994-04-15",
+      "persons_entitled": [
+       {
+        "name": "Cobroad Investments"
+       }
+      ],
+      "satisfied_on": "2000-09-14",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "1994-04-15",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "2000-09-14",
+        "filing_type": "charge-satisfaction-pre-2006-companies-act"
+       }
+      ]
+     },
+     {
+      "charge_number": 1,
+      "classification": {
+       "description": "Sterling deposit agreement and charge",
+       "type": "charge-description"
+      },
+      "created_on": "1991-12-17",
+      "delivered_on": "1992-01-03",
+      "persons_entitled": [
+       {
+        "name": "Cobroad Investments"
+       }
+      ],
+      "satisfied_on": "1995-08-01",
+      "status": "fully-satisfied",
+      "transactions": [
+       {
+        "delivered_on": "1992-01-03",
+        "filing_type": "create-charge-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "1994-04-28",
+        "filing_type": "charge-released-floating-charge-in-pre-2006-companies-act"
+       },
+       {
+        "delivered_on": "1995-08-01",
+        "filing_type": "charge-satisfaction-pre-2006-companies-act"
+       }
+      ]
+     }
+    ],
+    "part_satisfied_count": 0,
+    "satisfied_count": 7,
+    "total_count": 9,
+    "unfiltered_count": 9
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase",
+        "category": "annotation",
+        "date": "2026-09-16",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF9XVTV6",
+      "category": "capital",
+      "date": "2026-09-16",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzU0MzY3ODg5MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2026-07-07",
+      "barcode": "YF8R3DGI",
+      "category": "capital",
+      "date": "2026-08-26",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzOTMzNzQ1OWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-06-30",
+      "barcode": "YF8R3CZC",
+      "category": "capital",
+      "date": "2026-08-26",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzOTMzNzMyN2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-08-04",
+      "barcode": "YF8R3DGA",
+      "category": "capital",
+      "date": "2026-08-26",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzOTMzNzQ1OGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-06-22",
+      "barcode": "YF8R3CHN",
+      "category": "capital",
+      "date": "2026-08-26",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzOTMzNzIwOGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI03",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk1OGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NHZN",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk0OWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI0B",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk1OWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI14",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk2OWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI1K",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk3MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NHZV",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk1MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI0R",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk2MWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI0J",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk2MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI1C",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk2OGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI0W",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk2N2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-08-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AF79NI1S",
+      "category": "capital",
+      "date": "2026-08-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUzNjI5NTk3MWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "barcode": "AF703GAB",
+      "category": "resolution",
+      "date": "2026-08-05",
+      "description": "resolution",
+      "pages": 3,
+      "paper_filed": true,
+      "resolutions": [
+       {
+        "category": "capital",
+        "description": "resolution-purchase-number-shares",
+        "subcategory": "resolution",
+        "type": "RES09"
+       },
+       {
+        "category": "capital",
+        "description": "resolution-removal-pre-emption",
+        "subcategory": "resolution",
+        "type": "RES11"
+       },
+       {
+        "category": "capital",
+        "description": "resolution-securities",
+        "subcategory": "resolution",
+        "type": "RES10"
+       },
+       {
+        "category": "capital",
+        "description": "resolution",
+        "subcategory": "resolution",
+        "type": "RES13"
+       }
+      ],
+      "transaction_id": "QUY3MDNHQUJhZGlxemtjeA",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "action_date": "2026-02-28",
+      "barcode": "AF6FAFN7",
+      "category": "accounts",
+      "date": "2026-07-25",
+      "description": "accounts-with-accounts-type-group",
+      "pages": 236,
+      "paper_filed": true,
+      "transaction_id": "MzUzNDMwNDQ5M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2026-06-16",
+      "barcode": "YF4S7Y4R",
+      "category": "capital",
+      "date": "2026-07-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNzc4NzUwOWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-06-09",
+      "barcode": "YF4S7Y3F",
+      "category": "capital",
+      "date": "2026-07-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNzc4NzUwN2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-06-02",
+      "barcode": "YF4S3Q8B",
+      "category": "capital",
+      "date": "2026-07-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNzc1NTk0MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-06-18",
+      "barcode": "XF5EZFHE",
+      "category": "confirmation-statement",
+      "date": "2026-07-01",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzUyOTc5MTk2NGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2026-05-06",
+      "barcode": "YF3BU58P",
+      "category": "capital",
+      "date": "2026-06-10",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNDY1MTExNmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-04-28",
+      "barcode": "YF3BU494",
+      "category": "capital",
+      "date": "2026-06-10",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNDY1MDkyNWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-05-27",
+      "barcode": "YF3BU6ZD",
+      "category": "capital",
+      "date": "2026-06-10",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNDY1MTQ1MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-05-19",
+      "barcode": "YF3BU63T",
+      "category": "capital",
+      "date": "2026-06-10",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNDY1MTI4NWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-05-12",
+      "barcode": "YF3BU63D",
+      "category": "capital",
+      "date": "2026-06-10",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUyNDY1MTI3MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-05-06",
+      "barcode": "XF1HBBJ4",
+      "category": "officers",
+      "date": "2026-05-07",
+      "description": "termination-director-company-with-name-termination-date",
+      "pages": 1,
+      "subcategory": "termination",
+      "transaction_id": "MzUyMDA2NTczNGFkaXF6a2N4",
+      "type": "TM01"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-03-09",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEWTRM0U",
+      "category": "capital",
+      "date": "2026-03-09",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwODQxNDgxMmFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid for this transaction.",
+        "category": "annotation",
+        "date": "2026-03-09",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEWTRM0I",
+      "category": "capital",
+      "date": "2026-03-09",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwODQxNDgxMWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-02-11",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEVA29M3",
+      "category": "capital",
+      "date": "2026-02-11",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMzYwMDQzOWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-02-11",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEVA29LV",
+      "category": "capital",
+      "date": "2026-02-11",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMzYwMDQzN2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-02-11",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEVA29MB",
+      "category": "capital",
+      "date": "2026-02-11",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMzYwMDQzOGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2026-01-21",
+      "barcode": "YEUUPLY0",
+      "category": "capital",
+      "date": "2026-02-05",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMjM1Mjc2NGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase.",
+        "category": "annotation",
+        "date": "2026-02-05",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEUS8SPU",
+      "category": "capital",
+      "date": "2026-02-05",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMjM2NzY5MWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-02-05",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEUS8SR6",
+      "category": "capital",
+      "date": "2026-02-05",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzUwMjM2NzY4NWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2026-01-13",
+      "barcode": "YEU28COO",
+      "category": "capital",
+      "date": "2026-01-22",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5OTk4NzY0NmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2026-01-06",
+      "barcode": "YET5EC75",
+      "category": "capital",
+      "date": "2026-01-08",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5Nzg1MDgzN2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-12-30",
+      "barcode": "YET5EBSB",
+      "category": "capital",
+      "date": "2026-01-08",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5Nzg1MDcyNWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-12-23",
+      "barcode": "YET5EBRV",
+      "category": "capital",
+      "date": "2026-01-08",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5Nzg1MDcyNGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-01-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AET5UH11",
+      "category": "capital",
+      "date": "2026-01-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5NzgxMjY1MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate Stamp Duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2026-01-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AET5UH0P",
+      "category": "capital",
+      "date": "2026-01-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5NzgxMjY1MWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase",
+        "category": "annotation",
+        "date": "2026-01-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEIJMWK0",
+      "category": "capital",
+      "date": "2026-01-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5NzQ5NTQ3OGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase",
+        "category": "annotation",
+        "date": "2026-01-06",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEIJMWK8",
+      "category": "capital",
+      "date": "2026-01-06",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5NzQ5NTQ3N2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-12-16",
+      "barcode": "YEHKW4OG",
+      "category": "capital",
+      "date": "2025-12-24",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5NDk2NDA3OGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-12-09",
+      "barcode": "YEH3ZU41",
+      "category": "capital",
+      "date": "2025-12-12",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MzM2NDE4MmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-11-25",
+      "barcode": "YEGKSOGB",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MTkzNTk3NmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-12-02",
+      "barcode": "YEGKSP28",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MTkzNjEwNmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-11-07",
+      "barcode": "YEGKNXMG",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MTg5Njc1NWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-11-04",
+      "barcode": "YEGKNWTS",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MTg5NjYwMGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase.",
+        "category": "annotation",
+        "date": "2025-12-03",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEGK2C3T",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MjE4NTUxN2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase.",
+        "category": "annotation",
+        "date": "2025-12-03",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEGK2C0X",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MjE4NTUwOWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase.",
+        "category": "annotation",
+        "date": "2025-12-03",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEGK2C41",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MjE4NTUxMGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase.",
+        "category": "annotation",
+        "date": "2025-12-03",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEGK2C49",
+      "category": "capital",
+      "date": "2025-12-03",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ5MjE4NTUxMWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase",
+        "category": "annotation",
+        "date": "2025-11-10",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEEQ8CXF",
+      "category": "capital",
+      "date": "2025-11-10",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NzgzNjE3M2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this repurchase",
+        "category": "annotation",
+        "date": "2025-11-10",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEEQ8CTU",
+      "category": "capital",
+      "date": "2025-11-10",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NzgzNjE3NGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-10-21",
+      "barcode": "YEEATLJD",
+      "category": "capital",
+      "date": "2025-10-31",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NjkwNDA5OGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-10-28",
+      "barcode": "YEEATKWO",
+      "category": "capital",
+      "date": "2025-10-31",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NjkwMzgzMGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate stamp duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2025-10-20",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEDE3C4B",
+      "category": "capital",
+      "date": "2025-10-20",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NTUyMzExNmFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate stamp duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2025-10-20",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEDE3C4R",
+      "category": "capital",
+      "date": "2025-10-20",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NTUyMzE0NGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-10-14",
+      "barcode": "YEDB6H6R",
+      "category": "capital",
+      "date": "2025-10-17",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4NTIwNTM0NWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-10-07",
+      "barcode": "YECPF3LF",
+      "category": "capital",
+      "date": "2025-10-13",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk4MTg0NGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-10-07",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk3Njg2MGFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-10-07",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk3NDc5NWFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-10-07",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk3NDczMGFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-10-07",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk3NDY0N2FkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-10-07",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4Mzk3NDI1MGFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "action_date": "2025-09-30",
+      "barcode": "YEC9BW6I",
+      "category": "capital",
+      "date": "2025-10-02",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MzQzNTQ0MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-09-30",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4MzIxOTg4NmFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "category": "miscellaneous",
+      "date": "2025-09-30",
+      "description": "legacy",
+      "paper_filed": true,
+      "transaction_id": "MzQ4MzE3Mzg4MWFkaXF6a2N4",
+      "type": "ANNOTATION"
+     },
+     {
+      "barcode": "AEBWJUYH",
+      "category": "capital",
+      "date": "2025-09-30",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MjkyNzk5MGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "barcode": "AEBWJUXT",
+      "category": "capital",
+      "date": "2025-09-30",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MjkyNzk5OGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-09-09",
+      "barcode": "YEBPKI88",
+      "category": "capital",
+      "date": "2025-09-23",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MjI3NzA4MWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-09-23",
+      "barcode": "YEBPKI94",
+      "category": "capital",
+      "date": "2025-09-23",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MjI3NzA4MmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-09-16",
+      "barcode": "YEBPKI8W",
+      "category": "capital",
+      "date": "2025-09-23",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MjI3NzA4M2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2025-09-12",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEARX0MW",
+      "category": "capital",
+      "date": "2025-09-12",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MDYyMDgyMGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-08-05",
+      "barcode": "XEANOVW3",
+      "category": "officers",
+      "date": "2025-09-09",
+      "description": "change-person-director-company-with-change-date",
+      "pages": 2,
+      "subcategory": "change",
+      "transaction_id": "MzQ4MDEwNjQxMmFkaXF6a2N4",
+      "type": "CH01"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received that appropriate stamp duty has been paid on this transaction.",
+        "category": "annotation",
+        "date": "2025-09-09",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AEAF9XHD",
+      "category": "capital",
+      "date": "2025-09-09",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ4MDIxODkxOWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-09-02",
+      "barcode": "YEA7ONJ4",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODI2M2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-07-29",
+      "barcode": "YEA7ON42",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODA4MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-08-27",
+      "barcode": "YEA7ON56",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODA3N2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-07-22",
+      "barcode": "YEA7OMNV",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxNzk4MWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-08-12",
+      "barcode": "YEA7ON4Q",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODA3OWFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-08-05",
+      "barcode": "YEA7ON4I",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODA3NmFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-07-15",
+      "barcode": "YEA7OMNN",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxNzk4MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-08-19",
+      "barcode": "YEA7ON4Y",
+      "category": "capital",
+      "date": "2025-09-03",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3OTUxODA3OGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received appropriate stamp duty has been paid on this transaction",
+        "category": "annotation",
+        "date": "2025-08-18",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8Y6K4Y",
+      "category": "capital",
+      "date": "2025-08-18",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NzQwNzAyN2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC confirmation received appropriate stamp duty has been paid on this transaction",
+        "category": "annotation",
+        "date": "2025-08-18",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8Y6K4Q",
+      "category": "capital",
+      "date": "2025-08-18",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NzQwNzAyOGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBNT",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkwN2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBM2",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkwOWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBLU",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxMGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBLE",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxMmFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBL6",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxM2FkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBQ1",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxNGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBLM",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxMWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBRT",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkxNWFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "annotations": [
+       {
+        "annotation": "Clarification HMRC - CONFIRMATION RECIEVED THAT APPROPRIATE DUTY HAS BEEN PAID ON THIS REPURCHASE.",
+        "category": "annotation",
+        "date": "2025-08-14",
+        "description": "annotation",
+        "type": "ANNOTATION"
+       }
+      ],
+      "barcode": "AE8GKBNL",
+      "category": "capital",
+      "date": "2025-08-14",
+      "description": "capital-return-purchase-own-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NjY2NzkwOGFkaXF6a2N4",
+      "type": "SH03"
+     },
+     {
+      "action_date": "2025-07-01",
+      "barcode": "YE7FI8JK",
+      "category": "capital",
+      "date": "2025-07-28",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NDg0MDI0MGFkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-07-08",
+      "barcode": "YE7FI8KG",
+      "category": "capital",
+      "date": "2025-07-28",
+      "description": "capital-cancellation-shares",
+      "pages": 4,
+      "paper_filed": true,
+      "transaction_id": "MzQ3NDg0MDI3M2FkaXF6a2N4",
+      "type": "SH06"
+     },
+     {
+      "action_date": "2025-02-26",
+      "barcode": "AE6K3U7E",
+      "category": "accounts",
+      "date": "2025-07-15",
+      "description": "accounts-with-accounts-type-group",
+      "pages": 250,
+      "paper_filed": true,
+      "transaction_id": "MzQ3MzY5NzQ1OWFkaXF6a2N4",
+      "type": "AA"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 8372
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 11,
+    "inactive_count": 0,
+    "items": [
+     {
+      "appointed_on": "2025-04-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID001/appointments"
+       }
+      },
+      "name": "PERSON 001",
+      "officer_role": "secretary",
+      "person_number": "334718260001"
+     },
+     {
+      "appointed_on": "2018-09-24",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID002/appointments"
+       }
+      },
+      "name": "PERSON 002",
+      "officer_role": "director",
+      "person_number": "248450070003"
+     },
+     {
+      "appointed_on": "2021-06-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID003/appointments"
+       }
+      },
+      "name": "PERSON 003",
+      "officer_role": "director",
+      "person_number": "290317390002"
+     },
+     {
+      "appointed_on": "2023-09-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID004/appointments"
+       }
+      },
+      "name": "PERSON 004",
+      "officer_role": "director",
+      "person_number": "313074260001"
+     },
+     {
+      "appointed_on": "2018-03-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID005/appointments"
+       }
+      },
+      "name": "PERSON 005",
+      "officer_role": "director",
+      "person_number": "102677400003"
+     },
+     {
+      "appointed_on": "2025-02-20",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID006/appointments"
+       }
+      },
+      "name": "PERSON 006",
+      "officer_role": "director",
+      "person_number": "62227310005"
+     },
+     {
+      "appointed_on": "2023-09-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID007/appointments"
+       }
+      },
+      "name": "PERSON 007",
+      "officer_role": "director",
+      "person_number": "313050960001"
+     },
+     {
+      "appointed_on": "2020-10-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID008/appointments"
+       }
+      },
+      "name": "PERSON 008",
+      "officer_role": "director",
+      "person_number": "274996450001"
+     },
+     {
+      "appointed_on": "2021-05-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID009/appointments"
+       }
+      },
+      "name": "PERSON 009",
+      "officer_role": "director",
+      "person_number": "249455030002"
+     },
+     {
+      "appointed_on": "2022-10-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID010/appointments"
+       }
+      },
+      "name": "PERSON 010",
+      "officer_role": "director",
+      "person_number": "154200970001"
+     },
+     {
+      "appointed_on": "2021-06-18",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID011/appointments"
+       }
+      },
+      "name": "PERSON 011",
+      "officer_role": "director",
+      "person_number": "107774660002"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID012/appointments"
+       }
+      },
+      "name": "PERSON 012",
+      "officer_role": "secretary",
+      "person_number": "72555850002",
+      "resigned_on": "2004-03-15"
+     },
+     {
+      "appointed_on": "2016-07-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID013/appointments"
+       }
+      },
+      "name": "PERSON 013",
+      "officer_role": "secretary",
+      "person_number": "209575590001",
+      "resigned_on": "2016-08-10"
+     },
+     {
+      "appointed_on": "2006-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID014/appointments"
+       }
+      },
+      "name": "PERSON 014",
+      "officer_role": "secretary",
+      "person_number": "160028560001",
+      "resigned_on": "2015-01-12"
+     },
+     {
+      "appointed_on": "2005-07-18",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID014/appointments"
+       }
+      },
+      "name": "PERSON 014",
+      "officer_role": "secretary",
+      "person_number": "160028560001",
+      "resigned_on": "2006-12-14"
+     },
+     {
+      "appointed_on": "2015-01-12",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID015/appointments"
+       }
+      },
+      "name": "PERSON 015",
+      "officer_role": "secretary",
+      "person_number": "194096220001",
+      "resigned_on": "2016-06-30"
+     },
+     {
+      "appointed_on": "2004-03-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID016/appointments"
+       }
+      },
+      "name": "PERSON 016",
+      "officer_role": "secretary",
+      "person_number": "148079740001",
+      "resigned_on": "2006-12-14"
+     },
+     {
+      "appointed_on": "2024-12-17",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID017/appointments"
+       }
+      },
+      "name": "PERSON 017",
+      "officer_role": "secretary",
+      "person_number": "330478240001",
+      "resigned_on": "2025-04-14"
+     },
+     {
+      "appointed_on": "2016-08-10",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID018/appointments"
+       }
+      },
+      "name": "PERSON 018",
+      "officer_role": "secretary",
+      "person_number": "211978260001",
+      "resigned_on": "2024-12-17"
+     },
+     {
+      "appointed_on": "1992-10-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID012/appointments"
+       }
+      },
+      "name": "PERSON 012",
+      "officer_role": "director",
+      "person_number": "72555850002",
+      "resigned_on": "2004-02-27"
+     },
+     {
+      "appointed_on": "2015-03-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID019/appointments"
+       }
+      },
+      "name": "PERSON 019",
+      "officer_role": "director",
+      "person_number": "64484180004",
+      "resigned_on": "2023-06-16"
+     },
+     {
+      "appointed_on": "1999-02-19",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID020/appointments"
+       }
+      },
+      "name": "PERSON 020",
+      "officer_role": "director",
+      "person_number": "63372790004",
+      "resigned_on": "2010-07-02"
+     },
+     {
+      "appointed_on": "2013-09-02",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID021/appointments"
+       }
+      },
+      "name": "PERSON 021",
+      "officer_role": "director",
+      "person_number": "58001830011",
+      "resigned_on": "2021-06-25"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID022/appointments"
+       }
+      },
+      "name": "PERSON 022",
+      "officer_role": "director",
+      "person_number": "35534960001",
+      "resigned_on": "1996-06-07"
+     },
+     {
+      "appointed_on": "2004-03-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID023/appointments"
+       }
+      },
+      "name": "PERSON 023",
+      "officer_role": "director",
+      "person_number": "70633600002",
+      "resigned_on": "2012-03-15"
+     },
+     {
+      "appointed_on": "2011-07-02",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID024/appointments"
+       }
+      },
+      "name": "PERSON 024",
+      "officer_role": "director",
+      "person_number": "92752140003",
+      "resigned_on": "2015-03-01"
+     },
+     {
+      "appointed_on": "2010-07-02",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID025/appointments"
+       }
+      },
+      "name": "PERSON 025",
+      "officer_role": "director",
+      "person_number": "86839910002",
+      "resigned_on": "2015-03-05"
+     },
+     {
+      "appointed_on": "2009-02-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID026/appointments"
+       }
+      },
+      "name": "PERSON 026",
+      "officer_role": "director",
+      "person_number": "136580810001",
+      "resigned_on": "2015-04-07"
+     },
+     {
+      "appointed_on": "2010-07-02",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID027/appointments"
+       }
+      },
+      "name": "PERSON 027",
+      "officer_role": "director",
+      "person_number": "153260600001",
+      "resigned_on": "2015-06-26"
+     },
+     {
+      "appointed_on": "2002-07-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID028/appointments"
+       }
+      },
+      "name": "PERSON 028",
+      "officer_role": "director",
+      "person_number": "45250430001",
+      "resigned_on": "2010-07-02"
+     },
+     {
+      "appointed_on": "1998-11-16",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID029/appointments"
+       }
+      },
+      "name": "PERSON 029",
+      "officer_role": "director",
+      "person_number": "159223920001",
+      "resigned_on": "2014-09-01"
+     },
+     {
+      "appointed_on": "2004-10-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID030/appointments"
+       }
+      },
+      "name": "PERSON 030",
+      "officer_role": "director",
+      "person_number": "101866970001",
+      "resigned_on": "2013-02-23"
+     },
+     {
+      "appointed_on": "2014-11-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID031/appointments"
+       }
+      },
+      "name": "PERSON 031",
+      "officer_role": "director",
+      "person_number": "192569740001",
+      "resigned_on": "2017-01-03"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID032/appointments"
+       }
+      },
+      "name": "PERSON 032",
+      "officer_role": "director",
+      "person_number": "12380970001",
+      "resigned_on": "1994-05-20"
+     },
+     {
+      "appointed_on": "2003-07-07",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID033/appointments"
+       }
+      },
+      "name": "PERSON 033",
+      "officer_role": "director",
+      "person_number": "141864280001",
+      "resigned_on": "2008-10-31"
+     },
+     {
+      "appointed_on": "1999-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID034/appointments"
+       }
+      },
+      "name": "PERSON 034",
+      "officer_role": "director",
+      "person_number": "29982530002",
+      "resigned_on": "2010-07-02"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID035/appointments"
+       }
+      },
+      "name": "PERSON 035",
+      "officer_role": "director",
+      "person_number": "9380003",
+      "resigned_on": "2004-04-02"
+     },
+     {
+      "appointed_on": "2013-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID036/appointments"
+       }
+      },
+      "name": "PERSON 036",
+      "officer_role": "director",
+      "person_number": "177116520001",
+      "resigned_on": "2015-02-28"
+     },
+     {
+      "appointed_on": "2021-04-30",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID037/appointments"
+       }
+      },
+      "name": "PERSON 037",
+      "officer_role": "director",
+      "person_number": "262744000005",
+      "resigned_on": "2026-05-06"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID038/appointments"
+       }
+      },
+      "name": "PERSON 038",
+      "officer_role": "director",
+      "person_number": "52936560003",
+      "resigned_on": "2004-02-27"
+     },
+     {
+      "appointed_on": "2016-10-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID039/appointments"
+       }
+      },
+      "name": "PERSON 039",
+      "officer_role": "director",
+      "person_number": "215489870001",
+      "resigned_on": "2022-06-17"
+     },
+     {
+      "appointed_on": "2015-05-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID040/appointments"
+       }
+      },
+      "name": "PERSON 040",
+      "officer_role": "director",
+      "person_number": "197342780002",
+      "resigned_on": "2024-06-14"
+     },
+     {
+      "appointed_on": "2009-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID041/appointments"
+       }
+      },
+      "name": "PERSON 041",
+      "officer_role": "director",
+      "person_number": "78515410004",
+      "resigned_on": "2015-06-26"
+     },
+     {
+      "appointed_on": "1997-11-17",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID042/appointments"
+       }
+      },
+      "name": "PERSON 042",
+      "officer_role": "director",
+      "person_number": "57637410003",
+      "resigned_on": "2012-09-01"
+     },
+     {
+      "appointed_on": "2004-02-23",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID043/appointments"
+       }
+      },
+      "name": "PERSON 043",
+      "officer_role": "director",
+      "person_number": "10018190001",
+      "resigned_on": "2013-02-23"
+     },
+     {
+      "appointed_on": "1995-02-06",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID044/appointments"
+       }
+      },
+      "name": "PERSON 044",
+      "officer_role": "director",
+      "person_number": "57914230003",
+      "resigned_on": "1999-04-30"
+     },
+     {
+      "appointed_on": "1992-01-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID045/appointments"
+       }
+      },
+      "name": "PERSON 045",
+      "officer_role": "director",
+      "person_number": "66161140001",
+      "resigned_on": "1998-06-11"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID046/appointments"
+       }
+      },
+      "name": "PERSON 046",
+      "officer_role": "director",
+      "person_number": "11536030001",
+      "resigned_on": "1993-03-31"
+     },
+     {
+      "appointed_on": "1992-10-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID047/appointments"
+       }
+      },
+      "name": "PERSON 047",
+      "officer_role": "director",
+      "person_number": "183358310001",
+      "resigned_on": "2011-03-02"
+     },
+     {
+      "appointed_on": "2014-09-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID048/appointments"
+       }
+      },
+      "name": "PERSON 048",
+      "officer_role": "director",
+      "person_number": "190936130001",
+      "resigned_on": "2020-09-30"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID049/appointments"
+       }
+      },
+      "name": "PERSON 049",
+      "officer_role": "director",
+      "person_number": "84385670001",
+      "resigned_on": "1997-06-06"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID050/appointments"
+       }
+      },
+      "name": "PERSON 050",
+      "officer_role": "director",
+      "person_number": "35649260002",
+      "resigned_on": "1997-02-21"
+     },
+     {
+      "appointed_on": "1995-02-06",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID051/appointments"
+       }
+      },
+      "name": "PERSON 051",
+      "officer_role": "director",
+      "person_number": "74907510005",
+      "resigned_on": "2012-12-06"
+     },
+     {
+      "appointed_on": "2005-03-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID052/appointments"
+       }
+      },
+      "name": "PERSON 052",
+      "officer_role": "director",
+      "person_number": "39252480010",
+      "resigned_on": "2008-04-10"
+     },
+     {
+      "appointed_on": "2009-01-27",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID053/appointments"
+       }
+      },
+      "name": "PERSON 053",
+      "officer_role": "director",
+      "person_number": "136352880001",
+      "resigned_on": "2014-04-04"
+     },
+     {
+      "appointed_on": "1996-04-15",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID054/appointments"
+       }
+      },
+      "name": "PERSON 054",
+      "officer_role": "director",
+      "person_number": "6081080001",
+      "resigned_on": "2002-06-14"
+     },
+     {
+      "appointed_on": "2000-09-18",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID055/appointments"
+       }
+      },
+      "name": "PERSON 055",
+      "officer_role": "director",
+      "person_number": "73669680001",
+      "resigned_on": "2005-02-28"
+     },
+     {
+      "appointed_on": "2006-12-14",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID016/appointments"
+       }
+      },
+      "name": "PERSON 016",
+      "officer_role": "director",
+      "person_number": "148079740001",
+      "resigned_on": "2013-01-02"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID056/appointments"
+       }
+      },
+      "name": "PERSON 056",
+      "officer_role": "director",
+      "person_number": "45510340002",
+      "resigned_on": "2000-06-15"
+     },
+     {
+      "appointed_on": "2014-11-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID057/appointments"
+       }
+      },
+      "name": "PERSON 057",
+      "officer_role": "director",
+      "person_number": "192553810002",
+      "resigned_on": "2021-06-25"
+     },
+     {
+      "appointed_on": "2012-03-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID058/appointments"
+       }
+      },
+      "name": "PERSON 058",
+      "officer_role": "director",
+      "person_number": "168152320002",
+      "resigned_on": "2021-06-25"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID059/appointments"
+       }
+      },
+      "name": "PERSON 059",
+      "officer_role": "director",
+      "person_number": "7814570003",
+      "resigned_on": "1994-05-20"
+     },
+     {
+      "appointed_on": "2016-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID060/appointments"
+       }
+      },
+      "name": "PERSON 060",
+      "officer_role": "director",
+      "person_number": "293566980001",
+      "resigned_on": "2022-06-17"
+     },
+     {
+      "appointed_on": "1993-03-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID061/appointments"
+       }
+      },
+      "name": "PERSON 061",
+      "officer_role": "director",
+      "person_number": "66134860001",
+      "resigned_on": "2005-05-23"
+     },
+     {
+      "appointed_on": "2016-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID062/appointments"
+       }
+      },
+      "name": "PERSON 062",
+      "officer_role": "director",
+      "person_number": "206964090001",
+      "resigned_on": "2025-06-12"
+     },
+     {
+      "appointed_on": "1998-11-16",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID063/appointments"
+       }
+      },
+      "name": "PERSON 063",
+      "officer_role": "director",
+      "person_number": "61624730005",
+      "resigned_on": "2011-12-07"
+     },
+     {
+      "appointed_on": "2016-04-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID064/appointments"
+       }
+      },
+      "name": "PERSON 064",
+      "officer_role": "director",
+      "person_number": "206788490005",
+      "resigned_on": "2023-06-16"
+     },
+     {
+      "appointed_on": "2004-04-02",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID065/appointments"
+       }
+      },
+      "name": "PERSON 065",
+      "officer_role": "director",
+      "person_number": "1485630018",
+      "resigned_on": "2011-11-30"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID065/appointments"
+       }
+      },
+      "name": "PERSON 065",
+      "officer_role": "director",
+      "person_number": "1485630018",
+      "resigned_on": "2003-12-31"
+     },
+     {
+      "appointed_on": "2014-09-23",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID066/appointments"
+       }
+      },
+      "name": "PERSON 066",
+      "officer_role": "director",
+      "person_number": "149206970001",
+      "resigned_on": "2021-04-30"
+     },
+     {
+      "appointed_on": "2009-01-01",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID067/appointments"
+       }
+      },
+      "name": "PERSON 067",
+      "officer_role": "director",
+      "person_number": "136251290001",
+      "resigned_on": "2015-02-28"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID068/appointments"
+       }
+      },
+      "name": "PERSON 068",
+      "officer_role": "director",
+      "person_number": "12381010001",
+      "resigned_on": "1994-05-20"
+     },
+     {
+      "appointed_before": "1991-06-07",
+      "is_pre_1992_appointment": true,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID069/appointments"
+       }
+      },
+      "name": "PERSON 069",
+      "officer_role": "director",
+      "person_number": "77736160001",
+      "resigned_on": "2000-06-15"
+     },
+     {
+      "appointed_on": "2018-03-05",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID070/appointments"
+       }
+      },
+      "name": "PERSON 070",
+      "officer_role": "director",
+      "person_number": "243822170001",
+      "resigned_on": "2018-07-16"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 63,
+    "start_index": 0,
+    "total_results": 74
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "26",
+      "month": "02"
+     },
+     "last_accounts": {
+      "made_up_to": "2026-02-28",
+      "period_end_on": "2026-02-28",
+      "period_start_on": "2025-02-27",
+      "type": "group"
+     },
+     "next_accounts": {
+      "due_on": "2027-08-26",
+      "overdue": false,
+      "period_end_on": "2027-02-26",
+      "period_start_on": "2026-03-01"
+     },
+     "next_due": "2027-08-26",
+     "next_made_up_to": "2027-02-26",
+     "overdue": false
+    },
+    "can_file": true,
+    "company_name": "TESCO PLC",
+    "company_number": "00445790",
+    "company_status": "active",
+    "confirmation_statement": {
+     "last_made_up_to": "2026-06-18",
+     "next_due": "2027-07-02",
+     "next_made_up_to": "2027-06-18",
+     "overdue": false
+    },
+    "date_of_creation": "1947-11-27",
+    "has_been_liquidated": false,
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "last_full_members_list_date": "2013-06-07",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "47110"
+    ],
+    "type": "plc",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 0,
+    "ceased_count": 0,
+    "items": [],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 0
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-24",
+  "company_number": "00445790",
+  "public": true,
+  "recorded": "2026-10-24",
+  "synthetic": false,
+  "truncated": []
+ }
+}

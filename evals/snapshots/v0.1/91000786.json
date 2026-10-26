@@ -1,0 +1,380 @@
+{
+ "appointments": {
+  "OFFICERID601": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "is_corporate_officer": false,
+    "items": [
+     {
+      "appointed_on": "2019-07-22",
+      "appointed_to": {
+       "company_name": "TEST COMPANY 784",
+       "company_number": "91000786",
+       "company_status": "dissolved"
+      },
+      "is_pre_1992_appointment": false,
+      "officer_role": "director"
+     }
+    ],
+    "items_per_page": 50,
+    "kind": "personal-appointment",
+    "name": "PERSON 726",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "endpoints": {
+  "charges": {
+   "body": {
+    "items": [],
+    "part_satisfied_count": 0,
+    "satisfied_count": 0,
+    "total_count": 0,
+    "unfiltered_count": 0
+   },
+   "status": 200
+  },
+  "filings": {
+   "body": {
+    "filing_history_status": "filing-history-available",
+    "items": [
+     {
+      "category": "gazette",
+      "date": "2026-09-29",
+      "description": "gazette-dissolved-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzU0NjMzNDA5N2FkaXF6a2N4",
+      "type": "GAZ2(A)"
+     },
+     {
+      "action_date": "2026-07-04",
+      "barcode": "XF6IM1ZD",
+      "category": "accounts",
+      "date": "2026-07-17",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzUzMzQwMDE3M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2026-07-04",
+      "barcode": "XF6ILXIY",
+      "category": "accounts",
+      "date": "2026-07-17",
+      "description": "change-account-reference-date-company-previous-shortened",
+      "pages": 1,
+      "transaction_id": "MzUzMzM5OTE0NWFkaXF6a2N4",
+      "type": "AA01"
+     },
+     {
+      "action_date": "2025-07-31",
+      "barcode": "XF6FR0LT",
+      "category": "accounts",
+      "date": "2026-07-16",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzUzMzE0MTcxMWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "category": "gazette",
+      "date": "2026-07-14",
+      "description": "gazette-notice-voluntary",
+      "pages": 1,
+      "paper_filed": true,
+      "transaction_id": "MzUzMDU1MTk2NWFkaXF6a2N4",
+      "type": "GAZ1(A)"
+     },
+     {
+      "barcode": "XF5L49JF",
+      "category": "dissolution",
+      "date": "2026-07-04",
+      "description": "dissolution-application-strike-off-company",
+      "pages": 1,
+      "transaction_id": "MzUzMDU1MTc1M2FkaXF6a2N4",
+      "type": "DS01"
+     },
+     {
+      "action_date": "2025-07-21",
+      "barcode": "XE84929D",
+      "category": "confirmation-statement",
+      "date": "2025-08-02",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQ3NjAyNjg0MGFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2024-07-31",
+      "barcode": "XE1F8LP4",
+      "category": "accounts",
+      "date": "2025-04-28",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzQ2NDIxOTY0MWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2024-11-11",
+      "barcode": "XDFMEPDD",
+      "category": "address",
+      "date": "2024-11-11",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzQ0MjY0MDY1MWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "action_date": "2024-07-21",
+      "barcode": "XD7Z1TY9",
+      "category": "confirmation-statement",
+      "date": "2024-07-23",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzQyOTc0MTkyMmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2023-07-31",
+      "barcode": "XD1ZKP7M",
+      "category": "accounts",
+      "date": "2024-04-28",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzQxOTk1MTM0NWFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2023-07-21",
+      "barcode": "XC928GYJ",
+      "category": "confirmation-statement",
+      "date": "2023-08-02",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM4ODQ1Mjc5MmFkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2022-07-31",
+      "barcode": "XC2F7SYI",
+      "category": "accounts",
+      "date": "2023-04-28",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzM3Nzk3ODY0M2FkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2021-07-31",
+      "barcode": "XB948923",
+      "category": "accounts",
+      "date": "2022-07-27",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzM0Njk1MDIwNmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2022-07-21",
+      "barcode": "XB8QQW1X",
+      "category": "confirmation-statement",
+      "date": "2022-07-21",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzM0NjM1NzY1N2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2021-07-21",
+      "barcode": "XA980GGB",
+      "category": "confirmation-statement",
+      "date": "2021-07-21",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzMwODMyMDgwM2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-07-31",
+      "barcode": "X9KZRC8I",
+      "category": "accounts",
+      "date": "2020-12-30",
+      "description": "accounts-with-accounts-type-micro-entity",
+      "pages": 3,
+      "transaction_id": "MzI4NzIxMTczMmFkaXF6a2N4",
+      "type": "AA"
+     },
+     {
+      "action_date": "2020-07-21",
+      "barcode": "X99RMXO3",
+      "category": "confirmation-statement",
+      "date": "2020-07-21",
+      "description": "confirmation-statement-with-no-updates",
+      "pages": 3,
+      "transaction_id": "MzI3MzUxNDk4M2FkaXF6a2N4",
+      "type": "CS01"
+     },
+     {
+      "action_date": "2020-04-26",
+      "barcode": "X93SKCO3",
+      "category": "address",
+      "date": "2020-04-26",
+      "description": "change-registered-office-address-company-with-date-old-address-new-address",
+      "pages": 1,
+      "transaction_id": "MzI2MzI5ODQ2NWFkaXF6a2N4",
+      "type": "AD01"
+     },
+     {
+      "associated_filings": [
+       {
+        "category": "change-of-name",
+        "date": "2019-08-15",
+        "description": "change-of-name-by-resolution",
+        "type": "NM01"
+       }
+      ],
+      "barcode": "X8BUQY9C",
+      "category": "resolution",
+      "date": "2019-08-15",
+      "description": "resolution",
+      "pages": 3,
+      "resolutions": [
+       {
+        "category": "change-of-name",
+        "description": "resolution-change-of-name",
+        "subcategory": "resolution",
+        "type": "RES15"
+       }
+      ],
+      "subcategory": "certificate",
+      "transaction_id": "MzI0MTc5NzU4OWFkaXF6a2N4",
+      "type": "RESOLUTIONS"
+     },
+     {
+      "associated_filings": [
+       {
+        "action_date": "2019-07-22",
+        "category": "capital",
+        "date": "2019-07-22",
+        "description": "statement-of-capital",
+        "type": "SH01"
+       }
+      ],
+      "barcode": "X8A5VXFN",
+      "category": "incorporation",
+      "date": "2019-07-22",
+      "description": "incorporation-company",
+      "pages": 29,
+      "transaction_id": "MzIzOTc4NTU0MGFkaXF6a2N4",
+      "type": "NEWINC"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_count": 21
+   },
+   "status": 200
+  },
+  "insolvency": {
+   "body": null,
+   "status": 404
+  },
+  "officers": {
+   "body": {
+    "active_count": 0,
+    "inactive_count": 1,
+    "items": [
+     {
+      "appointed_on": "2019-07-22",
+      "is_pre_1992_appointment": false,
+      "links": {
+       "officer": {
+        "appointments": "/officers/OFFICERID601/appointments"
+       }
+      },
+      "name": "PERSON 724",
+      "officer_role": "director",
+      "person_number": "260709710001"
+     }
+    ],
+    "items_per_page": 100,
+    "kind": "officer-list",
+    "resigned_count": 0,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  },
+  "profile": {
+   "body": {
+    "accounts": {
+     "accounting_reference_date": {
+      "day": "04",
+      "month": "07"
+     },
+     "last_accounts": {
+      "made_up_to": "2026-07-04",
+      "period_end_on": "2026-07-04",
+      "type": "micro-entity"
+     }
+    },
+    "can_file": false,
+    "company_name": "TEST COMPANY 784",
+    "company_number": "91000786",
+    "company_status": "dissolved",
+    "confirmation_statement": {
+     "last_made_up_to": "2025-07-21"
+    },
+    "date_of_cessation": "2026-09-29",
+    "date_of_creation": "2019-07-22",
+    "has_charges": false,
+    "has_insolvency_history": false,
+    "has_super_secure_pscs": false,
+    "jurisdiction": "england-wales",
+    "registered_office_is_in_dispute": false,
+    "sic_codes": [
+     "41100"
+    ],
+    "type": "ltd",
+    "undeliverable_registered_office_address": false
+   },
+   "status": 200
+  },
+  "psc": {
+   "body": {
+    "active_count": 1,
+    "ceased_count": 0,
+    "items": [
+     {
+      "ceased": false,
+      "kind": "individual-person-with-significant-control",
+      "name": "PERSON 725",
+      "natures_of_control": [
+       "ownership-of-shares-75-to-100-percent",
+       "voting-rights-75-to-100-percent",
+       "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2019-07-22"
+     }
+    ],
+    "items_per_page": 100,
+    "start_index": 0,
+    "total_results": 1
+   },
+   "status": 200
+  }
+ },
+ "meta": {
+  "as_of": "2026-10-26",
+  "company_number": "91000786",
+  "public": false,
+  "recorded": "2026-10-26",
+  "synthetic": false,
+  "truncated": []
+ }
+}
