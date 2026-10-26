@@ -9,7 +9,7 @@ Design rules:
 """
 
 from datetime import date, datetime
-from typing import Generic, TypeVar
+from typing import TypeVar
 
 from pydantic import BaseModel, Field
 
@@ -25,7 +25,7 @@ class Source(BaseModel):
     from_cache: bool = Field(description="True if served from the local cache.")
 
 
-class ToolResult(BaseModel, Generic[T]):
+class ToolResult[T](BaseModel):
     found: bool = Field(
         description="False means Companies House holds NO matching records. This is a valid "
         "answer (e.g. a company with no charges), not an error."

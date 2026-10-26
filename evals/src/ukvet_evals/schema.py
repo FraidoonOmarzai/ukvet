@@ -159,7 +159,7 @@ class Item(Strict):
 T = TypeVar("T", bound=BaseModel)
 
 
-def read_jsonl(path: Path, model: type[T]) -> list[T]:
+def read_jsonl[T: BaseModel](path: Path, model: type[T]) -> list[T]:
     if not path.exists():
         return []
     rows: list[T] = []

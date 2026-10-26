@@ -131,9 +131,7 @@ def draft(snap: dict[str, Any]) -> tuple[list[tuple[str, str]], dict[str, Any]]:
         out.append(("network", "high"))
     elif failed_n == 2:
         out.append(("network", "medium"))
-    elif failed_n == 1:
-        out.append(("network", "low"))
-    elif dissolved_n >= 5:
+    elif failed_n == 1 or dissolved_n >= 5:
         out.append(("network", "low"))
 
     # officer turnover (appointments within 30 days of incorporation do not count)

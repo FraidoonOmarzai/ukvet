@@ -50,7 +50,7 @@ PUBLIC_BASE = "https://find-and-update.company-information.service.gov.uk"
 M = TypeVar("M")
 
 
-def _mapped(endpoint: str, fn: Callable[..., M], *args: Any) -> M:
+def _mapped[M](endpoint: str, fn: Callable[..., M], *args: Any) -> M:
     """Run a mapper; turn unexpected response shapes into a clean UpstreamError."""
     try:
         return fn(*args)

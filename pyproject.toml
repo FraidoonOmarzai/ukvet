@@ -45,11 +45,11 @@ extend-exclude = ["notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "S"]
-ignore = ["S101"]  # allow assert in tests
+ignore = ["S101", "UP046", "UP047"] 
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S105", "S106", "S603", "E501"]  # fake keys, subprocess, long fixture lines
-"scripts/**" = ["S310"]
+"scripts/**" = ["S310", "E501"]
 # data-heavy modules: seed strings, demo tables and report templates read better unwrapped
 "evals/src/ukvet_evals/authoring.py" = ["E501"]
 "evals/src/ukvet_evals/draft.py" = ["E501"]

@@ -85,7 +85,7 @@ mcp: MCPServer[None] = MCPServer(
 T = TypeVar("T")
 
 
-async def _run(call: Awaitable[T]) -> T:
+async def _run[T](call: Awaitable[T]) -> T:
     """Convert our typed errors into clean, LLM-readable tool errors (no stack traces)."""
     try:
         return await call
