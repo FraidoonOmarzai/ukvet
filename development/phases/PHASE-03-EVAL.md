@@ -480,6 +480,69 @@ Do this after your first no-LLM dev run, since the LLM run uses the same compani
 2. Add the Tier 1 workflow: it replays all companies in template mode and fails on the thresholds in section 10.
 3. Prove the gate works. Open a PR that breaks a mapper and confirm it is blocked. Open one that changes nothing and confirm it passes.
 
+---
+Day 10 is the CI gate. It stores today's dev scores as a baseline, and CI then blocks any change that makes them worse. We'll do Tier 1 only (free, template mode). Tier 2 (recorded LLM answers) should wait until the M4 miss is explained. Its gate demands M4 mechanical of exactly 100%, so it would fail on that one c033 claim every time.
+
+#### 1. Branch and baseline
+```powershell
+git checkout -b phase-3-eval-gate
+uv run ukvet-evals gate --dataset v0.1 --update-baseline
+uv run ukvet-evals gate --dataset v0.1
+```
+- The first command writes `evals\baselines\v0.1.json` from a dev run with no LLM.
+- The second should print `ukvet eval gate: PASS` with all changes `+0.0 pp`. If it fails right away, tell me. It would mean the run isn't deterministic.
+- Do **not** create an `-llm` baseline. The workflow skips the LLM check when that file is missing.
+
+#### 2. Point CI at the real dataset
+In `.github\workflows\evals.yml`, change:
+```yaml
+EVAL_DATASET: demo
+```
+to
+```yaml
+EVAL_DATASET: v0.1
+```
+
+#### 3. Commit the right things
+Commit:
+- `evals/datasets/v0.1/`
+- `evals/snapshots/v0.1/`
+- `evals/baselines/v0.1.json`
+- `evals/llm_cache/` (optional now, needed later for Tier 2)
+- `.github/workflows/evals.yml`
+- the `scripts/` helpers
+
+Never commit `data/raw/eval_mapping.json` or `evals/results/`. Check before committing:
+```powershell
+git status
+git check-ignore -v data/raw/eval_mapping.json evals/results
+```
+Both must be reported as ignored. Add a decision-log entry such as "Baseline v0.1 created from the first dev run; known issues: M4 (1 claim), M5 (2 officer_turnover cases)".
+
+#### 4. Push and open a pull request
+```powershell
+git push -u origin phase-3-eval-gate
+```
+Open a PR to `main`. In Actions, the **Evals** workflow should validate the dataset, run the gate, and post a results table as a PR comment. Green means CI works. If the push has to include a **tag or `main`** first, tell me.
+
+#### 5. Prove the gate works (the part reviewers like)
+**a. A change that must be blocked**
+1. Make a second branch, `git checkout -b test-gate-break`.
+2. Break a mapper on purpose. For example, in `packages\ukvet-mcp\src\ukvet_mcp\mappers.py` around line 71, change `date_of_creation=created` to `date_of_creation=None`. If that crashes instead of just giving wrong values, pick another field.
+3. Push it and open a PR. The Evals check should go **red** and list new field failures (M1 drop).
+4. Screenshot the PR comment for your write-up, then close the PR without merging and delete the branch.
+
+**b. A change that must pass**
+Make a branch with a harmless edit (a README line), push it and open a PR. Evals should be **green**. Delete it afterwards.
+
+#### 6. Make it required (optional but proper)
+In GitHub, go to Settings, then Branches, and add a rule for `main` that requires the Evals check before merging. Only then does it really block anything.
+
+#### Rules for the baseline
+Update it only in a PR that explains why, with a decision-log entry. Never update it just to turn a red build green.
+
+---
+
 ## Days 11-12: error analysis and baseline (3.15 and 3.16)
 1. Classify every dev failure as retrieval, mapper, rule, writing or label error. Fix the top causes test-first, on dev only.
 2. Run the final baseline once on dev and test. Don't change anything after seeing the test numbers.
