@@ -1,555 +1,568 @@
-# ukvet Phase 3: Evals. Complete roadmap
+# Phase 3: Evaluation (how we measure ukvet)
 
-| | |
-|---|---|
-| Owner | Fraidoon Omarzai |
-| Written | 22 Oct 2026 |
-| Plan reference | `docs/09-plan.md` (Phase 3 target: 200+ item dataset, M1 to M5 reported, CI gate live), `docs/04-success-metrics.md` |
-| Estimated effort | About 10 working days (the plan allows 2 weeks). Every step below is one day of work or less |
-| Rule from the plan | Cut scope inside the phase. **Never skip Phase 3** |
+This guide is for someone who has never seen this project. Follow it top to bottom. Every step says **why** you do it, **what to run**, **where to run it**, **what you should see**, and **what can go wrong**.
+
+All commands are PowerShell, run from the **repo root** (`C:\Users\44787\Desktop\ukvet`) unless a step says otherwise. There is no `make` on Windows; we use `uv run ...`.
 
 ---
 
-## 1. Why Phase 3 exists, and what it must prove
+## 1. Why Phase 3 exists
 
-Right now you can say "it worked on 10 companies and I found no errors in about 75 values". A hiring manager will ask "how do you know it keeps working, and how accurate is it?". Phase 3 turns your manual check into a **repeatable, versioned measurement**, so every later change (a rule, a prompt, a model) is judged by numbers, not by feel.
+ukvet is a tool that looks up a UK company on Companies House and writes a due-diligence report (status, age, accounts, directors, charges, red flags). Before Phase 3 we had checked it by hand on 10 companies. That has three problems:
 
-Phase 3 is done when you can publish a table of **M1 to M5 against their targets, including misses**, with the dataset size beside each result, and CI blocks changes that make those numbers worse.
+1. **It does not repeat.** Nobody can re-run "I looked at the website and it seemed fine".
+2. **It does not protect us.** If a later change breaks something, nothing tells us.
+3. **It gives no honest number.** "It works" is not a result. "1488 of 1488 fields matched, 95% interval 99.7% to 100%" is.
 
-**Not in Phase 3:** Langfuse tracing and the prompt-injection score M6 (Phase 4; you only *seed* injection cases now), and the second model comparison (Phase 5).
+Phase 3 turns the manual check into a **repeatable, versioned measurement**:
 
----
+- a fixed set of **48 real companies** saved as frozen, anonymised snapshots (so results do not change when Companies House changes, and no personal data is in the repo);
+- a list of **questions** (Q1 to Q9) asked about each company, with **known correct answers**;
+- **scorers** that compare ukvet's answers with the correct answers and produce metrics (M1 to M5, plus latency and cost);
+- a **CI gate** that fails a pull request if the numbers get worse;
+- a **report** that says what was measured, what was not, and what may be claimed.
 
-## 2. Where you start (what you already have)
-
-| Already in hand | Use in Phase 3 |
-|---|---|
-| 10 real companies manually verified (`docs/accuracy-check.md`) | The first 10 "golden" companies |
-| Deterministic pipeline: facts (`facts.py`), rules (`redflags.py`), citation checker (`citations.py`) | Each layer can be scored on its own |
-| `Deps.clock` and `service.today` can be injected | Freeze "today" so overdue and age results do not drift |
-| `scripts/offline_demo.py` serves recorded JSON through the real stack with `respx` | The replay mechanism for snapshots |
-| `scripts/record_fixtures.py` + `anonymise.py` | Record and anonymise real responses |
-| `scripts/measure.py` | Starting point for the runner |
-| Haiku works (20 of 20 narratives) | The first model to evaluate |
-
-### Carry-over fixes to do first (from the audit, `PROJECT_GUIDE.md`)
-| Fix | Why it blocks Phase 3 |
-|---|---|
-| **F2: `citation_stats` records only the last LLM attempt** | M2 and M4 depend on it. Record stats **per attempt**, and count LLM errors separately from checker violations |
-| F1: release workflow installs without Streamlit | Not an eval blocker, but a one-line fix; do it now so CI is honest |
-| Decide the Google secretary-change flag (open item in the decision log) | Rules should be settled before you label "expected flags" |
-| README overclaims Evals and Langfuse | Fix before the repo goes public |
+If you remember one thing: *Phase 3 is how we prove, with numbers, that ukvet is right, and how we notice quickly when it stops being right.*
 
 ---
 
-## 3. The design decisions (read this before building)
+## 2. Words you will see
 
-Decide these once, write them in **ADR-009: Evaluation design**, and log them in the decision log.
+| Word | Meaning |
+|---|---|
+| **Item** | One question about one company (for example "Q3: how many officers?" for company c012). 48 companies x 9 questions = 432 items. |
+| **Q1 to Q9** | The nine questions: status, age, officers, accounts and filings, PSCs, charges, insolvency, network, flags (see `evals/README.md` for exact wording). |
+| **Snapshot** | A saved copy of the raw Companies House API answers for one company. Frozen: replayed instead of calling the live API. |
+| **Anonymised** | Personal data replaced with fake names; real company numbers replaced with fake ones (`91...`). |
+| **Alias** | The fake id of a company, like `c004`. The link real number to alias is in `data/raw/eval_mapping.json` (private). |
+| **Oracle** | Expected values computed from the raw JSON by separate code that imports **neither** `ukvet_mcp` **nor** `ukvet_agent`. A test enforces this. It is the answer key. |
+| **Golden** | Values you read yourself from the live Companies House website. They check the oracle. |
+| **Flag labels** | The red flags an analyst should expect for each company, written from definitions in `evals/LABELLING.md`. |
+| **as_of** | The frozen "today" used when replaying, so "company is 11 months old" does not change over time. |
+| **Dev / test split** | Companies split by a salted hash. Dev is for fixing things. Test is looked at **once**, at the end, so we cannot tune to it. |
+| **Baseline** | The saved numbers (`evals/baselines/v0.1.json`) the CI gate compares new runs against. |
+| **Gate** | `ukvet-evals gate`: exits non-zero if a run is worse than the baseline. |
+| **Tier 1 / Tier 2** | Tier 1 = free CI run in template mode (no LLM). Tier 2 = recorded LLM answers replayed (designed, not enabled). |
+| **Wilson interval** | The 95% range a percentage could really be given the sample size. 100% of 10 is weak; 100% of 1488 is strong. |
 
-### D1. What is an "item"?
-The plan wants 200+ items with at least 15 per category. Define an item as **one question about one company**:
-`28 companies x 9 questions (Q1 to Q9) = 252 items`. On top of that:
-- **Q10 red-flag cases:** at least 20 companies with labelled expected flags (M5).
-- **Abstention cases:** at least 20 fault-injected runs (M3).
-- **Injection cases:** at least 15 adversarial names and texts (seeded now, scored in Phase 4).
+### The metrics
 
-### D2. Where does ground truth come from? (the honest answer)
-If the "truth" is the Companies House API and your system also reads the API, a shared misunderstanding passes silently. Use three tiers, and say so in the write-up:
-
-| Tier | Source | What it proves |
+| Metric | Measures | Target |
 |---|---|---|
-| **Golden** (hand-verified in the browser) | You, on the live website, 25 companies by the end (10 done) | The oracle is right |
-| **Oracle** (auto-generated expected values) | A small, separate script that reads the raw API JSON **without using the project's mappers or MCP code** | The pipeline (client, mappers, facts) is right, at scale |
-| **Rule labels** | You label expected red flags from the written definitions **before** looking at the rule output | The rules do what a reasonable analyst expects (M5) |
-
-Check the oracle against the golden set. Any disagreement is a bug in the oracle or a label error: fix and log it.
-
-### D3. Freeze the world
-- Record each company's **raw API responses once** (anonymised), with an `as_of` date.
-- Replay them through the real stack (`respx` + in-memory MCP, as in `offline_demo.py`) with the clock set to `as_of`.
-- Result: runs are free, fast, identical every time, and need no API key. This is also what makes CI possible.
-- The cost: replay does not test live API behaviour. Keep a small live smoke test (the 10 manual companies) separate.
-
-### D4. Privacy of the eval data
-Director names, birth dates and addresses are personal data (UK GDPR; your `06-legal-and-ethics.md`). The dataset is public, so:
-- Reuse `scripts/anonymise.py`: people are anonymised; company names too, except large public companies passed with `--public`.
-- Keep the **real-number to fake-number mapping** in `data/raw/` (git-ignored) so you can re-record later.
-- Never commit raw snapshots.
-
-### D5. Dev and test split (prevents fooling yourself)
-- Split companies by a fixed hash: **60% dev, 40% test**, decided once.
-- Tune rules and prompts **only on dev**. Look at the test split once per milestone.
-- If you ever change something after seeing test results, say so in the write-up.
-- Without this, a "90% accuracy" claim is not trustworthy.
-
-### D6. Two tiers of checks in CI
-| Tier | Content | When | Cost |
-|---|---|---|---|
-| **1 (offline)** | Retrieval (M1), rules (M5), abstention (M3), template narrative checks, scorer unit tests | Every PR | Free, about 1 to 2 minutes |
-| **2 (LLM)** | M2 and M4 with a real model | Cached replay on PRs; real calls only on manual or scheduled runs | A few pence |
-
-LLM output varies between runs, so Tier 2 **replays recorded responses** keyed by the hash of the prompt and the model. If facts or prompts change, the cache misses and the job tells you to re-record (manually, with your key).
+| M1 | Field accuracy against the oracle | >= 90% overall, each question >= 80% |
+| M2 | Unsupported claims in model-written text | < 2% |
+| M3 | Abstention: when data is missing, ukvet says so (fault injection) | >= 90% |
+| M4 | Citation validity (mechanical: cited ids exist and match) | 100% |
+| M5 | Red-flag recall (and precision) | recall >= 85% |
+| M6 | Prompt-injection resistance | Phase 4, not measured here |
+| M7 | Latency | worst < 30 s |
+| M8 | Cost per report | < £0.05 |
+| M12 | CI gate works | blocks regressions |
 
 ---
 
-## 4. Metrics: exactly how each is computed
+## 3. The design decisions in one paragraph each (ADR-009)
 
-| ID | Target | Computed how | Honest caveat |
-|---|---|---|---|
-| **M1 accuracy** | >= 90% overall, >= 80% in **each** of Q1 to Q9 | Field-level: for each item, compare each checkable field in the pipeline's facts with the oracle (and golden). M1 = correct fields / checked fields, per category and overall. Also report item-level pass rate (all fields right) | Measures retrieval and mapping, so it is rule-based with no LLM involved. Report the field list |
-| **M2 hallucination** | < 2% | Over the final narrative's claims: share not supported by the cited facts. Deterministic part: dates, numbers and **names** must appear in the cited facts (stricter than today's checker, which ignores names). Semantic part: LLM judge, hand-checked on a sample | About 250 claims per model run, so 2% is 5 claims: report a confidence interval, not just a point |
-| **M3 abstention** | >= 90% | Fault injection: make tools fail (timeouts, 5xx, 404, empty). Expected: the question becomes a **gap**, no fact is invented, and `insufficient_data` appears when 3 or more questions fail with no high flag | Mostly deterministic, because the Verifier is code |
-| **M4 citation validity** | 100% | (a) Mechanical: every shown claim cites existing facts whose values match, checked by a separate re-implementation of the checker. (b) Semantic: does the cited fact actually support the sentence (judge + hand sample) | (a) is nearly guaranteed by design, because failing claims are dropped. The real signal is (b). Say so |
-| **M5 red-flag recall** | >= 85% | Expected flags (your labels) found by the rules, over all expected flags. **Also report precision** (unexpected flags), because R17 is about unfair flags | You wrote the rules and the labels: reduce bias with D2 and a second labeller on 20% |
-| M6 injection | >= 95% | Seed the cases now; score in Phase 4 | |
-| M7 to M9 | p95 < 30 s, < £0.05, track calls | Re-measure on the full run | Say "worst of N" if N is small |
-| M12 | gate | CI blocks regressions (section 10) | |
+You will meet these rules again in the steps. They are here so nothing looks arbitrary.
 
-**Always show the set size** beside every number (reporting rule 3 in `04-success-metrics.md`).
+- **D1, an item is one question about one company.** Small units give many data points and show exactly which question fails.
+- **D2, three kinds of ground truth.** Golden (human, from the website), oracle (code, from raw JSON), and rule labels (flags, written from definitions *before* running the rules). Each checks a different thing, and none is copied from ukvet.
+- **D3, frozen snapshots replayed through the real stack.** Same input every time, so a changed score means changed code, not a changed website.
+- **D4, privacy.** Anonymise people, check for leaks, keep the mapping private. Large listed companies may stay public (`--public`).
+- **D5, dev/test split chosen once and locked.** Looking at the test split needs a reason on the command line, which is logged.
+- **D6, two CI tiers.** Free every time (Tier 1), recorded-LLM replay (Tier 2) so CI never needs a secret.
 
 ---
 
-## 5. The layers (what each score tells you when it fails)
+## 4. Rules that apply to every step
 
-Because retrieval is deterministic, a failure points to a specific layer. This is a strong point for the write-up.
-
-| Layer | Question | Failure means |
-|---|---|---|
-| 1. Retrieval | Do the facts match the oracle? (M1) | Mapper, client or fact-builder bug |
-| 2. Rules | Are the right flags raised, and only those? (M5) | Rule threshold or logic problem |
-| 3. Abstention | Does it admit missing data? (M3) | Gap or risk-level logic problem |
-| 4. Writing | Are the LLM's sentences supported? (M2, M4) | Prompt or model problem |
-| 5. Quality (optional) | Is it clear and fair? (judge) | Wording problem |
+1. **Never commit** `.env`, `data/raw/eval_mapping.json`, `evals/results/`, raw (unanonymised) recordings, real director names, or the output of `scripts/golden_sheet.py`.
+2. **Never look at the test split** before the final run. (`--split all` and `--split test` need `--confirm-test-split "reason"`.)
+3. **Never edit a label or the baseline to turn a result green** without writing down why (decision log and a `notes` field). If you change something after seeing dev results, say so in the report.
+4. **Label before you run.** Flag labels are written from the definitions before the rules are scored, otherwise M5 only proves the rules agree with themselves.
+5. **No secrets in CI.**
 
 ---
 
-## 6. Repository layout
+## 5. Setup (once)
 
-Make it a workspace package so imports are clean (your `tests/` taught you the cost of `sys.path` tricks):
+**Why:** every later step assumes the project installs, the tests pass and your API key is available.
 
+```powershell
+cd C:\Users\44787\Desktop\ukvet
+uv sync --all-groups --all-packages
+uv run pytest
 ```
+
+- You need Python 3.12 (the project targets 3.12) and `uv`.
+- Create `.env` in the repo root with `CH_API_KEY=<your Companies House key>`. Recording the LLM answers (Step 12) also needs your Anthropic key; see `.env.example` for the exact variable name.
+- Expected: `pytest` ends with all tests passing (the evals package alone has 84).
+
+If you see `Set CH_API_KEY`, `.env` is missing or not in the repo root.
+
+---
+
+## 6. Folder map
+
+```text
 evals/
-  pyproject.toml                 # workspace member "ukvet-evals"
-  ukvet_evals/
-    schema.py                    # item and result models (pydantic)
-    snapshot.py                  # record and replay raw API JSON, frozen clock
-    oracle.py                    # independent expected-value computation
-    scorers/{retrieval,flags,abstention,narrative}.py
-    faults.py                    # fault-injecting tool client
-    judge.py                     # LLM judge (rubric)
-    stats.py                     # Wilson interval, per-category tables
-    run.py                       # CLI runner
-    report.py                    # results.json and results.md
-  datasets/
-    v0.1/companies.jsonl         # company list, tags, split, as_of
-    v0.1/golden.jsonl            # hand-verified values
-    v0.1/flags.jsonl             # expected red flags
-    v0.1/abstention.jsonl
-    v0.1/injection.jsonl
-  snapshots/v0.1/*.json          # anonymised raw API responses (committed)
-  baseline.json                  # committed scores the CI gate compares with
-  results/                       # run outputs (small; commit only milestone runs)
-tests/evals/                     # unit tests for scorers, oracle, stats
+  README.md                 how the harness works (read second)
+  LABELLING.md              the written flag definitions (the "rules of the exam")
+  GOLDEN-AND-FLAGS.md       detailed guide to golden and flag labels
+  datasets/v0.1/
+    companies.jsonl         one row per company: alias, tags, split
+    golden.jsonl            your website-checked values
+    flags.jsonl             expected red flags per company
+    abstention.jsonl        fault-injection cases (missing data scenarios)
+    injection.jsonl         prompt-injection payloads (scored in Phase 4)
+    items.jsonl             the answer key, built by build-items
+  snapshots/v0.1/           frozen anonymised raw API answers
+  baselines/v0.1.json       the numbers CI compares against
+  llm_cache/                recorded LLM answers (for replay)
+  results/                  run outputs (private, git-ignored)
+  src/ukvet_evals/          the harness code and the `ukvet-evals` command
+scripts/
+  golden_sheet.py           alias to real company number helper (private output)
+  golden_from_manual.py     writes golden rows from the 10 hand-checked companies
+  golden_entry.py           interactive golden entry for more companies
+  flag_labeller.py          drafts flag labels from the written definitions
+  officer_dates.py          shows officer events for one company
+data/raw/eval_mapping.json  PRIVATE real number to alias map (git-ignored)
+docs/adr/009-evaluation-design.md   the design decisions
+docs/eval-report.md                 the final report
+.github/workflows/evals.yml         CI: job `gate` and manual job `record-llm`
 ```
 
 ---
 
-## 7. Dataset specification
+## 7. Step by step
 
-### 7.1 Companies (target 28, minimum 25)
-Pick companies with **tags**; every tag needs at least 2 companies (3 for the big ones). One company can carry several tags.
+Each step lists: **Why**, **Run**, **You should see**, **Done when**, **If it goes wrong**.
 
-| Tag | Min | Why |
-|---|---|---|
-| large listed plc | 3 | many directors, many appointments, PSC exempt |
-| healthy small Ltd | 4 | the normal case, no flags |
-| incorporated < 1 year | 3 | age flag, "not recorded" filings |
-| 1 to 2 years old | 2 | age boundary |
-| dissolved | 3 | status, cessation date |
-| liquidation: members' voluntary | 2 | the unfairness you fixed |
-| liquidation: creditors' | 2 | must stay HIGH |
-| administration / receivership | 2 | other failed statuses |
-| active proposal to strike off | 2 | the missing rule you fixed |
-| overdue accounts or confirmation statement | 3 | Q4 |
-| charges: several outstanding | 2 | Q6 |
-| charges: all satisfied | 2 | Q6 |
-| corporate PSC | 2 | Q5 |
-| no PSC / exempt | 2 | "no data is a fact" |
-| LLP, Scottish (SC), Northern Ireland (NI) | 1 each | number formats |
-| director with many other appointments | 2 | Q8 and the 5-director cap |
-| corporate director or secretary | 2 | role edge cases |
-| officer changes in last 12 months | 3 | Q9 |
-| registered office changed | 2 | Q9 |
+**Note:** Step by step code to add is also in `setup/phase-3-guide.md`
 
-**Your 10 verified companies are the seed.** Find the rest with Companies House search (filter by status) and the `search_company` tool. Record the **real** number in a private file; the dataset stores the anonymised id.
+### Step 1. Prove the harness works on fake data
 
-### 7.2 Item format (example)
-```json
-{
-  "id": "c014-Q4",
-  "company": "c014",
-  "question": "Q4",
-  "as_of": "2026-10-21",
-  "split": "dev",
-  "fields": {
-    "accounts.overdue": false,
-    "accounts.next_due": "2027-06-30",
-    "accounts.last_made_up_to": "2025-09-30",
-    "confirmation.overdue": false,
-    "confirmation.next_due": "2027-09-25"
-  },
-  "label_source": "oracle+golden",
-  "notes": ""
-}
-```
-Fields per question (start with these): **Q1** status, status detail, cessation date. **Q2** incorporation date, age in days. **Q3** number of current directors, their appointment dates. **Q4** overdue flags and due and last dates. **Q5** number and kind of current PSCs. **Q6** total, outstanding, satisfied counts. **Q7** number of cases, types. **Q8** per checked director: number of other appointments and status counts. **Q9** appointments and resignations in the window, address-change count.
+**Why:** before spending time on real data, confirm the machinery itself runs. The demo dataset is synthetic, so a failure here is a code problem, not a data problem.
 
-### 7.3 Labelling rules (write them down; they are part of the deliverable)
-1. Oracle values come from raw API JSON by code that does not import `ukvet_mcp` or `ukvet_agent`.
-2. Golden values are read from the live website page by you, with the date.
-3. Expected red flags are labelled **from the written flag definitions**, before you run the rules on that company.
-4. Dates are ISO; names are never stored.
-5. Any change to a label after seeing results is logged with a reason.
-6. Second labeller (an AAII colleague) on 20% of flag labels; report agreement.
-
----
-
-## 8. The step-by-step roadmap
-
-| Step | Task | Output | Done when | Time |
-|---|---|---|---|---|
-| **3.0** | **Prerequisites**: fix F2 (per-attempt stats; LLM errors counted separately), F1 (release workflow), decide the Google secretary flag, README honesty fixes | PR merged, tests green | `citation_stats` shows per-attempt data; reproduced case from the audit now shows the first attempt's violations | 0.5 day |
-| **3.1** | **ADR-009: evaluation design** (decisions D1 to D6), decision log #37+, risk R18 (label bias) and R19 (overfitting to the dev set) | `docs/adr/009-*.md` | Reviewed once by you the next morning | 0.5 day |
-| **3.2** | **Schema and guidelines** (backlog: "Eval dataset schema and guidelines"): `schema.py`, labelling rules, field lists per question | Pydantic models + `evals/README.md` | A sample item validates; rules are written | 0.5 day |
-| **3.3** | **Pick the companies**: 28 with tags, split dev/test by hash | `companies.jsonl` | Every tag meets its minimum | 0.5 day |
-| **3.4** | **Record snapshots** (anonymised) with `record_fixtures.py` extended for the eval set: all 8 endpoints per company, `as_of` date stored, real to fake map kept private | `snapshots/v0.1/*.json` | A leak check finds no names, birth dates or addresses; replay runs offline | 1 day |
-| **3.5** | **Replay harness**: `snapshot.py` serves the JSON through the real MCP and agent with the frozen clock | A function `run_company(id)` returning a `Report` | The 10 manual companies give the same facts as your live reports | 0.5 day |
-| **3.6** | **Golden labels**: verify 15 more companies on the website (5 key fields each) | `golden.jsonl` (25 total) | Each row has a date and source | 1 day (hand work) |
-| **3.7** | **Oracle** (independent of project code) and **oracle vs golden check** | `oracle.py`, `items.jsonl` generated | Oracle matches golden on every checked field, or each difference is explained and fixed | 1 day |
-| **3.8** | **Retrieval scorer (M1)**, per-category table, Wilson intervals, unit tests including a deliberately broken mapper to prove the scorer catches it | `scorers/retrieval.py` | Baseline M1 printed per Q1 to Q9 with set size | 1 day |
-| **3.9** | **Red-flag cases and scorer (M5)**: label expected flags, recall and precision, second labeller on 20% | `flags.jsonl`, `scorers/flags.py` | Recall and precision per flag type | 1 day |
-| **3.10** | **Abstention cases and scorer (M3)**: `faults.py` injects timeouts, 5xx, 404 and empty results per tool and in combination | `abstention.jsonl`, `scorers/abstention.py` | At least 20 cases; each expected gap and risk level written | 1 day |
-| **3.11** | **Runner and results report**: model ID, dataset version, git commit, as_of, split, seed in every result; `results.json` plus a readable `results.md` | `run.py`, `report.py` | One command produces the full report in template mode (no key) | 0.5 day |
-| **3.12** | **Narrative scoring (M2, M4)**: stricter name/date/number check, independent re-implementation of the citation checker, per-attempt stats; run Haiku over the dataset (cache the responses) | `scorers/narrative.py` | Per-claim results saved; cost and time per run recorded | 1 day |
-| **3.13** | **LLM judge + calibration**: rubric (support, neutrality, clarity); judge from a **different model family** than the writer; hand-judge 20 outputs and report agreement | `judge.py`, agreement number | Agreement reported; the judge never gates CI | 1 day |
-| **3.14** | **CI gate** (section 10): Tier 1 on every PR, Tier 2 cached; `baseline.json` | Workflow file, passing and failing demo PRs | A PR that breaks a mapper is blocked; one that does not change scores passes | 1 day |
-| **3.15** | **Error analysis and tuning on dev only**: classify every failure (retrieval, mapper, rule, writing, label error); fix the top causes with a test first; re-run dev | Error table in `docs/eval-report.md` | Each failure has a cause; fixes logged | 1 day |
-| **3.16** | **Final baseline** (committed version): full run on dev **and** test, every metric vs its target, **including misses** with cause and proposed fix; update README Results, risks R3, R12, R15, R17; decision log | `docs/eval-report.md`, README table | Section 12 checklist is ticked | 1 day |
-
-Total: about 12 working days if nothing slips. If time is tight, cut in this order: judge (3.13), second labeller, scheduled Tier 2 runs. **Do not cut** the dev/test split, the golden check or the CI gate.
-
----
-
-## 9. Scoring details worth getting right
-
-- **Field comparison:** exact match for dates, counts and booleans. For lists (current directors), compare as sets of (appointed date, role) because names are anonymised.
-- **Per-category floor:** M1 must be at least 80% in **each** of Q1 to Q9; an average can hide a failing category.
-- **Intervals:** use the Wilson interval for every proportion. With 252 items, a result of 92% still has an interval of about plus or minus 3 points.
-- **Q8 and the cap:** the pipeline checks the first 5 directors. The oracle must apply the same cap, otherwise every large company fails. Record the cap in the dataset notes.
-- **Flag precision:** list each unexpected flag with the company's tag, so unfair patterns (like the members' voluntary liquidation one) show up.
-- **Claim extraction for M2:** for template narrative each finding is one claim; for the LLM each sentence is one claim. Report totals so the percentage can be reproduced.
-- **Different judge family:** a model judging its own output tends to approve it.
-- **Reproducibility:** every result file records dataset version, git commit, model ID, `as_of`, seed and set size.
-
----
-
-## 10. The CI regression gate (M12)
-
-**Tier 1, every PR, offline, free:**
-1. Replay all dev and test companies in template mode.
-2. Compute M1 (overall and per category), M3, M5 recall/precision, template-claim checks.
-3. Compare with `evals/baseline.json`. **Fail** the PR if:
-   - M1 overall drops by more than 1 percentage point, or any category falls below its floor (80%);
-   - M3 or M5 recall drops by more than 2 points;
-   - any mechanical citation check fails (must be 100%).
-4. Post a short results table as a PR comment.
-
-**Tier 2, LLM:**
-- On PRs, replay cached model responses. If the prompt or facts changed (cache miss), the job fails with "re-record needed".
-- A manual workflow (secret `LLM_API_KEY`, spending cap on the key) re-records and refreshes M2 and M4.
-- Gate: M2 must not rise by more than 0.5 points; the mechanical M4 must stay 100%.
-
-**Updating the baseline** only through a PR that says why, plus a decision log entry. Never edit the baseline to make a red build green.
-
----
-
-## 11. Results report (what you publish)
-
-```
-Dataset v0.1: 28 companies, 252 items (dev 60% / test 40%), 22 red-flag cases, 21 abstention cases
-Model: <exact id>, as_of 2026-10-xx, git <sha>
-
-Metric                      Target     Dev      Test     n        Met?
-M1 accuracy overall         >= 90%     ..%      ..%      ...      ...
-  per category Q1..Q9       >= 80%     table
-M2 hallucination            < 2%       ..%      ..%      ... claims
-M3 abstention               >= 90%     ..%      ..%      21 cases
-M4 citation validity        100%       mech ..% / semantic ..%
-M5 red-flag recall          >= 85%     ..%      ..%      ... flags
-   red-flag precision       tracked    ..%
-M7 latency (worst/p95)      < 30 s     ..
-M8 cost per report          < 0.05 GBP ..
-```
-Rules: report **every** metric including misses; for each miss give the likely cause and the fix; never report only the best run; report the committed version; say what the test split was used for.
-
----
-
-## 12. Exit checklist (Phase 3 is closed when all are ticked)
-
-- [ ] F2 fixed; per-attempt citation stats recorded
-- [ ] ADR-009 written; decisions in the decision log
-- [ ] Dataset v0.1: 25+ companies, 200+ items, at least 15 items per question category
-- [ ] Golden set (25 companies) verified by hand; oracle agrees with it
-- [ ] Dev/test split fixed; test split used once for the final baseline
-- [ ] Scorers for M1 to M5 with unit tests (including a broken-mapper test)
-- [ ] 20+ abstention cases and 20+ red-flag cases
-- [ ] 15+ injection cases seeded for Phase 4
-- [ ] CI Tier 1 blocks regressions (shown with a deliberate failing PR)
-- [ ] Baseline results published, every metric against its target, misses explained
-- [ ] README Results table filled; risks R3, R12, R15, R17 updated; new R18 and R19
-- [ ] No personal data in the dataset (leak check passes); no keys committed
-- [ ] Weekly update and Friday demo to AAII
-
----
-
-## 13. Risks specific to Phase 3
-
-| Risk | Mitigation |
-|---|---|
-| **Circular ground truth**: the oracle and the system misread the API the same way | Golden hand-checked set; oracle independent of project code (D2) |
-| **Label bias**: you wrote both the rules and the expected flags | Label from definitions first; second labeller on 20% |
-| **Overfitting to the eval set** | Dev/test split; test used once per milestone (D5) |
-| **Small samples** | Wilson intervals; say "n"; do not over-read one point |
-| **LLM variation** | Cached replay in CI; 3 runs for the baseline; report the spread |
-| **Personal data in a public dataset** | Anonymiser, leak check, private mapping file |
-| **Cost** | Template mode is free; cache LLM responses; set a spending cap on the key |
-| **Scope creep** (judge for everything, huge dataset) | The cut order in section 8; the plan's "cut scope inside the phase" |
-| **Snapshots drift from the live API** | Keep the 10-company live smoke test; re-record on API changes |
-
----
-
-## 14. Mapping to your GitHub backlog (`scripts/backlog.tsv`)
-
-| Existing issue | Roadmap step |
-|---|---|
-| Eval dataset schema and guidelines | 3.2 |
-| Build ground-truth dataset (200+ items) | 3.3 to 3.7 |
-| Missing-data and abstention cases | 3.10 |
-| Red-flag cases for Q10 | 3.9 |
-| Rule-based scorers | 3.8, 3.12 |
-| LLM-as-judge for report quality | 3.13 |
-| Eval runner and results report | 3.11 |
-| Eval regression gate in CI | 3.14 |
-| Baseline results | 3.16 |
-
-**Add these issues:** F2 per-attempt stats (3.0), ADR-009 (3.1), golden verification (3.6), error analysis (3.15), snapshot recording and anonymisation (3.4), replay harness (3.5), oracle (3.7). Keep the plan's rule: each issue is one day or less.
-
----
-
-## 15. What you can claim when Phase 3 is done
-
-Only what the report shows, for example: "On a versioned 28-company, 252-item evaluation set with hand-verified ground truth, the system scored X% field accuracy (per-category minimum Y%), Z% correct abstention and a hallucination rate of W% (95% interval ...), and CI blocks regressions." Also say what the set does **not** cover (company types you did not include, live-API behaviour, only one model). Misses stated plainly are a strength, not a weakness.
-
----
-
-## 16. First three things to do tomorrow
-
-1. Do step 3.0 (the F2 fix and the one-line release workflow fix) so the numbers you build on are honest.
-2. Write ADR-009 from section 3 (30 minutes). It forces the decisions before the code.
-3. Start the company list (3.3) in a spreadsheet: for each tag, find the companies. The golden hand-checking (3.6) is the slowest step, so start collecting candidates early.
-
-Say "start 3.0" and I'll build the F2 fix with tests, or "start 3.2" and I'll write the schema, the labelling guide and the project skeleton.
-
----
----
-
-The full spec is in `PHASE-3-ROADMAP.md`. Below is the order to work in, as the actions you take each day. Your computer is no longer linked to this session, so I can't touch your repo directly. I'll write the code in my workspace copy and send it as zips, as before.
-
-## Day 1: prerequisites and decisions (step 3.0 and 3.1)
-1. Create a branch: `git checkout -b phase-3`.
-2. Fix F2: record citation stats per attempt, and count LLM errors separately from checker violations (`reporter.py`, around lines 113-120). Write a test first for the case where attempt 1 is bad and attempt 2 is clean.
-3. Fix F1: in `release-mcp.yml`, change the install to `uv sync --all-groups --all-packages`.
-4. Fix the README (lines 8, 33-34): remove the Evals and Langfuse claims and update the test count.
-5. Decide the Google secretary-flag question. I recommend ignoring corporate-secretary changes. Then re-run `uv run pytest`.
-6. Write ADR-009 (design decisions D1 to D6 from the roadmap) and add decision-log entries.
-
-Done when CI is green and the ADR is committed.
-
-## Day 2: skeleton and company list (3.2 and 3.3)
-1. Create `evals/ukvet_evals/` as a uv workspace member. Add `schema.py` with pydantic models for items, flags, abstention cases and results.
----
-```bash
-uv sync --all-groups --all-packages  # (it installs the new `evals` package).
-uv run pytest  # You should see about 428 passed.
-uv run ukvet-evals run --dataset demo  # You should see a results table on the fake demo companies.
-```
-## What is inside `evals/`
-- **`src/ukvet_evals/`** is the code:
-  - **`record.py`** records real companies and anonymises them.
-  - **`oracle.py`** works out the correct answers independently.
-  - **`snapshot.py`** replays the saved data through your real agent.
-  - **`scorers/`** holds the scoring for M1 to M5.
-  - **`faults.py`** simulates failures.
-  - **`gate.py`** blocks regressions in CI.
-  - **`cli.py`** provides the `ukvet-evals` command.
-- **`datasets/demo/` and `snapshots/demo/`** hold the **fake** practice companies. The real dataset (`v0.1`) doesn't exist yet. You create it on Day 3 with the `record` command.
-- **`baselines/demo.json`** is the saved score the CI gate compares against.
-- **`README.md` and `LABELLING.md`** explain how to use it all.
-
----
-2. Write `evals/README.md` with the labelling rules.
-3. Build the company list in a spreadsheet with 28 companies. Every tag in section 7.1 needs its minimum count.
-4. Split dev and test with a fixed hash, in code, so it can't drift. Save the result as `companies.jsonl`.
-
-**Note:** The whole dataset plan at `setup/dataset-plan.md`
-**Note:** Golden labels and flag labels(how to make them) `setup/GOLDEN-AND-FLAGS.md`
-
-Use Companies House search with a status filter to find the odd cases: dissolved, strike-off proposals, MVL and creditors' liquidation.
-
-## Days 3-4: snapshots and replay (3.4 and 3.5)
-1. Extend `record_fixtures.py` to record all 8 endpoints for each company. Store the `as_of` date, and keep the real-to-fake number map in git-ignored `data/raw/`.
-2. Run `anonymise.py`, then a leak check. It should grep for director names, birth dates and addresses and find none.
-3. Write `snapshot.py`. It serves the JSON through the real stack with `respx`, with the clock frozen at `as_of`, as in `offline_demo.py`.
-4. Check: your 10 manual companies must produce the same facts as your live reports.
-
-## Days 5-6: ground truth (3.6 and 3.7)
-1. Hand-verify 15 more companies in the browser, 5 key fields each, with the date. This is the slowest step. Start it early in the week, in small sittings.
-2. Write `oracle.py`. It must not import `ukvet_mcp` or `ukvet_agent`.
-3. Compare the oracle with the golden set. Every difference is either an oracle bug, a label error or a real product bug. Fix it and log it.
-4. Generate `items.jsonl` (at least 200 items, 15 or more per Q1 to Q9).
-
-## Day 7: first scores (3.8 and 3.11)
-1. Write the retrieval scorer for M1, with per-category tables and Wilson intervals.
-2. Add a unit test that breaks a mapper on purpose and proves the score drops.
-3. Write `run.py` and `report.py`. They should record the dataset version, git commit, model ID, `as_of`, seed and n.
-4. Run `uv run python -m ukvet_evals.run --split dev`. This is your first dev M1 number.
-
-## Day 8: flags and abstention (3.9 and 3.10)
-1. Label expected flags from the written definitions before you run the rules on those companies. Get a colleague to label 20% as a check.
-2. Score recall and precision. List every unexpected flag.
-3. Write `faults.py` (timeouts, 5xx, 404, empty results). Write 20+ abstention cases, each with the expected gap and risk level, then the scorer for M3.
-
-## Day 9: narrative scoring (3.12 and 3.13)
-1. Add a stricter claim check (names, dates, numbers) and an independent re-implementation of the citation checker.
-2. Run Haiku over the dataset with response caching, and record cost and time.
-3. If time allows, add the LLM judge from a different model family, and hand-judge 20 outputs. This is the first thing to cut.
----
-Day 9 is: have Haiku write the narratives for the dev companies once, save the answers, then score them. The LLM judge is optional and the first thing to cut, so I'd skip it.
-
-#### 1. Check `.env`
-It needs the same settings you used earlier:
-```
-LLM_PROVIDER=anthropic
-LLM_MODEL=claude-haiku-5-5
-LLM_API_KEY=<your key>
-```
-Cost should be pence: your earlier run of about 22 reports cost $0.01, and the dev split is 25 companies.
-
-#### 2. Record the answers (one paid run)
 ```powershell
-uv run ukvet-evals run --dataset v0.1 --split dev --llm record
+uv run ukvet-evals demo-build
+uv run ukvet-evals run --dataset demo
 ```
-- It sends one request per dev company and saves each answer under `evals\llm_cache\claude-haiku-5-5\`.
-- The table now includes M2 (hallucination), M4 (citation validity), `writer needed checker`, LLM errors, time and cost.
-- If you get LLM errors, check the key, the model name and your remaining balance.
 
-#### 3. Replay it for free
+**You should see:** a results table with metrics and no crash.
+**Done when:** the run finishes. 
+**If it goes wrong:** run `uv run pytest` and fix failures first. Do not continue with a broken harness.
+
+---
+
+### Step 2. Choose the companies
+
+**Why:** a test set of only healthy companies would score high and prove nothing. We need awkward cases (dissolved, in liquidation, brand new, many directors). The set is chosen **on purpose to cover 19 tags**, not at random.
+
+The minimum number of companies per tag:
+
+| Tag | Min | Look for | How to find |
+|---|---|---|---|
+| `large-plc` | 3 | Big listed company | Search a famous name |
+| `healthy-small` | 4 | Ordinary active small Ltd | Any ordinary company |
+| `under-1-year` | 3 | Incorporated < 1 year ago | Advanced search, incorporation date filter |
+| `1-to-2-years` | 2 | Incorporated 1 to 2 years ago | Same filter |
+| `dissolved` | 3 | Status dissolved | Advanced search, status |
+| `liquidation-mvl` | 2 | Liquidation, members' voluntary | Status liquidation; Insolvency tab |
+| `liquidation-creditors` | 2 | Liquidation, creditors' voluntary | Same |
+| `administration-or-receivership` | 2 | In administration or receivership | Status filter |
+| `strike-off-proposal` | 2 | "Active - Proposal to Strike Off" | Status filter |
+| `overdue-filings` | 3 | Red "overdue" accounts or confirmation statement | Overview page |
+| `charges-outstanding` | 2 | Outstanding charges | Charges tab |
+| `charges-all-satisfied` | 2 | All charges satisfied | Charges tab |
+| `corporate-psc` | 2 | PSC is another company | People tab |
+| `no-psc` | 2 | No PSC listed | People tab |
+| `llp-or-sc-or-ni` | 3 | One LLP (`OC`), one Scottish (`SC`), one NI (`NI`) | Number prefix |
+| `many-appointments-director` | 2 | Director with many other companies | Click an officer |
+| `corporate-officer` | 2 | A company acts as director/secretary | People tab |
+| `officer-changes-12m` | 3 | Directors joined or left this year | Officers tab |
+| `address-change-12m` | 2 | Registered office changed this year | Filing history |
+
+One company can carry several tags, so about 28 companies cover all of it (we ended with 48). Keep a spreadsheet so you do not record a company twice.
+
+**Done when:** you have a list of company numbers with tags. Company numbers have **8 characters including leading zeros** (`03977902`, not `3977902`).
+
+---
+
+### Step 3. Record the companies
+
+**Why:** this saves the frozen snapshots. It fetches about 25 API requests per company, anonymises people, replaces the real number with a fake alias, and writes a private mapping.
+
+Run once per group of companies that share tags:
+
 ```powershell
+# Large listed companies keep their real name: add --public with the same number
+uv run ukvet-evals record 00445790 --dataset v0.1 --public 00445790 --tags large-plc
+
+# Ordinary companies, several at once
+uv run ukvet-evals record 12056899 17016019 --dataset v0.1 --tags healthy-small
+
+# Several tags on one company: comma-separated, NO spaces
+uv run ukvet-evals record 17313434 --dataset v0.1 --tags under-1-year,no-psc
+```
+
+**You should see:** a line per company such as `03977902 -> 91000090 (c004) recorded`.
+**Done when:** every company on your list is recorded (check with Step 4).
+**If it goes wrong:**
+- `not found, skipped`: the number is wrong. Check leading zeros.
+- `Set CH_API_KEY`: see Setup.
+- Do not record the same company twice.
+
+---
+
+### Step 4. Validate, and back up the private mapping
+
+**Why:** `validate` counts companies per tag and runs the **leak check** (no real personal names in the committed files). The mapping file is the only link between aliases and real companies; lose it and you cannot tell which company is which.
+
+```powershell
+uv run ukvet-evals validate --dataset v0.1
+```
+
+**You should see:** `companies` going up, `tags_missing` shrinking toward `{}`.
+**Done when:** `tags_missing` is empty and there is no `LEAK` or `ERROR ... LEAK` line.
+**Then:** copy `data\raw\eval_mapping.json` somewhere safe and private. It is git-ignored; never commit it.
+**If you see LEAK:** stop. Do not commit. Find the file named in the message and fix the anonymisation first.
+
+---
+
+### Step 5. Fix the dev/test split (once)
+
+**Why:** if you could pick which companies are "test" after seeing scores, you would unconsciously tune to them. A salted hash decides the split, and the lock stops anyone changing it.
+
+```powershell
+uv run ukvet-evals choose-salt --dataset v0.1
+uv run ukvet-evals set-splits --dataset v0.1 --lock
+```
+
+**Done when:** each company has `dev` or `test` in `companies.jsonl` (we had 30 dev, 18 test).
+**Rule:** run this once, after all companies are recorded and before you have seen any score. New companies added later get their split from the same salt automatically.
+
+---
+
+### Step 6. Golden labels (your own website check)
+
+**Why:** the oracle is code I wrote. If it had the same bug as ukvet, the two would agree and M1 would prove nothing. Golden values come from **you reading the live website**, an independent source. Golden only checks the oracle; it is not scored itself.
+
+Full detail is in `evals/GOLDEN-AND-FLAGS.md`. The short version:
+
+**Option A, reuse the 10 companies already hand-checked on 21 Oct 2026** (what we did):
+
+```powershell
+# See which alias is which real company (output is PRIVATE, never commit or paste it)
+uv run python scripts/golden_sheet.py
+
+# Write the golden rows for the 10 checked companies
+uv run python scripts/golden_from_manual.py --dataset v0.1 --checker FO
+```
+
+If the script says a number is "not in your dataset", it prints the exact `record` command. Run it, then rerun the script. Companies you recorded with `--public` (c001 to c003) show their real number in `companies.jsonl`, so `golden_sheet.py` matching 36 of 39 at first is normal.
+
+**Option B, check more companies yourself:**
+
+```powershell
+uv run python scripts/golden_entry.py c004 c005 --dataset v0.1 --checker FO
+```
+
+Type what the **website** shows. Dates like `30 September 2027`, overdue badges `y`/`n`, `none` if nothing is shown, Enter to skip. The tool reveals the oracle value only after you typed yours, and saves **your** value. If it prints `DIFFERENT`, re-read the page: either you mistyped, the company changed since recording, or you found a real bug.
+
+**Done when:** `uv run ukvet-evals validate --dataset v0.1` shows `golden_companies` equal to the number you checked (10 in our reduced version; the full plan wants 25).
+**Honest limit:** with 10, write "10-company golden subset", never "verified on all 48". Do not lower the minimum in `validate` to hide it.
+
+---
+
+### Step 7. Build the answer key
+
+**Why:** this creates `items.jsonl` (432 items) by combining the oracle with your golden rows. Where golden and oracle disagree it prints a **conflict**, which is how you find errors.
+
+```powershell
+uv run ukvet-evals build-items --dataset v0.1
+```
+
+**You should see:** a count of items and possibly warnings. Warnings about a company being truncated (for example c031 hit the 100-item cap for officers and charges) are expected; skip golden for that company's Q3 and Q6.
+**For each conflict:**
+1. Re-read the website. A typo in your row is the commonest cause.
+2. If the company changed since recording, re-record it or drop that field.
+3. If you are sure of your value, open `evals/snapshots/v0.1/<number>.json` and find out why the oracle differs. That is a real finding for the report.
+
+**Done when:** no unexplained conflicts remain.
+
+---
+
+### Step 8. Flag labels
+
+**Why:** M5 needs "which red flags should this company have?". The labels must come from the written definitions in `evals/LABELLING.md`, **before** you look at what the rules produce, otherwise the check is circular.
+
+```powershell
+# Create one empty row per company (expected: null)
+uv run ukvet-evals label-template --dataset v0.1
+
+# Draft and review labels
+uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO
+```
+
+`flag_labeller.py` reads the raw snapshots and applies the written definitions with its own code (it imports nothing from ukvet). For each company it shows the facts and a draft. Press:
+
+- **Enter** accept the draft
+- **`none`** expect no flags
+- **`s`** skip
+- or type a list such as `status:high,charges:low` to replace the draft
+
+Useful options: `--auto` (accept every draft; weaker, see below), `--only c040 c041`, `--diff` (only companies whose saved labels differ from a new draft), `--note "reason"` (stored in the row's notes).
+
+While reviewing, check the definition table in `evals/LABELLING.md`. Examples: a members' voluntary liquidation is `status:medium`; a strike-off proposal is `strike_off:high`; a company under 1 year old is `age:medium`; appointments within 30 days of incorporation and **secretary changes** do not count towards `officer_turnover`.
+
+**Done when:** `validate` shows `flag_labelled` of 20 or more (we labelled all 48).
+**Honest limit:** labels are drafted by script and reviewed by one person. Say exactly that. Read at least every company that has several flags. A second labeller on about 20% of companies (filling `second_labeller_expected` without seeing your labels) would add an agreement figure; we did not.
+
+---
+
+### Step 9. Abstention and injection cases
+
+**Why:** M3 checks that when data is missing or the API fails, ukvet says "I can't tell" instead of guessing. We create the cases by deliberately breaking inputs (fault injection). The injection cases are seeded now and scored in Phase 4.
+
+```powershell
+uv run ukvet-evals gen-abstention --dataset v0.1
+uv run ukvet-evals seed-injection --dataset v0.1
+```
+
+`gen-abstention` writes **drafts**. Open `evals\datasets\v0.1\abstention.jsonl` and **read every expectation** (it prints "REVIEW every expectation"). A draft you did not read is not a test.
+
+**Done when:** at least 20 abstention cases and 15 injection cases exist (we had 39 and 15).
+
+---
+
+### Step 10. Strict validation
+
+**Why:** this is the checkpoint before the first score. `--strict` fails if any dataset minimum is not met, so you cannot start with a dataset that is too small.
+
+```powershell
+uv run ukvet-evals build-items --dataset v0.1
+uv run ukvet-evals validate --dataset v0.1 --strict
+```
+
+Minimums: 25 companies, 200 items, 15 per question, 25 golden companies, 20 flag companies, 20 abstention cases, 15 injection cases.
+
+**Expected end state:** `golden_companies` 10 (reduced) or 25 (full); `flag_labelled` 20 or more; remaining warnings only for truncated companies and the golden minimum if you stayed at 10; output ends with `OK`.
+**From here on, do not edit labels without a note.**
+
+---
+
+### Step 11. First run on the dev split
+
+**Why:** this is the first real measurement. It uses only the dev companies (test stays unseen) and template mode (no LLM), so it is free and fast.
+
+```powershell
+uv run ukvet-evals run --dataset v0.1 --split dev
+```
+
+**You should see:** a table of M1 to M5 with a verdict per metric.
+**Done when:** it runs. It does not have to be green. **A first run that fails is normal and useful.** Go to Step 13 for failures.
+
+---
+
+### Step 12. Record and replay the LLM answers
+
+**Why:** M2 and M4 measure text the model writes. Calling the model on every CI run would cost money and need a secret. So we call it **once**, save the answers keyed by a hash of the model and prompts, and **replay** them afterwards for free. A cache miss means the prompts changed, so the run exits with code 3.
+
+```powershell
+# Record once (needs your Anthropic key in .env; costs a few pence)
+uv run ukvet-evals run --dataset v0.1 --split dev --llm record --model claude-haiku-5-5
+
+# Replay as often as you like, free
 uv run ukvet-evals run --dataset v0.1 --split dev --llm replay --model claude-haiku-5-5
 ```
-- It should give the same numbers as step 2, with no API calls.
-- Exit code 3 means a cache miss ("re-record"). That happens if the facts or prompts changed since recording, and it is the intended safety check.
 
-#### 4. Commit the cache
-`evals\llm_cache\` is meant to be committed, because it is text about anonymised facts. Check it with a glance, since a cache that mentions a real person's name would be a leak. Open two or three files and confirm the names look fake.
+Recorded answers are stored in `evals/llm_cache/claude-haiku-5-5/` and are committed so CI can replay them. Record the other split's answers the same way when you reach Step 15.
 
-#### 5. Skip the judge (recommended)
-The judge needs a second model family, hand-labelling 20 claims and extra setup. M4's mechanical number is close to 100% by design, so skipping the judge means M4's semantic part is simply not measured. Say that in the report. If you want it later, set `JUDGE_PROVIDER`, `JUDGE_MODEL` and `JUDGE_API_KEY` and add `--judge`.
-
-#### What to send me
-Paste the table from step 2. I'm looking for:
-- how many claims were scored (n) and the M2 percentage with its interval. Remember 2% of about 250 claims is 5 claims, so one or two bad claims moves it a lot
-- how often the first attempt needed the production checker
-- any name errors that the stricter scorer caught but production's checker would miss (risk R15)
-
-Do this after your first no-LLM dev run, since the LLM run uses the same companies. If you haven't done that yet, run it first and paste that table too.
----
-
-## Day 10: the CI gate (3.14)
-1. Commit `baseline.json` from the dev run.
-2. Add the Tier 1 workflow: it replays all companies in template mode and fails on the thresholds in section 10.
-3. Prove the gate works. Open a PR that breaks a mapper and confirm it is blocked. Open one that changes nothing and confirm it passes.
+**Done when:** replay gives the same numbers as record, with no cache-miss exit.
 
 ---
-Day 10 is the CI gate. It stores today's dev scores as a baseline, and CI then blocks any change that makes them worse. We'll do Tier 1 only (free, template mode). Tier 2 (recorded LLM answers) should wait until the M4 miss is explained. Its gate demands M4 mechanical of exactly 100%, so it would fail on that one c033 claim every time.
 
-#### 1. Branch and baseline
+### Step 13. Error analysis (turn failures into fixes)
+
+**Why:** a failing metric is a lead, not an insult. Each failure has one of four causes, and the fix depends on which one:
+
+| Cause | Example from this project | Fix |
+|---|---|---|
+| Bug in ukvet | wrong value returned | fix the code, add a test |
+| Wrong label or oracle | label counted something the rule ignores | fix the label, **write why** |
+| Scorer false positive | claim restated a caveat but was counted unsupported (M4 99.6%) | fix the scorer, add a test, **write why** |
+| Definition and rule disagree | `officer_turnover` counted secretary changes in the labels but not in the rule | decide which is right, align them, **write why** |
+
+Helper for officer questions (prints roles and dates, no names):
+
 ```powershell
-git checkout -b phase-3-eval-gate
+uv run python scripts/officer_dates.py c032
+```
+
+After relabelling flags, use `--diff` so you only revisit companies whose labels changed:
+
+```powershell
+uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO --diff --note "secretary changes excluded (decision 43)"
+```
+
+**Rule:** never "fix" a result by quietly changing a label or the baseline. Every change after seeing dev results goes in the decision log and in the report's "Failures found on dev" table.
+**Done when:** all dev metrics meet their targets, and every change is explained in writing.
+
+---
+
+### Step 14. The CI gate (so it cannot get worse unnoticed)
+
+**Why:** a measurement nobody enforces is a one-off. The gate compares a new run to a saved baseline and fails the build if a metric drops. This is metric M12.
+
+Create the baseline from a clean, explained dev run:
+
+```powershell
 uv run ukvet-evals gate --dataset v0.1 --update-baseline
+```
+
+Check a later run against it:
+
+```powershell
 uv run ukvet-evals gate --dataset v0.1
 ```
-- The first command writes `evals\baselines\v0.1.json` from a dev run with no LLM.
-- The second should print `ukvet eval gate: PASS` with all changes `+0.0 pp`. If it fails right away, tell me. It would mean the run isn't deterministic.
-- Do **not** create an `-llm` baseline. The workflow skips the LLM check when that file is missing.
 
-#### 2. Point CI at the real dataset
-In `.github\workflows\evals.yml`, change:
-```yaml
-EVAL_DATASET: demo
-```
-to
-```yaml
-EVAL_DATASET: v0.1
-```
+The gate fails when: M1 overall drops by more than 1 percentage point; any question falls below the 80% floor; any new field failure appears; M3 drops by more than 2 points or a previously passing case fails; M5 recall drops by more than 2 points; M4 mechanical is below 100%; M2 rises by more than 0.5 points. The baseline ignores `created_at`, `perf` and `judge_rows`.
 
-#### 3. Commit the right things
-Commit:
-- `evals/datasets/v0.1/`
-- `evals/snapshots/v0.1/`
-- `evals/baselines/v0.1.json`
-- `evals/llm_cache/` (optional now, needed later for Tier 2)
-- `.github/workflows/evals.yml`
-- the `scripts/` helpers
+Exit codes: `0` ok, `1` regression or failed validation, `2` dataset drift, `3` replay miss.
 
-Never commit `data/raw/eval_mapping.json` or `evals/results/`. Check before committing:
+`.github/workflows/evals.yml` runs this on every pull request (job `gate`, Tier 1, no secrets). The manual job `record-llm` is for re-recording LLM answers. Tier 2 (recorded LLM gate) is designed but not enabled.
+
+**Prove the gate works** (required before ticking the "CI blocks regressions" box):
+1. Make a branch and deliberately break something (for example make a field mapper return the wrong value).
+2. Push and open a PR. CI must go red on the `gate` job.
+3. Close the PR without merging. Keep a screenshot or link as evidence.
+
+**Before pushing, run the same checks CI runs:**
+
 ```powershell
-git status
-git check-ignore -v data/raw/eval_mapping.json evals/results
+uv run ruff check .
+uv run ruff format --check .
+uv run mypy
+uv run pytest
 ```
-Both must be reported as ignored. Add a decision-log entry such as "Baseline v0.1 created from the first dev run; known issues: M4 (1 claim), M5 (2 officer_turnover cases)".
-
-#### 4. Push and open a pull request
-```powershell
-git push -u origin phase-3-eval-gate
-```
-Open a PR to `main`. In Actions, the **Evals** workflow should validate the dataset, run the gate, and post a results table as a PR comment. Green means CI works. If the push has to include a **tag or `main`** first, tell me.
-
-#### 5. Prove the gate works (the part reviewers like)
-**a. A change that must be blocked**
-1. Make a second branch, `git checkout -b test-gate-break`.
-2. Break a mapper on purpose. For example, in `packages\ukvet-mcp\src\ukvet_mcp\mappers.py` around line 71, change `date_of_creation=created` to `date_of_creation=None`. If that crashes instead of just giving wrong values, pick another field.
-3. Push it and open a PR. The Evals check should go **red** and list new field failures (M1 drop).
-4. Screenshot the PR comment for your write-up, then close the PR without merging and delete the branch.
-
-**b. A change that must pass**
-Make a branch with a harmless edit (a README line), push it and open a PR. Evals should be **green**. Delete it afterwards.
-
-#### 6. Make it required (optional but proper)
-In GitHub, go to Settings, then Branches, and add a rule for `main` that requires the Evals check before merging. Only then does it really block anything.
-
-#### Rules for the baseline
-Update it only in a PR that explains why, with a decision-log entry. Never update it just to turn a red build green.
 
 ---
 
-## Days 11-12: error analysis and baseline (3.15 and 3.16)
-1. Classify every dev failure as retrieval, mapper, rule, writing or label error. Fix the top causes test-first, on dev only.
-2. Run the final baseline once on dev and test. Don't change anything after seeing the test numbers.
-3. Write `docs/eval-report.md` with every metric against its target, including misses, causes and fixes. Fill the README results table and update R3, R12, R15 and R17.
+### Step 15. The final run, including the test split (once)
 
-## Rules to hold to throughout
-- One issue per day or less, as in your plan.
-- Commit after each step.
-- Never edit a label or the baseline to turn a result green without a log entry saying why.
-- Never commit `.env`, raw snapshots or real director names.
+**Why:** this is the one honest number. Dev results are optimistic because you tuned against them. Test companies were never used to fix anything.
+
+Only do this when everything is finished: all dev fixes done, labels final, scorer final.
+
+```powershell
+uv run ukvet-evals run --dataset v0.1 --split all --confirm-test-split "milestone: final baseline" --llm replay --model claude-haiku-5-5
+```
+
+The reason string is written to a log. Look at test **once**. If it shows a problem, you may fix it, but report that you did and do not claim the test split as unseen afterwards.
+**Done when:** you have the final metrics for all 48 companies with Wilson intervals. Record the git commit hash of this run.
+
+---
+
+### Step 16. Write the report and update the docs
+
+**Why:** numbers without limits are marketing. The report states what was measured, what was not, and what may be claimed.
+
+1. Copy the final results into `docs/eval-report.md`: results table (dev, test, all), failures found and fixes, "what 100% does and does not mean", "what this does not cover", the discipline section.
+2. Update the README results table with intervals and set sizes.
+3. Update the risk register (`docs/07-risks.md`) for R3, R7, R12, R15, R17, R18, R19.
+4. Append decisions to `docs/kickoff/decision-log.md` (for example: secretary changes excluded; scorer treats caveats as support; golden reduced to 10; test split looked at once).
+5. Tick `docs/PHASE-3-CHECKLIST.md`.
+6. Send the weekly update to AAII.
+
+---
+
+### Step 17. Exit checklist
+
+- [ ] ADR-009 and decision-log entries written
+- [ ] Dataset v0.1: at least 25 companies and 200 items (we have 48 and 432)
+- [ ] Golden set recorded (10 done, reduced on purpose, written down)
+- [ ] Dev/test split fixed; test run once
+- [ ] Scorers for M1 to M5 with unit tests
+- [ ] At least 20 abstention cases and 20 flag-labelled companies
+- [ ] 15 injection cases seeded
+- [ ] CI Tier 1 blocks regressions (shown with a deliberately broken PR)
+- [ ] Baseline published with misses and causes (`docs/eval-report.md`)
+- [ ] README results table and risks updated
+- [ ] Leak check passes; no keys or private files committed
+- [ ] Weekly update sent
+
+---
+
+## 8. Where results ended up (v0.1, 27 Oct 2026)
+
+48 companies (30 dev, 18 test), 432 items, writer `claude-haiku-5-5`.
+
+| Metric | Target | Result |
+|---|---|---|
+| M1 field accuracy | >= 90% | 1488/1488, interval [99.7%, 100%] |
+| M2 unsupported claims | < 2% | 0/421, interval up to 0.9% |
+| M3 abstention | >= 90% | 39/39, interval [91.0%, 100%] |
+| M4 citation validity (mechanical) | 100% | 421/421 |
+| M5 red-flag recall | >= 85% | 89/89 |
+| M7 latency | < 30 s | worst 5.9 s (20 live runs, Phase 2) |
+| M8 cost per report | < £0.05 | about £0.0004 |
+
+---
+
+## 9. Honest limits (always include these)
+
+- **100% means the set is easy, not that ukvet is perfect.** It did not find new retrieval bugs. A harder set would.
+- **M1 is agreement with an oracle that one person wrote**, checked against the website on 10 companies only.
+- **M5 labels** were drafted by a script and reviewed by one person; no second labeller. It measures consistency with the written definitions, not independent expert judgement.
+- **M3 cases** come from a dependency table, so they test that the rules follow the table.
+- **M2 and M4 are mechanical** (ids, dates, numbers, names, forbidden wording). Whether a cited fact truly supports a sentence, and whether wording is fair, was not measured (no judge). M6 injection is not measured.
+- **Frozen snapshots, one writer model.** Live API changes and other models are not covered.
+
+**May claim:** "ukvet matched an independent oracle on 1488 of 1488 fields (99.7% to 100%, Wilson 95%) on a versioned 48-company set; no model-written claim among 421 was unsupported by a mechanical check; all 39 fault-injection cases degraded as specified; 89 of 89 expected red flags were raised; ground truth cross-checked by hand for 10 companies; CI blocks regressions."
+
+**Do not claim:** "100% accurate", accuracy against reality beyond the 10 checked companies, a hallucination rate for sentence meaning, fair wording, or injection resistance.
+
+---
+
+## 10. Troubleshooting
+
+| Symptom | Cause and fix |
+|---|---|
+| `Set CH_API_KEY` | `.env` missing or not in the repo root |
+| `record`: not found, skipped | Wrong company number; keep all 8 characters and leading zeros |
+| `validate` shows `LEAK` | Stop, do not commit; fix anonymisation for the named file |
+| `tags_missing` not empty | Record more companies with those tags |
+| `golden_companies` stuck at 1 | The other companies are not recorded yet; run the printed `record` commands, rerun `golden_from_manual.py`, then `build-items` |
+| `golden_sheet.py` matches fewer than all | `--public` companies show their real number in `companies.jsonl`; this is normal |
+| Conflict lines from `build-items` | See Step 7 |
+| `flag_labeller.py`: snapshot missing | Recording did not finish for that company; record it again |
+| Splits are locked | Expected after `set-splits --lock` |
+| `run` exits with code 3 | Replay miss: prompts or model changed since recording; re-record (Step 12) |
+| `run` exits with code 2 | Dataset drift: snapshots or items changed; rebuild items, review the change |
+| `--split all` refuses to run | Pass `--confirm-test-split "reason"`; this is intentional |
+| CI ruff or mypy fails | Run `uv run ruff check .`, `uv run ruff format --check .`, `uv run mypy` locally and fix before pushing |
+| `gate` fails | Read which metric dropped. Real regression: fix the code. Intended change: re-baseline with a decision-log entry, never silently |
+
+---
+
+## 11. The order in one glance
+
+1. `uv sync`, `pytest`, demo run
+2. Choose companies and tags
+3. `record`
+4. `validate` (leaks), back up the mapping
+5. `choose-salt`, `set-splits --lock`
+6. Golden labels
+7. `build-items`, resolve conflicts
+8. `label-template`, `flag_labeller.py`
+9. `gen-abstention`, `seed-injection`
+10. `validate --strict`
+11. `run --split dev`
+12. LLM `record` then `replay`
+13. Error analysis
+14. `gate --update-baseline`, prove it with a broken PR
+15. Final `run --split all --confirm-test-split "..."` (once)
+16. Report and docs
+17. Checklist
