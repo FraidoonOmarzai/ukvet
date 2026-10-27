@@ -6,8 +6,8 @@ snapshots directly, so the labels do not come from the rules they grade. It is s
 script from the written definitions and reviewed by one person".
 
 Usage (repo root):
-    uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO          # review each company
-    uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO --auto   # accept every draft
+    uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO         # review each
+    uv run python scripts/flag_labeller.py --dataset v0.1 --labeller FO --auto  # accept all
 At each company: Enter = accept, `none` = expect no flags, `s` = skip, or type flags such as
 `status:high,charges:low` to replace the draft. Do NOT run the evals until this is finished.
 """
@@ -134,15 +134,21 @@ def draft(snap: dict[str, Any]) -> tuple[list[tuple[str, str]], dict[str, Any]]:
     elif failed_n == 1 or dissolved_n >= 5:
         out.append(("network", "low"))
 
-    # officer turnover (appointments within 30 days of incorporation do not count)
+    # officer turnover. Appointments within 30 days of incorporation do not count, and neither do
+    # changes of company secretary (routine administration; decision recorded in the decision log).
+    def counts(o: dict[str, Any]) -> bool:
+        return "secretary" not in str(o.get("officer_role") or "")
+
     def formation(o: dict[str, Any]) -> bool:
         a = d(o.get("appointed_on"))
         return bool(created and a and a <= created + timedelta(days=30))
 
     appointed = sum(
-        1 for o in officers if (o.get("appointed_on") or "") >= start and not formation(o)
+        1
+        for o in officers
+        if counts(o) and (o.get("appointed_on") or "") >= start and not formation(o)
     )
-    resigned = sum(1 for o in officers if (o.get("resigned_on") or "") >= start)
+    resigned = sum(1 for o in officers if counts(o) and (o.get("resigned_on") or "") >= start)
     turnover = appointed + resigned
     if turnover >= 3:
         out.append(("officer_turnover", "medium"))
@@ -194,6 +200,10 @@ def main() -> int:
     ap.add_argument("--labeller", default="")
     ap.add_argument("--auto", action="store_true", help="accept every draft without asking")
     ap.add_argument("--only", nargs="*", help="limit to these aliases")
+    ap.add_argument(
+        "--diff", action="store_true", help="only show companies whose saved labels differ"
+    )
+    ap.add_argument("--note", default="", help="text appended to notes of every row written")
     args = ap.parse_args()
 
     ds = Path(f"evals/datasets/{args.dataset}")
@@ -220,6 +230,13 @@ def main() -> int:
             continue
         proposed, facts = draft(json.loads(snap_path.read_text(encoding="utf-8")))
         shown = ", ".join(f"{i}:{s}" for i, s in proposed) or "(no flags)"
+        if args.diff:
+            saved = rows.get(alias, {}).get("expected")
+            saved_ids = sorted((e["id"], e.get("severity")) for e in saved or [])
+            if saved is not None and saved_ids == sorted(proposed):
+                continue
+            was = "unlabelled" if saved is None else (str(saved_ids) or "none")
+            print(f"{alias}: saved {was} -> draft {shown}")
         print(f"\n{alias} {','.join(c.get('tags', []))}\n  facts: {facts}\n  draft: {shown}")
         expected: list[tuple[str, str | None]] | None = list(proposed)
         note = "drafted by scripts/flag_labeller.py from LABELLING.md definitions"
@@ -240,6 +257,8 @@ def main() -> int:
                     break
         if expected is None:
             continue
+        if args.note:
+            note += "; " + args.note
         old = rows.get(alias, {})
         rows[alias] = {
             "company": alias,

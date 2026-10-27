@@ -77,7 +77,7 @@ def _scalars(value: Any) -> list[str]:
 
 
 def _support_text(fact: Fact) -> str:
-    return " ".join([fact.statement, *_scalars(fact.value)])
+    return " ".join([fact.statement, *fact.caveats, *_scalars(fact.value)])
 
 
 def mechanical_claim_errors(text: str, fact_ids: list[str], facts: list[Fact]) -> list[str]:

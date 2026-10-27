@@ -193,3 +193,17 @@ def test_expected_risk_rule() -> None:
     assert expected_risk(report(gaps=gaps3, flags=[flag("status", "high")])) == "high"
     assert expected_risk(report(flags=[flag("age", "medium")])) == "medium"
     assert expected_risk(report()) == "low"
+
+
+def test_restating_a_caveat_is_supported_but_inventing_a_name_is_not() -> None:
+    f = fact("Q8.network", "Across 2 directors, 18 other companies were found", other=18)
+    f.caveats.append(
+        "Appointments are matched by officer ID; the same person can have several IDs."
+    )
+    ok = "The same person can have several IDs, so this may be incomplete."
+    assert mechanical_claim_errors(ok, ["Q8.network"], [f]) == []
+    bad = "Across 2 directors, 18 other companies were found, including Zorbex."
+    assert any("Zorbex" in e for e in mechanical_claim_errors(bad, ["Q8.network"], [f]))
+    # without the caveat the same sentence is rejected: the caveat is what supports it
+    g = fact("Q8.network", "Across 2 directors, 18 other companies were found", other=18)
+    assert any("IDs" in e for e in mechanical_claim_errors(ok, ["Q8.network"], [g]))

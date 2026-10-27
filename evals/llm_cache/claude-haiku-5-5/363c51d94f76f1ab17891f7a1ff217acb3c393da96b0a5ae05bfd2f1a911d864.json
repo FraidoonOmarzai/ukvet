@@ -1,0 +1,72 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 25 October 2018 and is 8.0 years old."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "One insolvency case is on record, with the status 'in administration' and administration started on 20 March 2024."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts are overdue; they were last made up to 31 October 2022 and the next accounts were due 30 September 2024."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is overdue; it was last made up to 24 October 2023 and the next one was due 7 November 2024."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 2 current directors: PERSON 314 (appointed 2 July 2021) and PERSON 315 (appointed 25 October 2018), with no other officers."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 1445, a company holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "PERSON 314 has 11 other appointments on record: 8 dissolved, 2 liquidation and 1 active; across the 2 current directors, 11 other companies were found, and the search may be incomplete as appointments are matched by officer ID."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No outstanding charges are registered; 1 charge is registered and it has been satisfied."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "One registered office address change was filed on 30 December 2025, and no officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 429 (91000430) has status 'administration', with administration started on 20 March 2024, and its accounts and confirmation statement are overdue."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

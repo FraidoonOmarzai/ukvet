@@ -1,0 +1,60 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age",
+     "Q1.status"
+    ],
+    "text": "The company was incorporated on 6 November 2017 and ceased on 16 April 2019, at an age of 1.4 years (526 days)."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The register records one current officer, a director, PERSON 341, appointed on 6 November 2017."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts overdue status is unknown, and no next due date or last made-up date is recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement overdue status is unknown, and no next due date or last made-up date is recorded."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "No current person with significant control is on record, although this does not prove the company has no owner."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "PERSON 341 has no other appointments on record, and no other companies were found across the one current director checked."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 459 (91000460) is dissolved, having ceased on 16 April 2019, and the records hold no insolvency record or registered charges."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

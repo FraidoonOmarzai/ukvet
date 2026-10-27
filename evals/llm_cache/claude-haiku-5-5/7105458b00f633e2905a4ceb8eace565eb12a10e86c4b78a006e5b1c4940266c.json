@@ -1,0 +1,65 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "The company has no insolvency record held by Companies House."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue; the next accounts are due 31 December 2027, and the accounts were last made up to 31 March 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue; it was last made up to 11 November 2025 and the next is due 25 November 2026."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 9 current officers, comprising 8 directors and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025, 3 officer appointments and 8 resignations have been filed, including the appointment of PERSON 665 on 1 June 2026 and the resignations of several directors on 20 July 2026."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "The company has 4 charges registered, of which 2 are outstanding and 2 are satisfied."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "The company has one current person with significant control, CORPORATE CONTROLLER 2850, which holds 75 to 100 percent of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 5 current directors checked, 40 other companies were found, including 1 in administration, and directors' links to that company are noted as a low-level red flag."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 739 (91000740) is an active company incorporated on 18 February 2015, with accounts and confirmation statement not overdue and no insolvency record held."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

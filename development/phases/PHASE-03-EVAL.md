@@ -547,7 +547,6 @@ Update it only in a PR that explains why, with a decision-log entry. Never updat
 1. Classify every dev failure as retrieval, mapper, rule, writing or label error. Fix the top causes test-first, on dev only.
 2. Run the final baseline once on dev and test. Don't change anything after seeing the test numbers.
 3. Write `docs/eval-report.md` with every metric against its target, including misses, causes and fixes. Fill the README results table and update R3, R12, R15 and R17.
-4. Tick the section 12 checklist, push, and send your weekly update to AAII.
 
 ## Rules to hold to throughout
 - One issue per day or less, as in your plan.

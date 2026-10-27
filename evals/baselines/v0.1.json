@@ -486,7 +486,7 @@
     "found": 3
    },
    "officer_turnover": {
-    "expected": 4,
+    "expected": 3,
     "found": 3
    },
    "status": {
@@ -499,15 +499,7 @@
    }
   },
   "labelled_companies": 30,
-  "missed": [
-   {
-    "company": "c032",
-    "flag": "officer_turnover",
-    "tags": [
-     "many-appointments-director"
-    ]
-   }
-  ],
+  "missed": [],
   "precision": {
    "ci95": [
     0.9347,
@@ -519,12 +511,12 @@
   },
   "recall": {
    "ci95": [
-    0.9055,
-    0.9968
+    0.9347,
+    1.0
    ],
    "k": 55,
-   "n": 56,
-   "rate": 0.9821
+   "n": 55,
+   "rate": 1.0
   },
   "second_labeller": {
    "agreement": {
@@ -538,21 +530,14 @@
   },
   "severity_agreement": {
    "ci95": [
-    0.9039,
-    0.9968
+    0.9347,
+    1.0
    ],
-   "k": 54,
+   "k": 55,
    "n": 55,
-   "rate": 0.9818
+   "rate": 1.0
   },
-  "severity_mismatch": [
-   {
-    "company": "c035",
-    "expected": "medium",
-    "flag": "officer_turnover",
-    "got": "low"
-   }
-  ],
+  "severity_mismatch": [],
   "unexpected": [],
   "unlabelled_companies": 0
  },
@@ -560,7 +545,7 @@
   "companies": 30,
   "dataset": "v0.1",
   "dataset_version": "v0.1",
-  "git_commit": "2fc23d8",
+  "git_commit": "80d8e0f",
   "items": 270,
   "judge": null,
   "llm": {

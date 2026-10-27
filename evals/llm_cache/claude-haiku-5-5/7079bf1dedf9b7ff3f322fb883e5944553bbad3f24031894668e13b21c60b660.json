@@ -1,0 +1,72 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue; they were last made up to 31 December 2025 and the next accounts are due 30 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue; it was last made up to 23 March 2026 and the next is due 6 April 2027."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025, three officers were appointed (PERSON 581, PERSON 582 and PERSON 585, each on 22 September 2026) and one director, PERSON 589, resigned on 20 November 2025."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has 5 current directors: PERSON 581 and PERSON 582 and PERSON 585 (all appointed 22 September 2026), PERSON 583 (appointed 31 December 2015) and PERSON 584 (appointed 11 January 2019)."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "Three charges are outstanding, 28 are satisfied and none are part-satisfied, out of 31 registered in total."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One person with significant control is recorded: PERSON 592, an individual holding 25 to 50 percent of shares."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 5 current directors, 57 other companies were found, of which 34 are active and 23 are dissolved."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes"
+    ],
+    "text": "No registered office address changes were filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 532 (91000533) is an active company incorporated on 27 October 2014 with no insolvency record, accounts and confirmation statement not overdue, and 3 outstanding charges."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

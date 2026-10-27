@@ -224,3 +224,6 @@ data/*
 report.txt
 
 evals/results/*
+!evals/results/.gitkeep
+!evals/results/TEST_SPLIT_LOG.md
+!evals/results/milestone-*/

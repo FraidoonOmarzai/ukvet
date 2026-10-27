@@ -1,0 +1,66 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 22 June 2022 and is 4.3 years old."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue; they were last made up to 31 March 2025 and the next accounts are due 31 December 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue; it was last made up to 4 September 2026 and the next is due 18 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 2 current officers, both directors: PERSON 731 and PERSON 732, each appointed on 22 June 2022."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "There are 3 current persons with significant control: CORPORATE CONTROLLER 3020, PERSON 735 and PERSON 736, each recorded with 25 to 50 percent ownership of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "3 charges are registered and outstanding, with none satisfied or part-satisfied."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes",
+     "Q9.address_changes"
+    ],
+    "text": "Since 26 October 2025, PERSON 733 resigned as a director on 3 September 2026 and no registered office address changes were filed."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 786 (91000788) is an active company with no insolvency record, accounts and confirmation statement not overdue, and 3 outstanding charges registered."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}
