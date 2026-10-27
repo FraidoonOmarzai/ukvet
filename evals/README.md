@@ -147,3 +147,28 @@ from ukvet_evals.run import RunOptions, evaluate
 res = asyncio.run(evaluate(RunOptions(root=Path("."), dataset="v0.1", split="dev")))
 res["m1"]["by_question"]["Q4"]["fields"]  # {"k": 36, "n": 36, "rate": 1.0, "ci95": [...]}
 ```
+---
+---
+
+## Results (Phase 3)
+ 
+Dataset v0.1: 48 companies, 432 items, writer model `claude-haiku-5-5`, run on 27 Oct 2026. Intervals are Wilson 95%.
+ 
+| Metric                                      | Target        | Result (95% interval)       | Size                  |
+| ------------------------------------------- | ------------- | --------------------------- | --------------------- |
+| M1 field accuracy vs independent oracle     | >= 90%        | 100.0% [99.7%, 100.0%]      | 1488 fields           |
+| M2 unsupported claims (mechanical)          | < 2%          | 0.0% [0.0%, 0.9%]           | 421 claims            |
+| M3 abstention under fault injection         | >= 90%        | 100.0% [91.0%, 100.0%]     | 39 cases              |
+| M4 citation validity (mechanical)           | 100%          | 100.0% [99.1%, 100.0%]     | 421 claims            |
+| M5 red-flag recall                          | >= 85%        | 100.0% [95.9%, 100.0%]     | 89 flags              |
+| M7 latency, worst of 20 live runs (Phase 2) | < 30 s        | 5.9 s                       | 10 companies          |
+| M8 cost per report (Phase 2)                | < £0.05       | about £0.0004               |                       |
+ 
+**Read these honestly.** 100% shows the set is easy, not that ukvet is perfect.
+ 
+- Ground truth was cross-checked by hand against the live website for **10 companies only**.
+- Flag labels were drafted by script from written definitions and reviewed by one person (no second labeller).
+- M2 and M4 are mechanical checks. Whether a cited fact truly supports a sentence, and whether wording is fair, was not measured.
+- M6 prompt-injection resistance is not measured yet (15 cases are seeded for Phase 4).
+- Results use frozen snapshots and one writer model.
+Full report: `docs/eval-report.md`. How the evaluation was built, step by step: `development/phases/PHASE-3-EVAL.md`.

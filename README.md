@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 3 (evaluation) in progress.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested offline. A first manual check of 10 real companies found no errors in about 75 values; this is a spot check, not an accuracy figure. The evaluation harness is in [`evals/`](evals/README.md); the measured results will be published in [docs/eval-report.md](docs/eval-report.md) once the dataset is complete.
+> **Status: Phase 3 (evaluation) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI. Results, limits and what may be claimed are in [docs/eval-report.md](docs/eval-report.md). Next: Phase 4 (Langfuse tracing, prompt-injection evaluation).
 
 ## What it does
 
@@ -30,35 +30,44 @@ Every fact is cited to the official record. When data is missing, ukvet says so 
 | ------------- | ---------------------------------------------------------------------------- |
 | `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client       |
 | `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                  |
-| Evals         | 200+ item benchmark; accuracy, hallucination, citation validity; gated in CI |
+| Evals         | 432-item benchmark on 48 frozen, anonymised companies; gated in CI ([`evals/`](evals/README.md)) |
 | Observability | Langfuse tracing of cost, latency and tool calls                             |
 
 Architecture: [docs/08-architecture.md](docs/08-architecture.md)
 
 ## Development
 
-Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
-
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/ukvet.git
+Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). Commands below are shown for PowerShell; on Linux or macOS the same `uv run ...` commands work (a `Makefile` is provided as a shortcut where `make` is available).
+ 
+```powershell
+git clone https://github.com/fraidoonomarzai/ukvet.git
 cd ukvet
-cp .env.example .env      # add your Companies House API key
-make install              # dependencies + git hooks
-make check                # lint, type check, tests
-make notebook             # API exploration notebook
+copy .env.example .env                 # add your Companies House API key
+uv sync --all-groups --all-packages    # install dependencies
+uv run ruff check .                    # lint
+uv run ruff format --check .           # formatting
+uv run mypy                            # type check
+uv run pytest                          # tests
 ```
-
+ 
 ### Run it
-
-```bash
+ 
+```powershell
 # .env: CH_API_KEY=...   (optional: LLM_PROVIDER / LLM_MODEL / LLM_API_KEY, see .env.example)
-make api                                   # API on http://localhost:8000/docs
-make ui                                    # Streamlit UI on http://localhost:8501
-uv run ukvet-check --full 00445790         # terminal, no UI
-docker compose up --build                  # API + UI in Docker
+uv run ukvet-check --full 00445790     # terminal, no UI
+docker compose up --build              # API (http://localhost:8000/docs) + UI (http://localhost:8501)
 ```
-
+ 
 With no `LLM_PROVIDER` set, reports use a template narrative and cost nothing. With one set, the LLM writes the wording and every sentence must pass the citation check, or the template is used instead.
+ 
+### Run the evaluation
+ 
+```powershell
+uv run ukvet-evals demo-build                      # synthetic demo set, proves the harness works
+uv run ukvet-evals run --dataset demo
+uv run ukvet-evals run --dataset v0.1 --split dev  # real set, dev split, free (template mode)
+uv run ukvet-evals gate --dataset v0.1             # compare with the baseline; fails if worse
+```
 
 ## Project documents
 
