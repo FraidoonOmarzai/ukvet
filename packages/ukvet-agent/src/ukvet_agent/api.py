@@ -23,6 +23,7 @@ from ukvet_agent.llm import LlmSettings, build_writer
 from ukvet_agent.mcp_client import McpToolClient
 from ukvet_agent.schemas import NeedsSelection, Report
 from ukvet_agent.settings import AgentSettings
+from ukvet_agent.tracing import flush_tracer
 
 log = logging.getLogger("ukvet_agent.api")
 
@@ -77,6 +78,7 @@ def create_app(deps_factory: DepsFactory = default_deps) -> FastAPI:
                 semaphore=asyncio.Semaphore(deps.settings.max_concurrent_reports),
             )
             yield
+        flush_tracer()
 
     app = FastAPI(
         title="ukvet",

@@ -19,7 +19,9 @@ from ukvet_agent.nodes.reporter import report_node
 from ukvet_agent.nodes.researcher import research_node
 from ukvet_agent.nodes.verifier import verify_node
 from ukvet_agent.schemas import Fact, Gap, NeedsSelection, Report
+from ukvet_agent import usage as usage_mod
 from ukvet_agent.settings import AgentSettings
+from ukvet_agent.tracing import TracedTools, get_tracer
 
 
 class AgentState(TypedDict, total=False):
@@ -62,7 +64,8 @@ def _timed(name: str, fn: NodeFn) -> NodeFn:
 
     async def wrapper(state: AgentState) -> dict[str, Any]:
         start = time.perf_counter()
-        update = await fn(state)
+        with get_tracer().node(name):
+            update = await fn(state)
         elapsed = round((time.perf_counter() - start) * 1000)
         timings = dict(state.get("timings_ms") or {})
         timings[name] = timings.get(name, 0) + elapsed
@@ -72,11 +75,13 @@ def _timed(name: str, fn: NodeFn) -> NodeFn:
 
 
 def build_graph(deps: Deps) -> Any:
+    tools = TracedTools(deps.tools)  # counts every call (M9) and opens a span when tracing is on
+
     async def plan(state: AgentState) -> dict[str, Any]:
-        return await plan_node(dict(state), deps.tools)
+        return await plan_node(dict(state), tools)
 
     async def research(state: AgentState) -> dict[str, Any]:
-        return await research_node(dict(state), deps.tools, deps.settings, deps.today())
+        return await research_node(dict(state), tools, deps.settings, deps.today())
 
     async def verify(state: AgentState) -> dict[str, Any]:
         return verify_node(dict(state), deps.settings, deps.today())
@@ -108,10 +113,16 @@ def build_graph(deps: Deps) -> Any:
 async def run_report(graph: Any, request: str) -> Report | NeedsSelection:
     """Run one request through the graph and return the typed result."""
     start = time.perf_counter()
-    final: AgentState = await graph.ainvoke({"request": request})
+    recorder, token = usage_mod.start()
+    try:
+        with get_tracer().report(request):
+            final: AgentState = await graph.ainvoke({"request": request})
+    finally:
+        usage_mod.stop(token)
     result = final["result"]
     if isinstance(result, Report):
         timings = dict(final.get("timings_ms") or {})
         timings["total"] = round((time.perf_counter() - start) * 1000)
         result.timings_ms = timings
+        result.usage = recorder.snapshot()
     return result

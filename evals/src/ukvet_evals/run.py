@@ -8,6 +8,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Literal
 
+from ukvet_agent.guardrails import check_report
 from ukvet_agent.llm import LlmSettings, NarrativeWriter, build_writer
 from ukvet_agent.mcp_client import ToolClient
 from ukvet_agent.schemas import Report
@@ -110,6 +111,7 @@ async def evaluate(options: RunOptions) -> dict[str, Any]:
     harness = ReplayHarness({c.company_number: snaps[c.company_number] for c in companies})
     judge_rows: list[dict[str, Any]] = []
     cases: list[CaseResult] = []
+    guardrail_problems: list[dict[str, str]] = []
 
     async with harness.open():
         for c in companies:
@@ -118,6 +120,7 @@ async def evaluate(options: RunOptions) -> dict[str, Any]:
             totals_ms.append(report.timings_ms.get("total", 0))
             score_report(report, [i for i in items if i.company == c.id], retrieval)
             score_narrative(report, narrative, c.id)
+            guardrail_problems += [{"company": c.id, "problem": p} for p in check_report(report)]
             label = next((f for f in ds.flags if f.company == c.id), None)
             if label is not None:
                 score_flags(report, label, c.tags, flags)
@@ -176,6 +179,7 @@ async def evaluate(options: RunOptions) -> dict[str, Any]:
         "m5": flags.to_dict(),
         "narrative": narrative.to_dict(),
         "judge_rows": judge_rows,
+        "guardrails": {"reports": len(reports), "violations": guardrail_problems},
         "perf": {
             "reports": len(totals_ms),
             "median_ms": int(statistics.median(totals_ms)) if totals_ms else None,

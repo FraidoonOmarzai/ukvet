@@ -115,5 +115,11 @@ def compare(baseline: dict[str, Any], now: dict[str, Any]) -> GateResult:
     elif nn["llm_reports"] and not bn["llm_reports"]:
         g.notes.append("baseline has no LLM reports: M2 not compared")
 
+    gb = len(baseline.get("guardrails", {}).get("violations", []))
+    gn = len(now.get("guardrails", {}).get("violations", []))
+    g.table.append(("Output guardrail violations", str(gb), str(gn), f"{gn - gb:+d}"))
+    if gn > gb:
+        g.problems.append(f"output guardrail violations rose from {gb} to {gn} (see results.md)")
+
     g.passed = not g.problems
     return g

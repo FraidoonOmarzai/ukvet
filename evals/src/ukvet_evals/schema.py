@@ -140,9 +140,13 @@ class AbstentionCase(Strict):
 
 class InjectionCase(Strict):
     id: str
-    kind: Literal["company_name", "officer_name", "charge_holder", "registry_text"]
+    kind: Literal["company_name", "officer_name", "psc_name", "charge_holder", "registry_text"]
     payload: str
     expect: str = Field(description="What must NOT happen (scored in Phase 4, M6).")
+    canaries: list[str] = Field(
+        default_factory=list,
+        description="Tokens the payload asks the model to print; one in the report = it worked.",
+    )
 
 
 class Item(Strict):

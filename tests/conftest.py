@@ -82,3 +82,13 @@ def _isolate_llm_env(monkeypatch: pytest.MonkeyPatch, request: pytest.FixtureReq
         "LLM_TIMEOUT_SECONDS",
     ):
         monkeypatch.delenv(name, raising=False)
+
+
+@pytest.fixture(autouse=True)
+def no_real_tracing() -> Iterator[None]:
+    """A developer's .env with LANGFUSE keys must never make a test talk to Langfuse."""
+    from ukvet_agent.tracing import NoopTracer, set_tracer
+
+    set_tracer(NoopTracer())
+    yield
+    set_tracer(None)
