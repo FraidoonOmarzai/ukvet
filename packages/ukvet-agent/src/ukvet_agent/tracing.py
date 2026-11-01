@@ -100,6 +100,18 @@ def _mask_everything(*, data: Any, **_: Any) -> str:
     return "[redacted]"
 
 
+# Third-party OpenTelemetry instrumentors (for example the Anthropic one) record the same LLM call
+# a second time, with the prompt text, and `mask` does not apply to their spans. We trace the LLM
+# call ourselves (LangChain handler), so ONLY spans made by the Langfuse SDK are exported: no
+# double count, no unmasked prompt.
+_SDK_SCOPE = "langfuse-sdk"
+
+
+def _export_span(span: Any) -> bool:
+    scope = getattr(getattr(span, "instrumentation_scope", None), "name", "") or ""
+    return bool(scope == _SDK_SCOPE)
+
+
 class LangfuseTracer:
     enabled = True
 
@@ -112,6 +124,7 @@ class LangfuseTracer:
         }
         if settings.host:
             kwargs["base_url"] = settings.host
+        kwargs["should_export_span"] = _export_span
         if settings.content == "redacted":
             kwargs["mask"] = _mask_everything
         self._client = Langfuse(**kwargs)

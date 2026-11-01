@@ -261,6 +261,22 @@ Open the trace in Langfuse. Check:
 
 4. Also record the per-node split (where the time goes) and how often the LLM step fell back to the template (Phase 2 noted this as a metric to watch).
 
+---
+**Steps:**
+1. Put 20 to 48 real company numbers in `numbers.txt`, one per line.
+2. Set `UKVET_PRICE_IN_GBP_PER_MTOK` and `UKVET_PRICE_OUT_GBP_PER_MTOK` in `.env`, so M8 gets a cost in pounds.
+3. Run:
+   ```powershell
+   uv run python scripts/phase4_metrics.py --file numbers.txt
+   ```
+
+It writes `evals/results/phase4/metrics.md`. The table has:
+- **M7:** p50, p95 and worst latency against the 30 s target.
+- **M8:** mean cost per report against £0.05.
+- **M9:** tool calls per report, as a baseline only.
+- **Extras:** time per node, retries, dropped claims, and how many reports fell back to the template.
+---
+
 **Done when:** the table exists with the sample size next to every number. State the number of runs; p95 of 20 runs is weak, say so.
 
 ---

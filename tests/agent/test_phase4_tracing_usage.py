@@ -251,3 +251,30 @@ async def test_tracing_failures_never_break_a_report(
         )
     assert isinstance(result, Report)
     tracing.flush_tracer()  # must not raise
+
+
+def test_foreign_instrumentation_spans_are_not_exported(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Fixes a double-counted LLM call whose prompt text bypassed the redaction mask."""
+    langfuse = pytest.importorskip("langfuse")
+    seen: dict[str, Any] = {}
+
+    class FakeLangfuse:
+        def __init__(self, **kwargs: Any) -> None:
+            seen.update(kwargs)
+
+    monkeypatch.setattr(langfuse, "Langfuse", FakeLangfuse)
+    build_tracer(TraceSettings(public_key="pk", secret_key="sk", _env_file=None))  # type: ignore[arg-type,call-arg]
+
+    class Scope:
+        def __init__(self, name: str) -> None:
+            self.name = name
+
+    class Span:
+        def __init__(self, name: str) -> None:
+            self.instrumentation_scope = Scope(name)
+
+    keep = seen["should_export_span"]
+    assert not keep(Span("opentelemetry.instrumentation.anthropic"))
+    assert not keep(Span("openinference.instrumentation.langchain"))
+    assert not keep(Span("anthropic.something.new"))  # any unknown instrumentor is dropped
+    assert keep(Span("langfuse-sdk"))
