@@ -15,6 +15,7 @@ statement is fair; Phase 3's evals measure those.
 import re
 from dataclasses import dataclass
 
+from ukvet_agent.guardrails import ADVICE, VERDICT
 from ukvet_agent.schemas import Claim, Fact
 from ukvet_agent.text import extract_checkables
 
@@ -55,6 +56,8 @@ def check_claim(claim: Claim, facts: dict[str, Fact]) -> str | None:
         return f"cites unknown fact id(s) {', '.join(unknown)}"
     if _FORBIDDEN.search(text):
         return "uses wording that implies wrongdoing"
+    if ADVICE.search(text) or VERDICT.search(text):
+        return "gives advice or states a risk verdict"
 
     cited_dates: set[str] = set()
     cited_numbers: set[str] = set()

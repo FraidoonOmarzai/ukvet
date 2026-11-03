@@ -297,6 +297,18 @@ def assessment_text(level: RiskLevel, flags: list[RedFlag], gaps: list[Gap]) -> 
 
 # Behaviour changes. Apply only after you have measured M6 "before" (Step 9 of the guide).
 STAGE2: list[Edit] = [
+    # ---- sanitiser: also strip C1 controls, bidi overrides, zero-width characters ---------------
+    Edit(
+        f"{AGENT}/text.py",
+        '_CONTROL = re.compile(r"[\\x00-\\x1f\\x7f]")',
+        '_CONTROL = re.compile("[\\x00-\\x1f\\x7f-\\x9f\\u200b-\\u200f\\u202a-\\u202e\\u2060-\\u2069\\ufeff]")',
+    ),
+    # ---- facts: the raw status detail must not be copied into the fact value --------------------
+    Edit(
+        f"{AGENT}/facts.py",
+        '            "status_detail": detail,\n',
+        '            "status_detail": _s(detail) if detail else detail,\n',
+    ),
     Edit(
         f"{AGENT}/citations.py",
         "from ukvet_agent.schemas import Claim, Fact\n",

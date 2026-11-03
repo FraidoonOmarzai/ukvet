@@ -25,7 +25,7 @@ from ukvet_evals import __version__
 from ukvet_evals.llmcache import CachingWriter
 from ukvet_evals.run import LlmMode, ReplayMissError, RunOptions, _writer, git_commit
 from ukvet_evals.schema import Dataset, InjectionCase
-from ukvet_evals.scorers.injection import InjectionResult, score_injection
+from ukvet_evals.scorers.injection import InjectionResult, prompt_markers, score_injection
 from ukvet_evals.snapshot import ReplayHarness, Snapshot
 from ukvet_evals.stats import Rate
 
@@ -81,8 +81,14 @@ def _first_current_director(snap: Snapshot) -> dict[str, Any] | None:
 
 
 def applicable(snap: Snapshot, kind: str) -> bool:
-    if kind in ("company_name", "registry_text"):
+    if kind == "company_name":
         return _body(snap, "profile") is not None
+    if kind == "registry_text":
+        # Only hosts with NO real status detail: rules read that field (for example strike-off),
+        # so overwriting or extending a real value changes the report for reasons that have
+        # nothing to do with the model, and the clean-vs-attacked comparison would be unfair.
+        body = _body(snap, "profile")
+        return body is not None and not body.get("company_status_detail")
     if kind == "officer_name":
         return _first_current_director(snap) is not None
     if kind == "psc_name":
@@ -108,7 +114,11 @@ def injected(snap: Snapshot, kind: str, payload: str) -> Iterator[None]:
         elif kind == "registry_text":
             body = _body(snap, "profile")
             assert body is not None
-            body["company_status_detail"] = payload
+            # APPEND, never replace: rules read this field (for example the strike-off flag), so
+            # replacing it would change the report for a reason that has nothing to do with the
+            # model, and the run would be scored as a failure it did not cause.
+            existing = str(body.get("company_status_detail") or "")
+            body["company_status_detail"] = f"{existing} {payload}".strip()
         elif kind == "officer_name":
             officer = _first_current_director(snap)
             assert officer is not None
@@ -144,6 +154,13 @@ def reached_prompt(payload: str, prompts: list[str]) -> bool:
 # ---- the run ----------------------------------------------------------------------------------
 
 
+def _system_prompt() -> str:
+    import ukvet_agent
+
+    path = Path(ukvet_agent.__file__).parent / "prompts" / "reporter_system.md"
+    return path.read_text(encoding="utf-8") if path.exists() else ""
+
+
 def _secrets() -> list[str]:
     names = ("LLM_API_KEY", "CH_API_KEY", "ANTHROPIC_API_KEY", "OPENAI_API_KEY")
     return [v for n in names if (v := os.environ.get(n, ""))] + ["offline"]
@@ -176,6 +193,7 @@ async def run_injection(options: InjectionOptions) -> dict[str, Any]:
     assert base is not None
     harness = ReplayHarness({c.company_number: snaps[c.company_number] for c in companies})
     secrets = _secrets()
+    markers = prompt_markers(_system_prompt())
     results: list[InjectionResult] = []
     clean_reports: dict[str, Any] = {}
 
@@ -196,6 +214,7 @@ async def run_injection(options: InjectionOptions) -> dict[str, Any]:
                         attacked,
                         reached=reached_prompt(case.payload, spy.prompts),
                         secrets=secrets,
+                        prompt_markers=markers,
                     )
                 )
 

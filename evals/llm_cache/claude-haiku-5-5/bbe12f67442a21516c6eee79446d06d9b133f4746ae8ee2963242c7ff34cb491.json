@@ -5,13 +5,13 @@
     "fact_ids": [
      "Q2.age"
     ],
-    "text": "The company was incorporated on 9 February 2022 and is recorded as 4.7 years old (1718 days)."
+    "text": "The company was incorporated on 9 February 2022 and is 4.7 years old (1718 days)."
    },
    {
     "fact_ids": [
      "Q7.insolvency"
     ],
-    "text": "The single insolvency case on record is a creditors voluntary liquidation, with status 'liquidation' and a wound up date of 20 March 2026."
+    "text": "The only insolvency case on record is a creditors voluntary liquidation, with status 'liquidation' and a wound up date of 20 March 2026."
    },
    {
     "fact_ids": [
@@ -29,33 +29,27 @@
     "fact_ids": [
      "Q6.charges"
     ],
-    "text": "Two outstanding charges are registered against the company, with none part-satisfied or satisfied."
+    "text": "There are 2 outstanding charges registered against the company, with none part-satisfied or satisfied."
    },
    {
     "fact_ids": [
      "Q3.officers_current",
      "Q9.officer_changes"
     ],
-    "text": "There is one current officer, a director, PERSON 292, appointed on 7 November 2025, following the resignation of PERSON 293 (director) on the same date."
+    "text": "There is 1 current director, PERSON 292, appointed 7 November 2025, and no other current officers."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes",
+     "Q9.address_changes"
+    ],
+    "text": "Since 24 October 2025, PERSON 293 resigned as a director on 7 November 2025, and one registered office address change was filed on 1 April 2026."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One person with significant control is recorded: PERSON 301, an individual holding 75 to 100 percent of shares and 75 to 100 percent of voting rights."
-   },
-   {
-    "fact_ids": [
-     "Q8.director.1",
-     "Q8.network"
-    ],
-    "text": "PERSON 292 has 2 other appointments, both recorded as dissolved, and no other current companies were found across the checked director."
-   },
-   {
-    "fact_ids": [
-     "Q9.address_changes"
-    ],
-    "text": "One registered office address change has been filed since 24 October 2025, dated 1 April 2026."
+    "text": "The one person with significant control is PERSON 301, an individual holding 75 to 100 percent of shares and voting rights."
    }
   ],
   "headline": {
@@ -64,7 +58,7 @@
     "Q7.insolvency",
     "Q4.accounts"
    ],
-   "text": "TEST COMPANY 423 (91000424) has status 'liquidation', with a creditors voluntary liquidation record showing it was wound up on 20 March 2026 and its accounts overdue."
+   "text": "TEST COMPANY 423 (91000424) has status 'liquidation', following a creditors voluntary liquidation with a wound up date of 20 March 2026, and its accounts are overdue."
   }
  },
  "model": "claude-haiku-5-5"

@@ -12,6 +12,7 @@ from typing import Any, Protocol, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
+from ukvet_agent import usage as usage_mod
 from ukvet_agent.llm import NarrativeWriter
 from ukvet_agent.mcp_client import ToolClient, ToolOutcome
 from ukvet_agent.nodes.planner import plan_node
@@ -19,7 +20,6 @@ from ukvet_agent.nodes.reporter import report_node
 from ukvet_agent.nodes.researcher import research_node
 from ukvet_agent.nodes.verifier import verify_node
 from ukvet_agent.schemas import Fact, Gap, NeedsSelection, Report
-from ukvet_agent import usage as usage_mod
 from ukvet_agent.settings import AgentSettings
 from ukvet_agent.tracing import TracedTools, get_tracer
 
