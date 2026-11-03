@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 3 (evaluation) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI. Results, limits and what may be claimed are in [docs/eval-report.md](docs/eval-report.md). Next: Phase 4 (Langfuse tracing, prompt-injection evaluation).
+> **Status: Phase 4 (observability and guardrails) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI ([docs/eval-report.md](docs/eval-report.md)). Phase 4 added optional Langfuse tracing, per-report cost and tool-call counts, output guardrails, and a prompt-injection evaluation (M6) ([threat model](docs/threat-model.md)). Next: Phase 5 (model comparison: API model vs open-weight).
 
 ## What it does
 
@@ -26,19 +26,20 @@ Every fact is cited to the official record. When data is missing, ukvet says so 
 
 ## How it's built
 
-| Part          | What                                                                         |
-| ------------- | ---------------------------------------------------------------------------- |
-| `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client       |
-| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                  |
-| Evals         | 432-item benchmark on 48 frozen, anonymised companies; gated in CI ([`evals/`](evals/README.md)) |
-| Observability | Langfuse tracing of cost, latency and tool calls                             |
+| Part          | What                                                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------------------- |
+| `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client                                        |
+| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                                                   |
+| Evals         | 432-item benchmark on 48 frozen, anonymised companies; gated in CI ([`evals/`](evals/README.md))              |
+| Observability | Optional Langfuse tracing (off by default, content redacted); per-report latency, tokens, cost and tool calls |
+| Guardrails    | Citation checker plus output checks on every finished report; injection eval (M6)                             |
 
 Architecture: [docs/08-architecture.md](docs/08-architecture.md)
 
 ## Development
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). Commands below are shown for PowerShell; on Linux or macOS the same `uv run ...` commands work (a `Makefile` is provided as a shortcut where `make` is available).
- 
+
 ```powershell
 git clone https://github.com/fraidoonomarzai/ukvet.git
 cd ukvet
@@ -49,25 +50,44 @@ uv run ruff format --check .           # formatting
 uv run mypy                            # type check
 uv run pytest                          # tests
 ```
- 
+
 ### Run it
- 
+
 ```powershell
 # .env: CH_API_KEY=...   (optional: LLM_PROVIDER / LLM_MODEL / LLM_API_KEY, see .env.example)
 uv run ukvet-check --full 00445790     # terminal, no UI
 docker compose up --build              # API (http://localhost:8000/docs) + UI (http://localhost:8501)
 ```
- 
+
 With no `LLM_PROVIDER` set, reports use a template narrative and cost nothing. With one set, the LLM writes the wording and every sentence must pass the citation check, or the template is used instead.
- 
+
 ### Run the evaluation
- 
+
 ```powershell
 uv run ukvet-evals demo-build                      # synthetic demo set, proves the harness works
 uv run ukvet-evals run --dataset demo
 uv run ukvet-evals run --dataset v0.1 --split dev  # real set, dev split, free (template mode)
 uv run ukvet-evals gate --dataset v0.1             # compare with the baseline; fails if worse
 ```
+
+### Observability and safety (Phase 4)
+
+```powershell
+# .env (all optional): LANGFUSE_PUBLIC_KEY, LANGFUSE_SECRET_KEY, LANGFUSE_HOST
+#   UKVET_TRACE_CONTENT=redacted (default, names are masked) or full (synthetic data only)
+#   UKVET_PRICE_IN_GBP_PER_MTOK / UKVET_PRICE_OUT_GBP_PER_MTOK  (cost is shown only when set)
+uv sync --all-groups --all-packages --extra observability
+
+# live latency (M7), cost (M8) and tool calls (M9); needs CH_API_KEY and an LLM key
+uv run python scripts/phase4_metrics.py --file numbers.txt --out evals/results/phase4
+
+# prompt-injection resistance (M6): record once, then replay for free
+uv run ukvet-evals extend-injection --dataset v0.1
+uv run ukvet-evals injection --dataset v0.1 --llm record --model <model>
+uv run ukvet-evals injection --dataset v0.1 --llm replay --model <model>
+```
+
+Tracing is off unless both Langfuse keys are set, and it can never break a report. Targets: M6 injection resistance 95% or more, M7 p95 latency under 30 s, M8 cost under £0.05 per report, M9 tool calls per report tracked as a baseline. M6 measures resistance to the listed payloads only; it is not proof of safety. Measured results are in `evals/results/`.
 
 ## Project documents
 
@@ -82,6 +102,7 @@ uv run ukvet-evals gate --dataset v0.1             # compare with the baseline; 
 | [07 Risks](docs/07-risks.md)                             | Risk register                 |
 | [08 Architecture](docs/08-architecture.md)               | Design + [ADRs](docs/adr/)    |
 | [09 Plan](docs/09-plan.md)                               | Milestones, backlog, workflow |
+...
 
 ## Disclaimer
 
