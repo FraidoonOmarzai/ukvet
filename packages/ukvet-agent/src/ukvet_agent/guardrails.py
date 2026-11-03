@@ -22,7 +22,7 @@ import re
 from typing import Any
 
 from ukvet_agent.redflags import ASSESSMENT_PREFIX
-from ukvet_agent.schemas import ATTRIBUTION, DISCLAIMER, Report
+from ukvet_agent.schemas import ATTRIBUTION, DISCLAIMER, Claim, Fact, Report
 
 # Wording ukvet never repeats or writes. (The citation checker keeps its own copy of FORBIDDEN so
 # that module stays standalone; the eval scorer keeps a third, independent one.)
@@ -59,6 +59,46 @@ def _strings(value: Any) -> list[str]:
     return []
 
 
+_NAME_KEYS = ("name", "director")
+MIN_NAME_CHARS = 5
+
+
+def _walk_names(value: Any) -> list[str]:
+    found: list[str] = []
+    if isinstance(value, dict):
+        for k, v in value.items():
+            if k in _NAME_KEYS and isinstance(v, str) and len(v) >= MIN_NAME_CHARS:
+                found.append(v)
+            else:
+                found += _walk_names(v)
+    elif isinstance(value, list):
+        for v in value:
+            found += _walk_names(v)
+    return found
+
+
+def person_names(facts: list[Fact]) -> set[str]:
+    """Names of people (officers, PSCs, directors) that appear in the facts' values."""
+    return {n for f in facts for n in _walk_names(f.value)}
+
+
+def person_citation_problems(claim: Claim, facts: list[Fact], names: set[str]) -> list[str]:
+    """A sentence that names a person must cite a fact that contains that name.
+
+    Limit: only exact name strings are recognised. A paraphrased name is not seen.
+    """
+    by_id = {f.id: f for f in facts}
+    cited = " ".join(
+        f"{by_id[i].statement} {by_id[i].value}".lower() for i in claim.fact_ids if i in by_id
+    )
+    text = claim.text.lower()
+    return [
+        f"names a person without citing their fact: {claim.text[:60]}"
+        for name in sorted(names)
+        if name.lower() in text and name.lower() not in cited
+    ][:1]
+
+
 def claim_problems(text: str, *, llm_text: bool = False) -> list[str]:
     """Wording problems in ONE sentence. `llm_text=True` also rejects a stated risk verdict."""
     problems: list[str] = []
@@ -84,6 +124,7 @@ def check_report(report: Report) -> list[str]:
         problems.append("assessment is not labelled as ukvet's automated opinion")
 
     claims = [report.headline, *report.findings]
+    names = person_names(report.facts)
     q1_gap = any(g.question_id == "Q1" for g in report.gaps)
     for i, claim in enumerate(claims):
         if not claim.fact_ids and not (i == 0 and q1_gap):
@@ -92,6 +133,7 @@ def check_report(report: Report) -> list[str]:
             f"{p}: {claim.text[:60]}"
             for p in claim_problems(claim.text, llm_text=report.narrative_source == "llm")
         ]
+        problems += person_citation_problems(claim, report.facts, names)
 
     for text in _strings(report.model_dump(mode="json")):
         if _MARKUP.search(text):

@@ -102,21 +102,10 @@ class CitationStats(BaseModel):
 
 
 class Usage(BaseModel):
-    """Work done for ONE report: tool calls, LLM calls, tokens and cost (metrics M8 and M9).
+    """Measured work for one report: tool calls, LLM calls, tokens, cost (M8, M9).
 
-    `cost_gbp` is `None` unless both prices are set in `.env`; see `ukvet_agent.usage`.
+    See `ukvet_agent.usage` for how cost is computed.
     """
-
-    tool_calls: int = 0
-    tools: list[str] = Field(default_factory=list)
-    llm_calls: int = 0
-    input_tokens: int = 0
-    output_tokens: int = 0
-    cost_gbp: float | None = None
-
-
-class Usage(BaseModel):
-    """Measured work for one report: tool calls, LLM calls, tokens, cost (M8, M9)."""
 
     tool_calls: int = 0
     tools: list[str] = Field(default_factory=list)
