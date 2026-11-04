@@ -229,3 +229,7 @@ evals/results/*
 !evals/results/milestone-*/
 
 numbers.txt
+
+.env.*
+
+docker/vllm/vllm.env
