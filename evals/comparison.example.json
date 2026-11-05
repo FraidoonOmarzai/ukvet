@@ -1,0 +1,25 @@
+{
+  "title": "Model comparison: frontier API model vs open-weight model",
+  "models": [
+    {
+      "label": "API model",
+      "kind": "api",
+      "model_id": "REPLACE-with-the-exact-api-model-id",
+      "results": "evals/results/v0.1-test-api/results.json",
+      "live": "evals/results/phase5-live-api/metrics.json",
+      "injection": "evals/results/v0.1-injection-api/injection.json"
+    },
+    {
+      "label": "Open-weight model",
+      "kind": "self-hosted",
+      "model_id": "REPLACE-with-the-id-from-/v1/models",
+      "hardware": "REPLACE e.g. 1x GPU-name, vLLM x.y.z, quantisation",
+      "gpu_gbp_per_hour": 0.0,
+      "gpu_hours": 0.0,
+      "results": "evals/results/v0.1-test-open/results.json",
+      "live": "evals/results/phase5-live-open/metrics.json",
+      "injection": "evals/results/v0.1-injection-open/injection.json",
+      "notes": "REPLACE anything a reader needs, e.g. timeout used"
+    }
+  ]
+}
