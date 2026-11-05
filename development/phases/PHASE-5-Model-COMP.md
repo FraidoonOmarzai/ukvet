@@ -79,6 +79,20 @@ git pull
 git checkout -b phase-5
 ```
 
+**What codes added and updated:**
+```bash
+evals/src/ukvet_evals
+  \---- compare.py
+  \---- perf.py
+  \---- phase4_cli.py
+  \---- phase5_cli.py
+
+scripts/phase4_metrics.py
+scripts/phase5_check_endpoint.py
+
+tests/evals/test_phase5_compare.py
+```
+
 ### Step 2. Pick the open-weight model (1-2 hours, reading)
 **Do:** choose ONE model. Criteria, in order: (a) supports tool calling or JSON-schema structured
 output in vLLM, (b) fits on one GPU you can rent, (c) has a licence you can cite, (d) recent enough
@@ -127,6 +141,10 @@ LLM_TIMEOUT_SECONDS=60
 like a failure, and ukvet quietly falls back to the template. Raise it for BOTH models so the
 timeout is not what decides the winner, and keep M7 as the place where slowness is measured.
 
+> One more detail: ukvet only reads a file named .env, so it won’t pick up env.qwen automatically. When you’re ready to test the Qwen model, copy it over .env, for example Copy-Item .env .env.cluade to back up your API settings, then Copy-Item env.qwen .env. Copy .env.cluade back afterwards when you want to use the API model again.
+
+**Note:** Deep descriptions from step2-4(`development/setup/PHSAE-5-GPU-SETUP.md`)
+
 ### Step 5. Smoke test before spending real money (1 hour)
 **Do:** generate 5 to 10 real reports with the open model:
 ```powershell
@@ -140,6 +158,7 @@ that is a result, not a bug: record it and continue.
 **Why:** a full run is hundreds of calls. Find the setup mistakes on ten.
 
 ### Step 6. Record the open-model answers (backlog issue 2, part 1) (half a day)
+
 Phase 3 evals replay recorded LLM answers (the cache is keyed by model, system prompt and user
 prompt), so each model needs its own recording, made once.
 ```powershell
@@ -190,6 +209,8 @@ uv run ukvet-evals injection --dataset v0.1 --llm replay --model <open-model-id>
 ```
 **Why:** a weaker model may follow injected text more often. It is one more column that employers
 care about, and it costs pence. Same rules as Phase 4: do not change defences between models.
+
+**Note:** `setup/PHASE-5-RUNBOOK.md` for deeper explanation.
 
 ### Step 10. Optional ablation: ReAct baseline (cut this if you are behind)
 ADR-007 says Phase 5 *can* add a ReAct (model-chooses-tools) baseline to show what the

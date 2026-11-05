@@ -1,0 +1,66 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q2.age"
+    ],
+    "text": "The company has status 'active' and was incorporated on 22 June 2004."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "No insolvency record is held for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts",
+     "Q4.confirmation_statement"
+    ],
+    "text": "Accounts are not overdue, with the next due date being 31 December 2026, and the confirmation statement is not overdue, with the next due date being 10 July 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "There is 1 current person with significant control: CORPORATE CONTROLLER 2111, which holds 75 to 100 percent ownership of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "There are 0 outstanding charges, 0 part-satisfied charges, and 3 satisfied charges registered."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The current officers include 2 directors, PERSON 555 and PERSON 556, and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 2 current directors checked, 50 other companies were found, comprising 44 active and 6 dissolved entities."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025, there has been 1 officer appointment and 1 resignation, specifically the appointment of PERSON 555 on 28 April 2026 and the resignation of PERSON 563 on 26 May 2026."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q8.network",
+    "Q9.officer_changes"
+   ],
+   "text": "ACME LTD (91000482) is an active company with no insolvency records, though its directors are linked to many other companies and recent officer changes have occurred."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

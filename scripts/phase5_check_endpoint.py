@@ -17,6 +17,7 @@ import argparse
 import asyncio
 import sys
 import time
+from typing import Any
 
 import httpx
 from ukvet_agent.errors import AgentConfigError
@@ -42,8 +43,8 @@ def list_models(base_url: str, key: str | None) -> list[str]:
     return [m["id"] for m in r.json().get("data", [])]
 
 
-async def one_round(settings: LlmSettings) -> tuple[bool, float, str]:
-    writer = build_writer(settings)
+async def one_round(settings: LlmSettings, writer: Any = None) -> tuple[bool, float, str]:
+    writer = writer or build_writer(settings)
     assert writer is not None
     start = time.perf_counter()
     try:
@@ -59,6 +60,19 @@ async def one_round(settings: LlmSettings) -> tuple[bool, float, str]:
     if not cited <= ALLOWED:
         return False, took, f"cited ids it was not given: {sorted(cited - ALLOWED)}"
     return True, took, "ok"
+
+
+async def run_rounds(settings: LlmSettings, rounds: int) -> tuple[int, list[float]]:
+    """All rounds in ONE event loop with ONE writer (a new loop per round breaks the client)."""
+    writer = build_writer(settings)
+    good = 0
+    times: list[float] = []
+    for i in range(1, rounds + 1):
+        ok, took, why = await one_round(settings, writer)
+        good += ok
+        times.append(took)
+        print(f"round {i}: {'ok  ' if ok else 'FAIL'} {took:5.1f}s  {why}")
+    return good, times
 
 
 def main() -> int:
@@ -90,13 +104,7 @@ def main() -> int:
         print(f"configuration error: {exc}")
         return 2
 
-    good = 0
-    times: list[float] = []
-    for i in range(1, args.rounds + 1):
-        ok, took, why = asyncio.run(one_round(settings))
-        good += ok
-        times.append(took)
-        print(f"round {i}: {'ok  ' if ok else 'FAIL'} {took:5.1f}s  {why}")
+    good, times = asyncio.run(run_rounds(settings, args.rounds))
     print(
         f"\n{good}/{args.rounds} valid structured answers; "
         f"mean {sum(times) / len(times):.1f}s, slowest {max(times):.1f}s "

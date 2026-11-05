@@ -1,0 +1,25 @@
+{
+  "title": "Model comparison: Claude Haiku 5.5 (API) vs Qwen3.6-27B (self-hosted)",
+  "models": [
+    {
+      "label": "Claude Haiku 5.5 (API)",
+      "kind": "api",
+      "model_id": "claude-haiku-5-5",
+      "results": "evals/results/v0.1-test-api/results.json",
+      "live": "evals/results/phase5-live-api/metrics.json",
+      "injection": "evals/results/v0.1-injection-api/injection.json",
+      "notes": "No temperature set (parameter deprecated for this model, API default sampling). Timeout 60 s. Cost from configured token prices."
+    },
+    {
+      "label": "Qwen3.6-27B (self-hosted)",
+      "kind": "self-hosted",
+      "model_id": "Qwen/Qwen3.6-27B",
+      "hardware": "1x A100 SXM 80GB, RunPod Secure Cloud (US-MD-1), vLLM 0.33.0, bf16, thinking off, max model length 16384",
+      "gpu_gbp_per_hour": 1.35,
+      "gpu_hours": 0.168,
+      "results": "evals/results/v0.1-test-open/results.json",
+      "live": "evals/results/phase5-live-open/metrics.json",
+      "injection": "evals/results/v0.1-injection-open/injection.json",
+      "notes": "Temperature 0, timeout 60 s. Cost = GPU price x live-run hours / reports (no idle time). GPU price £1.35 per hour. Whole session: 2h 22m, about £3.20 (2.37 h x £1.35). USD to GBP rate used: 0.74."    }
+  ]
+}

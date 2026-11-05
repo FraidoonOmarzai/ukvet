@@ -40,6 +40,7 @@ def summarise(reports: Sequence[Report]) -> dict[str, Any]:
     mean_cost = mean(costs) if costs else None
     return {
         "reports": n,
+        "busy_ms_total": sum(totals),  # time spent working on reports (for GPU utilisation)
         "m7_latency_ms": {
             "p50": percentile(totals, 50),
             "p95": p95,

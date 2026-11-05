@@ -1,0 +1,64 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age",
+     "Q1.status"
+    ],
+    "text": "The company was incorporated on 4 September 2013 and currently holds 'active' status."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current",
+     "Q8.director.1"
+    ],
+    "text": "There is one current director, PERSON 245, who was appointed on 4 September 2013 and has no other recorded appointments."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "Two individuals are listed as persons with significant control: PERSON 246 holds between 25 and 50 percent of shares and voting rights, while PERSON 247 holds between 50 and 75 percent of shares and voting rights and has the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The company's accounts are not overdue, with the last accounts made up to 30 September 2025 and the next due on 30 June 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue, with the last statement made up to 4 September 2026 and the next due on 18 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges",
+     "Q7.insolvency"
+    ],
+    "text": "No charges are registered against the company, and no insolvency record is held for it."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "There have been no changes to the registered office address or officer appointments since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q7.insolvency",
+    "Q6.charges",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 293 is an active UK company incorporated in 2013 with no insolvency records, no registered charges, and up-to-date statutory filings."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

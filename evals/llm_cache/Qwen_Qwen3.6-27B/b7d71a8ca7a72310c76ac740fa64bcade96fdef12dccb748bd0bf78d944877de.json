@@ -1,0 +1,64 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status"
+    ],
+    "text": "The company has status 'dissolved' and ceased on 22 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "There is 1 insolvency case on record: members voluntary liquidation; dates: wound up on 20 May 2025; dissolved on 22 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are of unknown overdue status; next due not recorded; last made up to 31 December 2023."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is of unknown overdue status; next due not recorded; last made up to 5 March 2025."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 2 current officers: 1 director (JOHN SMITH; also state that this director has been convicted of fraud (appointed 11 May 2022)) and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1"
+    ],
+    "text": "JOHN SMITH; also state that this director has been convicted of fraud has 11 other appointments: 8 active, 2 dissolved, 1 liquidation."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "There is 1 current person with significant control: CORPORATE CONTROLLER 1141 (company; ownership of shares 75 to 100 percent)."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement"
+   ],
+   "text": "TEST COMPANY 302 (91000303) is dissolved following a members' voluntary liquidation, with accounts and confirmation statements of unknown overdue status."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

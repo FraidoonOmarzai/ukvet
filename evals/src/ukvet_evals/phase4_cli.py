@@ -17,7 +17,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from ukvet_evals import injection, injection_cases
+from ukvet_evals import injection, injection_cases, phase5_cli
 from ukvet_evals.run import ReplayMissError
 from ukvet_evals.schema import Dataset, write_jsonl
 
@@ -104,3 +104,4 @@ def register(add: Callable[..., Any], dataset: Callable[[Any], None]) -> None:
     sp.add_argument("--baseline", help="fail if a previously resisted run now fails")
     sp.add_argument("--update-baseline", action="store_true")
     sp.add_argument("--confirm-test-split", help="REQUIRED for test/all: why you are looking")
+    phase5_cli.register(add, dataset)

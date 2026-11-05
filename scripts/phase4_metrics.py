@@ -16,10 +16,12 @@ import asyncio
 import json
 import logging
 import sys
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ukvet_agent.api import default_deps
 from ukvet_agent.graph import build_graph, run_report
+from ukvet_agent.llm import LlmSettings
 from ukvet_agent.schemas import NeedsSelection, Report
 from ukvet_agent.tracing import flush_tracer
 from ukvet_evals import perf
@@ -47,6 +49,7 @@ def main() -> int:
     ap.add_argument("numbers", nargs="*", help="company numbers (8 characters)")
     ap.add_argument("--file", help="text file with one company number per line")
     ap.add_argument("--out", default="evals/results/phase4")
+    ap.add_argument("--label", default="", help="name of the model being measured (Phase 5)")
     args = ap.parse_args()
     numbers = list(args.numbers)
     if args.file:
@@ -54,9 +57,18 @@ def main() -> int:
     if not numbers:
         ap.error("give company numbers or --file")
     logging.basicConfig(level=logging.WARNING)
+    llm = LlmSettings()
+    started = datetime.now(UTC)
     reports = asyncio.run(measure(numbers))
     flush_tracer()
     summary = perf.summarise(reports)
+    summary["run"] = {
+        "label": args.label,
+        "provider": llm.provider,
+        "model": llm.model or "",
+        "started": started.isoformat(timespec="seconds"),
+        "finished": datetime.now(UTC).isoformat(timespec="seconds"),
+    }
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     (out / "metrics.json").write_text(json.dumps(summary, indent=1, default=str) + "\n")

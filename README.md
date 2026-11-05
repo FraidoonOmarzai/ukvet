@@ -5,7 +5,7 @@
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 4 (observability and guardrails) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI ([docs/eval-report.md](docs/eval-report.md)). Phase 4 added optional Langfuse tracing, per-report cost and tool-call counts, output guardrails, and a prompt-injection evaluation (M6) ([threat model](docs/threat-model.md)). Next: Phase 5 (model comparison: API model vs open-weight).
+> **Status: Phase 5 (model comparison) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI ([docs/eval-report.md](docs/eval-report.md)). Phase 4 added optional Langfuse tracing, per-report cost and tool-call counts, output guardrails, and a prompt-injection evaluation (M6) ([threat model](docs/threat-model.md)). Phase 5 compared Claude Haiku 5.5 with the open-weight Qwen3.6-27B on the same test set: equal measured accuracy, but Claude was about 3.7 times faster at the p95 and about 13 times cheaper per report ([docs/results.md](docs/results.md)). Next: Phase 6 (launch).
 
 ## What it does
 
@@ -26,13 +26,14 @@ Every fact is cited to the official record. When data is missing, ukvet says so 
 
 ## How it's built
 
-| Part          | What                                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------------------------- |
-| `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client                                        |
-| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                                                   |
-| Evals         | 432-item benchmark on 48 frozen, anonymised companies; gated in CI ([`evals/`](evals/README.md))              |
-| Observability | Optional Langfuse tracing (off by default, content redacted); per-report latency, tokens, cost and tool calls |
-| Guardrails    | Citation checker plus output checks on every finished report; injection eval (M6)                             |
+| Part          | What                                                                                                           |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ukvet-mcp`   | Open-source MCP server exposing Companies House data to any MCP client                                         |
+| `ukvet-agent` | LangGraph agent: Planner → Researcher → Verifier → Reporter                                                    |
+| Evals         | 432-item benchmark on 48 frozen, anonymised companies; gated in CI ([`evals/`](evals/README.md))               |
+| Observability | Optional Langfuse tracing (off by default, content redacted); per-report latency, tokens, cost and tool calls  |
+| Guardrails    | Citation checker plus output checks on every finished report; injection eval (M6)                              |
+| Model choice  | Claude Haiku 5.5 vs open-weight Qwen3.6-27B on one test set, published as a table ([results](docs/results.md)) |
 
 Architecture: [docs/08-architecture.md](docs/08-architecture.md)
 
@@ -89,6 +90,20 @@ uv run ukvet-evals injection --dataset v0.1 --llm replay --model <model>
 
 Tracing is off unless both Langfuse keys are set, and it can never break a report. Targets: M6 injection resistance 95% or more, M7 p95 latency under 30 s, M8 cost under £0.05 per report, M9 tool calls per report tracked as a baseline. M6 measures resistance to the listed payloads only; it is not proof of safety. Measured results are in `evals/results/`.
 
+
+### Model comparison (Phase 5)
+ 
+```powershell
+# one env file per model; copy the one you want over .env
+uv run python scripts/phase5_check_endpoint.py        # smoke-test an OpenAI-compatible endpoint (vLLM)
+uv run ukvet-evals run --dataset v0.1 --split test --llm record --model <model-id> --confirm-test-split "reason" --out evals/results/v0.1-test-<name>
+uv run python scripts/phase4_metrics.py --file numbers.txt --label <name> --out evals/results/phase5-live-<name>
+uv run ukvet-evals compare --init                     # create evals/comparison.json, fill it in
+uv run ukvet-evals compare                            # writes docs/results.md; refuses unfair comparisons
+```
+ 
+Both models must run on the same dataset version, split, prompts and git commit; `compare` refuses different datasets or splits and warns about the rest. How the open-weight model was served: [ADR-008](docs/adr/008-open-weight-serving.md) and [docs/PHASE-5-GPU-SETUP.md](docs/PHASE-5-GPU-SETUP.md).
+
 ## Project documents
 
 | Doc                                                      | Contents                      |
@@ -102,6 +117,7 @@ Tracing is off unless both Langfuse keys are set, and it can never break a repor
 | [07 Risks](docs/07-risks.md)                             | Risk register                 |
 | [08 Architecture](docs/08-architecture.md)               | Design + [ADRs](docs/adr/)    |
 | [09 Plan](docs/09-plan.md)                               | Milestones, backlog, workflow |
+
 ...
 
 ## Disclaimer
