@@ -9,27 +9,33 @@
    },
    {
     "fact_ids": [
-     "Q3.officers_current"
+     "Q1.status"
     ],
-    "text": "Companies House records 2 current officers, both directors, PERSON 368 and PERSON 369, each appointed on 30 July 2014."
+    "text": "Companies House records the company's status as dissolved, which is the high-severity red flag identified by the rules."
    },
    {
     "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "The accounts are recorded as of unknown overdue status, with no next due date recorded; they were last made up to 31 July 2017."
+    "text": "Accounts are of unknown overdue status, with no next due date recorded; the last accounts were made up to 31 July 2017."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is recorded as of unknown overdue status, with no next due date and no last made up to date recorded."
+    "text": "The confirmation statement is of unknown overdue status, with no next due date recorded and no last made-up date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "Two current directors are recorded, PERSON 368 and PERSON 369, both appointed on 30 July 2014."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "Two individuals, PERSON 370 and PERSON 371, are recorded as persons with significant control, each holding 25 to 50 percent ownership of shares."
+    "text": "Two individuals are recorded as persons with significant control, PERSON 370 and PERSON 371, each holding 25 to 50 percent ownership of shares."
    },
    {
     "fact_ids": [
@@ -39,18 +45,9 @@
    },
    {
     "fact_ids": [
-     "Q8.director.1",
-     "Q8.director.2",
      "Q8.network"
     ],
-    "text": "PERSON 368 has 4 other appointments (3 active, 1 dissolved), while PERSON 369 has no other appointments on record; across the two current directors, 4 other companies were found."
-   },
-   {
-    "fact_ids": [
-     "Q9.address_changes",
-     "Q9.officer_changes"
-    ],
-    "text": "No registered office address changes and no officer appointments or resignations have been filed since 24 October 2025."
+    "text": "Across the two current directors checked, 4 other companies were found (3 active, 1 dissolved), though this may be incomplete because appointments are matched by officer ID."
    }
   ],
   "headline": {
@@ -58,7 +55,7 @@
     "Q1.status",
     "Q7.insolvency"
    ],
-   "text": "TEST COMPANY 470 (91000471) is dissolved, having ceased on 4 December 2018, and no insolvency record is held for it."
+   "text": "TEST COMPANY 470 (91000471) is recorded as dissolved, having ceased on 4 December 2018, and no insolvency record is held for it."
   }
  },
  "model": "claude-haiku-5-5"

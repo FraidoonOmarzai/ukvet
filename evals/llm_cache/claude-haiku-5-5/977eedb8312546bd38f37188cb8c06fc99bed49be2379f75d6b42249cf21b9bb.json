@@ -3,12 +3,6 @@
   "findings": [
    {
     "fact_ids": [
-     "Q3.officers_current"
-    ],
-    "text": "The company has 2 current directors, PERSON 231 and PERSON 232, both appointed on 19 January 2024, and no other current officers."
-   },
-   {
-    "fact_ids": [
      "Q7.insolvency"
     ],
     "text": "Companies House holds no insolvency record for this company."
@@ -17,33 +11,37 @@
     "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "The accounts were last made up to 31 January 2025 and are not overdue; the next accounts are due 31 October 2026."
+    "text": "Accounts are not overdue, with the next accounts due 31 October 2026 and the last accounts made up to 31 January 2025."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement was last made up to 25 February 2026 and is not overdue; the next one is due 11 March 2027."
+    "text": "The confirmation statement is not overdue, with the next statement due 11 March 2027 and the last made up to 25 February 2026."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 2 current directors, PERSON 231 and PERSON 232, both appointed on 19 January 2024."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across the 2 current directors, 2 other companies were found (1 liquidation, 1 dissolved), which is a low-level red flag for directors linked to a company in an insolvency process."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "Two individuals, PERSON 233 and PERSON 234, are recorded as persons with significant control, each holding 25 to 50 percent of shares and voting rights and the right to appoint and remove directors."
+    "text": "Two individuals are registered as persons with significant control, PERSON 233 and PERSON 234, each holding 25 to 50 percent of shares and voting rights and the right to appoint and remove directors."
    },
    {
     "fact_ids": [
      "Q6.charges"
     ],
-    "text": "One charge is registered against the company and it is satisfied; no charges are outstanding or part-satisfied."
-   },
-   {
-    "fact_ids": [
-     "Q8.director.1",
-     "Q8.director.2",
-     "Q8.network"
-    ],
-    "text": "Each current director, PERSON 231 and PERSON 232, has 2 other appointments (1 liquidation and 1 dissolved), which is a low-level red flag for directors linked to a company in an insolvency process."
+    "text": "The company has 1 satisfied charge registered and no outstanding or part-satisfied charges."
    },
    {
     "fact_ids": [
@@ -58,10 +56,9 @@
     "Q1.status",
     "Q2.age",
     "Q7.insolvency",
-    "Q4.accounts",
-    "Q4.confirmation_statement"
+    "Q8.network"
    ],
-   "text": "TEST COMPANY 284 (91000285) is an active company incorporated on 19 January 2024, with no insolvency record held and its accounts and confirmation statement not overdue."
+   "text": "TEST COMPANY 284 (91000285) is an active company incorporated on 19 January 2024, with no insolvency record held and a low-level red flag linked to directors' other companies."
   }
  },
  "model": "claude-haiku-5-5"

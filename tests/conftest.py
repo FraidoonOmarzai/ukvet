@@ -82,3 +82,26 @@ def _isolate_llm_env(monkeypatch: pytest.MonkeyPatch, request: pytest.FixtureReq
         "LLM_TIMEOUT_SECONDS",
     ):
         monkeypatch.delenv(name, raising=False)
+
+
+@pytest.fixture(autouse=True)
+def _isolate_usage_prices(monkeypatch: pytest.MonkeyPatch) -> Iterator[None]:
+    """A developer's .env with UKVET_PRICE_* must not give template-mode reports a cost."""
+    from ukvet_agent.usage import UsageSettings, usage_settings
+
+    monkeypatch.setitem(UsageSettings.model_config, "env_file", None)
+    for name in ("UKVET_PRICE_IN_GBP_PER_MTOK", "UKVET_PRICE_OUT_GBP_PER_MTOK"):
+        monkeypatch.delenv(name, raising=False)
+    usage_settings.cache_clear()
+    yield
+    usage_settings.cache_clear()
+
+
+@pytest.fixture(autouse=True)
+def no_real_tracing() -> Iterator[None]:
+    """A developer's .env with LANGFUSE keys must never make a test talk to Langfuse."""
+    from ukvet_agent.tracing import NoopTracer, set_tracer
+
+    set_tracer(NoopTracer())
+    yield
+    set_tracer(None)

@@ -15,7 +15,7 @@ import httpx
 import respx
 from pydantic import BaseModel, ConfigDict, Field, SecretStr
 from ukvet_agent.graph import Deps, build_graph, run_report
-from ukvet_agent.llm import NarrativeWriter
+from ukvet_agent.llm import LlmSettings, NarrativeWriter
 from ukvet_agent.mcp_client import McpToolClient, ToolClient
 from ukvet_agent.schemas import NeedsSelection, Report
 from ukvet_agent.settings import AgentSettings
@@ -98,6 +98,11 @@ def _page(ep: Endpoint, request: httpx.Request) -> httpx.Response:
         body["start_index"] = start
         body["items_per_page"] = per
     return httpx.Response(200, json=body)
+
+
+def narrative_timeout() -> float:
+    """Same rule as the live API (LLM_TIMEOUT_SECONDS + 2), never below the old 30 s default."""
+    return max(30.0, LlmSettings().timeout_seconds + 2)
 
 
 class ReplayHarness:
@@ -184,7 +189,13 @@ class ReplayHarness:
         )
         tools: ToolClient = wrap_tools(self.tools) if wrap_tools else self.tools
         graph = build_graph(
-            Deps(tools=tools, settings=self.settings, writer=writer, clock=lambda: now)
+            Deps(
+                tools=tools,
+                settings=self.settings,
+                writer=writer,
+                llm_timeout_seconds=narrative_timeout(),
+                clock=lambda: now,
+            )
         )
         result = await run_report(graph, number)
         if isinstance(result, NeedsSelection):

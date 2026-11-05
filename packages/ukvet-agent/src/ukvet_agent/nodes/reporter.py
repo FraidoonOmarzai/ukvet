@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from ukvet_agent.citations import MAX_CLAIM_CHARS, Violation, check_claims
+from ukvet_agent.guardrails import claim_problems
 from ukvet_agent.llm import NarrativeDraft, NarrativeWriter
 from ukvet_agent.mcp_client import ToolOutcome
 from ukvet_agent.redflags import assessment_text, evaluate_red_flags, risk_level
@@ -80,7 +81,14 @@ def template_narrative(
     """Deterministic fallback: states the facts as written, red-flag facts first."""
     by_id = {f.id: f for f in facts}
     q1 = by_id.get("Q1.status")
-    if q1 is not None:
+    if q1 is not None and claim_problems(q1.statement):
+        # The registry text itself contains wording we never repeat (a link, advice, a
+        # wrongdoing word). Say so without quoting it.
+        headline = Claim(
+            text=f"The status of company {number} is recorded; see the facts below.",
+            fact_ids=[q1.id],
+        )
+    elif q1 is not None:
         headline = Claim(text=_clip(q1.statement), fact_ids=[q1.id])
     else:
         headline = Claim(
@@ -92,7 +100,7 @@ def template_narrative(
     findings = [
         Claim(text=_clip(by_id[i].statement), fact_ids=[i])
         for i in order
-        if i in by_id and i != "Q1.status"
+        if i in by_id and i != "Q1.status" and not claim_problems(by_id[i].statement)
     ][:MAX_FINDINGS]
     return NarrativeDraft(headline=headline, findings=findings)
 

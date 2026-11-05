@@ -18,39 +18,40 @@
     "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "The registry records 4 current officers, comprising 3 directors (PERSON 288, PERSON 289 and PERSON 290, each appointed 14 December 2018) and 1 other officer."
+    "text": "The register shows 4 current officers, comprising 3 directors (PERSON 288, PERSON 289 and PERSON 290, each appointed 14 December 2018) and 1 other officer."
    },
    {
     "fact_ids": [
      "Q8.network"
     ],
-    "text": "The 3 current directors are linked to 108 other companies, of which 48 are dissolved, 41 active, 12 registered and 7 in liquidation; the registry notes these lists may be incomplete."
+    "text": "Across the 3 current directors checked, 108 other companies were found, of which 48 are dissolved, 41 active, 12 registered and 7 in liquidation."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.director.2",
+     "Q8.director.3"
+    ],
+    "text": "Individual director checks show PERSON 288 with 50 other appointments shown (35 dissolved, 12 registered, 3 in liquidation), PERSON 289 with 50 shown (34 active, 11 dissolved, 5 in liquidation) and PERSON 290 with 50 shown (32 active, 14 dissolved, 4 in liquidation)."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 1175, holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+    "text": "One person with significant control is recorded: CORPORATE CONTROLLER 1175, a company holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
    },
    {
     "fact_ids": [
      "Q6.charges"
     ],
-    "text": "Charges on record: 0 outstanding, 0 part-satisfied and 1 satisfied, 1 in total."
+    "text": "The register records 1 satisfied charge, with no outstanding or part-satisfied charges."
    },
    {
     "fact_ids": [
      "Q4.accounts",
      "Q4.confirmation_statement"
     ],
-    "text": "Accounts were last made up to 31 December 2020, and the overdue status of accounts and the confirmation statement is recorded as unknown, with no next due date recorded."
-   },
-   {
-    "fact_ids": [
-     "Q9.address_changes",
-     "Q9.officer_changes"
-    ],
-    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+    "text": "The accounts are last made up to 31 December 2020 and their overdue status is unknown, with no next due date recorded; the confirmation statement's overdue status is also unknown, with no last made-up date recorded."
    }
   ],
   "headline": {

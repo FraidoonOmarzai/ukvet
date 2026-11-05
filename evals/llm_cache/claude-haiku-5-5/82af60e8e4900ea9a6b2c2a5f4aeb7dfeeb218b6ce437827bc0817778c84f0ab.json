@@ -3,34 +3,39 @@
   "findings": [
    {
     "fact_ids": [
-     "Q2.age",
      "Q1.status"
     ],
-    "text": "The company was incorporated on 30 September 2024 and its status is recorded as active, with a proposal to strike off."
+    "text": "The company has a status of 'active' with the detail 'active-proposal-to-strike-off'."
+   },
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 30 September 2024 and is 2.1 years old (754 days)."
    },
    {
     "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "The accounts are overdue, with the next accounts due 30 June 2026 and no last made-up date recorded."
+    "text": "Accounts are overdue; the next accounts are due 30 June 2026 and the last made-up date is not recorded."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is overdue; it was last made up to 10 September 2025 and the next is due 24 September 2026."
+    "text": "The confirmation statement is overdue; the last one was made up to 10 September 2025 and the next is due 24 September 2026."
    },
    {
     "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "There is one current officer, a director, PERSON 257, appointed on 30 September 2024."
+    "text": "There is 1 current officer, a director, PERSON 257, appointed 30 September 2024, and no other officers."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: PERSON 258, an individual holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+    "text": "One person with significant control is recorded: PERSON 258, an individual holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
    },
    {
     "fact_ids": [
@@ -42,11 +47,10 @@
    {
     "fact_ids": [
      "Q8.director.1",
-     "Q8.network",
      "Q9.address_changes",
      "Q9.officer_changes"
     ],
-    "text": "No other appointments were found for the director, and no registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+    "text": "PERSON 257 has no other appointments on record, and no registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
    }
   ],
   "headline": {

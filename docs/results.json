@@ -1,0 +1,369 @@
+{
+ "models": [
+  {
+   "claims": 156,
+   "guardrail_violations": [],
+   "hardware": "",
+   "kind": "api",
+   "label": "Claude Haiku 5.5 (API)",
+   "live_llm_reports": 30,
+   "live_reports": 30,
+   "llm_errors": 0,
+   "llm_share": 1.0,
+   "llm_written": {
+    "llm_reports": 18,
+    "reports": 18
+   },
+   "m1": {
+    "ci95": [
+     0.9932,
+     1.0
+    ],
+    "k": 558,
+    "n": 558,
+    "rate": 1.0
+   },
+   "m1_by_question": {
+    "Q1": {
+     "ci95": [
+      0.9336,
+      1.0
+     ],
+     "k": 54,
+     "n": 54,
+     "rate": 1.0
+    },
+    "Q2": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q3": {
+     "ci95": [
+      0.9493,
+      1.0
+     ],
+     "k": 72,
+     "n": 72,
+     "rate": 1.0
+    },
+    "Q4": {
+     "ci95": [
+      0.9657,
+      1.0
+     ],
+     "k": 108,
+     "n": 108,
+     "rate": 1.0
+    },
+    "Q5": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q6": {
+     "ci95": [
+      0.9493,
+      1.0
+     ],
+     "k": 72,
+     "n": 72,
+     "rate": 1.0
+    },
+    "Q7": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q8": {
+     "ci95": [
+      0.9591,
+      1.0
+     ],
+     "k": 90,
+     "n": 90,
+     "rate": 1.0
+    },
+    "Q9": {
+     "ci95": [
+      0.9336,
+      1.0
+     ],
+     "k": 54,
+     "n": 54,
+     "rate": 1.0
+    }
+   },
+   "m2": {
+    "ci95": [
+     0.0,
+     0.024
+    ],
+    "k": 0,
+    "n": 156,
+    "rate": 0.0
+   },
+   "m3": 1.0,
+   "m4": {
+    "ci95": [
+     0.976,
+     1.0
+    ],
+    "k": 156,
+    "n": 156,
+    "rate": 1.0
+   },
+   "m5_recall": 1.0,
+   "m6": {
+    "narrative_source": {
+     "llm": 98,
+     "template": 1
+    },
+    "rate": {
+     "ci95": [
+      0.9065,
+      0.9886
+     ],
+     "k": 87,
+     "n": 90,
+     "rate": 0.9667
+    },
+    "reached_prompt": 90,
+    "runs": 99
+   },
+   "m7": {
+    "met": true,
+    "p50": 2876,
+    "p95": 6592,
+    "reports": 30,
+    "target_p95": 30000,
+    "weak": false,
+    "worst": 8315
+   },
+   "m8": {
+    "max": 0.001104,
+    "mean": 0.0005815333333333333,
+    "met": true,
+    "method": "tokens x configured price",
+    "note": "",
+    "priced_reports": 30,
+    "target": 0.05
+   },
+   "m9": {
+    "max": 11,
+    "mean": 8.4,
+    "median": 8.0,
+    "target": "tracked (baseline only)"
+   },
+   "model_id": "claude-haiku-5-5",
+   "notes": "No temperature set (parameter deprecated for this model, API default sampling). Timeout 60 s. Cost from configured token prices.",
+   "retries": 1,
+   "run": {
+    "companies": 18,
+    "created_at": "2026-11-05T20:32:50+00:00",
+    "dataset": "v0.1",
+    "dataset_version": "v0.1",
+    "git_commit": "bcb4a89",
+    "llm_mode": "record",
+    "llm_model": "claude-haiku-5-5",
+    "split": "test"
+   },
+   "template_fallback_share": 0.0
+  },
+  {
+   "claims": 154,
+   "guardrail_violations": [],
+   "hardware": "1x A100 SXM 80GB, RunPod Secure Cloud (US-MD-1), vLLM 0.33.0, bf16, thinking off, max model length 16384",
+   "kind": "self-hosted",
+   "label": "Qwen3.6-27B (self-hosted)",
+   "live_llm_reports": 30,
+   "live_reports": 30,
+   "llm_errors": 0,
+   "llm_share": 1.0,
+   "llm_written": {
+    "llm_reports": 18,
+    "reports": 18
+   },
+   "m1": {
+    "ci95": [
+     0.9932,
+     1.0
+    ],
+    "k": 558,
+    "n": 558,
+    "rate": 1.0
+   },
+   "m1_by_question": {
+    "Q1": {
+     "ci95": [
+      0.9336,
+      1.0
+     ],
+     "k": 54,
+     "n": 54,
+     "rate": 1.0
+    },
+    "Q2": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q3": {
+     "ci95": [
+      0.9493,
+      1.0
+     ],
+     "k": 72,
+     "n": 72,
+     "rate": 1.0
+    },
+    "Q4": {
+     "ci95": [
+      0.9657,
+      1.0
+     ],
+     "k": 108,
+     "n": 108,
+     "rate": 1.0
+    },
+    "Q5": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q6": {
+     "ci95": [
+      0.9493,
+      1.0
+     ],
+     "k": 72,
+     "n": 72,
+     "rate": 1.0
+    },
+    "Q7": {
+     "ci95": [
+      0.9036,
+      1.0
+     ],
+     "k": 36,
+     "n": 36,
+     "rate": 1.0
+    },
+    "Q8": {
+     "ci95": [
+      0.9591,
+      1.0
+     ],
+     "k": 90,
+     "n": 90,
+     "rate": 1.0
+    },
+    "Q9": {
+     "ci95": [
+      0.9336,
+      1.0
+     ],
+     "k": 54,
+     "n": 54,
+     "rate": 1.0
+    }
+   },
+   "m2": {
+    "ci95": [
+     0.0011,
+     0.0359
+    ],
+    "k": 1,
+    "n": 154,
+    "rate": 0.0065
+   },
+   "m3": 1.0,
+   "m4": {
+    "ci95": [
+     0.9641,
+     0.9989
+    ],
+    "k": 153,
+    "n": 154,
+    "rate": 0.9935
+   },
+   "m5_recall": 1.0,
+   "m6": {
+    "narrative_source": {
+     "llm": 98,
+     "template": 1
+    },
+    "rate": {
+     "ci95": [
+      0.9591,
+      1.0
+     ],
+     "k": 90,
+     "n": 90,
+     "rate": 1.0
+    },
+    "reached_prompt": 90,
+    "runs": 99
+   },
+   "m7": {
+    "met": true,
+    "p50": 19840,
+    "p95": 24239,
+    "reports": 30,
+    "target_p95": 30000,
+    "weak": false,
+    "worst": 26447
+   },
+   "m8": {
+    "gbp_per_report": 0.007560000000000001,
+    "gpu_hours": 0.168,
+    "method": "gpu price x hours up / reports",
+    "reports": 30,
+    "total_gbp": 0.22680000000000003,
+    "utilisation": 0.9869907407407408
+   },
+   "m9": {
+    "max": 11,
+    "mean": 8.4,
+    "median": 8.0,
+    "target": "tracked (baseline only)"
+   },
+   "model_id": "Qwen/Qwen3.6-27B",
+   "notes": "Temperature 0, timeout 60 s. Cost = GPU price x live-run hours / reports (no idle time). GPU price \u00a31.35 per hour. Whole session: 2h 22m, about \u00a33.20 (2.37 h x \u00a31.35). USD to GBP rate used: 0.74.",
+   "retries": 0,
+   "run": {
+    "companies": 18,
+    "created_at": "2026-11-05T20:16:32+00:00",
+    "dataset": "v0.1",
+    "dataset_version": "v0.1",
+    "git_commit": "bcb4a89",
+    "llm_mode": "record",
+    "llm_model": "Qwen/Qwen3.6-27B",
+    "split": "test"
+   },
+   "template_fallback_share": 0.0
+  }
+ ],
+ "title": "Model comparison: Claude Haiku 5.5 (API) vs Qwen3.6-27B (self-hosted)",
+ "warnings": []
+}

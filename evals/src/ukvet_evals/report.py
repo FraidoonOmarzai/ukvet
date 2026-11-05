@@ -163,6 +163,16 @@ def render_markdown(res: dict[str, Any]) -> str:
             f"- {ex['company']} [{ex['source']}]: {'; '.join(ex['errors'])} — “{ex['claim']}”"
         )
 
+    guard = res.get("guardrails")
+    if guard is not None:
+        bad = guard["violations"]
+        out.append(
+            f"\n## Output guardrails: {guard['reports'] - len({v['company'] for v in bad})}/{guard['reports']} reports clean\n"
+        )
+        out += [f"- {v['company']}: {v['problem']}" for v in bad[:30]]
+        if not bad:
+            out.append("No violations (disclaimer, opinion label, no advice or links, no markup).")
+
     perf = res["perf"]
     out.append(
         f"\n## Timing (replay, no network)\n\nmedian {perf['median_ms']} ms, worst {perf['worst_ms']} ms over {perf['reports']} reports. {perf['note']}."

@@ -150,7 +150,7 @@ def _q1(profile: ToolOutcome) -> Fact:
         stmt,
         {
             "status": status,
-            "status_detail": detail,
+            "status_detail": _s(detail) if detail else detail,
             "date_of_cessation": ceased,
             "company_number": number,
         },

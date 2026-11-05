@@ -5,7 +5,7 @@
     "fact_ids": [
      "Q1.status"
     ],
-    "text": "The company's status is recorded as dissolved, with cessation on 27 January 2026."
+    "text": "The company's status is recorded as dissolved, and it ceased on 27 January 2026."
    },
    {
     "fact_ids": [
@@ -17,7 +17,26 @@
     "fact_ids": [
      "Q7.insolvency"
     ],
-    "text": "No insolvency record is held for the company at Companies House."
+    "text": "No insolvency record is held for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts",
+     "Q4.confirmation_statement"
+    ],
+    "text": "The register holds the accounts and confirmation statement as of unknown overdue status, with no next due or last made-up dates recorded."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There is one current officer, a director, PERSON 260, appointed on 22 August 2024."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "Two individuals, PERSON 261 and PERSON 262, are recorded as persons with significant control, each holding 25 to 50 percent of shares and voting rights."
    },
    {
     "fact_ids": [
@@ -27,29 +46,10 @@
    },
    {
     "fact_ids": [
-     "Q3.officers_current"
-    ],
-    "text": "The company has 1 current officer, a director, PERSON 260, appointed 22 August 2024."
-   },
-   {
-    "fact_ids": [
-     "Q5.control"
-    ],
-    "text": "Two individuals are recorded as persons with significant control: PERSON 261 and PERSON 262, each holding 25 to 50 percent of shares and voting rights."
-   },
-   {
-    "fact_ids": [
      "Q8.director.1",
      "Q9.officer_changes"
     ],
-    "text": "The director, PERSON 260, has 1 other active appointment outside this company, and no officer appointments or resignations have been filed since 24 October 2025."
-   },
-   {
-    "fact_ids": [
-     "Q4.accounts",
-     "Q4.confirmation_statement"
-    ],
-    "text": "The overdue status of the accounts and confirmation statement is unknown, as their next due dates and last made-up dates are not recorded."
+    "text": "PERSON 260 has one other active appointment, and no officer appointments or resignations have been filed since 24 October 2025."
    }
   ],
   "headline": {
@@ -57,7 +57,7 @@
     "Q1.status",
     "Q2.age"
    ],
-   "text": "TEST COMPANY 297 (91000298) is dissolved, having ceased on 27 January 2026, after incorporation on 22 August 2024."
+   "text": "TEST COMPANY 297 (91000298) is recorded as dissolved, having ceased on 27 January 2026, after being incorporated on 22 August 2024."
   }
  },
  "model": "claude-haiku-5-5"

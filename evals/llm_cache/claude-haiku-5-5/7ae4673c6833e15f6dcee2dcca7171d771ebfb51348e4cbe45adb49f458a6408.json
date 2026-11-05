@@ -1,0 +1,62 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "Companies House lists 3 current officers, comprising 2 directors and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts were last made up to 31 December 2024 and are not overdue; the next accounts are due 31 December 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement was last made up to 26 June 2026 and is not overdue; the next is due 10 July 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 2111, holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "The company has 3 satisfied charges registered and no outstanding or part-satisfied charges."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.director.2",
+     "Q8.network"
+    ],
+    "text": "The current directors have 9 active other appointments (one director) and 43 active and 6 dissolved other appointments (the other director), across 50 other companies found, of which 44 are active and 6 are dissolved."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes",
+     "Q9.address_changes"
+    ],
+    "text": "Since 24 October 2025, one officer was appointed (a director, 28 April 2026) and one director resigned (PERSON 563, 26 May 2026); no registered office address changes were filed in that period."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 481 (91000482) is an active company incorporated on 22 June 2004, with accounts and confirmation statement not overdue and no insolvency record held."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

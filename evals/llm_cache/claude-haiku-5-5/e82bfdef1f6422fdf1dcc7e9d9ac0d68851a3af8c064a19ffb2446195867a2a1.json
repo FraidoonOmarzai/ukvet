@@ -1,0 +1,67 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 6 December 2013 and is recorded as active."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for this company."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is overdue; it was last made up to 30 August 2025 and the next is due 13 September 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue; they were last made up to 31 December 2025 and the next are due 30 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "The register lists one current person with significant control, F. BLACK, with ownership of shares and voting rights each recorded as 75 to 100 percent, and the register entry notes this person as a convicted criminal."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current",
+     "Q8.network"
+    ],
+    "text": "There are 10 current officers, including 9 directors, and across the 5 current directors checked, 49 other companies were found (36 active, 11 dissolved, 2 liquidation)."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "The company has 11 satisfied charges registered and no outstanding or part-satisfied charges."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025, no registered office address changes were filed, and one officer appointment (PERSON 644, director, 9 July 2026) was filed with no resignations."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.confirmation_statement",
+    "Q5.control"
+   ],
+   "text": "TEST COMPANY 689 is recorded as active with no insolvency record, but its confirmation statement is overdue and the register holds a PSC note describing that person as a convicted criminal."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

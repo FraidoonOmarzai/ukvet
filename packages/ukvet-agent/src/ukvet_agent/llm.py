@@ -18,6 +18,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from ukvet_agent.errors import AgentConfigError
 from ukvet_agent.schemas import Claim
+from ukvet_agent.tracing import get_tracer
+from ukvet_agent.usage import UsageCallback
+from ukvet_agent.usage import current as current_usage
 
 
 class NarrativeDraft(BaseModel):
@@ -53,7 +56,15 @@ class LangChainNarrativeWriter:
         self._structured = chat_model.with_structured_output(NarrativeDraft)
 
     async def write(self, system: str, user: str) -> NarrativeDraft:
-        result = await self._structured.ainvoke([("system", system), ("human", user)])
+        messages = [("system", system), ("human", user)]
+        callbacks: list[Any] = list(get_tracer().llm_callbacks())
+        recorder = current_usage()
+        if recorder is not None:
+            callbacks.append(UsageCallback(recorder))
+        if callbacks:
+            result = await self._structured.ainvoke(messages, config={"callbacks": callbacks})
+        else:
+            result = await self._structured.ainvoke(messages)
         if isinstance(result, NarrativeDraft):
             return result
         return NarrativeDraft.model_validate(result)

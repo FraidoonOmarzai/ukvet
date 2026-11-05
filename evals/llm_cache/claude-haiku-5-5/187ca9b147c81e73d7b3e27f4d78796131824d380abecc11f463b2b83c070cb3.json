@@ -3,21 +3,27 @@
   "findings": [
    {
     "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "Accounts are not overdue; the next accounts are due 31 December 2026 and were last made up to 31 March 2025."
+    "text": "Accounts are not overdue; they were last made up to 31 March 2025 and the next accounts are due 31 December 2026."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is not overdue; the next statement is due 14 April 2027 and was last made up to 31 March 2026."
+    "text": "The confirmation statement is not overdue; it was last made up to 31 March 2026 and the next is due 14 April 2027."
    },
    {
     "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "There is 1 current officer, a director, PERSON 242, appointed 1 April 2022, and no other officers."
+    "text": "There is 1 current officer, a director, PERSON 242, appointed 1 April 2022."
    },
    {
     "fact_ids": [
@@ -27,21 +33,23 @@
    },
    {
     "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
      "Q8.director.1",
      "Q8.network"
     ],
-    "text": "No other appointments are on record for PERSON 242, and no other companies were found across the 1 current director checked."
+    "text": "The director has no other appointments on record, and no other companies were found across the current directors checked; this may be incomplete because appointments are matched by officer ID."
    },
    {
     "fact_ids": [
      "Q9.address_changes",
      "Q9.officer_changes"
     ],
-    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
-   },
-   {
-    "fact_ids": [],
-    "text": "No red flags were identified by the rules applied to these records."
+    "text": "No registered office address changes and no officer appointments or resignations have been filed since 24 October 2025."
    }
   ],
   "headline": {

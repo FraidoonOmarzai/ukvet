@@ -3,27 +3,34 @@
   "findings": [
    {
     "fact_ids": [
-     "Q3.officers_current"
+     "Q3.officers_current",
+     "Q9.officer_changes"
     ],
     "text": "The company has 2 current directors, PERSON 079 and PERSON 080, both appointed on 6 February 2026, and no other current officers."
    },
    {
     "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for the company."
+   },
+   {
+    "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "Accounts are not overdue and are next due 6 November 2027, with the last accounts made up to date not recorded."
+    "text": "Accounts are not overdue and the next accounts are due 6 November 2027; the last accounts made-up date is not recorded."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is not overdue and is next due 19 February 2027, with the last statement made up to date not recorded."
+    "text": "The confirmation statement is not overdue and the next one is due 19 February 2027; the last made-up date is not recorded."
    },
    {
     "fact_ids": [
-     "Q5.control"
+     "Q2.age"
     ],
-    "text": "Two individuals, PERSON 081 and PERSON 082, are recorded as persons with significant control, each holding 25 to 50 percent of shares and voting rights."
+    "text": "The company is less than a year old, at 0.7 years (262 days) since incorporation on 6 February 2026."
    },
    {
     "fact_ids": [
@@ -33,17 +40,16 @@
    },
    {
     "fact_ids": [
-     "Q8.director.1",
-     "Q8.director.2",
-     "Q8.network"
+     "Q5.control"
     ],
-    "text": "Each current director, PERSON 079 and PERSON 080, has one other active appointment, and across the two directors one other company was found."
+    "text": "Two individuals are recorded as persons with significant control: PERSON 081 and PERSON 082, each holding 25 to 50 percent of shares and voting rights."
    },
    {
     "fact_ids": [
+     "Q8.network",
      "Q9.address_changes"
     ],
-    "text": "No registered office address changes have been filed since 26 October 2025."
+    "text": "Each current director has one other active appointment, and no registered office address changes have been filed since 26 October 2025."
    }
   ],
   "headline": {
@@ -51,9 +57,11 @@
     "Q1.status",
     "Q2.age",
     "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
     "Q6.charges"
    ],
-   "text": "TEST COMPANY 085 (91000085) is an active company incorporated on 6 February 2026, with no insolvency record held and one outstanding charge registered."
+   "text": "TEST COMPANY 085 (91000085) is an active company incorporated on 6 February 2026, with no insolvency record, accounts and confirmation statement not overdue, and one outstanding charge."
   }
  },
  "model": "claude-haiku-5-5"

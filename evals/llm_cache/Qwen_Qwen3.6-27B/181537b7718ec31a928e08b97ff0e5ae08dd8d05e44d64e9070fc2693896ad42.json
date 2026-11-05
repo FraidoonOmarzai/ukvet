@@ -1,0 +1,66 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 4 October 1971 and has been active for 55.1 years."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "There are 10 current officers, comprising 9 directors and 1 other officer, though some records may be missing due to data caps."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "CORPORATE CONTROLLER 1815 is the sole person with significant control, holding 75 to 100 percent of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue, with the last made up to 31 December 2025 and the next due on 30 June 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue, with the last made up to 1 November 2025 and the next due on 15 November 2026."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "There are 92 outstanding charges registered against the company, out of a total of 308 charges."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "No insolvency record is held for the company by Companies House."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes",
+     "Q9.address_changes"
+    ],
+    "text": "One director, PERSON 421, resigned on 6 May 2026, and there have been no registered office address changes since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 475 is an active company with no insolvency records, up-to-date filings, and 92 outstanding charges."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

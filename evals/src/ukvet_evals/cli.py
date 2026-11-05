@@ -19,7 +19,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from ukvet_evals import authoring
+from ukvet_evals import authoring, phase4_cli
 from ukvet_evals.gate import compare
 from ukvet_evals.items import build_items, golden_conflicts
 from ukvet_evals.judge import JudgeSettings, agreement, build_judge, load_hand_labels
@@ -442,6 +442,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--hand", required=True)
     sp = add("report", cmd_report, "print results.json as markdown")
     sp.add_argument("--results", required=True)
+    phase4_cli.register(add, dataset)
     return p
 
 

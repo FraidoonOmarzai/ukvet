@@ -18,7 +18,7 @@ _MONTH_NUM = {m.lower(): i + 1 for i, m in enumerate(MONTHS)}
 _ISO = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
 _LONG = re.compile(r"\b(\d{1,2})\s+(" + "|".join(MONTHS) + r")\s+(\d{4})\b", re.IGNORECASE)
 _NUM = re.compile(r"(?<![\w.])\d+(?:\.\d+)?(?!\w)")
-_CONTROL = re.compile(r"[\x00-\x1f\x7f]")
+_CONTROL = re.compile("[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2060-\u2069\ufeff]")
 
 
 def fmt_date(value: str | date | None) -> str:

@@ -3,55 +3,54 @@
   "findings": [
    {
     "fact_ids": [
-     "Q2.age",
      "Q1.status"
     ],
-    "text": "The company was incorporated on 18 June 2019 and its status is recorded as active with a proposal to be struck off."
+    "text": "Companies House records the company's status as active, with the detail active-proposal-to-strike-off."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "No insolvency record is held for the company."
    },
    {
     "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "The accounts are overdue, with the next accounts due 31 December 2023 and the last accounts made up to 31 March 2022."
+    "text": "The accounts are overdue: the next accounts were due 31 December 2023, and the last accounts were made up to 31 March 2022."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is overdue, with the next statement due 29 July 2024 and the last statement made up to 15 July 2023."
+    "text": "The confirmation statement is overdue: the next statement was due 29 July 2024, and the last statement was made up to 15 July 2023."
    },
    {
     "fact_ids": [
-     "Q7.insolvency",
-     "Q6.charges"
-    ],
-    "text": "No insolvency record is held for the company, and no charges are registered against it."
-   },
-   {
-    "fact_ids": [
+     "Q2.age",
      "Q3.officers_current"
     ],
-    "text": "There is one current officer, a director, PERSON 076, appointed on 18 June 2019."
+    "text": "The company was incorporated on 18 June 2019 and has 1 current officer, a director, PERSON 076, appointed 18 June 2019."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: PERSON 077, an individual with ownership of shares of 75 to 100 percent."
+    "text": "One person with significant control is recorded: PERSON 077, an individual with ownership of shares of 75 to 100 percent."
    },
    {
     "fact_ids": [
-     "Q9.address_changes",
-     "Q9.officer_changes"
+     "Q6.charges"
     ],
-    "text": "No registered office address changes or officer appointments or resignations have been filed since 26 October 2025."
+    "text": "No charges are registered against the company."
    },
    {
     "fact_ids": [
      "Q8.director.1",
-     "Q8.network"
+     "Q9.address_changes",
+     "Q9.officer_changes"
     ],
-    "text": "PERSON 076 has no other appointments on record, and no other companies were found through the current director, though this may be incomplete because appointments are matched by officer ID."
+    "text": "The director, PERSON 076, has no other appointments on record, and no registered office address changes or officer appointments or resignations have been filed since 26 October 2025."
    }
   ],
   "headline": {
@@ -60,7 +59,7 @@
     "Q4.accounts",
     "Q4.confirmation_statement"
    ],
-   "text": "TEST COMPANY 084 is active but has a proposal to be struck off the register, with overdue accounts and an overdue confirmation statement."
+   "text": "TEST COMPANY 084 is recorded as active but subject to a proposal to be struck off, with overdue accounts and an overdue confirmation statement."
   }
  },
  "model": "claude-haiku-5-5"

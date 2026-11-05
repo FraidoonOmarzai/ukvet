@@ -5,19 +5,19 @@
     "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "The company has one current officer, a director, PERSON 254, who was appointed on 29 August 2024."
+    "text": "The company has 1 current officer, a director, PERSON 254, who was appointed on 29 August 2024."
    },
    {
     "fact_ids": [
      "Q4.accounts"
     ],
-    "text": "Accounts were last made up to 31 August 2025 and are next due 31 May 2027."
+    "text": "Accounts were last made up to 31 August 2025 and are next due by 31 May 2027."
    },
    {
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement was last made up to 28 August 2026 and is next due 11 September 2027."
+    "text": "The confirmation statement was last made up to 28 August 2026 and is next due by 11 September 2027."
    },
    {
     "fact_ids": [
@@ -30,14 +30,14 @@
      "Q8.director.1",
      "Q8.network"
     ],
-    "text": "PERSON 254 has no other appointments on record, and no other current companies were found across the one director checked."
+    "text": "Companies House records show no other appointments for PERSON 254 outside the company, based on matching by officer ID, which may be incomplete."
    },
    {
     "fact_ids": [
      "Q9.address_changes",
      "Q9.officer_changes"
     ],
-    "text": "No registered office address changes and no officer appointments or resignations have been filed since 24 October 2025."
+    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
    }
   ],
   "headline": {
@@ -49,7 +49,7 @@
     "Q4.accounts",
     "Q4.confirmation_statement"
    ],
-   "text": "TEST COMPANY 295 (91000296) is an active company incorporated on 29 August 2024, with no insolvency record, no registered charges, and no overdue accounts or confirmation statement."
+   "text": "TEST COMPANY 295 (91000296) is an active company incorporated on 29 August 2024, with no insolvency record, no registered charges, and accounts and confirmation statement not overdue."
   }
  },
  "model": "claude-haiku-5-5"

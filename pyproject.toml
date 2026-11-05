@@ -16,6 +16,7 @@ dev = [
     "pre-commit>=4.6.2",
     "pytest>=9.1.1",
     "pytest-asyncio>=1.4.0",
+    "langfuse>=5,<6",
     "pytest-cov>=7.1.0",
     "respx>=0.23.1",
     "ruff>=0.16.10",
@@ -55,6 +56,8 @@ ignore = ["S101", "UP046", "UP047"]
 "evals/src/ukvet_evals/draft.py" = ["E501"]
 "evals/src/ukvet_evals/demo.py" = ["E501"]
 "evals/src/ukvet_evals/report.py" = ["E501"]
+"evals/src/ukvet_evals/injection.py" = ["E501"]
+"evals/src/ukvet_evals/injection_cases.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"

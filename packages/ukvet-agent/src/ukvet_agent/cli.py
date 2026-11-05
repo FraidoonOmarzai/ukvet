@@ -19,6 +19,7 @@ from ukvet_agent.api import DepsFactory, default_deps
 from ukvet_agent.errors import AgentConfigError, AgentError
 from ukvet_agent.graph import build_graph, run_report
 from ukvet_agent.schemas import NeedsSelection, Report
+from ukvet_agent.tracing import flush_tracer
 
 
 def _summary(report: Report) -> str:
@@ -84,6 +85,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     except AgentConfigError as exc:
         print(f"Configuration error: {exc}", file=sys.stderr)
         code = 2
+    flush_tracer()
     sys.exit(code)
 
 

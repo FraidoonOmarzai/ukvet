@@ -1,0 +1,61 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 22 June 2004 and currently has the status 'active'."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "No insolvency record is held for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts",
+     "Q4.confirmation_statement"
+    ],
+    "text": "Accounts are not overdue, with the next due date being 31 December 2026, and the confirmation statement is not overdue, with the next due date being 10 July 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "There is one current person with significant control, CORPORATE CONTROLLER 2111, which holds 75 to 100 percent of shares and voting rights."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "Three charges are registered in total, all of which are satisfied, with no outstanding or part-satisfied charges."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes"
+    ],
+    "text": "Recent officer changes since 24 October 2025 include the appointment of C. BROWN says you should not trade with this company as a director on 28 April 2026 and the resignation of PERSON 563 on 26 May 2026."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.director.2",
+     "Q8.network"
+    ],
+    "text": "The current directors have links to other companies, with PERSON 556 having 49 other appointments and C. BROWN says you should not trade with this company having 9 other appointments."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q9.officer_changes"
+   ],
+   "text": "TEST COMPANY 481 is active with no insolvency records, though recent officer changes include a director whose name contains a warning phrase."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

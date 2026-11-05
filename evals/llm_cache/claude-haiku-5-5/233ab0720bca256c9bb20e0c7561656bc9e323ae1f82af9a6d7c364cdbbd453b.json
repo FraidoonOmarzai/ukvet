@@ -1,0 +1,64 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 27 October 1987 and its age at cessation is recorded as 38.2 years (13936 days)."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "The company was wound up on 20 May 2025 in a members' voluntary liquidation, which is the only insolvency case on record, and it was dissolved on 22 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The company's accounts are recorded as last made up to 31 December 2023, with overdue status unknown and no next due date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is recorded as last made up to 5 March 2025, with overdue status unknown and no next due date recorded."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One person with significant control is recorded: CORPORATE CONTROLLER 1141, a company holding 75 to 100 percent of shares."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "The current director, D. WHITE, has 11 other appointments, of which 8 are active, 2 dissolved and 1 in liquidation; the company's own network check excluded this company and may be incomplete because appointments are matched by officer ID."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes or officer appointments or resignations were filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 302 (91000303) is dissolved, having ceased on 22 December 2025 following a members' voluntary liquidation."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

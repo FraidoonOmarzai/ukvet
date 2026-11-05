@@ -101,6 +101,22 @@ class CitationStats(BaseModel):
     attempts: list[AttemptStats] = Field(default_factory=list)
 
 
+class Usage(BaseModel):
+    """Measured work for one report: tool calls, LLM calls, tokens, cost (M8, M9).
+
+    See `ukvet_agent.usage` for how cost is computed.
+    """
+
+    tool_calls: int = 0
+    tools: list[str] = Field(default_factory=list)
+    llm_calls: int = 0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cost_gbp: float | None = Field(
+        default=None, description="None unless UKVET_PRICE_IN/OUT_GBP_PER_MTOK are set."
+    )
+
+
 class Report(BaseModel):
     kind: Literal["report"] = "report"
     company_number: str
@@ -120,6 +136,7 @@ class Report(BaseModel):
     model: str | None = None
     citation_stats: CitationStats
     timings_ms: dict[str, int] = Field(default_factory=dict)
+    usage: Usage = Field(default_factory=Usage)
     disclaimer: str = DISCLAIMER
     attribution: str = ATTRIBUTION
 

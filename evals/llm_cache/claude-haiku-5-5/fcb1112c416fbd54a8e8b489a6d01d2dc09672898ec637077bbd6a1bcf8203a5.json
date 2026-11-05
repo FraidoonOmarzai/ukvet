@@ -3,6 +3,13 @@
   "findings": [
    {
     "fact_ids": [
+     "Q2.age",
+     "Q1.status"
+    ],
+    "text": "The company was incorporated on 4 October 1971 and its status is recorded as active."
+   },
+   {
+    "fact_ids": [
      "Q7.insolvency"
     ],
     "text": "Companies House holds no insolvency record for the company."
@@ -21,46 +28,46 @@
    },
    {
     "fact_ids": [
-     "Q6.charges"
+     "Q3.officers_current",
+     "Q9.officer_changes"
     ],
-    "text": "The company has 92 outstanding, 0 part-satisfied and 8 satisfied charges registered, out of 308 in total; only the first 100 charges were fetched."
-   },
-   {
-    "fact_ids": [
-     "Q3.officers_current"
-    ],
-    "text": "The register lists 10 current officers, including 9 directors, though only 100 of 120 officer records were fetched so some current officers may be missing."
+    "text": "The company has 10 current officers recorded, 9 of them directors, although only 100 of 120 officer records were fetched so some current officers may be missing."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 1815, a company holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
+    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 1815, holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "92 charges are recorded as outstanding and 0 as part-satisfied, with 8 satisfied, out of 308 registered in total; only 100 of the 308 charges were fetched."
    },
    {
     "fact_ids": [
      "Q9.officer_changes",
      "Q9.address_changes"
     ],
-    "text": "Since 24 October 2025, PERSON 421, a director, resigned on 6 May 2026, and no registered office address changes were filed."
+    "text": "Since 24 October 2025, one director resignation has been filed (PERSON 421, 6 May 2026) and no registered office address changes have been filed."
    },
    {
     "fact_ids": [
-     "Q8.network"
+     "Q6.charges"
     ],
-    "text": "Across the first 5 of 9 current directors checked, 2 other active companies were found, excluding this company."
+    "text": "The outstanding secured charges are flagged as a low-level red flag under the rules applied."
    }
   ],
   "headline": {
    "fact_ids": [
     "Q1.status",
-    "Q2.age",
     "Q7.insolvency",
     "Q4.accounts",
     "Q4.confirmation_statement",
     "Q6.charges"
    ],
-   "text": "TEST COMPANY 475 is an active company incorporated on 4 October 1971 with no insolvency record, accounts and confirmation statement not overdue, and 92 outstanding charges."
+   "text": "TEST COMPANY 475 is an active company with no insolvency record, accounts and confirmation statement not overdue, and 92 outstanding charges registered."
   }
  },
  "model": "claude-haiku-5-5"

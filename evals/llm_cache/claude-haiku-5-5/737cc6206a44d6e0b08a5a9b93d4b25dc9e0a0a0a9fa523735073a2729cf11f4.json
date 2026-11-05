@@ -5,7 +5,7 @@
     "fact_ids": [
      "Q7.insolvency"
     ],
-    "text": "The company was wound up on 11 September 2024 in a members' voluntary liquidation, with a declaration of solvency dated 9 September 2024."
+    "text": "The company was wound up on 11 September 2024 in a members' voluntary liquidation, with a declaration of solvency made on 9 September 2024."
    },
    {
     "fact_ids": [
@@ -21,16 +21,21 @@
    },
    {
     "fact_ids": [
-     "Q2.age",
+     "Q2.age"
+    ],
+    "text": "The company was incorporated on 24 December 1979 and is 46.8 years old."
+   },
+   {
+    "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "The company was incorporated on 24 December 1979 and has 2 current officers: 1 director (PERSON 728) and 1 other officer."
+    "text": "There are 2 current officers: 1 director (PERSON 728) and 1 other officer."
    },
    {
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "There is 1 current person with significant control recorded: PERSON 729, an individual with significant influence or control as a firm."
+    "text": "One person with significant control is recorded: PERSON 729, an individual with significant influence or control as a firm."
    },
    {
     "fact_ids": [
@@ -40,17 +45,10 @@
    },
    {
     "fact_ids": [
-     "Q8.director.1",
-     "Q8.network"
-    ],
-    "text": "The director, PERSON 728, has no other appointments on record, and no other companies were found across the 1 current director checked."
-   },
-   {
-    "fact_ids": [
      "Q9.address_changes",
      "Q9.officer_changes"
     ],
-    "text": "No registered office address changes or officer appointments or resignations were filed since 26 October 2025."
+    "text": "No registered office address changes or officer appointments or resignations have been filed since 26 October 2025."
    }
   ],
   "headline": {
@@ -60,7 +58,7 @@
     "Q4.accounts",
     "Q4.confirmation_statement"
    ],
-   "text": "TEST COMPANY 785 (91000787) is in liquidation following a members' voluntary liquidation, with its accounts and confirmation statement both overdue."
+   "text": "TEST COMPANY 785 (91000787) is in liquidation, having entered a members' voluntary liquidation, and its accounts and confirmation statement are both overdue."
   }
  },
  "model": "claude-haiku-5-5"

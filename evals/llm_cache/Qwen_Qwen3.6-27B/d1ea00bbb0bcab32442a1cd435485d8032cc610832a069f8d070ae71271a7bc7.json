@@ -1,0 +1,67 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q1.status",
+     "Q2.age"
+    ],
+    "text": "ALDI LIMITED (02333320) has the status 'active' and was incorporated on 9 January 1989."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "No insolvency record is held for the company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "Accounts are not overdue, with the next due date being 30 September 2027, and the last accounts were made up to 31 December 2025."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue, with the next due date being 29 May 2027, and the last statement was made up to 15 May 2026."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "There is one current person with significant control: CORPORATE CONTROLLER 898, which holds 75 to 100 percent ownership of shares and voting rights, and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "No charges are registered against the company."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "The five current directors have 54 other appointments across 29 active and 25 dissolved companies."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "No registered office address changes or officer appointments and resignations have been filed since 24 October 2025."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q8.network"
+   ],
+   "text": "ALDI LIMITED is an active company with no insolvency records or overdue filings, though its directors are linked to a network of dissolved companies."
+  }
+ },
+ "model": "Qwen/Qwen3.6-27B"
+}

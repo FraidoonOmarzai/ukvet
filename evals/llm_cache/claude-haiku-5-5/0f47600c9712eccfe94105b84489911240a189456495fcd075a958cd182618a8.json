@@ -6,13 +6,7 @@
      "Q2.age",
      "Q1.status"
     ],
-    "text": "The company was incorporated on 12 August 2024 and is recorded as active, with a status detail of active-proposal-to-strike-off."
-   },
-   {
-    "fact_ids": [
-     "Q7.insolvency"
-    ],
-    "text": "Companies House holds no insolvency record for the company."
+    "text": "The company was incorporated on 12 August 2024 and is recorded as active with a proposal to be struck off."
    },
    {
     "fact_ids": [
@@ -24,7 +18,7 @@
     "fact_ids": [
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is overdue; the next one is due on 25 August 2026, and the last was made up to 11 August 2025."
+    "text": "The confirmation statement is overdue; it was last made up to 11 August 2025 and the next one is due 25 August 2026."
    },
    {
     "fact_ids": [
@@ -36,13 +30,21 @@
     "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: PERSON 251, an individual holding 75 to 100 percent of the shares."
+    "text": "One current person with significant control is recorded: PERSON 251, an individual holding 75 to 100 percent of shares."
    },
    {
     "fact_ids": [
-     "Q6.charges"
+     "Q6.charges",
+     "Q7.insolvency"
     ],
-    "text": "No charges are registered against the company."
+    "text": "No charges are registered against the company, and Companies House holds no insolvency record for it."
+   },
+   {
+    "fact_ids": [
+     "Q8.director.1",
+     "Q8.network"
+    ],
+    "text": "The director has no other appointments on record, and no other companies were found across the current directors checked."
    },
    {
     "fact_ids": [

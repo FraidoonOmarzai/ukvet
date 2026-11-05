@@ -1,0 +1,66 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has 3 current officers, comprising 2 directors, JOHN SMITH and PERSON 556, and 1 other officer."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current",
+     "Q9.officer_changes"
+    ],
+    "text": "The register records that JOHN SMITH has been convicted of fraud; this director was appointed on 28 April 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts were last made up to 31 December 2024 and the next accounts are due 31 December 2026."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement was last made up to 26 June 2026 and the next one is due 10 July 2027."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "The company has one person with significant control, CORPORATE CONTROLLER 2111, which holds 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "The company has 0 outstanding and 3 satisfied charges registered, 3 in total."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across 2 current directors checked, 50 other companies were found, of which 44 are active and 6 are dissolved; the register notes this may be incomplete because appointments are matched by officer ID."
+   },
+   {
+    "fact_ids": [
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025 there has been 1 officer appointment and 1 resignation: JOHN SMITH was appointed as a director on 28 April 2026, and PERSON 563 resigned as a director on 26 May 2026."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q2.age",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q7.insolvency"
+   ],
+   "text": "TEST COMPANY 481 (91000482) is an active company incorporated on 22 June 2004, with accounts and confirmation statement not overdue and no insolvency record held."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

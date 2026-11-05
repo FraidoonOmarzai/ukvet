@@ -1,0 +1,66 @@
+{
+ "draft": {
+  "findings": [
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for this company."
+   },
+   {
+    "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts are not overdue; they were last made up to 31 December 2025 and the next accounts are due 30 June 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement is not overdue; it was last made up to 1 November 2025 and the next statement is due 15 November 2026."
+   },
+   {
+    "fact_ids": [
+     "Q6.charges"
+    ],
+    "text": "The register records 92 charges as outstanding, 0 as part-satisfied and 8 as satisfied, out of 308 registered in total; only the first 100 charges were fetched, so these counts cover only the listed charges."
+   },
+   {
+    "fact_ids": [
+     "Q3.officers_current"
+    ],
+    "text": "The company has 10 current officers recorded, 9 of whom are directors, including PERSON 375 (appointed 8 February 2022), PERSON 376 (appointed 23 April 2022) and PERSON 379 (appointed 1 June 2025); only 100 of 120 officer records were fetched, so some officers may be missing."
+   },
+   {
+    "fact_ids": [
+     "Q5.control"
+    ],
+    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 1815, a company holding ownership of shares 75 to 100 percent and voting rights 75 to 100 percent, with the right to appoint and remove directors."
+   },
+   {
+    "fact_ids": [
+     "Q9.address_changes",
+     "Q9.officer_changes"
+    ],
+    "text": "Since 24 October 2025, no registered office address changes have been filed, and one officer resignation has been filed: PERSON 421 (director, 6 May 2026)."
+   },
+   {
+    "fact_ids": [
+     "Q8.network"
+    ],
+    "text": "Across 5 of the 9 current directors checked, 2 other active company appointments were found, excluding the company being checked."
+   }
+  ],
+  "headline": {
+   "fact_ids": [
+    "Q1.status",
+    "Q7.insolvency",
+    "Q4.accounts",
+    "Q4.confirmation_statement",
+    "Q6.charges"
+   ],
+   "text": "TEST COMPANY 475 (91000476) is recorded as active, with no insolvency record held, accounts and confirmation statement not overdue, and 92 outstanding charges registered."
+  }
+ },
+ "model": "claude-haiku-5-5"
+}

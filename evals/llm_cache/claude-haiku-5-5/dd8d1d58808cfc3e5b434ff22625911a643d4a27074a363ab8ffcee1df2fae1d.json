@@ -5,31 +5,32 @@
     "fact_ids": [
      "Q2.age"
     ],
-    "text": "The company was incorporated on 20 March 2013 and ceased on 8 April 2014, at an age of 1.1 years (384 days)."
+    "text": "The company was incorporated on 20 March 2013 and ceased on 8 April 2014, an age at cessation of 1.1 years (384 days)."
    },
    {
     "fact_ids": [
      "Q1.status"
     ],
-    "text": "The red flag rules list the company's dissolved status as a high-severity finding."
+    "text": "A high-severity red flag is recorded because the company is dissolved."
+   },
+   {
+    "fact_ids": [
+     "Q7.insolvency"
+    ],
+    "text": "Companies House holds no insolvency record for this company."
    },
    {
     "fact_ids": [
      "Q3.officers_current"
     ],
-    "text": "Companies House records show 1 current officer: one director, PERSON 366, appointed 20 March 2013, and no other officers."
+    "text": "The register shows 1 current officer: one director, PERSON 366, appointed 20 March 2013, and no other officers."
    },
    {
     "fact_ids": [
-     "Q4.accounts"
-    ],
-    "text": "The company's accounts are of unknown overdue status, and the next due date and last made-up-to date are not recorded."
-   },
-   {
-    "fact_ids": [
+     "Q4.accounts",
      "Q4.confirmation_statement"
     ],
-    "text": "The confirmation statement is of unknown overdue status, and its next due date and last made-up-to date are not recorded."
+    "text": "The accounts and confirmation statement are of unknown overdue status, and their next due and last made up to dates are not recorded."
    },
    {
     "fact_ids": [
@@ -48,7 +49,7 @@
      "Q8.director.1",
      "Q8.network"
     ],
-    "text": "PERSON 366 has no other appointments on record, and no other companies were found across the 1 current director checked."
+    "text": "PERSON 366 has no other appointments on record, and no other companies were found across the one current director checked."
    },
    {
     "fact_ids": [
@@ -60,10 +61,9 @@
   ],
   "headline": {
    "fact_ids": [
-    "Q1.status",
-    "Q7.insolvency"
+    "Q1.status"
    ],
-   "text": "TEST COMPANY 469 (91000470) is recorded as dissolved, having ceased on 8 April 2014, and no insolvency record is held for it."
+   "text": "TEST COMPANY 469 (91000470) is dissolved, having ceased on 8 April 2014, and is the subject of a high-severity red flag for its dissolved status."
   }
  },
  "model": "claude-haiku-5-5"

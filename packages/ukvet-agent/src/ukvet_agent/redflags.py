@@ -268,11 +268,14 @@ def risk_level(flags: list[RedFlag], gaps: list[Gap]) -> RiskLevel:
     return "low"
 
 
+ASSESSMENT_PREFIX = (
+    "ukvet's automated assessment (an opinion generated from rules, not a statement of fact): "
+)
+
+
 def assessment_text(level: RiskLevel, flags: list[RedFlag], gaps: list[Gap]) -> str:
     """Deterministic, honest, labelled as opinion."""
-    prefix = (
-        "ukvet's automated assessment (an opinion generated from rules, not a statement of fact): "
-    )
+    prefix = ASSESSMENT_PREFIX
     counted = [f for f in flags if f.severity != "info"]
     if level == "insufficient_data":
         body = (

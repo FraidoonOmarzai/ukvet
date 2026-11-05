@@ -3,52 +3,40 @@
   "findings": [
    {
     "fact_ids": [
-     "Q7.insolvency"
-    ],
-    "text": "Companies House holds no insolvency record for the company."
-   },
-   {
-    "fact_ids": [
-     "Q6.charges"
-    ],
-    "text": "No charges are registered against the company."
-   },
-   {
-    "fact_ids": [
-     "Q4.accounts"
-    ],
-    "text": "The company's accounts are not overdue; they were last made up to 31 December 2025 and the next accounts are due 30 September 2027."
-   },
-   {
-    "fact_ids": [
-     "Q4.confirmation_statement"
-    ],
-    "text": "The confirmation statement is not overdue; it was last made up to 15 May 2026 and the next is due 29 May 2027."
-   },
-   {
-    "fact_ids": [
      "Q3.officers_current"
     ],
     "text": "The company has 6 current officers, comprising 5 directors and 1 other officer."
    },
    {
     "fact_ids": [
+     "Q4.accounts"
+    ],
+    "text": "The accounts were last made up to 31 December 2025 and the next accounts are due by 30 September 2027."
+   },
+   {
+    "fact_ids": [
+     "Q4.confirmation_statement"
+    ],
+    "text": "The confirmation statement was last made up to 15 May 2026 and the next one is due by 29 May 2027."
+   },
+   {
+    "fact_ids": [
      "Q5.control"
     ],
-    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 898, a company holding 75 to 100 percent of shares and voting rights and the right to appoint and remove directors."
+    "text": "One current person with significant control is recorded: CORPORATE CONTROLLER 898, a company holding 75 to 100 percent of shares and voting rights, with the right to appoint and remove directors."
    },
    {
     "fact_ids": [
      "Q8.network"
     ],
-    "text": "Across the 5 current directors checked, 54 other companies were found, of which 29 are active and 25 are dissolved, a pattern of directors linked to many dissolved companies (low flag)."
+    "text": "Across the 5 current directors checked, 54 other companies were found, of which 29 are active and 25 are dissolved; this is a low-level red flag for links to many dissolved companies."
    },
    {
     "fact_ids": [
      "Q9.address_changes",
      "Q9.officer_changes"
     ],
-    "text": "No registered office address changes or officer appointments or resignations have been filed since 24 October 2025."
+    "text": "No registered office address changes and no officer appointments or resignations have been filed since 24 October 2025."
    }
   ],
   "headline": {
