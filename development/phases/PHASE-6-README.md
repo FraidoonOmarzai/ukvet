@@ -218,16 +218,16 @@ The registry only stores metadata; it checks that the PyPI package belongs to yo
    ```json
    {
      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-     "name": "io.github.<github-user>/ukvet-mcp",
+     "name": "io.github.fraidoonomarzai/ukvet-mcp",
      "title": "ukvet: UK Companies House",
      "description": "Read-only UK Companies House tools for due diligence: profile, officers, PSC, charges, filings, insolvency.",
      "repository": { "url": "https://github.com/<github-user>/ukvet", "source": "github" },
-     "version": "0.0.1",
+     "version": "0.1.0",
      "packages": [
        {
          "registryType": "pypi",
          "identifier": "ukvet-mcp",
-         "version": "0.0.1",
+         "version": "0.1.0",
          "transport": { "type": "stdio" },
          "environmentVariables": [
            { "name": "COMPANIES_HOUSE_API_KEY", "description": "Your free Companies House API key",
@@ -248,7 +248,9 @@ The registry only stores metadata; it checks that the PyPI package belongs to yo
 4. Verify:
    ```powershell
    curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.<github-user>/ukvet-mcp"
+   curl.exe "https://registry.modelcontextprotocol.io/v0.1/servers?search=ukvet"
    ```
+   - click `https://registry.modelcontextprotocol.io/v0.1/servers?search=ukvet`
    Troubleshooting from the docs: "Registry validation failed for package" = the `mcp-name:` line
    is missing from the **published** PyPI README (needs a new PyPI version, so get it right in
    Step 5); "Invalid or expired token" = log in again; "no permission" = name prefix does not match
@@ -270,7 +272,7 @@ Submit once each. Their forms change, so follow their own pages:
 
 Keep a list of each submission and its link (you will want it for the 30-day review).
 
-## Step 9. Article 1: building ukvet (1-2 days)
+## Step 9. Article 1: building ukvet (`docs/ARTICLE-2.md`)
 
 Platform: Medium (plan), optionally cross-post to dev.to. Length 1,200 to 1,800 words. Outline:
 
@@ -288,7 +290,7 @@ Platform: Medium (plan), optionally cross-post to dev.to. Length 1,200 to 1,800 
 Do not include real company names or Langfuse links. Use the OGL line and the "not affiliated" line
 at the bottom.
 
-## Step 10. Article 2: what the evals revealed (1-2 days)
+## Step 10. Article 2: what the evals revealed (`docs/ARTICLE-1.md`)
 
 1. **Why evals** (accuracy that is measured, not claimed). Explain M1, M2, M4, M6 in plain words.
 2. **The numbers**: the results table from `docs/results.md`.
@@ -303,20 +305,8 @@ at the bottom.
 Before publishing, run the two verification commands from the Phase 5 close-out (c007's
 `date_of_creation`, the `CANARY-A16` cache lines) and make the sentences match what you find.
 
-## Step 11. CV and LinkedIn (1-2 hours)
 
-Only claims you can show. Template for the CV (adapt, keep numbers exact):
-
-> **ukvet**: UK Companies House due-diligence agent (MCP server + LangGraph agent + eval harness).
-> Published `ukvet-mcp` to PyPI and the MCP registry. Built a 156-claim citation-checked eval
-> harness; compared Claude Haiku 5.5 with self-hosted Qwen3.6-27B (p95 6.6 s vs 24.2 s; £0.00058 vs
-> £0.0076 per report). Two write-ups published.
-
-On LinkedIn: add the repo under Projects/Featured, post once with the GIF and a link to article 1
-(or 2), and say what you learned, not "excited to announce". Do not claim users or downloads you do
-not have.
-
-## Step 12. After launch: record adoption (M13 to M16)
+## Step 11. After launch: record adoption (M13 to M16)
 
 The plan sets no targets, only honest reporting. Create `docs/adoption.md` with a table and fill
 it at **launch day** and again at **launch + 30 days**:
@@ -344,25 +334,12 @@ and tag nothing further.
 | 5-6 | Steps 9, 10 (articles) |
 | 7 | Step 11, 12 (CV, LinkedIn, adoption file) |
 
-## Definition of done
-
-- [ ] No secrets in history; ignored files not tracked; fixtures anonymised
-- [ ] README quickstart followed successfully on a clean machine
-- [ ] README final: GIF, results, limitations, OGL line, not-affiliated line; stray `...` removed
-- [ ] CHANGELOG, versions aligned, tag pushed
-- [ ] `uvx ukvet-mcp --version` works from PyPI
-- [ ] GitHub release published
-- [ ] Listed in the official MCP registry (curl check returns your server); other directories submitted
-- [ ] Article 1 and article 2 published
-- [ ] CV and LinkedIn updated with exact numbers
-- [ ] `docs/adoption.md` created; 30-day reminder set
-- [ ] Decision log rows, risks (R16 closed), README status updated
 
 ## Common mistakes
 
 | Mistake | Fix |
 |---|---|
-| Uploading to PyPI before adding the `mcp-name:` line | PyPI versions cannot be changed; publish `0.1.1` with the line |
+| Uploading to PyPI before adding the `mcp-name:` line | PyPI versions cannot be changed; publish `0.1.0` with the line |
 | Tag name does not match the workflow trigger | the workflow listens for `ukvet-mcp-v*`; check `release-mcp.yml` |
 | Tagging before bumping the version | bump, commit, then tag |
 | README links work in the editor but not on GitHub | click them on GitHub |

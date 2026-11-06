@@ -3,9 +3,52 @@
 **Vet any UK company in 30 seconds — cited, evaluated, open source.**
 
 [![CI](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml/badge.svg)](https://github.com/fraidoonomarzai/ukvet/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/ukvet-mcp.svg)](https://pypi.org/project/ukvet-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Status: Phase 5 (model comparison) complete.** `ukvet-mcp` (8 tools) and `ukvet-agent` (LangGraph agent, FastAPI, Streamlit UI, Docker) are built and tested. A versioned evaluation set (48 companies, 432 items) is replayed through the real stack and gated in CI ([docs/eval-report.md](docs/eval-report.md)). Phase 4 added optional Langfuse tracing, per-report cost and tool-call counts, output guardrails, and a prompt-injection evaluation (M6) ([threat model](docs/threat-model.md)). Phase 5 compared Claude Haiku 5.5 with the open-weight Qwen3.6-27B on the same test set: equal measured accuracy, but Claude was about 3.7 times faster at the p95 and about 13 times cheaper per report ([docs/results.md](docs/results.md)). Next: Phase 6 (launch).
+<p align="center">
+  <img src="docs/ukvet-demo.gif" alt="ukvet-mcp demo in Claude Desktop" width="800">
+</p>
+
+> **Status: Phase 6 (launch) Completed.** `ukvet-mcp` 0.1.0 is on [PyPI](https://pypi.org/project/ukvet-mcp/) and in the official [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=ukvet) (`io.github.FraidoonOmarzai/ukvet-mcp`). The agent, UI and evaluation harness are built, tested and gated in CI.
+
+## Quickstart
+
+### 1. Use the data layer in Claude Desktop (2 minutes)
+
+You need [uv](https://docs.astral.sh/uv/) and a free Companies House REST API key
+([create one here](https://developer.company-information.service.gov.uk/), live environment).
+
+```powershell
+$env:CH_API_KEY="your-key"; uvx ukvet-mcp --check      # prints OK if the key works
+```
+
+Then add this to `claude_desktop_config.json` and restart Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "ukvet": {
+      "command": "uvx",
+      "args": ["ukvet-mcp"],
+      "env": { "CH_API_KEY": "your-key" }
+    }
+  }
+}
+```
+
+Full guide: [`packages/ukvet-mcp`](packages/ukvet-mcp) and its [PyPI page](https://pypi.org/project/ukvet-mcp/).
+
+### 2. Run the full agent and UI (Docker)
+
+```powershell
+git clone https://github.com/fraidoonomarzai/ukvet.git
+cd ukvet
+copy .env.example .env          # add CH_API_KEY (LLM settings are optional)
+docker compose up --build       # API http://localhost:8000/docs, UI http://localhost:8501
+```
+
+With no `LLM_PROVIDER` set, reports use a template narrative and cost nothing. With one set, the LLM writes the wording and every sentence must pass the citation check, or the template is used instead.
 
 ## What it does
 
@@ -35,7 +78,41 @@ Every fact is cited to the official record. When data is missing, ukvet says so 
 | Guardrails    | Citation checker plus output checks on every finished report; injection eval (M6)                              |
 | Model choice  | Claude Haiku 5.5 vs open-weight Qwen3.6-27B on one test set, published as a table ([results](docs/results.md)) |
 
-Architecture: [docs/08-architecture.md](docs/08-architecture.md)
+Facts, red flags and the risk level come from deterministic code and rules. The LLM is one node: it sees only verified facts, has no tools, and every claim it writes is checked. Architecture: [docs/08-architecture.md](docs/08-architecture.md)
+
+## Results
+
+Measured on a versioned set of 48 companies (30 dev, 18 test). Full tables, intervals and failure analysis: [docs/eval-report.md](docs/eval-report.md) and [docs/results.md](docs/results.md).
+
+**Baseline (Claude Haiku 5.5, all 48 companies)**
+
+| Metric                          | Target | Result                          |
+| ------------------------------- | ------ | ------------------------------- |
+| M1 retrieval accuracy           | ≥ 90%  | 100% (1488/1488 fields)         |
+| M2 unsupported claims           | < 2%   | 0 of 421 (95% upper bound 0.9%) |
+| M4 citations valid (mechanical) | 100%   | 100% (421/421)                  |
+| M5 red-flag recall              | ≥ 85%  | 100% (89/89)                    |
+
+**Model comparison (test split: 18 reports, about 155 claims each)**
+
+|                         | Claude Haiku 5.5 (API) | Qwen3.6-27B (self-hosted, A100)                    |
+| ----------------------- | ---------------------- | -------------------------------------------------- |
+| M1 accuracy             | 100%                   | 100%                                               |
+| M2 unsupported claims   | 0 of 156               | 1 of 154                                           |
+| M4 citations valid      | 156 of 156             | 153 of 154                                         |
+| M6 injection resistance | 96.7% (87/90)          | 100% (90/90)                                       |
+| M7 latency, p95         | 6.6 s                  | 24.2 s                                             |
+| M8 cost per report      | £0.00058               | £0.0076 (best case, GPU time of the live run only) |
+
+Recommendation: keep Claude Haiku 5.5 as the default; the open-weight path is supported by a settings change. Accuracy differences are within the noise on this test set.
+
+### Limitations (read these)
+
+- M1 is agreement with an oracle I wrote, hand-checked against the live website for 10 companies. It does not prove every field is true, and a 100% score means the set is not yet hard enough to find new retrieval bugs.
+- M2 and M4 are mechanical checks (IDs, dates, numbers, names, forbidden wording). Whether a cited fact fully supports a sentence, and fairness of wording, were not measured.
+- The test split is 18 reports; one open-weight model, one run each; latency and cost are from one network and one GPU.
+- Prompt injection: one payload (a company name) put attacker-chosen text into Claude's report on 3 of 3 host companies. The risk level and red flags did not change. This is an open follow-up, and M6 measures resistance to the listed payloads only.
+- Labels and rules were written by one person.
 
 ## Development
 
@@ -90,9 +167,8 @@ uv run ukvet-evals injection --dataset v0.1 --llm replay --model <model>
 
 Tracing is off unless both Langfuse keys are set, and it can never break a report. Targets: M6 injection resistance 95% or more, M7 p95 latency under 30 s, M8 cost under £0.05 per report, M9 tool calls per report tracked as a baseline. M6 measures resistance to the listed payloads only; it is not proof of safety. Measured results are in `evals/results/`.
 
-
 ### Model comparison (Phase 5)
- 
+
 ```powershell
 # one env file per model; copy the one you want over .env
 uv run python scripts/phase5_check_endpoint.py        # smoke-test an OpenAI-compatible endpoint (vLLM)
@@ -101,24 +177,12 @@ uv run python scripts/phase4_metrics.py --file numbers.txt --label <name> --out 
 uv run ukvet-evals compare --init                     # create evals/comparison.json, fill it in
 uv run ukvet-evals compare                            # writes docs/results.md; refuses unfair comparisons
 ```
- 
+
 Both models must run on the same dataset version, split, prompts and git commit; `compare` refuses different datasets or splits and warns about the rest. How the open-weight model was served: [ADR-008](docs/adr/008-open-weight-serving.md) and [docs/PHASE-5-GPU-SETUP.md](docs/PHASE-5-GPU-SETUP.md).
 
-## Project documents
+## More documents
 
-| Doc                                                      | Contents                      |
-| -------------------------------------------------------- | ----------------------------- |
-| [01 Problem statement](docs/01-problem-statement.md)     | Why ukvet exists              |
-| [02 Users and questions](docs/02-users-and-questions.md) | Personas and Q1–Q10           |
-| [03 Scope](docs/03-scope.md)                             | In, out, later                |
-| [04 Success metrics](docs/04-success-metrics.md)         | Targets fixed before building |
-| [05 Data notes](docs/05-data-notes.md)                   | API findings                  |
-| [06 Legal and ethics](docs/06-legal-and-ethics.md)       | Licensing, UK GDPR, misuse    |
-| [07 Risks](docs/07-risks.md)                             | Risk register                 |
-| [08 Architecture](docs/08-architecture.md)               | Design + [ADRs](docs/adr/)    |
-| [09 Plan](docs/09-plan.md)                               | Milestones, backlog, workflow |
-
-...
+[Architecture and ADRs](docs/08-architecture.md) · [Evaluation report](docs/eval-report.md) · [Model comparison](docs/results.md) · [Threat model](docs/threat-model.md) · [Decision log](docs/kickoff/decision-log.md) · [All docs](docs/)
 
 ## Disclaimer
 

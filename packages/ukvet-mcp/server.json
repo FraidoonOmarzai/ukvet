@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.FraidoonOmarzai/ukvet-mcp",
+  "title": "ukvet: UK Companies House",
+  "description": "Read-only UK Companies House tools for due diligence: profile, officers, PSC, charges, insolvency.",
+  "repository": { "url": "https://github.com/fraidoonomarzai/ukvet", "source": "github" },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "ukvet-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "CH_API_KEY",
+          "description": "Your free Companies House REST API key (live environment)",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
