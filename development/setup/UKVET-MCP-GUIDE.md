@@ -437,3 +437,31 @@ Points to know:
 Settings you can add to the `env` block (all optional; defaults are fine): `UKVET_LOG_LEVEL`
 (for example `INFO`), `UKVET_CACHE_ENABLED` (`false` turns the cache off), `UKVET_CACHE_TTL_HOURS`
 (default 24), `UKVET_MAX_ITEMS` (default 100).
+
+
+---
+**for new version**
+
+**Release 0.1.0 (recommended).** It matches your plan ("v0.1.0 released"), the changelog and the GitHub release, and it avoids a confusing 0.0.2. Use it unless you have a reason not to.
+
+Version fields to change for 0.1.0:
+
+1. `packages\ukvet-mcp\pyproject.toml`: set `version = "0.1.0"`.
+2. Any other place that holds the old number. Find them with:
+   ```powershell
+   git grep -n "0\.0\.1"
+   ```
+   Ignore unrelated matches such as dependency versions. Update the package's own version, for example in `__init__.py` if `--version` reads it.
+3. `server.json`: set both `"version"` fields to `0.1.0`.
+
+The `ukvet-agent` package is also 0.0.1. Bumping it to `0.1.0` as well keeps the repo consistent, but it is optional because the agent isn't published to PyPI.
+
+
+```bash
+# Bump the version, commit and tag. Use 0.1.0 in packages\ukvet-mcp\pyproject.toml
+git add packages/ukvet-mcp
+git commit -m "ukvet-mcp 0.1.0: add registry ownership line"
+git push origin HEAD
+git tag ukvet-mcp-v0.1.0
+git push origin ukvet-mcp-v0.1.0
+```
