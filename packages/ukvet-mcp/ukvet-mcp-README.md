@@ -7,6 +7,7 @@ insolvency and filing history.
 Part of [ukvet](https://github.com/fraidoonomarzai/ukvet) (an AI due-diligence agent with an
 evaluation benchmark). This package is the data layer and works on its own.
 
+<!-- mcp-name: io.github.FraidoonOmarzai/ukvet-mcp -->
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FraidoonOmarzai/ukvet/main/docs/ukvet-demo.gif" alt="ukvet-mcp demo" width="800">
@@ -33,8 +34,16 @@ You need a free Companies House API key: create an application at
 <https://developer.company-information.service.gov.uk/> and add a **REST** key for the **live**
 environment.
 
+macOS / Linux:
+
 ```bash
 CH_API_KEY=your-key uvx ukvet-mcp --check     # verifies the key, prints OK
+```
+
+Windows (PowerShell):
+
+```powershell
+$env:CH_API_KEY="your-key"; uvx ukvet-mcp --check
 ```
 
 ### Claude Desktop
@@ -56,7 +65,8 @@ Edit `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/
 
 Try: *"Is Tesco PLC active, who are its directors, and does it have any outstanding charges?"*
 
-**Claude setup guide:** `ukvet\development\setup\claude-desktop-ukvet-setup.md`
+Step-by-step guide with screenshots:
+[Claude Desktop setup](https://github.com/fraidoonomarzai/ukvet/blob/main/development/setup/claude-desktop-ukvet-setup.md)
 
 ### Cursor and other clients
 
