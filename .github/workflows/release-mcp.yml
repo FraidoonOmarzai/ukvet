@@ -1,9 +1,9 @@
 name: Release ukvet-mcp
 
 # Publishes with PyPI Trusted Publishing (OIDC): no API token is stored anywhere.
-# One-off setup: docs/10-phase-1-guide.md, section "Publishing".
+# One-off setup: development/setup/ukvet-mcp-publishing-guide.md.
 #
-#   Tag release:   git tag ukvet-mcp-v0.1.0 && git push origin ukvet-mcp-v0.1.0   -> PyPI
+#   Tag release:   git tag ukvet-mcp-v0.0.1 && git push origin ukvet-mcp-v0.0.1   -> PyPI
 #   Dry run:       Actions -> Release ukvet-mcp -> Run workflow -> target: testpypi  -> TestPyPI
 
 on:

@@ -18,7 +18,7 @@
 | Phase 3 — Evals | Measured quality | 200+ item dataset; M1–M5 reported; CI gate live | Weeks 4–5 |
 | Phase 4 — Observability & guardrails | Measured cost, latency, safety | Langfuse live; M6–M9 reported | Week 5 |
 | Phase 5 — Model comparison | Evidence-based model choice | Comparison table published | Week 6 |
-| Phase 6 — Launch | Public, documented, discoverable | v0.1.0 released; registries; 2 articles | Week 6 |
+| Phase 6 — Launch | Public, documented, discoverable | v0.0.1 released; registries; 2 articles | Week 6 |
 
 Timeline is ~6 weeks including Phase 0. If a phase slips, cut scope inside the phase — **never skip Phase 3**.
 

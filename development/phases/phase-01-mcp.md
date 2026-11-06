@@ -222,7 +222,7 @@ The `packages/ukvet-mcp/README.md` should include:
 
 ## Step 1.12: Release (½ day)
 
-1. Set the package metadata: version `0.1.0`, description, keywords, URLs, classifiers, and the MIT licence.
+1. Set the package metadata: version `0.0.1`, description, keywords, URLs, classifiers, and the MIT licence.
 2. `uv build --package ukvet-mcp`
 3. Publish to **TestPyPI** first, then install it on a clean environment and test it.
 4. Set up **PyPI Trusted Publishing** through a GitHub Actions workflow triggered by a version tag. This means no API token stored anywhere, which is more secure and good to mention in interviews.
